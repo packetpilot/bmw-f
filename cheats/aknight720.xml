@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FDL>
+	<!--aknight720-->
+	<cafd id="000000F9" name="HU_CICHB" author="aknight720">
+		<code description="FDL Code EBT 6NL">
+			<group id="3000">
+				<function start="03" end="03" mask="01000000b">nicht_aktiv</function>
+				<function start="04" end="04" mask="00000001b">nicht_aktiv</function>
+				<function start="07" end="07" mask="00000010b">aktiv</function>
+				<function start="18" end="18" mask="00000010b">aktiv</function>
+				<function start="22" end="22" mask="00100000b">aktiv</function>
+				<function start="49" end="49" mask="00100000b">browser</function>
+				<function start="56" end="56" mask="01000000b">nicht_aktiv</function>
+				<function start="61" end="61" mask="00010000b">nicht_aktiv</function>
+			</group>
+			<group id="3002">
+				<function start="02" end="02" mask="00000001b">aktiv</function>
+			</group>
+			<group id="3003">
+				<function start="02" end="02" mask="01000000b">aktiv</function>
+				<function start="03" end="03" mask="11100000b">combox</function>
+				<function start="20" end="20" mask="00010000b">aktiv</function>
+				<function start="20" end="20" mask="00100000b">aktiv</function>
+				<function start="20" end="20" mask="10000000b">aktiv</function>
+				<function start="22" end="22" mask="00000001b">nicht_aktiv</function>
+				<function start="23" end="23" mask="01000000b">aktiv</function>
+				<function start="23" end="23" mask="00000010b">aktiv</function>
+			</group>
+			<group id="3004">
+				<function start="02" end="02" mask="00000100b">aktiv</function>
+				<function start="06" end="06" mask="00000001b">aktiv</function>
+				<function start="10" end="10" mask="10000000b">aktiv</function>
+			</group>
+		</code>
+	</cafd>
+</FDL>

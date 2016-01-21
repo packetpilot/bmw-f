@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FDL>
+	<!--aboulfad-->
+	<cafd id="00001A33" name="DSC" author="aboulfad">
+		<code description="Euro2 MDM: Coding US Spec Cars">
+			<group id="3000">
+				<!-- C_Laenderkennung => US -->
+				<function start="12" end="12" mask="00000011b">US</function>
+			</group>
+			<group id="3008">
+				<!-- CTpmsMarket => US -->
+				<function start="3" end="3" mask="00000001b">US</function>
+				<!-- CPrewarnEnable => enable -->
+				<function start="3" end="3" mask="00000010b">enable</function>
+				<!-- CPrewarnIgnition => enable -->
+				<function start="3" end="3" mask="00010000b">enable</function>
+				<!-- CalLrPDevMax => 50kpa -->
+				<function start="6" end="6" mask="11111111b">50kpa</function>
+				<!-- CPInitRangeMax => 80kpa -->
+				<function start="7" end="7" mask="11111111b">80kpa</function>
+				<!-- UiaSetLevelPc => 20% -->
+				<function start="8" end="8" mask="11111111b">20%</function>
+				<!-- UiwSetLevelPc => 15% -->
+				<function start="11" end="11" mask="11111111b">15%</function>
+			</group>
+		</code>
+	</cafd>
+</FDL>

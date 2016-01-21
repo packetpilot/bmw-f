@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FDL>
+	<!--TMD29-->
+	<cafd id="000007A1" name="REM_01" author="TMD29">
+		<code description="Disable Seat belt Assist (Driver Side)">
+			<group id="3130">
+				<function start="4" end="4" mask="00001000b">nicht_aktiv</function>
+			</group>
+		</code>
+		<code description="Enable Seat belt Assist (Driver Side Default)">
+			<group id="3130">
+				<function start="4" end="4" mask="00001000b">aktiv</function>
+			</group>
+		</code>
+		<code description="Disable Seat belt Assist (Passenger Side)">
+			<group id="3130">
+				<function start="4" end="4" mask="00010000b">nicht_aktiv</function>
+			</group>
+		</code>
+		<code description="Enable Seat belt Assist (Passenger Side Default)">
+			<group id="3130">
+				<function start="4" end="4" mask="00010000b">aktiv</function>
+			</group>
+		</code>
+	</cafd>
+</FDL>

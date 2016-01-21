@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FDL>
+	<!--dmnc02-->
+	<cafd id="00000794" name="FEM_BODY" author="dmnc02">
+		<code description="No-Glare High Beam Assistant (Step 3)">
+			<group id="3073">
+				<function start="176" end="184" mask="11111111b">00, 00, 00, 15, 00, 00, 0A, 15, 1F</function>
+			</group>
+			<group id="3074">
+				<function start="81" end="86" mask="11111111b">2E, 3B, 00, 00, 00, 00</function>
+				<function start="87" end="92" mask="11111111b">2E, 3B, 00, 00, 00, 00</function>
+				<function start="93" end="98" mask="11111111b">00, 00, 00, 00, 00, 00</function>
+				<function start="99" end="104" mask="11111111b">00, 00, 00, 00, 00, 00</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="0000010BA" name="LHM" author="dmnc02">
+		<code description="No-Glare High Beam Assistant (Step 2: driver side)">
+			<group id="3000">
+				<function start="0" end="6" mask="11111111b">FA, 64, 00, 00, FA, FA, 00</function>
+				<function start="7" end="13" mask="11111111b">FA, 64, 00, 00, FA, FA, 00</function>
+				<function start="14" end="20" mask="11111111b">FA, 00, 00, 19, FA, FA, 00</function>
+				<function start="21" end="27" mask="11111111b">FA, 00, 00, 00, C8, C8, 00</function>
+				<function start="91" end="97" mask="11111111b">FA, 00, FA, 00, FA, FA, 00</function>
+				<function start="98" end="104" mask="11111111b">FA, FA, FA, 00, FA, FA, FA</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="0000016BF" name="LHM" author="dmnc02">
+		<code description="No-Glare High Beam Assistant (Step 2: passenger side)">
+			<group id="3000">
+				<function start="0" end="6" mask="11111111b">FA, FA, 00, 00, FA, FA, 00</function>
+				<function start="7" end="13" mask="11111111b">FA, FA, 00, 00, FA, FA, 00</function>
+				<function start="14" end="20" mask="11111111b">FA, FA, 00, 19, FA, FA, 00</function>
+				<function start="21" end="27" mask="11111111b">FA, 00, 00, 00, C8, C8, 00</function>
+				<function start="35" end="41" mask="11111111b">FA, FA, 00, 00, FA, FA, 00</function>
+				<function start="42" end="48" mask="11111111b">FA, FA, 00, 00, FA, FA, 00</function>
+				<function start="49" end="55" mask="11111111b">FA, FA, 00, 00, FA, FA, 00</function>
+				<function start="56" end="62" mask="11111111b">FA, FA, 00, 00, FA, FA, 00</function>
+				<function start="91" end="97" mask="11111111b">FA, FA, FA, 00, FA, FA, 00</function>
+				<function start="98" end="104" mask="11111111b">FA, FA, FA, 00, FA, FA, FA</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="000001082" name="TMS" author="dmnc02">
+		<code description="Turn sidemarker LEDs off (driver side)">
+			<group id="3005">
+				<function start="16" end="31" mask="11111111b">00, 03, 00, 00, 00, 03, 00, 00, 64, 03, 00, 00, 2B, 04, 00, 00</function>
+				<function start="32" end="47" mask="11111111b">00, 03, 00, 00, 00, 03, 00, 00, 64, 03, 00, 00, 2B, 04, 00, 00</function>
+				<function start="80" end="95" mask="11111111b">00, 03, 00, 00, 00, 03, 00, 00, 64, 03, 00, 00, 2E, 04, 00, 00</function>
+			</group>
+		</code>
+		<code description="Turn sidemarker LEDs on (driver side)">
+			<group id="3005">
+				<function start="16" end="31" mask="11111111b">00, 03, 00, 00, 64, 03, 00, 00, 64, 03, 00, 00, 2B, 04, 00, 00</function>
+				<function start="32" end="47" mask="11111111b">00, 03, 00, 00, 64, 03, 00, 00, 64, 03, 00, 00, 2B, 04, 00, 00</function>
+				<function start="80" end="95" mask="11111111b">00, 03, 00, 00, 64, 03, 00, 00, 64, 03, 00, 00, 2E, 04, 00, 00</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="000001083" name="TMS" author="dmnc02">
+		<code description="Turn sidemarker LEDs off (passenger side)">
+			<group id="3005">
+				<function start="16" end="31" mask="11111111b">00, 03, 00, 00, 00, 03, 00, 00, 64, 03, 00, 00, 2B, 04, 00, 00</function>
+				<function start="32" end="47" mask="11111111b">00, 03, 00, 00, 00, 03, 00, 00, 64, 03, 00, 00, 2B, 04, 00, 00</function>
+				<function start="80" end="95" mask="11111111b">00, 03, 00, 00, 00, 03, 00, 00, 64, 03, 00, 00, 2E, 04, 00, 00</function>
+			</group>
+		</code>
+		<code description="Turn sidemarker LEDs on (passenger side)">
+			<group id="3005">
+				<function start="16" end="31" mask="11111111b">00, 03, 00, 00, 64, 03, 00, 00, 64, 03, 00, 00, 2B, 04, 00, 00</function>
+				<function start="32" end="47" mask="11111111b">00, 03, 00, 00, 64, 03, 00, 00, 64, 03, 00, 00, 2B, 04, 00, 00</function>
+				<function start="80" end="95" mask="11111111b">00, 03, 00, 00, 64, 03, 00, 00, 64, 03, 00, 00, 2E, 04, 00, 00</function>
+			</group>
+		</code>
+	</cafd>
+</FDL>

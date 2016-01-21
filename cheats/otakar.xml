@@ -1,0 +1,885 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FDL>
+	<!-- Sample Only
+	<cafd id="00000794" name="FEM_BODY" series="F020,F030">
+		<code description="Angel Eyes Parking Light Brightness 50%" series="F030">
+			<group id="3062">
+				<function start="68" end="68" mask="11111111b" comment="MAPPING_STANDL_V_L_PWM Level 1 - Left">32</function>
+				<function start="80" end="80" mask="11111111b" comment="This is a comment...">32</function>
+			</group>
+		</code>
+	</cafd>
+	-->
+	<!--otakar-->
+	<cafd id="00000F9B" name="ASD01" author="otakar">
+		<code description="ASD disable">
+			<group id="3000">
+				<function start="0" end="0" mask="11111111b">05</function>
+				<function start="1" end="1" mask="11111111b">0A</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="00000911" name="ACSM_4B" author="otakar">
+		<code description="Seatbelt reminder sound duration (5secs)">
+			<group id="3001">
+				<function start="3" end="3" mask="11111111b">5</function>
+			</group>
+		</code>
+		<code description="Disable seatbelt reminder sound">
+			<group id="3000">
+				<function start="15" end="15" mask="00000010b">00</function>
+				<function start="15" end="15" mask="00000100b">00</function>
+			</group>
+		</code>
+		<code description="Disable dashboard seatbelt icon">
+			<group id="3000">
+				<function start="15" end="15" mask="00001000b">00</function>
+				<function start="15" end="15" mask="00010000b">00</function>
+			</group>
+		</code>
+		<code description="Disable seatbelt sound on disconnect">
+			<group id="3000">
+				<function start="16" end="16" mask="00000001b">00</function>
+				<function start="16" end="16" mask="00000010b">00</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="00000794" name="FEM_01" author="otakar">
+		<code description="Turn off Radio-Navigation with Opening Driver Door">
+			<group id="3020">
+				<function start="1" end="1" mask="00000001b">01</function>
+			</group>
+		</code>
+		<code description="Auto Start-Stop Always Off">
+			<group id="3023">
+				<function start="0" end="0" mask="00010000b">01</function>
+			</group>
+		</code>
+		<code description="Auto Start-Stop Remember Last Setting">
+			<group id="3023">
+				<function start="0" end="0" mask="00100000b">01</function>
+			</group>
+		</code>
+		<code description="Announcement higher coolant temperature">
+			<group id="3040">
+				<function start="1" end="1" mask="10000000b">01</function>
+			</group>
+		</code>
+		<code description="Automatic door lock speed (10km/h = 0A)">
+			<group id="3040">
+				<function start="6" end="6" mask="11111111b">0A</function>
+			</group>
+		</code>
+		<code description="Automatic lock after unlocking without opening of doors (180secs = 10 x 18secs = 12)">
+			<group id="3040">
+				<function start="5" end="5" mask="11111111b">12</function>
+			</group>
+		</code>
+		<code description="Unlock doors on engine off">
+			<group id="3040">
+				<function start="1" end="1" mask="00000010b">01</function>
+			</group>
+		</code>
+		<code description="Double horn sound when locking car with engine running and FOB outside">
+			<group id="3040">
+				<function start="1" end="1" mask="00100000b">01</function>
+			</group>
+		</code>
+		<code description="Window still rollup when opening door">
+			<group id="3050">
+				<function start="0" end="0" mask="00000001b">00</function>
+			</group>
+		</code>
+		<code description="Open/Close windows/mirror/roof from FOB">
+			<group id="3053">
+				<function start="0" end="0" mask="01000000b">00</function>
+				<function start="0" end="0" mask="10000000b">00</function>
+			</group>
+			<group id="3110">
+				<function start="0" end="0" mask="10000000b">01</function>
+				<function start="7" end="7" mask="00000001b">01</function>
+			</group>
+		</code>
+		<code description="The window closes, closing the door">
+			<group id="3053">
+				<function start="1" end="1" mask="00010000b">01</function>
+			</group>
+		</code>
+		<code description="Open/Close windows/mirror/roof from comfort access">
+			<group id="3053">
+				<function start="1" end="1" mask="00000010b">00</function>
+				<function start="1" end="1" mask="00000001b">00</function>
+				<function start="1" end="1" mask="00000100b">00</function>
+			</group>
+		</code>
+		<code description="Convenience opening FOB minor delays opening and closing windows">
+			<group id="3053">
+				<function start="3" end="3" mask="11111111b">00</function>
+				<function start="4" end="4" mask="11111111b">03</function>
+				<function start="5" end="5" mask="11111111b">03</function>
+				<function start="6" end="6" mask="11111111b">03</function>
+				<function start="8" end="8" mask="11111111b">05</function>
+			</group>
+		</code>
+		<code description="Delay for mirror close from FOB (0.3sec)">
+			<group id="3053">
+				<function start="9" end="9" mask="11111111b">03</function>
+			</group>
+		</code>
+		<code description="3 flashes the turn signals when unlocking">
+			<group id="3060">
+				<function start="6" end="6" mask="00001100b">03</function>
+			</group>
+		</code>
+		<code description="Blinker indicator amount (3 flashes = 2)">
+			<group id="3060">
+				<function start="7" end="7" mask="00000111b">02</function>
+			</group>
+		</code>
+		<code description="Emergency brake light mode - flashed">
+			<group id="3060">
+				<function start="16" end="16" mask="00000011b">02</function>
+			</group>
+		</code>
+		<code description="Enabled daytime running lights">
+			<group id="3060">
+				<function start="31" end="31" mask="00110000b">01</function>
+			</group>
+		</code>
+		<code description="Turn signals -> LED bulbs">
+			<group id="3061">
+				<function start="50" end="50" mask="00000001b">00</function>
+				<function start="50" end="50" mask="00000010b">00</function>
+				<function start="50" end="50" mask="00001000b">01</function>
+				<function start="54" end="54" mask="00000001b">00</function>
+				<function start="54" end="54" mask="00000010b">00</function>
+				<function start="54" end="54" mask="00001000b">01</function>
+			</group>
+		</code>
+		<code description="Angel Eyes Brightness 50% Headlamp On">
+			<group id="3062">
+				<function start="46" end="46" mask="11111111b">32</function>
+				<function start="57" end="57" mask="11111111b">32</function>
+			</group>
+		</code>
+		<code description="Angel Eyes Brightness 100% Headlamp On">
+			<group id="3062">
+				<function start="46" end="46" mask="11111111b">64</function>
+				<function start="57" end="57" mask="11111111b">64</function>
+			</group>
+		</code>
+		<code description="Angel Eyes Parking Light Brightness 50%">
+			<group id="3062">
+				<function start="68" end="68" mask="11111111b">32</function>
+				<function start="80" end="80" mask="11111111b">32</function>
+			</group>
+		</code>
+		<code description="Angel Eyes Parking Light Brightness 100%">
+			<group id="3062">
+				<function start="68" end="68" mask="11111111b">64</function>
+				<function start="80" end="80" mask="11111111b">64</function>
+			</group>
+		</code>
+		<code description="Angel Eyes Brightness 50% DRL">
+			<group id="3062">
+				<function start="90" end="90" mask="11111111b">32</function>
+				<function start="101" end="101" mask="11111111b">32</function>
+			</group>
+		</code>
+		<code description="Angel Eyes Brightness 100% DRL">
+			<group id="3062">
+				<function start="90" end="90" mask="11111111b">64</function>
+				<function start="101" end="101" mask="11111111b">64</function>
+			</group>
+		</code>
+		<code description="Enable muliple blinker">
+			<group id="3064">
+				<function start="215" end="215" mask="00000001b">01</function>
+			</group>
+		</code>
+		<code description="Ambient light full bright">
+			<group id="3070">
+				<function start="5" end="5" mask="11111111b">99</function>
+			</group>
+		</code>
+		<code description="Ambient light independent from cluster light">
+			<group id="3070">
+				<function start="4" end="4" mask="10000000b">00</function>
+			</group>
+		</code>
+		<code description="Door handle LED while in reverse">
+			<group id="3070">
+				<function start="11" end="11" mask="00010000b">01</function>
+			</group>
+		</code>
+		<code description="Variable light distribution">
+			<group id="3073">
+				<function start="40" end="42" mask="11111111b">9C, 9C, 9C</function>
+				<function start="152" end="152" mask="00000001b">01</function>
+			</group>
+		</code>
+		<code description="3 injection pulses of wipe washers">
+			<group id="3080">
+				<function start="8" end="8" mask="00011000b">03</function>
+			</group>
+		</code>
+		<code description="1 sec. pause between injection pulses">
+			<group id="3080">
+				<function start="10" end="10" mask="00001111b">0A</function>
+			</group>
+		</code>
+		<code description="0 sec. delay opening trunk with remote control">
+			<group id="30D0">
+				<function start="8" end="8" mask="11111111b">00</function>
+			</group>
+		</code>
+		<code description="1 sec. delay tilt mirrors with remote control">
+			<group id="3110">
+				<function start="0" end="0" mask="10000000b">01</function>
+			</group>
+		</code>
+		<code description="Smaller tilt angle right mirror in return">
+			<group id="3110">
+				<function start="2" end="2" mask="11111111b">2B</function>
+			</group>
+		</code>
+		<code description="Mirror auto-unfold speed (0x14= 20 km/h)">
+			<group id="3110">
+				<function start="9" end="9" mask="11111111b">14</function>
+			</group>
+		</code>
+		<code description="highest sensitivity headlamp lowering">
+			<group id="3130">
+				<function start="5" end="5" mask="00000111b">02</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="000016EE" name="IHKA_VA02" author="otakar">
+		<code description="AC Recirc Last Settings Memory">
+			<group id="3003">
+				<function start="0" end="0" mask="00000001b">01</function>
+			</group>
+		</code>
+		<code description="AC Last Settings Memory">
+			<group id="3003">
+				<function start="0" end="0" mask="00000010b">01</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="000009C8" name="KOMBI L7_MID" author="otakar">
+		<code description="BMW Logo   M135i">
+			<group id="3000">
+				<function start="0" end="0" mask="11110000b">02</function>
+			</group>
+		</code>
+		<code description="BMW Logo   M235i">
+			<group id="3000">
+				<function start="0" end="0" mask="11110000b">03</function>
+			</group>
+		</code>
+		<code description="BMW Logo   340i">
+			<group id="3000">
+				<function start="0" end="0" mask="11110000b">04</function>
+			</group>
+		</code>
+		<code description="BMW Logo   50d">
+			<group id="3000">
+				<function start="0" end="0" mask="11110000b">05</function>
+			</group>
+		</code>
+		<code description="BMW Logo   M3">
+			<group id="3000">
+				<function start="0" end="0" mask="11110000b">06</function>
+			</group>
+		</code>
+		<code description="BMW Logo   M4">
+			<group id="3000">
+				<function start="0" end="0" mask="11110000b">07</function>
+			</group>
+		</code>
+		<code description="BMW Logo   eDrive">
+			<group id="3000">
+				<function start="0" end="0" mask="11110000b">0B</function>
+			</group>
+		</code>
+		<code description="BMW Logo   BMW">
+			<group id="3000">
+				<function start="0" end="0" mask="11110000b">0C</function>
+			</group>
+		</code>
+		<code description="BMW Logo   M2">
+			<group id="3000">
+				<function start="0" end="0" mask="11110000b">0D</function>
+			</group>
+		</code>
+		<code description="BMW Logo   M140i">
+			<group id="3000">
+				<function start="0" end="0" mask="11110000b">0E</function>
+			</group>
+		</code>
+		<code description="BMW Logo   M240i">
+			<group id="3000">
+				<function start="0" end="0" mask="11110000b">0F</function>
+			</group>
+		</code>
+		<code description="Digital Speed Display">
+			<group id="3000">
+				<function start="1" end="1" mask="00000010b">01</function>
+			</group>
+		</code>
+		<code description="Disable Speed Correction">
+			<group id="3000">
+				<function start="1" end="1" mask="01000000b">00</function>
+			</group>
+		</code>
+		<code description="Clock Synchronization via GPS">
+			<group id="3000">
+				<function start="1" end="1" mask="10000000b">01</function>
+			</group>
+		</code>
+		<code description="Temperature warning for cold countries">
+			<group id="3000">
+				<function start="30" end="30" mask="00000001b">01</function>
+			</group>
+		</code>
+		<code description="Motortemp enable">
+			<group id="3000">
+				<function start="42" end="42" mask="00010000b">01</function>
+			</group>
+		</code>
+		<code description="M digi tacho - km/h">
+			<group id="3000">
+				<function start="42" end="42" mask="11000000b">01</function>
+			</group>
+		</code>
+		<code description="dsc off unbundling enable">
+			<group id="3000">
+				<function start="43" end="43" mask="00000010b">01</function>
+			</group>
+		</code>
+		<code description="MPM Logo   AG">
+			<group id="3000">
+				<function start="43" end="43" mask="11110000b">00</function>
+			</group>
+		</code>
+		<code description="MPM Logo   550d">
+			<group id="3000">
+				<function start="43" end="43" mask="11110000b">01</function>
+			</group>
+		</code>
+		<code description="MPM Logo   M135i">
+			<group id="3000">
+				<function start="43" end="43" mask="11110000b">02</function>
+			</group>
+		</code>
+		<code description="MPM Logo   M235i">
+			<group id="3000">
+				<function start="43" end="43" mask="11110000b">03</function>
+			</group>
+		</code>
+		<code description="MPM Logo   340i">
+			<group id="3000">
+				<function start="43" end="43" mask="11110000b">04</function>
+			</group>
+		</code>
+		<code description="MPM Logo   50d">
+			<group id="3000">
+				<function start="43" end="43" mask="11110000b">05</function>
+			</group>
+		</code>
+		<code description="MPM Logo   eDrive">
+			<group id="3000">
+				<function start="43" end="43" mask="11110000b">0B</function>
+			</group>
+		</code>
+		<code description="MPM Logo   M140i">
+			<group id="3000">
+				<function start="43" end="43" mask="11110000b">0E</function>
+			</group>
+		</code>
+		<code description="MPM Logo   M240i">
+			<group id="3000">
+				<function start="43" end="43" mask="11110000b">0F</function>
+			</group>
+		</code>
+		<code description="M Variante motorsport">
+			<group id="3003">
+				<function start="3" end="3" mask="00001000b">01</function>
+			</group>
+		</code>
+		<code description="CBS service reset">
+			<group id="3004">
+				<function start="33" end="33" mask="00001000b">01</function>
+			</group>
+		</code>
+		<code description="language czech">
+			<group id="3008">
+				<function start="0" end="0" mask="00011111b">18</function>
+			</group>
+		</code>
+		<code description="Speed limit">
+			<group id="3008">
+				<function start="4" end="4" mask="01000000b">01</function>
+			</group>
+		</code>
+		<code description="Volume of blinker signal">
+			<group id="300B">
+				<function start="4" end="7" mask="11111111b">FF, FF, FF, FF</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="00000DED" name="HU_NBT" author="otakar">
+		<code description="Online entertainment">
+			<group id="3000">
+				<function start="10" end="10" mask="00001000b">01</function>
+				<function start="10" end="10" mask="00010000b">01</function>
+			</group>
+		</code>
+		<code description="video support">
+			<group id="3000">
+				<function start="13" end="13" mask="00000100b">01</function>
+			</group>
+		</code>
+		<code description="Enable import of customer playlists through the optical drive">
+			<group id="3000">
+				<function start="13" end="13" mask="00001000b">01</function>
+			</group>
+		</code>
+		<code description="Enable function to bookmark current playback position inside of a currently playback music file from the music collection">
+			<group id="3000">
+				<function start="14" end="14" mask="00000100b">01</function>
+			</group>
+		</code>
+		<code description="Enables to scale album-cover from Gracenote for Audio-CDs to full-size">
+			<group id="3000">
+				<function start="14" end="14" mask="00100000b">01</function>
+			</group>
+		</code>
+		<code description="Gracenote installed">
+			<group id="3000">
+				<function start="14" end="14" mask="01000000b">01</function>
+			</group>
+		</code>
+		<code description="Gracenote via USB enable">
+			<group id="3000">
+				<function start="15" end="15" mask="00000010b">01</function>
+			</group>
+		</code>
+		<code description="Video codec OGG">
+			<group id="3000">
+				<function start="15" end="15" mask="00010000b">01</function>
+			</group>
+		</code>
+		<code description="Video codec XVID">
+			<group id="3000">
+				<function start="15" end="15" mask="00100000b">01</function>
+			</group>
+		</code>
+		<code description="Video codec VCD">
+			<group id="3000">
+				<function start="15" end="15" mask="01000000b">01</function>
+			</group>
+		</code>
+		<code description="Traffic Info Categories in the HMI enable">
+			<group id="3000">
+				<function start="16" end="16" mask="00000010b">01</function>
+			</group>
+		</code>
+		<code description="Auto map ZOOM enable">
+			<group id="3000">
+				<function start="16" end="16" mask="00001000b">01</function>
+			</group>
+		</code>
+		<code description="Apple enhancements">
+			<group id="3000">
+				<function start="22" end="22" mask="10000000b">01</function>
+			</group>
+		</code>
+		<code description="Online Entertainment login speedlimit disable">
+			<group id="3000">
+				<function start="33" end="33" mask="10000000b">00</function>
+			</group>
+		</code>
+		<code description="Display full messages while driving">
+			<group id="3000">
+				<function start="56" end="56" mask="00001110b">00</function>
+			</group>
+			<group id="3003">
+				<function start="11" end="11" mask="00000111b">07</function>
+			</group>
+		</code>
+		<code description="Enable Road Preview">
+			<group id="3000">
+				<function start="59" end="59" mask="00100000b">01</function>
+			</group>
+		</code>
+		<code description="Enable Traffic Information via TMC">
+			<group id="3000">
+				<function start="59" end="59" mask="00010000b">01</function>
+			</group>
+			<group id="3002">
+				<function start="23" end="23" mask="00000100b">01</function>
+				<function start="23" end="23" mask="00100000b">01</function>
+				<function start="24" end="24" mask="00000010b">01</function>-
+			</group>
+		</code>
+		<code description="Enable Trip Import via USB">
+			<group id="3000">
+				<function start="61" end="61" mask="00000001b">01</function>
+			</group>
+		</code>
+		<code description="Enable Trip Export via USB">
+			<group id="3000">
+				<function start="61" end="61" mask="00000010b">01</function>
+			</group>
+		</code>
+		<code description="Enable Dest Import via USB">
+			<group id="3000">
+				<function start="61" end="61" mask="00000100b">01</function>
+			</group>
+		</code>
+		<code description="Enable Dest Export via USB">
+			<group id="3000">
+				<function start="61" end="61" mask="00001000b">01</function>
+			</group>
+		</code>
+		<code description="Enable MyPOI Import via USB">
+			<group id="3000">
+				<function start="61" end="61" mask="00010000b">01</function>
+			</group>
+		</code>
+		<code description="Enable MyPOI Export via USB">
+			<group id="3000">
+				<function start="61" end="61" mask="00100000b">01</function>
+			</group>
+		</code>
+		<code description="Map Arrowview">
+			<group id="3000">
+				<function start="62" end="62" mask="00000100b">01</function>
+			</group>
+		</code>
+		<code description="Route study">
+			<group id="3000">
+				<function start="62" end="62" mask="00100000b">01</function>
+			</group>
+		</code>
+		<code description="Distance unit Km only">
+			<group id="3000">
+				<function start="65" end="65" mask="01110000b">03</function>
+			</group>
+		</code>
+		<code description="Enable DVD/Video in motion">
+			<group id="3000">
+				<function start="71" end="71" mask="11111111b">FF</function>
+				<function start="72" end="72" mask="11111111b">FF</function>
+				<function start="5" end="5" mask="00000100b">00</function>
+				<function start="57" end="57" mask="00000111b">00</function>
+			</group>
+		</code>
+		<code description="Show DRL Option in iDrive">
+			<group id="3000">
+				<function start="92" end="92" mask="00011000b">01</function>
+			</group>
+		</code>
+		<code description="NAVI Position menu">
+			<group id="3000">
+				<function start="96" end="96" mask="10000000b">01</function>
+			</group>
+		</code>
+		<code description="Menu Express roads">
+			<group id="3000">
+				<function start="108" end="108" mask="00000100b">01</function>
+			</group>
+		</code>
+		<code description="High beam assistant">
+			<group id="3000">
+				<function start="109" end="109" mask="10000000b">01</function>
+			</group>
+		</code>
+		<code description="setting for acoustic confirmation is displayed and can be adjusted">
+			<group id="3000">
+				<function start="110" end="110" mask="00000001b">01</function>
+			</group>
+		</code>
+		<code description="NAVI Enable the 2 step guiding advice output">
+			<group id="3000">
+				<function start="111" end="111" mask="00000010b">01</function>
+			</group>
+		</code>
+		<code description="NAVI Autozoom">
+			<group id="3000">
+				<function start="111" end="111" mask="00000100b">01</function>
+			</group>
+		</code>
+		<code description="Enable Route Preview">
+			<group id="3000">
+				<function start="111" end="111" mask="00001000b">01</function>
+				<function start="135" end="135" mask="00001000b">01</function>
+			</group>
+		</code>
+		<code description="Enable NAVI route management">
+			<group id="3000">
+				<function start="111" end="111" mask="00010000b">01</function>
+			</group>
+		</code>
+		<code description="Enable POI alert">
+			<group id="3000">
+				<function start="111" end="111" mask="10000000b">01</function>
+			</group>
+		</code>
+		<code description="M theme for sport display (hp/torque color)">
+			<group id="3000">
+				<function start="133" end="133" mask="01000000b">01</function>
+			</group>
+		</code>
+		<code description="Show Tire Pressure and Temperature in iDrive">
+			<group id="3001">
+				<function start="1" end="1" mask="00100000b">01</function>
+				<function start="66" end="66" mask="00001100b">02</function>
+			</group>
+		</code>
+		<code description="Disable Camera/PDC Legal Disclaimer">
+			<group id="3001">
+				<function start="52" end="52" mask="11111111b">00</function>
+			</group>
+		</code>
+		<code description="Show Volume Popup Display">
+			<group id="3002">
+				<function start="52" end="52" mask="01000000b">01</function>
+			</group>
+		</code>
+		<code description="Disable Legal Disclaimer">
+			<group id="3001">
+				<function start="58" end="58" mask="11111111b">00</function>
+			</group>
+		</code>
+		<code description="Startup animation - black">
+			<group id="3001">
+				<function start="62" end="62" mask="00000110b">00</function>
+			</group>
+		</code>
+		<code description="Startup animation - splash">
+			<group id="3001">
+				<function start="62" end="62" mask="00000110b">01</function>
+			</group>
+		</code>
+		<code description="Startup animation - animation">
+			<group id="3001">
+				<function start="62" end="62" mask="00000110b">02</function>
+			</group>
+		</code>
+		<code description="Startup emblem BMW ConnectedDrive">
+			<group id="3001">
+				<function start="62" end="62" mask="01111000b">00</function>
+			</group>
+		</code>
+		<code description="Startup emblem ///M">
+			<group id="3001">
+				<function start="62" end="62" mask="01111000b">01</function>
+			</group>
+		</code>
+		<code description="Startup emblem Alpina">
+			<group id="3001">
+				<function start="62" end="62" mask="01111000b">02</function>
+			</group>
+		</code>
+		<code description="Startup emblem BMW i">
+			<group id="3001">
+				<function start="62" end="62" mask="01111000b">03</function>
+			</group>
+		</code>
+		<code description="Startup emblem MINI">
+			<group id="3001">
+				<function start="62" end="62" mask="01111000b">04</function>
+			</group>
+		</code>
+		<code description="Startup emblem RollsRoyce">
+			<group id="3001">
+				<function start="62" end="62" mask="01111000b">05</function>
+			</group>
+		</code>
+		<code description="Startup emblem BMW ConnectedDrive">
+			<group id="3001">
+				<function start="62" end="62" mask="01111000b">06</function>
+			</group>
+		</code>
+		<code description="Startup emblem BMW (smaller)">
+			<group id="3001">
+				<function start="62" end="62" mask="01111000b">07</function>
+			</group>
+		</code>
+		<code description="Startup emblem BMW (bigger)">
+			<group id="3001">
+				<function start="62" end="62" mask="01111000b">08</function>
+			</group>
+		</code>
+		<code description="Startup emblem Merry Christmass">
+			<group id="3001">
+				<function start="62" end="62" mask="01111000b">09</function>
+			</group>
+		</code>
+		<code description="One microphone">
+			<group id="3002">
+				<function start="55" end="55" mask="00110000b">01</function>
+			</group>
+		</code>
+		<code description="Ringtone from phone">
+			<group id="3003">
+				<function start="6" end="6" mask="10000000b">01</function>
+			</group>
+		</code>
+		<code description="Contacts Phone/NAVI separated">
+			<group id="3003">
+				<function start="8" end="8" mask="00000100b">01</function>
+			</group>
+		</code>
+		<code description="ringtone BMW">
+			<group id="3003">
+				<function start="8" end="8" mask="00000011b">00</function>
+			</group>
+		</code>
+		<code description="ringtone MINI">
+			<group id="3003">
+				<function start="8" end="8" mask="00000011b">01</function>
+			</group>
+		</code>
+		<code description="ringtone BMW i">
+			<group id="3003">
+				<function start="8" end="8" mask="00000011b">02</function>
+			</group>
+		</code>
+		<code description="ringtone RR">
+			<group id="3003">
+				<function start="8" end="8" mask="00000011b">03</function>
+			</group>
+		</code>
+		<code description="API USB read-write">
+			<group id="3003">
+				<function start="22" end="22" mask="10000000b">01</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="0000067B" name="ICMQL" author="otakar">
+		<code description="Enable cruise control at any speed">
+			<group id="3000">
+				<function start="142" end="142" mask="11111111b">00</function>
+				<function start="143" end="143" mask="11111111b">00</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="000000B5" name="CFAS_PLX_1" author="otakar">
+		<code description="MEMORY GONG">
+			<group id="3000">
+				<function start="2" end="2" mask="00001000b">01</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="000007A1" name="REM_01" author="otakar">
+		<code description="Brake lights -> LED bulbs">
+			<group id="3061">
+				<function start="18" end="18" mask="00000001b">00</function>
+				<function start="18" end="18" mask="00000010b">00</function>
+				<function start="18" end="18" mask="00001000b">01</function>
+				<function start="22" end="22" mask="00000001b">00</function>
+				<function start="22" end="22" mask="00000010b">00</function>
+				<function start="22" end="22" mask="00001000b">01</function>
+			</group>
+		</code>
+		<code description="Brake force lights -> LED bulbs">
+			<group id="3061">
+				<function start="26" end="26" mask="00000001b">00</function>
+				<function start="26" end="26" mask="00000010b">00</function>
+				<function start="26" end="26" mask="00001000b">01</function>
+				<function start="30" end="30" mask="00000001b">00</function>
+				<function start="30" end="30" mask="00000010b">00</function>
+				<function start="30" end="30" mask="00001000b">01</function>
+			</group>
+		</code>
+		<code description="Fog lights -> LED bulbs">
+			<group id="3061">
+				<function start="34" end="34" mask="00000001b">00</function>
+				<function start="34" end="34" mask="00000010b">00</function>
+				<function start="34" end="34" mask="00001000b">01</function>
+				<function start="38" end="38" mask="00000001b">00</function>
+				<function start="38" end="38" mask="00000010b">00</function>
+				<function start="38" end="38" mask="00001000b">01</function>
+			</group>
+		</code>
+		<code description="Reverse lights -> LED bulbs">
+			<group id="3061">
+				<function start="42" end="42" mask="00000001b">00</function>
+				<function start="42" end="42" mask="00000010b">00</function>
+				<function start="42" end="42" mask="00001000b">01</function>
+				<function start="46" end="46" mask="00000001b">00</function>
+				<function start="46" end="46" mask="00000010b">00</function>
+				<function start="46" end="46" mask="00001000b">01</function>
+			</group>
+		</code>
+		<code description="Turn signals -> LED bulbs">
+			<group id="3061">
+				<function start="50" end="50" mask="00000001b">00</function>
+				<function start="50" end="50" mask="00000010b">00</function>
+				<function start="50" end="50" mask="00001000b">01</function>
+				<function start="54" end="54" mask="00000001b">00</function>
+				<function start="54" end="54" mask="00000010b">00</function>
+				<function start="54" end="54" mask="00001000b">01</function>
+			</group>
+		</code>
+		<code description="== ALL rear lights -> LED bulbs ==">
+			<group id="3061">
+				<function start="10" end="10" mask="00000001b">00</function>
+				<function start="10" end="10" mask="00000010b">00</function>
+				<function start="10" end="10" mask="00001000b">01</function>
+				<function start="14" end="14" mask="00000001b">00</function>
+				<function start="14" end="14" mask="00000010b">00</function>
+				<function start="14" end="14" mask="00001000b">01</function>
+				<function start="18" end="18" mask="00000001b">00</function>
+				<function start="18" end="18" mask="00000010b">00</function>
+				<function start="18" end="18" mask="00001000b">01</function>
+				<function start="22" end="22" mask="00000001b">00</function>
+				<function start="22" end="22" mask="00000010b">00</function>
+				<function start="22" end="22" mask="00001000b">01</function>
+				<function start="26" end="26" mask="00000001b">00</function>
+				<function start="26" end="26" mask="00000010b">00</function>
+				<function start="26" end="26" mask="00001000b">01</function>
+				<function start="30" end="30" mask="00000001b">00</function>
+				<function start="30" end="30" mask="00000010b">00</function>
+				<function start="30" end="30" mask="00001000b">01</function>
+				<function start="34" end="34" mask="00000001b">00</function>
+				<function start="34" end="34" mask="00000010b">00</function>
+				<function start="34" end="34" mask="00001000b">01</function>
+				<function start="38" end="38" mask="00000001b">00</function>
+				<function start="38" end="38" mask="00000010b">00</function>
+				<function start="38" end="38" mask="00001000b">01</function>
+				<function start="42" end="42" mask="00000001b">00</function>
+				<function start="42" end="42" mask="00000010b">00</function>
+				<function start="42" end="42" mask="00001000b">01</function>
+				<function start="46" end="46" mask="00000001b">00</function>
+				<function start="46" end="46" mask="00000010b">00</function>
+				<function start="46" end="46" mask="00001000b">01</function>
+				<function start="50" end="50" mask="00000001b">00</function>
+				<function start="50" end="50" mask="00000010b">00</function>
+				<function start="50" end="50" mask="00001000b">01</function>
+				<function start="54" end="54" mask="00000001b">00</function>
+				<function start="54" end="54" mask="00000010b">00</function>
+				<function start="54" end="54" mask="00001000b">01</function>
+				<function start="66" end="66" mask="00001000b">01</function>
+				<function start="70" end="70" mask="00001000b">01</function>
+			</group>
+		</code>
+		<code description="tail lights with dayrunlights">
+			<group id="3062">
+				<function start="200" end="200" mask="00111111b">14</function>
+				<function start="210" end="210" mask="00111111b">15</function>
+			</group>
+		</code>
+		<code description="Enable camera at any speed">
+			<group id="3203">
+				<function start="7" end="7" mask="11111111b">FF</function>
+				<function start="8" end="8" mask="11111111b">FF</function>
+				<function start="9" end="9" mask="11111111b">FF</function>
+				<function start="10" end="10" mask="11111111b">FF</function>
+			</group>
+		</code>
+	</cafd>
+</FDL>

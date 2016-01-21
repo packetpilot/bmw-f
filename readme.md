@@ -42,7 +42,7 @@ AMPT|[37]|Audio & Amplificaiton
 ASD|[3f]|Active Sound Design
 ATM|[61]|
 DME2|[12]|Engine Management [!!DANGER!!]
-DSC|[29]|Dynamic Stability Control|[?]|&|Diff
+DSC|[29]|Dynamic Stability Control [?] & Diff
 EKPM2|[17]
 EGS|[XX]|Automatic Transmission [non-DCT?]
 EPS|[30]
@@ -54,7 +54,7 @@ HC2|[8]
 HU_NBT2|[63]|iDrive System|(MY2016+)
 ICM|[1c]
 IHKA3|[78]
-KAFAS2|[5d]|Driver Assist Plus [v2?|MYXXXX+]
+KAFAS2|[5d]|Driver Assist Plus [v2? MYXXXX+]
 KOMBI|[60]|Combination Dash Display
 LHM|[43]|LED Headlight Main Module
 LHM|[44]|LED Headlight Main Module

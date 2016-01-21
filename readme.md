@@ -17,9 +17,9 @@
 * You
 
 ### Understand the Codemandments.
-1. Clicking the "Code Default Values" Button == ![Crosbones](https://upload.wikimedia.org/wikipedia/commons/5/56/Skull_%26_Crossbones_BW.png =12x)
-2. Coding, or thinking about coding, the DME module == ![Crosbones](https://upload.wikimedia.org/wikipedia/commons/5/56/Skull_%26_Crossbones_BW.png =12x)![Crosbones](https://upload.wikimedia.org/wikipedia/commons/5/56/Skull_%26_Crossbones_BW.png =12x)
-3. Putting others' intellectual property (BMW's or otherwise) in a public repo == ![Crosbones](https://upload.wikimedia.org/wikipedia/commons/5/56/Skull_%26_Crossbones_BW.png =12x) ![Crosbones](https://upload.wikimedia.org/wikipedia/commons/5/56/Skull_%26_Crossbones_BW.png =12x) ![Crosbones](https://upload.wikimedia.org/wikipedia/commons/5/56/Skull_%26_Crossbones_BW.png =12x)
+1. Clicking the "Code Default Values" Button == ☠
+2. Coding, or thinking about coding, the DME module == ☠☠
+3. Putting others' intellectual property (BMW's or otherwise) in a public repo == ☠☠☠
 
 ## Desirements
 

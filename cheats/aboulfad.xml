@@ -1,60 +1,37 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <FDL>
 	<!--aboulfad-->
-        <cafd id="00001A33" name="DSC" author="aboulfad" series="F030">
-        <code description="Euro3 MDM: Euro Coding for US Spec Cars(58.3)">
-         <group id="3000">
-          <!-- C_Laenderkennung = ECE-->        <function start="12" end="12" mask="00000011b">00</function>
-         </group> 
-         <group id="3008">
-          <!-- CTpmsMarket = US -->             <function  start="3"  end="3" mask="00000001b">01</function>
-          <!-- CPrewarnEnable = enable -->      <function  start="3"  end="3" mask="00000010b">01</function>
-          <!-- CPrewarnIgnition = enable -->    <function  start="3"  end="3" mask="00010000b">01</function>
-          <!-- CalLrPDevMax = UNK_0 -->         <function  start="6"  end="6" mask="11111111b">20</function>
-          <!-- CPInitRangeMax = 80kpa -->       <function  start="7"  end="7" mask="11111111b">20</function>
-          <!-- UiaSetLevelPc = 20% -->          <function  start="8"  end="8" mask="11111111b">14</function>
-          <!-- UiwSetLevelPc = 15% -->          <function start="11" end="11" mask="11111111b">0F</function>
-          <!-- UiwSetLevelDistMin = UNK_0 -->   <function start="13" end="13" mask="11111111b">08</function>
-          <!-- CalTimeConfUiw  = UNK_0 -->      <function start="16" end="16" mask="11111111b">02</function>
-          <!-- CDtAmbPrewarn   = UNK_0 -->      <function start="17" end="17" mask="11111111b">C8</function>
-          </group>
-        </code>
-        </cafd>
-        
-        <cafd id="00001A33" name="DSC" author="aboulfad" series="F030">
+	<cafd id="00001A33" name="DSC" author="aboulfad" series="F030">
         <code description="Euro2 MDM: Euro Coding for US Spec Cars">
          <group id="3000">
-          <!-- C_Laenderkennung = ECE-->        <function start="12" end="12" mask="00000011b">00</function>
+	 <!-- C_Laenderkennung = ECE-->	<function start="12" end="12" mask="00000011b">00</function>
          </group> 
          <group id="3008">
-          <!-- CTpmsMarket = US -->             <function  start="3"  end="3" mask="00000001b">01</function>
-          <!-- CPrewarnEnable = enable -->      <function  start="3"  end="3" mask="00000010b">01</function>
-          <!-- CPrewarnIgnition = enable -->    <function  start="3"  end="3" mask="00010000b">01</function>
-          <!-- CalLrPDevMax = 50kpa -->         <function  start="6"  end="6" mask="11111111b">20</function>
-          <!-- CPInitRangeMax = 80kpa -->       <function  start="7"  end="7" mask="11111111b">20</function>
-          <!-- UiaSetLevelPc = 20% -->          <function  start="8"  end="8" mask="11111111b">14</function>
-          <!-- UiwSetLevelPc = 15% -->          <function start="11" end="11" mask="11111111b">0F</function>
+          <!-- CTpmsMarket = US -->		<function start="3" end="3" mask="00000001b">01</function>
+          <!-- CPrewarnEnable = enable -->	<function start="3" end="3" mask="00000010b">01</function>
+          <!-- CPrewarnIgnition = enable -->	<function start="3" end="3" mask="00010000b">01</function>
+          <!-- CalLrPDevMax = 50kpa -->		<function start="6" end="6" mask="11111111b">20</function>
+          <!-- CPInitRangeMax = 80kpa -->	<function start="7" end="7" mask="11111111b">20</function>
+          <!-- UiaSetLevelPc = 20% -->		<function start="8" end="8" mask="11111111b">14</function>
+          <!-- UiwSetLevelPc = 15% -->		<function start="11" end="11" mask="11111111b">0F</function>
          </group>
         </code>
         </cafd>
 	
-        <cafd id="00001A33" name="DSC" author="aboulfad" series="F030">
-        <code description="US MDM: Original Coding for US Spec Cars">
-         <group id="3000">
-          <!-- C_Laenderkennung = US-->		<function start="12" end="12" mask="00000011b">01</function>
+	<cafd id="00001A33" name="DSC" author="aboulfad" series="F030">
+	<code description="US MDM: Original Coding for US Spec Cars">
+	 <group id="3000">
+          <!-- C_Laenderkennung = US-->	<function start="12" end="12" mask="00000011b" >01</function>
          </group> 
          <group id="3008">
-          <!-- CTpmsMarket = US -->             <function  start="3"  end="3" mask="00000001b">01</function>
-          <!-- CPrewarnEnable = disable-->      <function  start="3"  end="3" mask="00000010b">00</function>
-          <!-- CPrewarnIgnition = disable-->    <function  start="3"  end="3" mask="00010000b">00</function>
-          <!-- CalLrPDevMax = 100kpa -->        <function  start="6"  end="6" mask="11111111b">28</function>
-          <!-- CPInitRangeMax = 200kpa -->      <function  start="7"  end="7" mask="11111111b">50</function>
-          <!-- UiaSetLevelPc = 25% -->          <function  start="8"  end="8" mask="11111111b">19</function>
-          <!-- UiwSetLevelPc = 20% -->          <function start="11" end="11" mask="11111111b">14</function>
-          <!-- UiwSetLevelDistMin = 0C -->      <function start="13" end="13" mask="11111111b">0C</function>
-          <!-- CalTimeConfUiw  = 0A -->         <function start="16" end="16" mask="11111111b">0A</function>
-          <!-- CDtAmbPrewarn   = 0A -->         <function start="17" end="17" mask="11111111b">0A</function>
-          </group>
-        </code>
-        </cafd>  
+          <!-- CTpmsMarket = US -->		<function start="3" end="3" mask="00000001b">01</function>
+          <!-- CPrewarnEnable = disable-->	<function start="3" end="3" mask="00000010b">00</function>
+          <!-- CPrewarnIgnition = disable-->	<function start="3" end="3" mask="00010000b">00</function>
+          <!-- CalLrPDevMax = 100kpa -->	<function start="6" end="6" mask="11111111b">28</function>
+          <!-- CPInitRangeMax = 200kpa -->	<function start="7" end="7" mask="11111111b">50</function>
+          <!-- UiaSetLevelPc = 25% -->		<function start="8" end="8" mask="11111111b">19</function>
+          <!-- UiwSetLevelPc = 20% -->		<function start="11" end="11" mask="11111111b">14</function>
+         </group>
+	</code>
+	</cafd>  
 </FDL>

@@ -2,7 +2,7 @@
 <FDL>
 	<!--aboulfad-->
         <cafd id="00001A33" name="DSC" author="aboulfad" series="F030">
-        <code description="Euro3 MDM: Euro Coding for US Spec Cars(58.3)">
+        <code description="Euro3 MDM: Euro Coding for US Spec Cars(59.0)">
          <group id="3000">
           <!-- C_Laenderkennung = ECE-->        <function start="12" end="12" mask="00000011b">00</function>
          </group> 

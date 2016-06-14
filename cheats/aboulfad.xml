@@ -2,7 +2,7 @@
 <FDL>
 	<!--aboulfad-->
         <cafd id="00001A33" name="DSC" author="aboulfad" series="F030">
-        <code description="Euro3 MDM: Euro Coding for US Spec Cars(58.3)">
+        <code description="Euro3 MDM: Euro Coding for US Spec Cars(59.0)">
          <group id="3000">
           <!-- C_Laenderkennung = ECE-->        <function start="12" end="12" mask="00000011b">00</function>
          </group> 
@@ -13,7 +13,7 @@
           <!-- CalLrPDevMax = UNK_0 -->         <function  start="6"  end="6" mask="11111111b">20</function>
           <!-- CPInitRangeMax = 80kpa -->       <function  start="7"  end="7" mask="11111111b">20</function>
           <!-- UiaSetLevelPc = 20% -->          <function  start="8"  end="8" mask="11111111b">14</function>
-          <!-- UiwSetLevelPc = 15% -->          <function start="11" end="11" mask="11111111b">0F</function>
+          <!-- UiwSetLevelPc = UNK_0 -->        <function start="11" end="11" mask="11111111b">11</function>
           <!-- UiwSetLevelDistMin = UNK_0 -->   <function start="13" end="13" mask="11111111b">08</function>
           <!-- CalTimeConfUiw  = UNK_0 -->      <function start="16" end="16" mask="11111111b">02</function>
           <!-- CDtAmbPrewarn   = UNK_0 -->      <function start="17" end="17" mask="11111111b">C8</function>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FDL>
+	<!-- packetpilot -->
+	<cafd id="00000794" name="FEM_01" author="packetpilot" series="F030">
+	<code description="Rear Fog Switch Enable [dep: switch or blank mod]">
+		<group id="3060">
+			<function start="7" end="7" mask="00001000b">01</function>
+		</group>
+	</code>
+	<code description="Rear Fog Switch Disable">
+		<group id="3060">
+			<function start="7" end="7" mask="00001000b">00</function>
+		</group>
+	</code>
+	<code description="Fold/Unfold Mirrors w/ Fob + Comfort Access">
+		<group id="3110">
+			<function start="1" end="1" mask="=00000001b">01</function>
+			<function start="8" end="8" mask="=00000001b">01</function>
+		</group>
+	</code>
+	<code description="No Fold/Unfold Mirrors w/ Fob + Comfort Access">
+		<group id="3110">
+			<function start="1" end="1" mask="=00000001b">00</function>
+			<function start="8" end="8" mask="=00000001b">00</function>
+		</group>
+	</code>
+	</cafd>
+
+	<cafd id="000007A1" name="REM_01" author="packetpilot" series="F030">
+	<code description="Outer+Inner Tails w/ DRL">
+		<group id="3062">
+			<function start="200" end="200" mask="00111111b">14</function>
+			<function start="210" end="210" mask="00111111b">15</function>
+			<function start="220" end="220" mask="00111111b">16</function>
+			<function start="230" end="230" mask="00111111b">17</function>
+		</group>
+	</code>
+	<code description="Outer Tails Only w/ DRL" series="F030">
+		<group id="3062">
+			<function start="200" end="200" mask="00111111b">14</function>
+			<function start="210" end="210" mask="00111111b">15</function>
+			<function start="220" end="220" mask="00111111b">00</function>
+			<function start="230" end="230" mask="00111111b">00</function>
+		</group>
+	</code>
+	<code description="No Tails w/ DRL" series="F030">
+		<group id="3062">
+			<function start="200" end="200" mask="00111111b">00</function>
+			<function start="210" end="210" mask="00111111b">00</function>
+			<function start="220" end="220" mask="00111111b">00</function>
+			<function start="230" end="230" mask="00111111b">00</function>
+		</group>
+	</code>
+	<code description="Both Rear Fogs Active [dep: switch activation in FEM_Body]">
+		<group id="3063">
+			<function start="40" end="40" mask="00111111b">1C</function>
+			<function start="50" end="50" mask="00111111b">1D</function>
+		</group>
+	</code>
+	<code description="Left Rear Fog Active [dep: switch activation in FEM_Body]">
+		<group id="3063">
+			<function start="40" end="40" mask="00111111b">1C</function>
+			<function start="50" end="50" mask="00111111b">00</function>
+		</group>
+	</code>
+	<code description="Right Rear Fog Active [dep: switch activation in FEM_Body]">
+		<group id="3063">
+			<function start="40" end="40" mask="00111111b">00</function>
+			<function start="50" end="50" mask="00111111b">1D</function>
+		</group>
+	</code>
+	</cafd>
+
+	<cafd id="00001EF6" name="HU_NBT_EVO" author="packetpilot" series="F030">
+	<code description="B-and-O Digital Signal Processing, Replaces Logic7">
+		<group id="3000">
+			<function start="57" end="57" mask="00110000b">03</function>
+		</group>
+	</code>
+	<code description="No B-and-O Digital Signal Processing, Restores Logic7">
+		<group id="3000">
+			<function start="57" end="57" mask="00110000b">00</function>
+		</group>
+	</code>
+	</cafd>
+
+</FDL>

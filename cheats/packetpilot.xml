@@ -84,4 +84,29 @@
 	</code>
 	</cafd>
 
+	<cafd id="00001082" name="TMS_03" author="packetpilot" series="F030">
+		<code description="DRL Headlamp Settings: Angel Eyes Only, No Eyebrow">
+			<group id="3005">
+				<function start="0" end="15" mask="11111111b">00, 04, 00, 00, 00, 04, 00, 00, 00, 03, 00, 00, 64, 00, 00, 00</function>
+			</group>
+		</code>
+		<code description="DRL Headlamp Settings: Eyebrow Only, No Angel Eyes">
+			<group id="3005">
+				<function start="0" end="15" mask="11111111b">00, 04, 00, 00, 00, 04, 00, 00, 64, 03, 00, 00, 00, 00, 00, 00</function>
+			</group>
+		</code>
+		</cafd>
+<cafd id="00001083" name="TMS_03" author="packetpilot" series="F030">
+<code description="DRL Headlamp Settings: Angel Eyes Only, No Eyebrow">
+	<group id="3005">
+		<function start="0" end="15" mask="11111111b">00, 04, 00, 00, 00, 04, 00, 00, 00, 03, 00, 00, 64, 00, 00, 00</function>
+	</group>
+</code>
+<code description="DRL Headlamp Settings: Eyebrow Only, No Angel Eyes">
+	<group id="3005">
+		<function start="0" end="15" mask="11111111b">00, 04, 00, 00, 00, 04, 00, 00, 64, 03, 00, 00, 00, 00, 00, 00</function>
+	</group>
+</code>
+</cafd>
+
 </FDL>

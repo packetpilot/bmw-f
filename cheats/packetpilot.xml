@@ -24,6 +24,22 @@
         <function start="8" end="8" mask="=00000001b">00</function>
       </group>
     </code>
+    <code description="Front Fog-Like VLD: Enable Step 1 [dep: switch or blank mod, VLD]">
+      <group id="3060">
+        <function start="13" end="13" mask="10000000b">01</function>
+      </group>
+      <group id="3064">
+        <function start="213" end="213" mask="11111111b">09</function>
+      </group>
+    </code>
+    <code description="Front Fog-Like VLD: Disable Step 1">
+      <group id="3060">
+        <function start="13" end="13" mask="10000000b">00</function>
+      </group>
+      <group id="3064">
+        <function start="213" end="213" mask="11111111b">02</function>
+      </group>
+    </code>
   </cafd>
 
   <cafd id="000007A1" name="REM_01" author="packetpilot" series="F030">
@@ -43,7 +59,7 @@
         <function start="230" end="230" mask="00111111b">00</function>
       </group>
     </code>
-    <code description="DRL: No Tails" series="F030">
+    <code description="DRL: Disable Tails" series="F030">
       <group id="3062">
         <function start="200" end="200" mask="00111111b">00</function>
         <function start="210" end="210" mask="00111111b">00</function>
@@ -51,19 +67,19 @@
         <function start="230" end="230" mask="00111111b">00</function>
       </group>
     </code>
-    <code description="Rear Fog: Both Lamps Active [dep: switch activation in FEM_Body]">
+    <code description="Rear Fog: Enable Both Lamps [dep: switch activation in FEM_Body]">
       <group id="3063">
         <function start="40" end="40" mask="00111111b">1C</function>
         <function start="50" end="50" mask="00111111b">1D</function>
       </group>
     </code>
-    <code description="Rear Fog: Left Lamp Active [dep: switch activation in FEM_Body]">
+    <code description="Rear Fog: Enable Left Lamp [dep: switch activation in FEM_Body]">
       <group id="3063">
         <function start="40" end="40" mask="00111111b">1C</function>
         <function start="50" end="50" mask="00111111b">00</function>
       </group>
     </code>
-    <code description="Rear Fog: Right Lamp Active [dep: switch activation in FEM_Body]">
+    <code description="Rear Fog: Enable Right Lamp [dep: switch activation in FEM_Body]">
       <group id="3063">
         <function start="40" end="40" mask="00111111b">00</function>
         <function start="50" end="50" mask="00111111b">1D</function>
@@ -72,14 +88,44 @@
   </cafd>
 
   <cafd id="00001EF6" name="HU_NBT_EVO" author="packetpilot" series="F030">
-    <code description="B-and-O Digital Signal Processing, Replaces Logic7">
+    <code description="Digital Signal Processing: Enable B-and-O (Replacing Logic7">
       <group id="3000">
         <function start="57" end="57" mask="00110000b">03</function>
       </group>
     </code>
-    <code description="No B-and-O Digital Signal Processing, Restores Logic7">
+    <code description="Digital Signal Processing, Restore Logic7">
       <group id="3000">
         <function start="57" end="57" mask="00110000b">00</function>
+      </group>
+    </code>
+  </cafd>
+
+  <cafd id="000010BA" name="LHM2" author="packetpilot" series="F030">
+    <code description="Front Fog-Like VLD: Enable Step 2a [dep: step 1 in FEM_BODY]">
+      <group id="3000">
+        <function start="0" end="6" mask="11111111b">FA, FA, 00, FA, C8, C8, 00</function>
+        <function start="7" end="13" mask="11111111b">FA, FA, 00, FA, C8, C8, 00</function>
+      </group>
+    </code>
+    <code description="Front Fog-Like VLD: Disable Step 2a [reco: revert Step 1 in FEM_Body]">
+      <group id="3000">
+        <function start="0" end="6" mask="11111111b">FA, FA, 00, 00, C8, C8, 00</function>
+        <function start="7" end="13" mask="11111111b">FA, FA, 00, 00, C8, C8, 00</function>
+      </group>
+    </code>
+  </cafd>
+
+  <cafd id="000016BF" name="LHM2" author="packetpilot" series="F030">
+    <code description="Front Fog-Like VLD: Enable Step 2b [dep: step 1 in FEM_BODY]">
+      <group id="3000">
+        <function start="0" end="6" mask="11111111b">FA, FA, 00, FA, C8, C8, 00</function>
+        <function start="7" end="13" mask="11111111b">FA, FA, 00, FA, C8, C8, 00</function>
+      </group>
+    </code>
+    <code description="Front Fog-Like VLD: Disable Step 2b [reco: revert Step 1 in FEM_Body]">
+      <group id="3000">
+        <function start="0" end="6" mask="11111111b">FA, FA, 00, 00, C8, C8, 00</function>
+        <function start="7" end="13" mask="11111111b">FA, FA, 00, 00, C8, C8, 00</function>
       </group>
     </code>
   </cafd>
@@ -100,22 +146,6 @@
         <function start="0" end="15" mask="11111111b">00, 03, 00, 00, 00, 04, 00, 00, 64, 04, 00, 00, 64, 24, 00, 00</function>
       </group>
     </code>
-    <!-- here for testing in isolation>
-    <code description="Turn sidemarker LEDs off [Drv]">
-      <group id="3005">
-        <function start="16" end="31" mask="11111111b">00, 03, 00, 00, 00, 03, 00, 00, 64, 03, 00, 00, 2B, 04, 00, 00</function>
-        <function start="32" end="47" mask="11111111b">00, 03, 00, 00, 00, 03, 00, 00, 64, 03, 00, 00, 2B, 04, 00, 00</function>
-        <function start="80" end="95" mask="11111111b">00, 03, 00, 00, 00, 03, 00, 00, 64, 03, 00, 00, 2E, 04, 00, 00</function>
-      </group>
-    </code>
-    <code description="Turn sidemarker LEDs on [Drv]">
-      <group id="3005">
-        <function start="16" end="31" mask="11111111b">00, 03, 00, 00, 64, 03, 00, 00, 64, 03, 00, 00, 2B, 04, 00, 00</function>
-        <function start="32" end="47" mask="11111111b">00, 03, 00, 00, 64, 03, 00, 00, 64, 03, 00, 00, 2B, 04, 00, 00</function>
-        <function start="80" end="95" mask="11111111b">00, 03, 00, 00, 64, 03, 00, 00, 64, 03, 00, 00, 2E, 04, 00, 00</function>
-      </group>
-    </code>
-    -->
   </cafd>
 
   <cafd id="00001083" name="TMS_03" author="packetpilot" series="F030">
@@ -134,22 +164,6 @@
         <function start="0" end="15" mask="11111111b">00, 03, 00, 00, 00, 04, 00, 00, 64, 04, 00, 00, 64, 24, 00, 00</function>
       </group>
     </code>
-    <!-- here for testing in isolation>
-    <code description="Turn sidemarker LEDs off [Pass]">
-      <group id="3005">
-        <function start="16" end="31" mask="11111111b">00, 03, 00, 00, 00, 03, 00, 00, 64, 03, 00, 00, 2B, 04, 00, 00</function>
-        <function start="32" end="47" mask="11111111b">00, 03, 00, 00, 00, 03, 00, 00, 64, 03, 00, 00, 2B, 04, 00, 00</function>
-        <function start="80" end="95" mask="11111111b">00, 03, 00, 00, 00, 03, 00, 00, 64, 03, 00, 00, 2E, 04, 00, 00</function>
-      </group>
-    </code>
-    <code description="Turn sidemarker LEDs on [Pass]">
-      <group id="3005">
-        <function start="16" end="31" mask="11111111b">00, 03, 00, 00, 64, 03, 00, 00, 64, 03, 00, 00, 2B, 04, 00, 00</function>
-        <function start="32" end="47" mask="11111111b">00, 03, 00, 00, 64, 03, 00, 00, 64, 03, 00, 00, 2B, 04, 00, 00</function>
-        <function start="80" end="95" mask="11111111b">00, 03, 00, 00, 64, 03, 00, 00, 64, 03, 00, 00, 2E, 04, 00, 00</function>
-      </group>
-    </code>
-    -->
   </cafd>
 
 </FDL>

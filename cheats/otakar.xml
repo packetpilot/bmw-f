@@ -12,7 +12,7 @@
 	-->
 	<!--otakar-->
 	<cafd id="00000F9B" name="ASD01" author="otakar">
-		<code description="ASD disable">
+		<code description="ASD: Disable">
 			<group id="3000">
 				<function start="0" end="0" mask="11111111b">05</function>
 				<function start="1" end="1" mask="11111111b">0A</function>
@@ -20,24 +20,24 @@
 		</code>
 	</cafd>
 	<cafd id="00000911" name="ACSM_4B" author="otakar">
-		<code description="Seatbelt reminder sound duration (5secs)">
+		<code description="Seatbelt reminder sound duration: 5 sec">
 			<group id="3001">
 				<function start="3" end="3" mask="11111111b">5</function>
 			</group>
 		</code>
-		<code description="Disable seatbelt reminder sound">
+		<code description="Seatbelt reminder: Disable">
 			<group id="3000">
 				<function start="15" end="15" mask="00000010b">00</function>
 				<function start="15" end="15" mask="00000100b">00</function>
 			</group>
 		</code>
-		<code description="Disable dashboard seatbelt icon">
+		<code description="Dashboard seatbelt icon: Disable">
 			<group id="3000">
 				<function start="15" end="15" mask="00001000b">00</function>
 				<function start="15" end="15" mask="00010000b">00</function>
 			</group>
 		</code>
-		<code description="Disable seatbelt sound on disconnect">
+		<code description="Seatbelt sound on disconnect: Disable">
 			<group id="3000">
 				<function start="16" end="16" mask="00000001b">00</function>
 				<function start="16" end="16" mask="00000010b">00</function>
@@ -45,17 +45,17 @@
 		</code>
 	</cafd>
 	<cafd id="00000794" name="FEM_01" author="otakar">
-		<code description="Turn off Radio-Navigation with Opening Driver Door">
+		<code description="Radio/Navigation: Off with Driver Door Ajar">
 			<group id="3020">
 				<function start="1" end="1" mask="00000001b">01</function>
 			</group>
 		</code>
-		<code description="Auto Start-Stop Always Off">
+		<code description="Auto Start/Stop: Disable">
 			<group id="3023">
 				<function start="0" end="0" mask="00010000b">01</function>
 			</group>
 		</code>
-		<code description="Auto Start-Stop Remember Last Setting">
+		<code description="Auto Start-Stop: Mode Recall (Last Setting)">
 			<group id="3023">
 				<function start="0" end="0" mask="00100000b">01</function>
 			</group>
@@ -65,7 +65,7 @@
 				<function start="1" end="1" mask="10000000b">01</function>
 			</group>
 		</code>
-		<code description="Automatic door lock speed (10km/h = 0A)">
+		<code description="Automatic door lock speed: 10km/h = 0A">
 			<group id="3040">
 				<function start="6" end="6" mask="11111111b">0A</function>
 			</group>
@@ -75,22 +75,27 @@
 				<function start="5" end="5" mask="11111111b">12</function>
 			</group>
 		</code>
-		<code description="Unlock doors on engine off">
+		<code description="Unlock doors on engine off: Enable">
 			<group id="3040">
 				<function start="1" end="1" mask="00000010b">01</function>
 			</group>
 		</code>
-		<code description="Double horn sound when locking car with engine running and FOB outside">
+		<code description="Unlock doors on engine off: Disable">
+			<group id="3040">
+				<function start="1" end="1" mask="00000010b">00</function>
+			</group>
+		</code>
+		<code description="When locking car with engine running and FOB outside: Double Horn">
 			<group id="3040">
 				<function start="1" end="1" mask="00100000b">01</function>
 			</group>
 		</code>
-		<code description="Window still rollup when opening door">
+		<code description="Window Close: Continue when Opening Door">
 			<group id="3050">
 				<function start="0" end="0" mask="00000001b">00</function>
 			</group>
 		</code>
-		<code description="Open/Close windows/mirror/roof from FOB">
+		<code description="Open/Close windows/mirror/roof from FOB: Enable">
 			<group id="3053">
 				<function start="0" end="0" mask="01000000b">00</function>
 				<function start="0" end="0" mask="10000000b">00</function>
@@ -100,7 +105,7 @@
 				<function start="7" end="7" mask="00000001b">01</function>
 			</group>
 		</code>
-		<code description="The window closes, closing the door">
+		<code description="Window Close: Continue when Closing Door">
 			<group id="3053">
 				<function start="1" end="1" mask="00010000b">01</function>
 			</group>
@@ -126,22 +131,22 @@
 				<function start="9" end="9" mask="11111111b">03</function>
 			</group>
 		</code>
-		<code description="3 flashes the turn signals when unlocking">
+		<code description="Unlocking: 3 Indicator Flashes">
 			<group id="3060">
 				<function start="6" end="6" mask="00001100b">03</function>
 			</group>
 		</code>
-		<code description="Blinker indicator amount (3 flashes = 2)">
+		<code description="Blinker Tap: 3 flashes = 02">
 			<group id="3060">
 				<function start="7" end="7" mask="00000111b">02</function>
 			</group>
 		</code>
-		<code description="Emergency brake light mode - flashed">
+		<code description="Emergency Brake Light Mode: Enable Flashing">
 			<group id="3060">
 				<function start="16" end="16" mask="00000011b">02</function>
 			</group>
 		</code>
-		<code description="Enabled daytime running lights">
+		<code description="DRL: Enable">
 			<group id="3060">
 				<function start="31" end="31" mask="00110000b">01</function>
 			</group>
@@ -156,53 +161,53 @@
 				<function start="54" end="54" mask="00001000b">01</function>
 			</group>
 		</code>
-		<code description="Angel Eyes Brightness 50% Headlamp On">
+		<code description="Angel Eyes Brightness: 50% w/ Parking Lights">
+			<group id="3062">
+				<function start="68" end="68" mask="11111111b">32</function>
+				<function start="69" end="69" mask="11111111b">32</function>
+			</group>
+		</code>
+		<code description="Angel Eyes Brightness: 100% w/ Parking Lights">
+			<group id="3062">
+				<function start="68" end="68" mask="11111111b">64</function>
+				<function start="69" end="69" mask="11111111b">64</function>
+			</group>
+		</code>
+		<code description="Angel Eyes Brightness: 50% w/ Headlamps On">
 			<group id="3062">
 				<function start="46" end="46" mask="11111111b">32</function>
 				<function start="57" end="57" mask="11111111b">32</function>
 			</group>
 		</code>
-		<code description="Angel Eyes Brightness 100% Headlamp On">
+		<code description="Angel Eyes Brightness: 100% w/ Headlamp On (for the courtesy-conscious: this is bright for oncoming/preceding vehicles)">
 			<group id="3062">
 				<function start="46" end="46" mask="11111111b">64</function>
 				<function start="57" end="57" mask="11111111b">64</function>
 			</group>
 		</code>
-		<code description="Angel Eyes Parking Light Brightness 50%">
-			<group id="3062">
-				<function start="68" end="68" mask="11111111b">32</function>
-				<function start="80" end="80" mask="11111111b">32</function>
-			</group>
-		</code>
-		<code description="Angel Eyes Parking Light Brightness 100%">
-			<group id="3062">
-				<function start="68" end="68" mask="11111111b">64</function>
-				<function start="80" end="80" mask="11111111b">64</function>
-			</group>
-		</code>
-		<code description="Angel Eyes Brightness 50% DRL">
+		<code description="Angel Eyes Brightness: 50% w/ DRL On">
 			<group id="3062">
 				<function start="90" end="90" mask="11111111b">32</function>
 				<function start="101" end="101" mask="11111111b">32</function>
 			</group>
 		</code>
-		<code description="Angel Eyes Brightness 100% DRL">
+		<code description="Angel Eyes Brightness: 100% w/ DRL On">
 			<group id="3062">
 				<function start="90" end="90" mask="11111111b">64</function>
 				<function start="101" end="101" mask="11111111b">64</function>
 			</group>
 		</code>
-		<code description="Enable muliple blinker">
+		<code description="Muliple Blinker: Enable">
 			<group id="3064">
 				<function start="215" end="215" mask="00000001b">01</function>
 			</group>
 		</code>
-		<code description="Ambient light full bright">
+		<code description="Ambient Light: full brightness">
 			<group id="3070">
 				<function start="5" end="5" mask="11111111b">99</function>
 			</group>
 		</code>
-		<code description="Ambient light independent from cluster light">
+		<code description="Ambient light: independent from cluster brightness">
 			<group id="3070">
 				<function start="4" end="4" mask="10000000b">00</function>
 			</group>
@@ -212,7 +217,7 @@
 				<function start="11" end="11" mask="00010000b">01</function>
 			</group>
 		</code>
-		<code description="Variable light distribution">
+		<code description="Variable Light Distribution: Enable">
 			<group id="3073">
 				<function start="40" end="42" mask="11111111b">9C, 9C, 9C</function>
 				<function start="152" end="152" mask="00000001b">01</function>
@@ -255,149 +260,154 @@
 		</code>
 	</cafd>
 	<cafd id="000016EE" name="IHKA_VA02" author="otakar">
-		<code description="AC Recirc Last Settings Memory">
+		<code description="AC Recirc: Mode Recall (Last Settings)">
 			<group id="3003">
 				<function start="0" end="0" mask="00000001b">01</function>
 			</group>
 		</code>
-		<code description="AC Last Settings Memory">
+		<code description="AC Mode: Mode Recall (Last Settings)">
 			<group id="3003">
 				<function start="0" end="0" mask="00000010b">01</function>
 			</group>
 		</code>
 	</cafd>
 	<cafd id="000009C8" name="KOMBI L7_MID" author="otakar">
-		<code description="BMW Logo   M135i">
+		<code description="BMW Logo: M135i">
 			<group id="3000">
 				<function start="0" end="0" mask="11110000b">02</function>
 			</group>
 		</code>
-		<code description="BMW Logo   M235i">
+		<code description="BMW Logo: M235i">
 			<group id="3000">
 				<function start="0" end="0" mask="11110000b">03</function>
 			</group>
 		</code>
-		<code description="BMW Logo   340i">
+		<code description="BMW Logo: 340i">
 			<group id="3000">
 				<function start="0" end="0" mask="11110000b">04</function>
 			</group>
 		</code>
-		<code description="BMW Logo   50d">
+		<code description="BMW Logo: 50d">
 			<group id="3000">
 				<function start="0" end="0" mask="11110000b">05</function>
 			</group>
 		</code>
-		<code description="BMW Logo   M3">
+		<code description="BMW Logo: M3">
 			<group id="3000">
 				<function start="0" end="0" mask="11110000b">06</function>
 			</group>
 		</code>
-		<code description="BMW Logo   M4">
+		<code description="BMW Logo: M4">
 			<group id="3000">
 				<function start="0" end="0" mask="11110000b">07</function>
 			</group>
 		</code>
-		<code description="BMW Logo   eDrive">
+		<code description="BMW Logo: eDrive">
 			<group id="3000">
 				<function start="0" end="0" mask="11110000b">0B</function>
 			</group>
 		</code>
-		<code description="BMW Logo   BMW">
+		<code description="BMW Logo: BMW">
 			<group id="3000">
 				<function start="0" end="0" mask="11110000b">0C</function>
 			</group>
 		</code>
-		<code description="BMW Logo   M2">
+		<code description="BMW Logo: M2">
 			<group id="3000">
 				<function start="0" end="0" mask="11110000b">0D</function>
 			</group>
 		</code>
-		<code description="BMW Logo   M140i">
+		<code description="BMW Logo: M140i">
 			<group id="3000">
 				<function start="0" end="0" mask="11110000b">0E</function>
 			</group>
 		</code>
-		<code description="BMW Logo   M240i">
+		<code description="BMW Logo: M240i">
 			<group id="3000">
 				<function start="0" end="0" mask="11110000b">0F</function>
 			</group>
 		</code>
-		<code description="Digital Speed Display">
+		<code description="Digital Speed Display: Enable">
 			<group id="3000">
 				<function start="1" end="1" mask="00000010b">01</function>
 			</group>
 		</code>
-		<code description="Disable Speed Correction">
+		<code description="Speed Correction: Disable">
 			<group id="3000">
 				<function start="1" end="1" mask="01000000b">00</function>
 			</group>
 		</code>
-		<code description="Clock Synchronization via GPS">
+		<code description="Clock Sync: via GPS">
 			<group id="3000">
 				<function start="1" end="1" mask="10000000b">01</function>
 			</group>
 		</code>
-		<code description="Temperature warning for cold countries">
+		<code description="Temperature Warning: Cold Climate Thresholds">
 			<group id="3000">
 				<function start="30" end="30" mask="00000001b">01</function>
 			</group>
 		</code>
-		<code description="Motortemp enable">
+		<code description="Temperature Warning: Normal Climate Thresholds">
+			<group id="3000">
+				<function start="30" end="30" mask="00000001b">00</function>
+			</group>
+		</code>
+		<code description="Motortemp: Enable">
 			<group id="3000">
 				<function start="42" end="42" mask="00010000b">01</function>
 			</group>
 		</code>
-		<code description="M digi tacho - km/h">
+		<code description="M digi tacho: km/h">
 			<group id="3000">
 				<function start="42" end="42" mask="11000000b">01</function>
 			</group>
 		</code>
-		<code description="dsc off unbundling enable">
+		<code description="DSC off: unbundling enable">
 			<group id="3000">
 				<function start="43" end="43" mask="00000010b">01</function>
 			</group>
 		</code>
-		<code description="MPM Logo   AG">
+		<code description="MPM Logo: AG">
 			<group id="3000">
 				<function start="43" end="43" mask="11110000b">00</function>
 			</group>
 		</code>
-		<code description="MPM Logo   550d">
+		<code description="MPM Logo: 550d">
 			<group id="3000">
 				<function start="43" end="43" mask="11110000b">01</function>
 			</group>
 		</code>
-		<code description="MPM Logo   M135i">
+		<code description="MPM Logo: M135i">
 			<group id="3000">
 				<function start="43" end="43" mask="11110000b">02</function>
 			</group>
 		</code>
-		<code description="MPM Logo   M235i">
+		<code description="MPM Logo: M235i">
 			<group id="3000">
 				<function start="43" end="43" mask="11110000b">03</function>
 			</group>
 		</code>
-		<code description="MPM Logo   340i">
+		<code description="MPM Logo: 340i">
 			<group id="3000">
 				<function start="43" end="43" mask="11110000b">04</function>
 			</group>
 		</code>
-		<code description="MPM Logo   50d">
+		<code description="MPM Logo: 50d">
 			<group id="3000">
 				<function start="43" end="43" mask="11110000b">05</function>
 			</group>
 		</code>
-		<code description="MPM Logo   eDrive">
+		<code description="MPM Logo: eDrive">
 			<group id="3000">
 				<function start="43" end="43" mask="11110000b">0B</function>
 			</group>
 		</code>
-		<code description="MPM Logo   M140i">
+		<code description="MPM Logo: M140i">
 			<group id="3000">
 				<function start="43" end="43" mask="11110000b">0E</function>
 			</group>
 		</code>
-		<code description="MPM Logo   M240i">
+		<code description="MPM Logo: M240i">
 			<group id="3000">
 				<function start="43" end="43" mask="11110000b">0F</function>
 			</group>

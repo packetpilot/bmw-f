@@ -43,14 +43,14 @@
 		</code>
 	</cafd>
 	<cafd id="000001082" name="TMS" author="dmnc02">
-		<code description="Turn sidemarker LEDs off (driver side)">
+		<code description="Sidemarker LEDs: Disable (driver side)">
 			<group id="3005">
 				<function start="16" end="31" mask="11111111b">00, 03, 00, 00, 00, 03, 00, 00, 64, 03, 00, 00, 2B, 04, 00, 00</function>
 				<function start="32" end="47" mask="11111111b">00, 03, 00, 00, 00, 03, 00, 00, 64, 03, 00, 00, 2B, 04, 00, 00</function>
 				<function start="80" end="95" mask="11111111b">00, 03, 00, 00, 00, 03, 00, 00, 64, 03, 00, 00, 2E, 04, 00, 00</function>
 			</group>
 		</code>
-		<code description="Turn sidemarker LEDs on (driver side)">
+		<code description="Sidemarker LEDs: Enable (driver side)">
 			<group id="3005">
 				<function start="16" end="31" mask="11111111b">00, 03, 00, 00, 64, 03, 00, 00, 64, 03, 00, 00, 2B, 04, 00, 00</function>
 				<function start="32" end="47" mask="11111111b">00, 03, 00, 00, 64, 03, 00, 00, 64, 03, 00, 00, 2B, 04, 00, 00</function>
@@ -59,14 +59,14 @@
 		</code>
 	</cafd>
 	<cafd id="000001083" name="TMS" author="dmnc02">
-		<code description="Turn sidemarker LEDs off (passenger side)">
+		<code description="Sidemarker LEDs: Disable (passenger side)">
 			<group id="3005">
 				<function start="16" end="31" mask="11111111b">00, 03, 00, 00, 00, 03, 00, 00, 64, 03, 00, 00, 2B, 04, 00, 00</function>
 				<function start="32" end="47" mask="11111111b">00, 03, 00, 00, 00, 03, 00, 00, 64, 03, 00, 00, 2B, 04, 00, 00</function>
 				<function start="80" end="95" mask="11111111b">00, 03, 00, 00, 00, 03, 00, 00, 64, 03, 00, 00, 2E, 04, 00, 00</function>
 			</group>
 		</code>
-		<code description="Turn sidemarker LEDs on (passenger side)">
+		<code description="Sidemarker LEDs: Enable (passenger side)">
 			<group id="3005">
 				<function start="16" end="31" mask="11111111b">00, 03, 00, 00, 64, 03, 00, 00, 64, 03, 00, 00, 2B, 04, 00, 00</function>
 				<function start="32" end="47" mask="11111111b">00, 03, 00, 00, 64, 03, 00, 00, 64, 03, 00, 00, 2B, 04, 00, 00</function>

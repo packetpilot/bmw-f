@@ -2,7 +2,7 @@
 <FDL>
 	<!--aknight720-->
 	<cafd id="000000F9" name="HU_CICHB" author="aknight720">
-		<code description="FDL Code EBT 6NL">
+		<code description="FDL Code: EBT 6NL">
 			<group id="3000">
 				<function start="03" end="03" mask="01000000b">nicht_aktiv</function>
 				<function start="04" end="04" mask="00000001b">nicht_aktiv</function>

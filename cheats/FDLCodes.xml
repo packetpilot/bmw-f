@@ -10,49 +10,49 @@
 		</code>
 	</cafd>
 	-->
-	<cafd id="00000794" name="FEM_BODY">
-		<code description="Angel Eyes Parking Light Brightness 50%">
+	<cafd id="00000794" name="FEM_01 BODY">
+		<code description="Angel Eyes Brightness: 50% w/ Parking Lights">
 			<group id="3062">
 				<function start="68" end="68" mask="11111111b">32</function>
-				<function start="80" end="80" mask="11111111b">32</function>
+				<function start="69" end="69" mask="11111111b">32</function>
 			</group>
 		</code>
-		<code description="Angel Eyes Parking Light Brightness 100%">
+		<code description="Angel Eyes Brightness: 100% w/ Parking Lights">
 			<group id="3062">
 				<function start="68" end="68" mask="11111111b">64</function>
-				<function start="80" end="80" mask="11111111b">64</function>
+				<function start="69" end="69" mask="11111111b">64</function>
 			</group>
 		</code>
-		<code description="Angel Eyes Brightness 50% Headlamp On">
+		<code description="Angel Eyes Brightness: 50% w/ Headlamps On">
 			<group id="3062">
 				<function start="46" end="46" mask="11111111b">32</function>
 				<function start="57" end="57" mask="11111111b">32</function>
 			</group>
 		</code>
-		<code description="Angel Eyes Brightness 100% Headlamp On">
+		<code description="Angel Eyes Brightness: 100% w/ Headlamp On (for the courtesy-conscious: this is bright for oncoming/preceding vehicles)">
 			<group id="3062">
 				<function start="46" end="46" mask="11111111b">64</function>
 				<function start="57" end="57" mask="11111111b">64</function>
 			</group>
 		</code>
-		<code description="Angel Eyes Brightness 50% DRL">
+		<code description="Angel Eyes Brightness: 50% w/ DRL On">
 			<group id="3062">
 				<function start="90" end="90" mask="11111111b">32</function>
 				<function start="101" end="101" mask="11111111b">32</function>
 			</group>
 		</code>
-		<code description="Angel Eyes Brightness 100% DRL">
+		<code description="Angel Eyes Brightness: 100% w/ DRL On">
 			<group id="3062">
 				<function start="90" end="90" mask="11111111b">64</function>
 				<function start="101" end="101" mask="11111111b">64</function>
 			</group>
 		</code>
-		<code description="Enable DRL">
+		<code description="DRL: Enable">
 			<group id="3060">
 				<function start="31" end="31" mask="00110000b">TFL_S</function>
 			</group>
 		</code>
-		<code description="Cornering Lights">
+		<code description="Cornering Lights: Enable">
 			<group id="3073">
 				<function start="218" end="218" mask="00000010b">01</function>
 				<function start="66" end="66" mask="00000001b">01</function>
@@ -66,74 +66,74 @@
 				<function start="110" end="110" mask="00111111b">0B</function>
 			</group>
 		</code>
-		<code description="Fog Lamps Welcome Light">
+		<code description="Fog Lamps Welcome Light: Enable">
 			<group id="3063">
 				<function start="55" end="55" mask="11000000b">Soft_On</function>
 				<function start="66" end="66" mask="11000000b">Soft_On</function>
 			</group>
 		</code>
-		<code description="Auto Start/Stop Always Off">
+		<code description="Auto Start/Stop: Disable">
 			<group id="3023">
 				<function start="0" end="0" mask="00010000b">Aktiv</function>
 			</group>
 		</code>
-		<code description="Auto Start/Stop Remember Last Setting">
+		<code description="Auto Start/Stop: Mode Recall (Last Setting)">
 			<group id="3023">
 				<function start="0" end="0" mask="00100000b">Aktiv</function>
 			</group>
 		</code>
-		<code description="Turn off Radio/Navigation with Opening Driver Door">
+		<code description="Radio/Navigation: Off with Driver Door Ajar">
 			<group id="3020">
 				<function start="1" end="1" mask="00000001b">Aktiv</function>
 			</group>
 		</code>
 	</cafd>
 	<cafd id="00000A3F" name="IHKA">
-		<code description="AC Last Settings Memory">
+		<code description="AC Mode Recall (Last Setting): Enable">
 			<group id="3002">
 				<function start="0" end="0" mask="00000010b">Aktiv</function>
 			</group>
 		</code>
-		<code description="AC Recirc Last Settings Memory">
+		<code description="AC Recirc Mode Recall: Enable">
 			<group id="3002">
 				<function start="0" end="0" mask="00000001b">Aktiv</function>
 			</group>
 		</code>
 	</cafd>
 	<cafd id="000009C8" name="KOMBI">
-		<code description="Digital Speed Display">
+		<code description="Digital Speed Display: Enable">
 			<group id="3000">
 				<function start="1" end="1" mask="00000010b">Aktiv</function>
 			</group>
 		</code>
-		<code description="Disable Speed Correction">
+		<code description="Speed Correction: Disable">
 			<group id="3000">
 				<function start="1" end="1" mask="01000000b">Nicht_Aktiv</function>
 			</group>
 		</code>
-		<code description="M Performance Logo">
+		<code description="Logo: M Performance">
 			<group id="3000">
 				<function start="0" end="0" mask="11110000b">01</function>
 			</group>
 		</code>
-		<code description="Clock Synchronization via GPS">
+		<code description="Clock: Sync via GPS">
 			<group id="3000">
 				<function start="1" end="1" mask="10000000b">Aktiv</function>
 			</group>
 		</code>
 	</cafd>
 	<cafd id="00000DED" name="NBT">
-		<code description="Disable Legal Disclaimer">
+		<code description="Legal Disclaimer: Disable">
 			<group id="3001">
 				<function start="58" end="58" mask="11111111b">00</function>
 			</group>
 		</code>
-		<code description="Disable Camera/PDC Legal Disclaimer">
+		<code description="Camera/PDC Legal Disclaimer: Disable">
 			<group id="3001">
 				<function start="52" end="52" mask="11111111b">00</function>
 			</group>
 		</code>
-		<code description="Show DRL Option in iDrive">
+		<code description="DRL Option in iDrive: Enable">
 			<group id="3000">
 				<function start="92" end="92" mask="00011000b">perm_on</function>
 			</group>
@@ -143,39 +143,39 @@
 				<function start="55" end="55" mask="00011000b">popup_and_config</function>
 			</group>
 		</code>
-		<code description="Show Tire Pressure and Temperature in iDrive">
+		<code description="Display Tire Pressure and Temperature in iDrive: Enable">
 			<group id="3001">
 				<function start="1" end="1" mask="00100000b">Aktiv</function>
 				<function start="66" end="66" mask="00001100b">02</function>
 			</group>
 		</code>
-		<code description="Show Volume Popup Display">
+		<code description="Display Volume Level Popup">
 			<group id="3002">
 				<function start="52" end="52" mask="01000000b">Aktiv</function>
 			</group>
 		</code>
-		<code description="Enable Route Preview">
+		<code description="Route Preview: Enable">
 			<group id="3000">
 				<function start="135" end="135" mask="00001000b">Aktiv</function>
 				<function start="111" end="111" mask="00001000b">Aktiv</function>
 			</group>
 		</code>
-		<code description="Enable Road Preview">
+		<code description="Road Preview: Enable">
 			<group id="3000">
 				<function start="59" end="59" mask="00100000b">Aktiv</function>
 			</group>
 		</code>
-		<code description="Enable Trip Import via USB">
+		<code description="Trip Import via USB: Enable">
 			<group id="3000">
 				<function start="61" end="61" mask="00000001b">Aktiv</function>
 			</group>
 		</code>
-		<code description="Activate Siri Eyes-Free">
+		<code description="Siri Eyes-Free: Enable">
 			<group id="3003">
 				<function start="3" end="3" mask="00001000b">Aktiv</function>
 			</group>
 		</code>
-		<code description="Enable Traffic Information via TMC">
+		<code description="Traffic Information via TMC: Enable">
 			<group id="3000">
 				<function start="59" end="59" mask="00010000b">Aktiv</function>
 			</group>
@@ -186,32 +186,32 @@
 			</group>
 		</code>
 
-		<code description="Online Entertainment">
+		<code description="Online Entertainment: Enable">
 			<group id="3000">
 				<function start="10" end="10" mask="00001000b">01</function>
 				<function start="10" end="10" mask="00010000b">01</function>
 			</group>
 		</code>
 
-		<code description="Video Support">
+		<code description="Video Support: Enable">
 			<group id="3000">
 				<function start="13" end="13" mask="00000100b">01</function>
 			</group>
 		</code>
 
-		<code description="Enable Import of Customer Playlists Through the Optical Drive">
+		<code description="Import of Customer Playlists via Optical Disc: Enable">
 			<group id="3000">
 				<function start="13" end="13" mask="00001000b">01</function>
 			</group>
 		</code>
 
-		<code description="Enable Function to Bookmark Current Playback Position of Music File From the Music Collection">
+		<code description="Function to Bookmark Current Playback Position of Music File From the Music Collection: Enable">
 			<group id="3000">
 				<function start="14" end="14" mask="00000100b">01</function>
 			</group>
 		</code>
 
-		<code description="Enables Scaling of Album-Cover from Gracenote for Audio-CDs to full-size">
+		<code description="Album Art: Scale Gracenote Assets to Full Size">
 			<group id="3000">
 				<function start="14" end="14" mask="00100000b">01</function>
 			</group>
@@ -223,55 +223,55 @@
 			</group>
 		</code>
 
-		<code description="Gracenote via USB Enable">
+		<code description="Gracenote via USB: Enable">
 			<group id="3000">
 				<function start="15" end="15" mask="00000010b">01</function>
 			</group>
 		</code>
 
-		<code description="Video Codec OGG">
+		<code description="Video Codec: Enable OGG">
 			<group id="3000">
 				<function start="15" end="15" mask="00010000b">01</function>
 			</group>
 		</code>
 
-		<code description="Video Codec XVID">
+		<code description="Video Codec: Enable XVID">
 			<group id="3000">
 				<function start="15" end="15" mask="00100000b">01</function>
 			</group>
 		</code>
 
-		<code description="Video Codec VCD">
+		<code description="Video Codec: Enable VCD">
 			<group id="3000">
 				<function start="15" end="15" mask="01000000b">01</function>
 			</group>
 		</code>
 
-		<code description="Traffic Info Categories in the HMI enable">
+		<code description="Traffic Info Categories in the HMI: Enable">
 			<group id="3000">
 				<function start="16" end="16" mask="00000010b">01</function>
 			</group>
 		</code>
 
-		<code description="Auto Map ZOOM enable">
+		<code description="Auto Map Zoom: Enable">
 			<group id="3000">
 				<function start="16" end="16" mask="00001000b">01</function>
 			</group>
 		</code>
 
-		<code description="Apple Enhancements">
+		<code description="Apple Enhancements: Enable">
 			<group id="3000">
 				<function start="22" end="22" mask="10000000b">01</function>
 			</group>
 		</code>
 
-		<code description="Online Entertainment Login Speedlimit Disable">
+		<code description="Online Entertainment Login Speedlimit: Disable">
 			<group id="3000">
 				<function start="33" end="33" mask="10000000b">00</function>
 			</group>
 		</code>
 
-		<code description="Display Full Messages While Driving">
+		<code description="Display Full Messages While Driving: Enable">
 			<group id="3000">
 				<function start="56" end="56" mask="00001110b">00</function>
 			</group>
@@ -280,49 +280,49 @@
 			</group>
 		</code>
 
-		<code description="Enable Destination Import via USB">
+		<code description="Destination Import via USB: Enable">
 			<group id="3000">
 				<function start="61" end="61" mask="00000100b">01</function>
 			</group>
 		</code>
 
-		<code description="Enable Destination Export via USB">
+		<code description="Destination Export via USB: Enable">
 			<group id="3000">
 				<function start="61" end="61" mask="00001000b">01</function>
 			</group>
 		</code>
 
-		<code description="Enable MyPOI Import via USB">
+		<code description="MyPOI Import via USB: Enable">
 			<group id="3000">
 				<function start="61" end="61" mask="00010000b">01</function>
 			</group>
 		</code>
 
-		<code description="Enable MyPOI Export via USB">
+		<code description="MyPOI Export via USB: Enable">
 			<group id="3000">
 				<function start="61" end="61" mask="00100000b">01</function>
 			</group>
 		</code>
 
-		<code description="Map Arrow View">
+		<code description="Map Arrow View: Enable">
 			<group id="3000">
 				<function start="62" end="62" mask="00000100b">01</function>
 			</group>
 		</code>
 
-		<code description="Route Study">
+		<code description="Route Study: Enable">
 			<group id="3000">
 				<function start="62" end="62" mask="00100000b">01</function>
 			</group>
 		</code>
 
-		<code description="Distance Unit Km Only">
+		<code description="Distance Unit: Km Only">
 			<group id="3000">
 				<function start="65" end="65" mask="01110000b">03</function>
 			</group>
 		</code>
 
-		<code description="Enable DVD/Video in motion">
+		<code description="DVD/Video in motion: Enable">
 			<group id="3000">
 				<function start="71" end="71" mask="11111111b">FF</function>
 				<function start="72" end="72" mask="11111111b">FF</function>
@@ -332,175 +332,175 @@
 			</group>
 		</code>
 
-		<code description="NAVI Position menu">
+		<code description="Menu: Navi Position Enable">
 			<group id="3000">
 				<function start="96" end="96" mask="10000000b">01</function>
 			</group>
 		</code>
 
-		<code description="Menu Express roads">
+		<code description="Menu: Express Roads Enable">
 			<group id="3000">
 				<function start="108" end="108" mask="00000100b">01</function>
 			</group>
 		</code>
 
-		<code description="High Beam Assistant">
+		<code description="High Beam Assistant: Enable">
 			<group id="3000">
 				<function start="109" end="109" mask="10000000b">01</function>
 			</group>
 		</code>
 
-		<code description="Lock/Unlock Sound Confirm Checkbox With alarm only">
+		<code description="Lock/Unlock Sound Confirm Checkbox: alarm only">
 			<group id="3000">
 				<function start="110" end="110" mask="00000001b">01</function>
 			</group>
 		</code>
 
-		<code description="NAVI Enable the 2 Step Guiding Advice Output">
+		<code description="Navi 2-Step Guiding Advice Output: Enable">
 			<group id="3000">
 				<function start="111" end="111" mask="00000010b">01</function>
 			</group>
 		</code>
 
-		<code description="NAVI Autozoom">
+		<code description="Navi Autozoom: Enable">
 			<group id="3000">
 				<function start="111" end="111" mask="00000100b">01</function>
 			</group>
 		</code>
 
-		<code description="Enable NAVI Route Management">
+		<code description="Navi Route Management: Enable">
 			<group id="3000">
 				<function start="111" end="111" mask="00010000b">01</function>
 			</group>
 		</code>
 
-		<code description="Enable POI Alert">
+		<code description="POI Alert: Enable">
 			<group id="3000">
 				<function start="111" end="111" mask="10000000b">01</function>
 			</group>
 		</code>
 
-		<code description="Startup Animation - Black">
+		<code description="Startup Display: Black">
 			<group id="3001">
 				<function start="62" end="62" mask="00000110b">00</function>
 			</group>
 		</code>
 
-		<code description="Startup Animation - Splash">
+		<code description="Startup Display: Splash">
 			<group id="3001">
 				<function start="62" end="62" mask="00000110b">01</function>
 			</group>
 		</code>
 
-		<code description="Startup Animation - Animation">
+		<code description="Startup Display: Animation">
 			<group id="3001">
 				<function start="62" end="62" mask="00000110b">02</function>
 			</group>
 		</code>
 
-		<code description="Startup Emblem BMW ConnectedDrive">
+		<code description="Startup Emblem: BMW ConnectedDrive">
 			<group id="3001">
 				<function start="62" end="62" mask="01111000b">00</function>
 			</group>
 		</code>
 
-		<code description="Startup Emblem ///M">
+		<code description="Startup Emblem: ///M">
 			<group id="3001">
 				<function start="62" end="62" mask="01111000b">01</function>
 			</group>
 		</code>
 
-		<code description="Startup Emblem Alpina">
+		<code description="Startup Emblem: Alpina">
 			<group id="3001">
 				<function start="62" end="62" mask="01111000b">02</function>
 			</group>
 		</code>
 
-		<code description="Startup Emblem BMW i">
+		<code description="Startup Emblem: BMW i">
 			<group id="3001">
 				<function start="62" end="62" mask="01111000b">03</function>
 			</group>
 		</code>
 
-		<code description="Startup Emblem MINI">
+		<code description="Startup Emblem: MINI">
 			<group id="3001">
 				<function start="62" end="62" mask="01111000b">04</function>
 			</group>
 		</code>
 
-		<code description="Startup Emblem RollsRoyce">
+		<code description="Startup Emblem: RollsRoyce">
 			<group id="3001">
 				<function start="62" end="62" mask="01111000b">05</function>
 			</group>
 		</code>
 
-		<code description="Startup Emblem BMW ConnectedDrive">
+		<code description="Startup Emblem: BMW ConnectedDrive">
 			<group id="3001">
 				<function start="62" end="62" mask="01111000b">06</function>
 			</group>
 		</code>
 
-		<code description="Startup Emblem BMW (smaller)">
+		<code description="Startup Emblem: BMW (smaller)">
 			<group id="3001">
 				<function start="62" end="62" mask="01111000b">07</function>
 			</group>
 		</code>
 
-		<code description="Startup Emblem BMW (bigger)">
+		<code description="Startup Emblem: BMW (bigger)">
 			<group id="3001">
 				<function start="62" end="62" mask="01111000b">08</function>
 			</group>
 		</code>
 
-		<code description="Startup Emblem Merry Christmas">
+		<code description="Startup Emblem: Merry Christmas">
 			<group id="3001">
 				<function start="62" end="62" mask="01111000b">09</function>
 			</group>
 		</code>
 
-		<code description="One microphone">
+		<code description="Microphone Qty: 1">
 			<group id="3002">
 				<function start="55" end="55" mask="00110000b">01</function>
 			</group>
 		</code>
 
-		<code description="Ringtone from phone">
+		<code description="Ringtone: From Phone">
 			<group id="3003">
 				<function start="6" end="6" mask="10000000b">01</function>
 			</group>
 		</code>
 
-		<code description="Contacts Phone/NAVI separated">
+		<code description="Contacts: Phone/Navi Separated">
 			<group id="3003">
 				<function start="8" end="8" mask="00000100b">01</function>
 			</group>
 		</code>
 
-		<code description="ringtone BMW">
+		<code description="Ringtone: BMW">
 			<group id="3003">
 				<function start="8" end="8" mask="00000011b">00</function>
 			</group>
 		</code>
 
-		<code description="ringtone MINI">
+		<code description="Ringtone: MINI">
 			<group id="3003">
 				<function start="8" end="8" mask="00000011b">01</function>
 			</group>
 		</code>
 
-		<code description="ringtone BMW i">
+		<code description="Ringtone: BMW i">
 			<group id="3003">
 				<function start="8" end="8" mask="00000011b">02</function>
 			</group>
 		</code>
 
-		<code description="ringtone RR">
+		<code description="Ringtone: Rolls-Royce">
 			<group id="3003">
 				<function start="8" end="8" mask="00000011b">03</function>
 			</group>
 		</code>
 
-		<code description="API USB read-write">
+		<code description="API: USB Read-Write Enable">
 			<group id="3003">
 				<function start="22" end="22" mask="10000000b">01</function>
 			</group>

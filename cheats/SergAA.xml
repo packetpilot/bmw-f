@@ -2,42 +2,42 @@
 <FDL>
 	<!--SergAA-->
 	<cafd id="00001060" name="DKOMBI 6WB" author="SergAA" series="F010">
-		<code description="Startup screen - BMW (standard)">
+		<code description="Startup Screen: BMW (standard)">
 			<group id="3000">
 				<function start="44" end="44" mask="00001111b">00</function>
 			</group>
 		</code>
-		<code description="Startup screen - M">
+		<code description="Startup Screen: M">
 			<group id="3000">
 				<function start="44" end="44" mask="00001111b">01</function>
 			</group>
 		</code>
-		<code description="Startup screen - BMW i">
+		<code description="Startup Screen: BMW i">
 			<group id="3000">
 				<function start="44" end="44" mask="00001111b">03</function>
 			</group>
 		</code>
-		<code description="Startup screen - X5M">
+		<code description="Startup Screen: X5M">
 			<group id="3000">
 				<function start="44" end="44" mask="00001111b">08</function>
 			</group>
 		</code>
-		<code description="Startup screen - X6M">
+		<code description="Startup Screen: X6M">
 			<group id="3000">
 				<function start="44" end="44" mask="00001111b">09</function>
 			</group>
 		</code>
-		<code description="ECO Pro sailing display">
+		<code description="ECO Pro Sailing Display: Enable">
 			<group id="3003">
 				<function start="4" end="4" mask="00010000b">01</function>
 			</group>
 		</code>
-		<code description="Entertainment display in HUD">
+		<code description="Entertainment display in HUD: Enable">
 			<group id="3003">
 				<function start="10" end="10" mask="00000001b">01</function>
 			</group>
 		</code>
-		<code description="HorsePower display on">
+		<code description="Horsepower Display: Enable">
 			<group id="3003">
 				<function start="11" end="11" mask="00000010b">01</function>
 			</group>
@@ -47,12 +47,12 @@
 
 
 <cafd id="0000000F" name="CAS_04" author="SergAA" series="F010">
-  <code description="Start Stop - default OFF">
+  <code description="Auto Start/Stop: Default Off">
    <group id="3000">
     <function start="3" end="3" mask="00010000b">01</function>
    </group>
   </code>
-  <code description="Start Stop - memory">
+  <code description="Start Stop: Mode Recall (Last Setting)">
    <group id="3000">
     <function start="3" end="3" mask="00100000b">01</function>
    </group>
@@ -61,7 +61,7 @@
 
 
  <cafd id="000001A7" name="DME DDE" author="SergAA" series="F010">
-  <code description="Recuperation off - always charge">
+  <code description="Recuperation off: always charge">
    <group id="3701">
     <function start="2" end="2" mask="00000001b">00</function>
    </group>
@@ -83,12 +83,12 @@
     <function start="1" end="1" mask="00000011b">02</function>
    </group>
   </code>
-  <code description="Enable High Beam Assistant FLA">
+  <code description="High Beam Assistant FLA: Enable">
    <group id="3050">
     <function start="0" end="0" mask="00000001b">01</function>
    </group>
   </code>
-  <code description="Enable High Beam GlareFree">
+  <code description="High Beam GlareFree: Enable">
    <group id="3050">
     <function start="0" end="0" mask="10000000b">01</function>
    </group>

@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <FDL>
-  <!-- packetpilot -->
-  <cafd id="00000794" name="FEM_01" author="packetpilot" series="F030">
-    <code description="Rear Fog Switch: Enable [dep: switch or blank mod]">
-      <group id="3060">
-        <function start="7" end="7" mask="00001000b">01</function>
+
+  <!-- Sample Only
+  <cafd id="00000794" name="FEM_BODY" series="F020,F030">
+    <code description="Angel Eyes Parking Light Brightness 50%" series="F020,F030">
+      <group id="3062">
+        <function start="68" end="68" mask="11111111b" comment="MAPPING_STANDL_V_L_PWM Level 1 - Left">32</function>
+        <function start="80" end="80" mask="11111111b" comment="This is a comment...">32</function>
       </group>
     </code>
-    <code description="Rear Fog Switch: Disable">
-      <group id="3060">
-        <function start="7" end="7" mask="00001000b">00</function>
-      </group>
-    </code>
+  </cafd>
+  -->
+
+  <!-- packetpilot
+    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    !! I'm new at this; feedback is welcomed. !!
+    !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  -->
+  <cafd id="00000794" name="FEM_01" author="packetpilot" series="F020,F030">
+    <!-- remote close/open -->
     <code description="Fold/Unfold Mirrors: Enable w/ Fob and Comfort Access, Min Delay">
       <group id="3053">
         <function start="0" end="0" mask="01000000b">00</function>
@@ -36,6 +43,17 @@
       <group id="3110">
         <function start="1" end="1" mask="00000001b">00</function>
         <function start="8" end="8" mask="00000001b">00</function>
+      </group>
+    </code>
+    <!-- lighting -->
+    <code description="Rear Fog Switch: Enable [dep: switch or blank mod]">
+      <group id="3060">
+        <function start="7" end="7" mask="00001000b">01</function>
+      </group>
+    </code>
+    <code description="Rear Fog Switch: Disable">
+      <group id="3060">
+        <function start="7" end="7" mask="00001000b">00</function>
       </group>
     </code>
     <code description="Front Fog-Like VLD: Enable Step 1 [dep: switch or blank mod, VLD]">
@@ -84,10 +102,46 @@
         <function start="29" end="29" mask="01000000b">00</function>
       </group>
     </code>
-
+    <!-- washers -->
+    <code description="Headlight Washer: Disable">
+      <group id="3080">
+        <function start="8" end="8" mask="00000001b" comment="WW_SCHEINWERFERREINIGUNG">nicht_aktiv</function>
+      </group>
+    </code>
+    <code description="Headlight Washer: Enable">
+      <group id="3080">
+        <function start="8" end="8" mask="00000001b" comment="WW_SCHEINWERFERREINIGUNG">aktiv</function>
+      </group>
+    </code>
+    <code description="Headlight Washer NummerSpritzen: 2 squirts">
+      <group id="3080">
+        <function start="8" end="8" mask="00011000b" comment="WW_ANZAHL_SPRITZIMPULSE_SRA">02</function>
+      </group>
+    </code>
+    <code description="Headlight Washer NummerSpritzen: 3 squirts">
+      <group id="3080">
+        <function start="8" end="8" mask="00011000b" comment="WW_ANZAHL_SPRITZIMPULSE_SRA">03</function>
+      </group>
+    </code>
+    <code description="Headlight Washer: Activate Every 2 Windshield Washes">
+      <group id="3080">
+        <function start="2" end="2" mask="00011110b" comment="WW_ANZAHL_WASCHBET_ZUR_SRA">02</function>
+      </group>
+    </code>
+    <code description="Headlight Washer: Activate Every 4 Windshield Washes">
+      <group id="3080">
+        <function start="2" end="2" mask="00011110b" comment="WW_ANZAHL_WASCHBET_ZUR_SRA">04</function>
+      </group>
+    </code>
+    <code description="Headlight Washer: Activate Every 8 Windshield Washes">
+      <group id="3080">
+        <function start="2" end="2" mask="00011110b" comment="WW_ANZAHL_WASCHBET_ZUR_SRA">08</function>
+      </group>
+    </code>
   </cafd>
 
-  <cafd id="000007A1" name="REM_01" author="packetpilot" series="F030">
+  <cafd id="000007A1" name="REM_01" author="packetpilot" series="F020,F030">
+    <!-- DRL & tails -->
     <code description="DRL: Enable Outer and Inner Tails">
       <group id="3062">
         <function start="200" end="200" mask="00111111b">14</function>
@@ -96,7 +150,7 @@
         <function start="230" end="230" mask="00111111b">17</function>
       </group>
     </code>
-    <code description="DRL: Enable Outer Tails Only" series="F030">
+    <code description="DRL: Enable Outer Tails Only" series="F020,F030">
       <group id="3062">
         <function start="200" end="200" mask="00111111b">14</function>
         <function start="210" end="210" mask="00111111b">15</function>
@@ -104,7 +158,7 @@
         <function start="230" end="230" mask="00111111b">00</function>
       </group>
     </code>
-    <code description="DRL: Disable Tails" series="F030">
+    <code description="DRL: Disable Tails" series="F020,F030">
       <group id="3062">
         <function start="200" end="200" mask="00111111b">00</function>
         <function start="210" end="210" mask="00111111b">00</function>
@@ -112,6 +166,7 @@
         <function start="230" end="230" mask="00111111b">00</function>
       </group>
     </code>
+    <!-- rear fogs -->
     <code description="Rear Fog: Enable Both Lamps [dep: switch activation in FEM_Body]">
       <group id="3063">
         <function start="40" end="40" mask="00111111b">1C</function>
@@ -132,20 +187,20 @@
     </code>
   </cafd>
 
-  <cafd id="00001EF6" name="HU_NBT_EVO" author="packetpilot" series="F030">
+  <cafd id="00001EF6" name="HU_NBT_EVO" author="packetpilot" series="F020,F030">
     <code description="Digital Signal Processing: Enable B-and-O (Replacing Logic7)">
       <group id="3000">
         <function start="57" end="57" mask="00110000b">03</function>
       </group>
     </code>
-    <code description="Digital Signal Processing, Restore Logic7">
+    <code description="Digital Signal Processing: Restore Logic7">
       <group id="3000">
         <function start="57" end="57" mask="00110000b">00</function>
       </group>
     </code>
   </cafd>
 
-  <cafd id="000010BA" name="LHM2" author="packetpilot" series="F030">
+  <cafd id="000010BA" name="LHM2" author="packetpilot" series="F020,F030">
     <code description="Front Fog-Like VLD: Enable Step 2a [dep: step 1 in FEM_Body]">
       <group id="3000">
         <function start="0" end="6" mask="11111111b">FA, FA, 00, FA, C8, C8, 00</function>
@@ -160,7 +215,7 @@
     </code>
   </cafd>
 
-  <cafd id="000016BF" name="LHM2" author="packetpilot" series="F030">
+  <cafd id="000016BF" name="LHM2" author="packetpilot" series="F020,F030">
     <code description="Front Fog-Like VLD: Enable Step 2b [dep: step 1 in FEM_Body]">
       <group id="3000">
         <function start="0" end="6" mask="11111111b">FA, FA, 00, FA, C8, C8, 00</function>
@@ -175,7 +230,7 @@
     </code>
   </cafd>
 
-  <cafd id="00001082" name="TMS_03" author="packetpilot" series="F030">
+  <cafd id="00001082" name="TMS_03" author="packetpilot" series="F020,F030">
     <code description="DRL Headlamp Settings: Eyebrow Off, AngelEyes On [Drv]">
       <group id="3005">
         <function start="0" end="15" mask="11111111b">00, 03, 00, 00, 00, 04, 00, 00, 00, 04, 00, 00, 64, 24, 00, 00</function>
@@ -193,7 +248,7 @@
     </code>
   </cafd>
 
-  <cafd id="00001083" name="TMS_03" author="packetpilot" series="F030">
+  <cafd id="00001083" name="TMS_03" author="packetpilot" series="F020,F030">
     <code description="DRL Headlamp Settings: Eyebrow Off, AngelEyes On [Pass]">
       <group id="3005">
         <function start="0" end="15" mask="11111111b">00, 03, 00, 00, 00, 04, 00, 00, 00, 04, 00, 00, 64, 24, 00, 00</function>
@@ -207,6 +262,30 @@
     <code description="DRL Headlamp Settings: Eyebrow AND Angel Eyes On [Pass]">
       <group id="3005">
         <function start="0" end="15" mask="11111111b">00, 03, 00, 00, 00, 04, 00, 00, 64, 04, 00, 00, 64, 24, 00, 00</function>
+      </group>
+    </code>
+  </cafd>
+
+    <!-- copied and translated from Botho.xml
+    !!! TODO: clarify language after testing -->
+    <code description="Easy Entry: Gong when Storing Position">
+      <group id="3000">
+        <function start="2" end="2" mask="00001000b" comment="MEMORY_GONG">Aktiv</function>
+      </group>
+    </code>
+    <code description="Easy Entry: Enable">
+      <group id="3000">
+        <function start="0" end="0" mask="00011100b" comment="EINAUSSTIEGSHILFE">Modus_FA_SLV</function>
+      </group>
+    </code>
+    <code description="Easy Entry: Set Max Rearward Auto-Travel (mm from limit)">
+      <group id="3012">
+        <function start="4" end="5" mask="11111111b" comment="EAH_SCHUTZFREIRAUM_HINTEN_SLV_PHYS">00, 32</function>
+      </group>
+    </code>
+    <code description="Easy Entry: Set Desired Rearward Travel (mm)">
+      <group id="3012">
+        <function start="0" end="1" mask="11111111b" comment="EAH_VERFAHRWEG_SLV_PHYS">00, 32</function>
       </group>
     </code>
   </cafd>

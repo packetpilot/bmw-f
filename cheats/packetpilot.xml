@@ -54,6 +54,37 @@
         <function start="213" end="213" mask="11111111b">02</function>
       </group>
     </code>
+    <code description="Five-Flash Blinker Tap">
+      <group id="3060">
+        <function start="7" end="7" mask="00000111b">04</function>
+      </group>
+    </code>
+    <code description="Brake Force Display: Disable Timeout [US/CDN]">
+      <group id="3060">
+        <function start="18" end="18" mask="11111111b">00</function>
+      </group>
+    </code>
+    <code description="Fog Lights: Disable Hi-Beam Override">
+      <group id="3060">
+        <function start="20" end="20" mask="00100000b">00</function>
+      </group>
+    </code>
+    <code description="Deploy Hazards upon Heavy Decel [req. manual cancel]">
+      <group id="3060">
+        <function start="26" end="26" mask="00000001b">01</function>
+      </group>
+    </code>
+    <code description="Fog Lights: Bypass Position 1 Requirement">
+      <group id="3060">
+        <function start="29" end="29" mask="01000000b">01</function>
+      </group>
+    </code>
+    <code description="Fog Lights: Reinstate Position 1 Requirement">
+      <group id="3060">
+        <function start="29" end="29" mask="01000000b">00</function>
+      </group>
+    </code>
+
   </cafd>
 
   <cafd id="000007A1" name="REM_01" author="packetpilot" series="F030">
@@ -102,7 +133,7 @@
   </cafd>
 
   <cafd id="00001EF6" name="HU_NBT_EVO" author="packetpilot" series="F030">
-    <code description="Digital Signal Processing: Enable B-and-O (Replacing Logic7">
+    <code description="Digital Signal Processing: Enable B-and-O (Replacing Logic7)">
       <group id="3000">
         <function start="57" end="57" mask="00110000b">03</function>
       </group>

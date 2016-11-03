@@ -12,16 +12,30 @@
         <function start="7" end="7" mask="00001000b">00</function>
       </group>
     </code>
-    <code description="Fold/Unfold Mirrors: Enable w/ Fob and Comfort Access">
+    <code description="Fold/Unfold Mirrors: Enable w/ Fob and Comfort Access, Min Delay">
+      <group id="3053">
+        <function start="0" end="0" mask="01000000b">00</function>
+        <function start="0" end="0" mask="10000000b">00</function>
+        <function start="1" end="1" mask="00000001b">00</function>
+        <function start="1" end="1" mask="00000010b">00</function>
+        <function start="8" end="8" mask="11111111b">0A</function>
+        <function start="9" end="9" mask="11111111b">00</function>
+      </group>
       <group id="3110">
-        <function start="1" end="1" mask="=00000001b">01</function>
-        <function start="8" end="8" mask="=00000001b">01</function>
+        <function start="1" end="1" mask="00000001b">01</function>
+        <function start="8" end="8" mask="00000001b">01</function>
       </group>
     </code>
     <code description="Fold/Unfold Mirrors: Disable w/ Fob and Comfort Access">
+      <group id="30530">
+        <function start="0" end="0" mask="01000000b">01</function>
+        <function start="0" end="0" mask="10000000b">01</function>
+        <function start="1" end="1" mask="00000001b">01</function>
+        <function start="1" end="1" mask="00000010b">01</function>
+      </group>
       <group id="3110">
-        <function start="1" end="1" mask="=00000001b">00</function>
-        <function start="8" end="8" mask="=00000001b">00</function>
+        <function start="1" end="1" mask="00000001b">00</function>
+        <function start="8" end="8" mask="00000001b">00</function>
       </group>
     </code>
     <code description="Front Fog-Like VLD: Enable Step 1 [dep: switch or blank mod, VLD]">
@@ -88,7 +102,7 @@
   </cafd>
 
   <cafd id="00001EF6" name="HU_NBT_EVO" author="packetpilot" series="F030">
-    <code description="Digital Signal Processing: Enable B&O (Replacing Logic7">
+    <code description="Digital Signal Processing: Enable B-and-O (Replacing Logic7">
       <group id="3000">
         <function start="57" end="57" mask="00110000b">03</function>
       </group>
@@ -101,7 +115,7 @@
   </cafd>
 
   <cafd id="000010BA" name="LHM2" author="packetpilot" series="F030">
-    <code description="Front Fog-Like VLD: Enable Step 2a [dep: step 1 in FEM_BODY]">
+    <code description="Front Fog-Like VLD: Enable Step 2a [dep: step 1 in FEM_Body]">
       <group id="3000">
         <function start="0" end="6" mask="11111111b">FA, FA, 00, FA, C8, C8, 00</function>
         <function start="7" end="13" mask="11111111b">FA, FA, 00, FA, C8, C8, 00</function>
@@ -116,7 +130,7 @@
   </cafd>
 
   <cafd id="000016BF" name="LHM2" author="packetpilot" series="F030">
-    <code description="Front Fog-Like VLD: Enable Step 2b [dep: step 1 in FEM_BODY]">
+    <code description="Front Fog-Like VLD: Enable Step 2b [dep: step 1 in FEM_Body]">
       <group id="3000">
         <function start="0" end="6" mask="11111111b">FA, FA, 00, FA, C8, C8, 00</function>
         <function start="7" end="13" mask="11111111b">FA, FA, 00, FA, C8, C8, 00</function>

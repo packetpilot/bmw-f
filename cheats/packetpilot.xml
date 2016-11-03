@@ -17,6 +17,30 @@
     !! I'm new at this; feedback is welcomed. !!
     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
   -->
+  <cafd id="00000F9B" name="ASD01" author="packetpilot" series="F020,F030">
+    <code description="ASD: M5/6 S63 Comp Pkg SL">
+      <group id="3000">
+        <function start="0" end="0" mask="11111111b">04</function>
+        <function start="1" end="1" mask="11111111b">01</function>
+        <function start="3" end="3" mask="11111111b">04</function>
+      </group>
+    </code>
+    <code description="ASD: M3/4 S55 Comp Pkg SL">
+      <group id="3000">
+        <function start="0" end="0" mask="11111111b">15</function>
+        <function start="1" end="1" mask="11111111b">0A</function>
+        <function start="3" end="3" mask="11111111b">04</function>
+      </group>
+    </code>
+    <code description="ASD: M2 N55 Comp Pkg SL">
+      <group id="3000">
+        <function start="0" end="0" mask="11111111b">22</function>
+        <function start="1" end="1" mask="11111111b">06</function>
+        <function start="3" end="3" mask="11111111b">04</function>
+      </group>
+    </code>
+  </cafd>
+
   <cafd id="00000F9B" name="ASD01" author="packetpilot" <cafd id="00000794" name="FEM_01" author="packetpilot" series="F020,F030">
     <code description="ASD: M5/6 S63 Comp Pkg SL">
       <group id="3000">

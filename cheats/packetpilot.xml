@@ -266,6 +266,7 @@
     </code>
   </cafd>
 
+  <cafd id="000000B5" name="SM2" author="packetpilot" series="F020,F030">
     <!-- copied and translated from Botho.xml
     !!! TODO: clarify language after testing -->
     <code description="Easy Entry: Gong when Storing Position">

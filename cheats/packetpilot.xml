@@ -19,7 +19,7 @@
   -->
   <cafd id="00000794" name="FEM_01" author="packetpilot" series="F020,F030">
     <!-- remote close/open -->
-    <code description="Fold/Unfold Mirrors: Enable w/ Fob and Comfort Access, Min Delay">
+    <code description="Fold/Unfold Mirrors, Ctrl Windows: Enable w/ Fob and Comfort Access, Min Delay">
       <group id="3053">
         <function start="0" end="0" mask="01000000b">00</function>
         <function start="0" end="0" mask="10000000b">00</function>
@@ -29,11 +29,13 @@
         <function start="9" end="9" mask="11111111b">00</function>
       </group>
       <group id="3110">
+        <function start="0" end="0" mask="10000000b">01</function>
         <function start="1" end="1" mask="00000001b">01</function>
+        <function start="7" end="7" mask="00000001b">01</function>
         <function start="8" end="8" mask="00000001b">01</function>
       </group>
     </code>
-    <code description="Fold/Unfold Mirrors: Disable w/ Fob and Comfort Access">
+    <code description="Fold/Unfold Mirrors, Ctrl Windows: Disable w/ Fob and Comfort Access">
       <group id="30530">
         <function start="0" end="0" mask="01000000b">01</function>
         <function start="0" end="0" mask="10000000b">01</function>
@@ -41,7 +43,9 @@
         <function start="1" end="1" mask="00000010b">01</function>
       </group>
       <group id="3110">
+         <function start="0" end="0" mask="10000000b">00</function>
         <function start="1" end="1" mask="00000001b">00</function>
+        <function start="7" end="7" mask="00000001b">00</function>
         <function start="8" end="8" mask="00000001b">00</function>
       </group>
     </code>

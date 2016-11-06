@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <FDL>
 	<!-- Sample Only
   <cafd id="00000794" name="FEM_BODY" series="F020,F030">
@@ -18,20 +18,22 @@
 			</group>
 		</code>
 	</cafd>
+	
+	
 	<cafd id="00000794" name="FEM_BODY" author="Botho" series="F020">
-		<code description="Délais d'ouverture du coffre">
-			<group id="3040">
-				<function start="10" end="10" mask="11111111b" comment="CLM_TIMEOUT_HK_SMO">wert_02</function>
-			</group>
-		</code>
 		<code description="Vitres active lors de l'ouverture des portes avant">
 			<group id="3050">
 				<function start="0" end="0" mask="00000001b" comment="FH_TUERAUF_STOP_MAUT">nicht_aktiv</function>
 			</group>
 		</code>
-		<code description="Délais activation de la fonction confort">
+		<code description="Délais d'activation de la fonction confort à la fermeture (1,5s par défaut)">
 			<group id="3053">
 				<function start="9" end="9" mask="11111111b" comment="KOMFORT_SCHLIESSEN">05</function>
+			</group>
+		</code>
+		<code description="Délais d'activation de la fonction confort à l'ouverture (1,9s par defaut)">
+			<group id="3053">
+				<function start="8" end="8" mask="11111111b" comment="KOMFORT_OEFFNEN">wert_01</function>
 			</group>
 		</code>
 		<code description="Xenon : Angel Eyes Brightness 50% Xenon On">
@@ -101,12 +103,17 @@
 				<function start="7" end="7" mask="00000111b" comment="BLINKZYKLEN_ANZAHL_TIPP">04</function>
 			</group>
 		</code>
+		<code description="Eclairage d'acceuil : durée (120 s)">
+			<group id="3060">
+				<function start="15" end="15" mask="11111111b" comment="WL_TIMEOUT">78</function>
+			</group>
+		</code>
 		<code description="Sensibilité du capteur éclairage automatique (moins sensible)">
 			<group id="3130">
 				<function start="5" end="5" mask="00000111b" comment="RLS_DEF_FLC_SCHWELLWERT_SATZ">03</function>
 			</group>
 		</code>
-		<code description="Activation de la lumiere d'ambiance à l'ouverture">
+		<code description="Activation de la lumière d'ambiance à l'ouverture">
 			<group id="3070">
 				<function start="1" end="1" mask="10000000b" comment="WELCOME_AMBIENTE">Aktiv</function>
 			</group>
@@ -116,7 +123,7 @@
 				<function start="4" end="4" mask="10000000b" comment="AMBIENTE_NACHFUEHRUNG">nicht_aktiv</function>
 			</group>
 		</code>
-		<code description="Activation Panic Alarme et tempo telecommande 500ms (short = welcome) : MID = coffre : 3s (long = panic)">
+		<code description="Activation Panic Alarme et tempo télécommande 500ms (short = welcome) : MID = coffre : 3s (long = panic)">
 			<group id="30D0">
 				<function start="2" end="2" mask="00000100b" comment="RC_PANIC_ALARM">Aktiv</function>
 				<function start="3" end="3" mask="00001111b" comment="RC_DEFAULT_IDG_3RD_BUTTON_SHORT">04</function>
@@ -131,7 +138,7 @@
 				<function start="16" end="16" mask="00000011b" comment="ESS_AKTIVIERBARER_AUSGANG">02</function>
 			</group>
 		</code>
-		<code description="Feux freinage d'urgence : décéleration  minimum (3 metre seconde)">
+		<code description="Feux freinage d'urgence : décéleration  minimum (3 metres par seconde)">
 			<group id="3060">
 				<function start="20" end="20" mask="00011111b" comment="ESS_AKTIVIERUNG_REALE_VERZ">06</function>
 			</group>
@@ -151,7 +158,17 @@
 				<function start="0" end="0" mask="00100000b" comment="TCM_MSA_MEMORY">aktiv</function>
 			</group>
 		</code>
-		<code description="ZZ TESTING KO 57.4 - Fermeture du coffre avec le pied">
+		<code description="CLM_CCM_COOLANT_TEMP -- TODO">
+			<group id="3040">
+				<function start="1" end="1" mask="00100000b" comment="CLM_CCM_COOLANT_TEMP">wert_01</function>
+			</group>
+		</code>
+		<code description="CLM_HORN_AT_SECURE -- TODO">
+			<group id="3040">
+				<function start="1" end="1" mask="10000000b" comment="CLM_HORN_AT_SECURE">wert_01</function>
+			</group>
+		</code>
+		<code description="Fermeture du coffre avec le pied (FA PRODUCTION DATE > 0315)">
 			<group id="3030">
 				<function start="5" end="5" mask="00000110b" comment="CAM_SMART_CLOSER">Aktiv</function>
 			</group>
@@ -161,7 +178,19 @@
 				<function start="1" end="1" mask="00010000b" comment="?? UNBELEGT ?? NOT MAPPED">01</function>
 			</group>
 		</code>
+		<code description="ZZ TESTING KO 59.2 - Délais d'activation de la fonction confort">
+			<group id="3053">
+				<function start="7" end="7" mask="11111111b" comment="KOMFORT_ANSTEUERZEIT">A0</function>
+			</group>
+		</code>
+		<code description="ZZZ Délais d'ouverture du coffre (DEPRECATED v59.1)">
+			<group id="3040">
+				<function start="10" end="10" mask="11111111b" comment="CLM_TIMEOUT_HK_SMO">wert_02</function>
+			</group>
+		</code>
 	</cafd>
+	
+	
 	<cafd id="000016EE" name="IHKA" author="Botho" series="F020">
 		<code description="Climatisation : Mémorise la dernière position AC (on/off)">
 			<group id="3003">
@@ -174,10 +203,17 @@
 			</group>
 		</code>
 	</cafd>
+	
+	
 	<cafd id="000009C8" name="KOMBI" author="Botho" series="F020">
 		<code description="Tableau de bord : Affichage de la vitesse digitale">
 			<group id="3000">
 				<function start="1" end="1" mask="00000010b" comment="BC_DIGITAL_V">Aktiv</function>
+			</group>
+		</code>
+		<code description="Tableau de bord : Affichage de l'heure en bas à droite du tableau de bord">
+			<group id="3000">
+				<function start="53" end="53" mask="01000000b" comment="BASISANZEIGE_VARIANTE">Aktiv</function>
 			</group>
 		</code>
 		<code description="Tableau de bord et HUD : Logo M performance">
@@ -190,12 +226,12 @@
 				<function start="41" end="41" mask="00010000b" comment="SPA_SPORT_ENABLE">Aktiv</function>
 			</group>
 		</code>
-		<code description="HUD : Durée de boot">
+		<code description="HUD : Durée de démarrage (durée d'affichage du logo plus longue)">
 			<group id="300B">
 				<function start="20" end="20" mask="11111111b" comment="HUD_STARTUP_TIME">78</function>
 			</group>
 		</code>
-		<code description="HUD : Affichage de l'assistant collision Step 1 (Step 2 dans HU_NBT)">
+		<code description="HUD : Affichage de l'assistant distance Step 1 (Step 2 dans HU_NBT, Step 3 dans KAFAS2)">
 			<group id="3000">
 				<function start="1" end="1" mask="00000001b" comment="IBRAKE_ABSTAND_ENABLE">Aktiv</function>
 			</group>
@@ -227,6 +263,8 @@
 			</group>
 		</code>
 	</cafd>
+	
+	
 	<cafd id="000007A1" name="REM" author="Botho" series="F020">
 		<code description="Vitres : Activation à l'ouverture des portes arrière">
 			<group id="3050">
@@ -234,6 +272,8 @@
 			</group>
 		</code>
 	</cafd>
+	
+	
 	<cafd id="0000067B" name="ICM" author="Botho" series="F020">
 		<code description="Active Cruise Control : Distance minimum par défaut à 1">
 			<group id="3000">
@@ -246,6 +286,8 @@
 			</group>
 		</code>
 	</cafd>
+	
+	
 	<cafd id="000007C8" name="HKFM" author="Botho" series="F020">
 		<code description="Hayon : Activation fermeture via bouton au tableau de bord">
 			<group id="3010">
@@ -260,6 +302,8 @@
 			</group>
 		</code>
 	</cafd>
+	
+	
 	<cafd id="000000B5" name="SM2" author="Botho" series="F020">
 		<code description="Sièges électriques : Gong lors de la mémorisation">
 			<group id="3000">
@@ -282,8 +326,25 @@
 			</group>
 		</code>
 	</cafd>
+	
+	
 	<cafd id="00000DED" name="HU_NBT" author="Botho" series="F020">
-		<code description="HUD : Affichage de l'assistant collision Step 2 (Step 1 dans KOMBI)">
+		<code description="iDrive (Media) : volume au démarrage à 30% (défaut 25%)">
+			<group id="3002">
+				<function start="3" end="3" mask="11111111b" comment="VOL_MAX_ON (défaut 25%)">1E</function>
+			</group>
+		</code>
+		<code description="iDrive (Media) : volume au démarrage à 40% (défaut 25%)">
+			<group id="3002">
+				<function start="3" end="3" mask="11111111b" comment="VOL_MAX_ON (défaut 25%)">28</function>
+			</group>
+		</code>
+		<code description="iDrive (Multimédia) : Montrer la piste suivante pour la musique">
+			<group id="3000">
+				<function start="110" end="110" mask="00100000b" comment="BASIS_KOMBI_MMI_LIST">Aktiv</function>
+			</group>
+		</code>
+		<code description="HUD : Affichage de l'assistant distance Step 2 (Step 1 dans KOMBI, Step 3 dans KAFAS2)">
 			<group id="3000">
 				<function start="97" end="97" mask="00001000b" comment="HUD_DISTANCE_INFO">Aktiv</function>
 			</group>
@@ -330,6 +391,11 @@
 				<function start="59" end="59" mask="00100000b" comment="NAVI_ROAD_PREVIEW">aktiv</function>
 			</group>
 		</code>
+		<code description="iDrive (Navigation) : Ajoute une préférence de calcul des trajets par les serveurs BMW">
+			<group id="3000">
+				<function start="112" end="112" mask="00000010b" comment="NAVI_ONLINE_OPTIMIZATION_BUTTON">aktiv</function>
+			</group>
+		</code>
 		<code description="iDrive (Navigation) : Affichage de la vue sortie autoroute dans HUD">
 			<group id="3000">
 				<function start="65" end="65" mask="00001000b" comment="JUNCTION_VIEW_HUD">aktiv</function>
@@ -372,6 +438,11 @@
 				<function start="74" end="74" mask="01000000b" comment="ENTWICKLER_MENUE">00</function>
 			</group>
 		</code>
+		<code description="iDrive (Options) : Activation menu Car Service (carnet d'entretien)">
+			<group id="3000">
+				<function start="2" end="2" mask="00100000b" comment="SERVICE_HISTORY">aktiv</function>
+			</group>
+		</code>
 		<code description="iDrive (Multimédia) : Activation lecture OGG, XVID, XVCD et USB">
 			<group id="3000">
 				<function start="15" end="15" mask="00010000b" comment="ENT_CODEC_OGG">aktiv</function>
@@ -394,6 +465,11 @@
 				<function start="6" end="6" mask="10000000b" comment="INBAND_RINGING">aktiv</function>
 			</group>
 		</code>
+		<code description="iDrive (Réglage) : Son du Gong iBMW plus moderne (défaut bmw)">
+			<group id="3002">
+				<function start="26" end="26" mask="00111000b" comment="SOUND_SIGNAL_SET">bmw_i</function>
+			</group>
+		</code>
 		<code description="ZZ TESTING KO 57.4 - HUD : Affichage clignotants Step 1 (Step 2 dans KOMBI)">
 			<group id="3001">
 				<function start="55" end="55" mask="10000000b" comment="HUD_TURNSIGNAL">Aktiv</function>
@@ -414,7 +490,7 @@
 				<function start="16" end="16" mask="00001000b" comment="AUTO_MAP_ZOOM">aktiv</function>
 			</group>
 		</code>
-		<code description="ZZ TESTING KO 57.4 - iDrive (Réglage) : Activation GPS tracking">
+		<code description="ZZ TESTING KO 57.4 - iDrive (Réglage) : Activation GPS tracking (problème de réglementation CNIL en France je pense ...)">
 			<group id="3003">
 				<function start="15" end="15" mask="00000001b" comment="ASSIST_SVR_SHOW">aktiv</function>
 				<function start="14" end="14" mask="10000000b" comment="ASSIST_VEHICLEFINDER_SHOW">aktiv</function>
@@ -430,9 +506,38 @@
 				<function start="108" end="108" mask="00000100b" comment="NAVI_EXPRESS_ROADS">aktiv</function>
 			</group>
 		</code>
-		<code description="ZZ TESTING - iDrive (Navigation) : Active le guidage en 2 etapes">
+		<code description="ZZ TESTING KO 58.3 - iDrive (Navigation) : Active le guidage en 2 etapes ?? No difference">
 			<group id="3000">
 				<function start="111" end="111" mask="00000010b" comment="NAVI_VIOCE_OUTPUT_2_STEP">aktiv</function>
+			</group>
+		</code>
+	</cafd>
+	
+	
+	<cafd id="00000223" name="TRSVC" author="Botho" series="F020">
+		<code description="Activation des caméras latérales à haute vitesse">
+			<group id="3000">
+				<function start="114" end="114" mask="11111111b" comment="SV_Activate_Speed_Limit">FF</function>
+				<function start="115" end="115" mask="11111111b" comment="SV_Deactivate_Speed">FF</function>
+			</group>
+		</code>
+	</cafd>
+	
+	
+	<cafd id="00001148" name="KAFAS2" author="Botho" series="F020">
+		<code description="HUD : Affichage de l'assistant distance Step 3 (Step 1 dans KOMBI, Step 2 dans HU_NBT)">
+			<group id="3060">
+				<function start="1" end="1" mask="00011000b" comment="DISPLAY_HEADWAY_DISTANCE">01</function>
+				<function start="1" end="1" mask="00000010b" comment="SEND_STATUS_IBRAKE">IBRAKE_STAT_on_F030</function>
+			</group>
+		</code>
+	</cafd>
+	
+	
+	<cafd id="00000A07" name="FZD" author="Botho" series="F020">
+		<code description="Activation Panic Alarme">
+			<group id="3002">
+				<function start="0" end="0" mask="00000100b" comment="Panikalarm">Aktiv</function>
 			</group>
 		</code>
 	</cafd>

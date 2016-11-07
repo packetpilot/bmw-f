@@ -51,8 +51,18 @@
 		<code description="Enable X View in menu">
 			<group id="3000">
 				<function start="15" end="15" mask="00000001b">Aktiv</function>
+				<function start="110" end="110" mask="00000010b">aktiv</function>
 			</group>
 		</code>
+		<code description="Enables All Video Codecs and Video Import">
+           <group id="3000">
+		   <function start="15" end="15" mask="00010000b">Aktiv</function>
+		    <function start="15" end="15" mask="00100000b">Aktiv</function>
+			 <function start="15" end="15" mask="01000000b">Aktiv</function>
+			  <function start="13" end="13" mask="00000100b">Aktiv</function>
+			   <function start="32" end="32" mask="00000110b">both</function>
+               </group>
+          </code>
 		<code description="Blicker 5 Times Config in HMI">
 			<group id="3000">
 				<function start="36" end="36" mask="00000001b">Aktiv</function>
@@ -63,10 +73,9 @@
 				<function start="110" end="110" mask="00000001b">Aktiv</function>
 			</group>
 		</code>
-		<code description="Ambient light, MODERN to SPORT and Deactivation Check Box">
+		<code description="Ambient light, MODERN to SPORT">
 			<group id="3000">
 				<function start="109" end="109" mask="01110000b">Sport</function>
-				<function start="35" end="35" mask="11000000b">deaktivierung_bmw</function>
 			</group>
 		</code>
 		<code description="M Performance Start Animation of HMI">
@@ -110,6 +119,208 @@
 			</group>
 		</code>
 	</cafd>
+	<cafd id="00000DED" name="HU_NBT" author="ruben_17non">
+		<code description="Disable Video Speedlock (Video in motion)">
+			<group id="3000">
+				<function start="71" end="71" mask="11111111b">FF</function>
+				<function start="72" end="72" mask="11111111b">FF</function>
+				<function start="5" end="5" mask="00000100b">00</function>
+				<function start="5" end="5" mask="00010000b">00</function>
+			</group>
+		</code>
+		<code description="Enable Video Player From USB + All Video Plugins">
+			<group id="3000">
+				<function start="6" end="6" mask="01000000b">Aktiv</function>
+				<function start="15" end="15" mask="00010000b">Aktiv</function>
+				<function start="15" end="15" mask="00100000b">Aktiv</function>
+				<function start="15" end="15" mask="01000000b">Aktiv</function>
+				<function start="13" end="13" mask="00000100b">Aktiv</function>
+			</group>
+			<group id="3003">
+				<function start="33" end="33" mask="00000110b">Both</function>
+			</group>
+		</code>
+		<code description="Eco Pro Prediction Diagram/Grafik">
+			<group id="3000">
+				<function start="135" end="135" mask="10000000b">Aktiv</function>
+				<function start="17" end="17" mask="00001000b">Aktiv</function>
+			</group>
+			<group id="3001">
+				<function start="64" end="64" mask="00000010b">Aktiv</function>
+				<function start="64" end="64" mask="00000100b">Aktiv</function>
+			</group>
+		</code>
+		<code description="Checkbox for Enable/Disable Sailing ECO PRO">
+			<group id="3000">
+				<function start="103" end="103" mask="10000000b">Aktiv</function>
+			</group>
+		</code>
+		<code description="Lock/Unlock Sound Confirm Checkbox With alarm only">
+			<group id="3000">
+				<function start="110" end="110" mask="00000001b">Aktiv</function>
+			</group>
+		</code>
+		<code description="Ambient light, MODERN to SPORT and Deactivation Check Box">
+			<group id="3000">
+				<function start="109" end="109" mask="01110000b">Sport</function>
+				<function start="35" end="35" mask="11000000b">deaktivierung_bmw</function>
+			</group>
+		</code>
+		<code description="Disable Top View Camara TEST">
+			<group id="3001">
+				<function start="18" end="18" mask="00100000b">00</function>
+			</group>
+		</code>
+		<code description="Enable Compass">
+			<group id="3000">
+				<function start="5" end="5" mask="00000001b">Aktiv</function>
+			</group>
+		</code>
+		<code description="M Performance Start Animation of HMI">
+			<group id="3001">
+				<function start="62" end="62" mask="00000110b">Animation</function>
+				<function start="62" end="62" mask="01111000b">variant_01</function>
+			</group>
+		</code>
+		<code description="Sport Display Power and Torque Gauge - Red/Silver M Performance">
+			<group id="3000">
+				<function start="133" end="133" mask="01000000b">Aktiv</function>
+				<function start="101" end="101" mask="00010000b">Aktiv</function>
+				<function start="107" end="107" mask="00000100b">Aktiv</function>
+			</group>
+		</code>
+		<code description="Sport Display Power and Torque Gauge - Amber Standard">
+			<group id="3000">
+				<function start="133" end="133" mask="01000000b">Nicht_Aktiv</function>
+				<function start="101" end="101" mask="00010000b">Aktiv</function>
+				<function start="107" end="107" mask="00000100b">Aktiv</function>
+			</group>
+		</code>
+		<code description="Sports Mode Configuration Option in iDrive (STEP 2 Go to ICM for Part1)">
+			<group id="3001">
+				<function start="55" end="55" mask="00011000b">popup_and_config</function>
+			</group>
+		</code>
+		<code description="Disable Legal Disclaimer">
+			<group id="3001">
+				<function start="58" end="58" mask="11111111b">00</function>
+			</group>
+		</code>
+		<code description="Disable Camera/PDC Legal Disclaimer">
+			<group id="3001">
+				<function start="52" end="52" mask="11111111b">00</function>
+			</group>
+		</code>
+		<code description="Show DRL Option in iDrive">
+			<group id="3000">
+				<function start="92" end="92" mask="00011000b">02</function>
+			</group>
+		</code>
+		<code description="Show Tire Pressure and Temperature in iDrive">
+			<group id="3001">
+				<function start="1" end="1" mask="00100000b">Aktiv</function>
+			</group>
+		</code>
+		<code description="Show Volume Popup Display">
+			<group id="3002">
+				<function start="52" end="52" mask="01000000b">Aktiv</function>
+			</group>
+		</code>
+		<code description="Enable Route Preview">
+			<group id="3000">
+				<function start="135" end="135" mask="00001000b">Aktiv</function>
+				<function start="111" end="111" mask="00001000b">Aktiv</function>
+			</group>
+		</code>
+		<code description="Enable Road Preview">
+			<group id="3000">
+				<function start="59" end="59" mask="00100000b">Aktiv</function>
+			</group>
+		</code>
+		<code description="Enable Trip Import via USB">
+			<group id="3000">
+				<function start="61" end="61" mask="00000001b">Aktiv</function>
+			</group>
+		</code>
+		<code description="Rear Camera Zoom -Trailer Mode- Only With Rear Camera">
+			<group id="3001">
+				<function start="54" end="54" mask="00000001b">Aktiv</function>
+			</group>
+		</code>
+		<code description="Activate BLUETOOTH Data Profile (PAN/DUN Profile)">
+			<group id="3003">
+				<function start="3" end="3" mask="00000010b">Aktiv</function>
+				<function start="3" end="3" mask="00000100b">Aktiv</function>
+			</group>
+		</code>
+		<code description="Activate Siri Eyes-Free">
+			<group id="3003">
+				<function start="3" end="3" mask="00001000b">Aktiv</function>
+			</group>
+		</code>
+		<code description="Activate APPLE ENHANCEMENTS">
+			<group id="3000">
+				<function start="22" end="22" mask="10000000b">Aktiv</function>
+			</group>
+		</code>
+		<code description="Enable Traffic Information via TMC">
+			<group id="3000">
+				<function start="59" end="59" mask="00010000b">Aktiv</function>
+			</group>
+			<group id="3002">
+				<function start="23" end="23" mask="00000100b">Aktiv</function>
+				<function start="24" end="24" mask="00000010b">Aktiv</function>
+				<function start="23" end="23" mask="00100000b">Aktiv</function>
+			</group>
+		</code>
+		<code description="Speech to Text Dictate Email or SMS Response">
+			<group id="3003">
+				<function start="1" end="1" mask="00010000b">Aktiv</function>
+			</group>
+		</code>
+		<code description="Speech to Text Transformation Supported">
+			<group id="3003">
+				<function start="11" end="11" mask="00010000b">Aktiv</function>
+			</group>
+		</code>
+		<code description="Create New Voice Email">
+			<group id="3003">
+				<function start="12" end="12" mask="00000001b">Aktiv</function>
+			</group>
+		</code>
+		<code description="Adds GPS current location to the Nav menu items at the bottom of the screen.">
+			<group id="3000">
+				<function start="96" end="96" mask="10000000b">Aktiv</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="00000DDC" name="TCB01" author="ruben_17non">
+<code description="Disable Telematik Module Functions -Not Recomended-">
+      <group id="3000">
+        <function start="2" end="2" mask="10000000b">01</function>
+      </group>
+    </code>
+	<code description="Disable SOS Butom -Not Recomended-">
+      <group id="3000">
+        <function start="13" end="13" mask="00010000b">01</function>
+      </group>
+    </code>
+	<code description="Disable Backup Antenna -Not Recomended-">
+      <group id="3000">
+        <function start="13" end="13" mask="00001000b">01</function>
+      </group>
+    </code>
+	<code description="-Choose One- PROVISIONING_VERSION 7-14 -TEST-">
+      <group id="3000">
+        <function start="14" end="14" mask="00011111b">13</function>
+      </group>
+	  </code>
+	  <code description="-Choose One- PROVISIONING_VERSION 3-14 -TEST-">
+      <group id="3000">
+        <function start="14" end="14" mask="00011111b">12</function>
+      </group>
+    </code>
+  </cafd> 
 	<cafd id="00001AB7" name="PMA_PDC" author="ruben_17non">
 		<code description="Cameras/PDC in all speed This disable speed restriction -STEP 1 Go to ICAM for Part2-">
 			<group id="300B">
@@ -128,6 +339,14 @@
 			</group>
 		</code>
 	</cafd>
+	<cafd id="00000223" name="TRSVC" author="ruben_17non">
+    <code description="Top View Cameras in all Speed.">
+      <group id="3000">
+        <function start="114" end="114" mask="11111111b">FF</function>
+		<function start="115" end="115" mask="11111111b">FF</function>
+      </group>
+    </code>
+  </cafd> 
 	<cafd id="00000629" name="DSC-DXC_CT01" author="ruben_17non">
 		<code description="Automatic Parking Brake Release in cars with automatic transmission -STEP 2 Go to EMF for Part1-">
 			<group id="3000">
@@ -137,6 +356,13 @@
 		<code description="Enable Launch Control">
 			<group id="3000">
 				<function start="26" end="26" mask="10000000b">01</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="00001A33" name="DSC_CT02M" author="ruben_17non">
+		<code description="EURO DSC">
+			<group id="3000">
+				<function start="12" end="12" mask="00000011b">ECE</function>
 			</group>
 		</code>
 	</cafd>
@@ -166,13 +392,6 @@
 		<code description="Enables Sport+ Mode">
 			<group id="3000">
 				<function start="190" end="190" mask="00111111b">01</function>
-			</group>
-		</code>
-	</cafd>
-	<cafd id="00001A33" name="DSC_CT02M" author="ruben_17non">
-		<code description="EURO DSC">
-			<group id="3000">
-				<function start="12" end="12" mask="00000011b">ECE</function>
 			</group>
 		</code>
 	</cafd>
@@ -355,18 +574,6 @@
 			</group>
 		</code>
 	</cafd>
-	<cafd id="00000A3F" name="IHKA_VA01" author="ruben_17non">
-		<code description="AC Last Settings Memory">
-			<group id="3002">
-				<function start="0" end="0" mask="00000010b">Aktiv</function>
-			</group>
-		</code>
-		<code description="AC Recirc Last Settings Memory">
-			<group id="3002">
-				<function start="0" end="0" mask="00000001b">Aktiv</function>
-			</group>
-		</code>
-	</cafd>
 	<cafd id="000009C8" name="KOMBI l7_MID" author="ruben_17non">
 		<code description="Digital Speed Display">
 			<group id="3000">
@@ -503,6 +710,54 @@
 			</group>
 		</code>
 	</cafd>
+	<cafd id="00000A3F" name="IHKA_VA01" author="ruben_17non">
+		<code description="AC Last Settings Memory">
+			<group id="3002">
+				<function start="0" end="0" mask="00000010b">Aktiv</function>
+			</group>
+		</code>
+		<code description="AC Recirc Last Settings Memory">
+			<group id="3002">
+				<function start="0" end="0" mask="00000001b">Aktiv</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="000006DE" name="IHKA_HIGH" author="ruben_17non">
+<code description="Always Remember Air ReCirculating">
+      <group id="3000">
+        <function start="0" end="0" mask="00000010b">01</function>
+      </group>
+    </code>
+    <code description="A/C System Remembers Last Setting">
+      <group id="3000">
+        <function start="0" end="0" mask="00000001b">01</function>
+      </group>
+    </code>
+  </cafd> 
+  	<cafd id="00000092" name="IHKA_CBF" author="ruben_17non">
+    <code description="Always Remember Air ReCirculating">
+      <group id="3000">
+         <function start="0" end="0" mask="00000100b">01</function>
+      </group>
+    </code>
+    <code description="A/C System Remembers Last Setting">
+      <group id="3000">
+        <function start="5" end="5" mask="00001000b">01</function>
+      </group>
+    </code>
+  </cafd>
+    <cafd id="000047D6" name="IHKA2" author="ruben_17non">
+  <code description="Always Remember Air ReCirculating">
+      <group id="3000">
+        <function start="0" end="0" mask="00000100b">01</function>
+      </group>
+    </code>
+    <code description="A/C System Remembers Last Setting">
+      <group id="3000">
+        <function start="5" end="5" mask="00001000b">01</function>
+      </group>
+    </code>
+  </cafd>
 	<cafd id="00001148" name="KAFAS2" author="ruben_17non">
 		<code description="Detect Road mark (Painted lane markings) + Detect grass and road sides">
 			<group id="3020">
@@ -520,179 +775,181 @@
 			</group>
 		</code>
 	</cafd>
-	<cafd id="00000DED" name="HU_NBT" author="ruben_17non">
-		<code description="Disable Video Speedlock (Video in motion)">
-			<group id="3000">
-				<function start="71" end="71" mask="11111111b">FF</function>
-				<function start="72" end="72" mask="11111111b">FF</function>
-				<function start="5" end="5" mask="00000100b">00</function>
-				<function start="5" end="5" mask="00010000b">00</function>
+	<cafd id="0000023F" name="GKEB23" author="ruben_17non">
+    <code description="Enable Sport Automatic Transmission (SAT)">
+      <group id="3000">
+        <function start="0" end="0" mask="01000000b">01</function>
+		<function start="1" end="1" mask="00000001b">01</function>
+      </group>
+    </code>
+	<code description="Enable Launch Control">
+      <group id="3000">
+        <function start="1" end="1" mask="10000000b">01</function>
+      </group>
+    </code>
+  </cafd> 
+    <cafd id="000006C6" name="VDC1_01" author="ruben_17non">
+	<code description="Competition Package M-Competition high -TEST-">
+      <group id="3001">
+        <function start="0" end="0" mask="00010000b">01</function>
+      </group>
+    </code>
+	</cafd> 
+	<cafd id="00000076" name="HKL_III" author="ruben_17non">
+<code description="Close/Open Trunk from Fob and Kick Panel">
+      <group id="3010">
+        <function start="0" end="0" mask="00001000b">01</function>
+		<function start="2" end="2" mask="00000100b">01</function>
+		<function start="2" end="2" mask="00001000b">01</function>
+      </group>
+    </code>
+  </cafd>
+    <cafd id="0000157F" name="HKFM" author="ruben_17non">
+  <code description="Close/Open Trunk from Fob and Kick Panel">
+      <group id="3010">
+        <function start="0" end="0" mask="00001000b">01</function>
+		<function start="2" end="2" mask="00000100b">01</function>
+		<function start="2" end="2" mask="00001000b">01</function>
+      </group>
+    </code>
+  </cafd> 
+    <cafd id="000007C8" name="HKFM F25" author="ruben_17non">
+	<code description="Close/Open Trunk from Fob and Kick Panel">
+      <group id="3010">
+        <function start="0" end="0" mask="00001000b">01</function>
+		<function start="2" end="2" mask="00000100b">01</function>
+		<function start="2" end="2" mask="00001000b">01</function>
+      </group>
+    </code>
+  </cafd>
+    <cafd id="00000014" name="JBBFE F25" author="ruben_17non">
+	<code description="Auto Wiper Sensitivity Increase to Max">
+	<group id="3530">
+				<function start="6" end="6" mask="11110000b">05</function>
+				<function start="6" end="6" mask="00001111b">09</function>
+				<function start="7" end="7" mask="00001111b">0D</function>
 			</group>
 		</code>
-		<code description="Enable Video Player From USB + All Video Plugins">
-			<group id="3000">
-				<function start="6" end="6" mask="01000000b">Aktiv</function>
-				<function start="15" end="15" mask="00010000b">Aktiv</function>
-				<function start="15" end="15" mask="00100000b">Aktiv</function>
-				<function start="15" end="15" mask="01000000b">Aktiv</function>
-				<function start="13" end="13" mask="00000100b">Aktiv</function>
-			</group>
-			<group id="3003">
-				<function start="33" end="33" mask="00000110b">Both</function>
+		<code description="-Choose One- Auto Light Sensitivity Increase set to: unempfindlich = insensitive  RECOMENDED">
+			<group id="3530">
+				<function start="5" end="5" mask="00000111b">03</function>
+				<function start="5" end="5" mask="00111000b">03</function>
 			</group>
 		</code>
-		<code description="Eco Pro Prediction Diagram/Grafik">
-			<group id="3000">
-				<function start="135" end="135" mask="10000000b">Aktiv</function>
-				<function start="17" end="17" mask="00001000b">Aktiv</function>
-			</group>
-			<group id="3001">
-				<function start="64" end="64" mask="00000010b">Aktiv</function>
-				<function start="64" end="64" mask="00000100b">Aktiv</function>
+		<code description="-Choose One-   Auto Light Sensitivity Increase set to: sehr_empfindlich = very sensitive">
+			<group id="3530">
+				<function start="5" end="5" mask="00000111b">04</function>
+				<function start="5" end="5" mask="00111000b">04</function>
 			</group>
 		</code>
-		<code description="Checkbox for Enable/Disable Sailing ECO PRO">
-			<group id="3000">
-				<function start="103" end="103" mask="10000000b">Aktiv</function>
+		<code description="-Choose One-   Auto Light Sensitivity Increase set to: empfindlich = sensitive">
+			<group id="3530">
+				<function start="5" end="5" mask="00000111b">02</function>
+				<function start="5" end="5" mask="00111000b">02</function>
 			</group>
 		</code>
-		<code description="Lock/Unlock Sound Confirm Checkbox With alarm only">
-			<group id="3000">
-				<function start="110" end="110" mask="00000001b">Aktiv</function>
+		<code description="-Choose One-   Auto Light Sensitivity Increase set to: normal = normal">
+			<group id="3530">
+				<function start="5" end="5" mask="00000111b">01</function>
+				<function start="5" end="5" mask="00111000b">01</function>
 			</group>
 		</code>
-		<code description="Ambient light, MODERN to SPORT and Deactivation Check Box">
-			<group id="3000">
-				<function start="109" end="109" mask="01110000b">Sport</function>
-				<function start="35" end="35" mask="11000000b">deaktivierung_bmw</function>
-			</group>
-		</code>
-		<code description="Disable Top View Camara TEST">
-			<group id="3001">
-				<function start="18" end="18" mask="00100000b">00</function>
-			</group>
-		</code>
-		<code description="Enable Compass">
-			<group id="3000">
-				<function start="5" end="5" mask="00000001b">Aktiv</function>
-			</group>
-		</code>
-		<code description="M Performance Start Animation of HMI">
-			<group id="3001">
-				<function start="62" end="62" mask="00000110b">Animation</function>
-				<function start="62" end="62" mask="01111000b">variant_01</function>
-			</group>
-		</code>
-		<code description="Sport Display Power and Torque Gauge - Red/Silver M Performance">
-			<group id="3000">
-				<function start="133" end="133" mask="01000000b">Aktiv</function>
-				<function start="101" end="101" mask="00010000b">Aktiv</function>
-				<function start="107" end="107" mask="00000100b">Aktiv</function>
-			</group>
-		</code>
-		<code description="Sport Display Power and Torque Gauge - Amber Standard">
-			<group id="3000">
-				<function start="133" end="133" mask="01000000b">Nicht_Aktiv</function>
-				<function start="101" end="101" mask="00010000b">Aktiv</function>
-				<function start="107" end="107" mask="00000100b">Aktiv</function>
-			</group>
-		</code>
-		<code description="Sports Mode Configuration Option in iDrive (STEP 2 Go to ICM for Part1)">
-			<group id="3001">
-				<function start="55" end="55" mask="00011000b">popup_and_config</function>
-			</group>
-		</code>
-		<code description="Disable Legal Disclaimer">
-			<group id="3001">
-				<function start="58" end="58" mask="11111111b">00</function>
-			</group>
-		</code>
-		<code description="Disable Camera/PDC Legal Disclaimer">
-			<group id="3001">
-				<function start="52" end="52" mask="11111111b">00</function>
-			</group>
-		</code>
-		<code description="Show DRL Option in iDrive">
-			<group id="3000">
-				<function start="92" end="92" mask="00011000b">02</function>
-			</group>
-		</code>
-		<code description="Show Tire Pressure and Temperature in iDrive">
-			<group id="3001">
-				<function start="1" end="1" mask="00100000b">Aktiv</function>
-			</group>
-		</code>
-		<code description="Show Volume Popup Display">
-			<group id="3002">
-				<function start="52" end="52" mask="01000000b">Aktiv</function>
-			</group>
-		</code>
-		<code description="Enable Route Preview">
-			<group id="3000">
-				<function start="135" end="135" mask="00001000b">Aktiv</function>
-				<function start="111" end="111" mask="00001000b">Aktiv</function>
-			</group>
-		</code>
-		<code description="Enable Road Preview">
-			<group id="3000">
-				<function start="59" end="59" mask="00100000b">Aktiv</function>
-			</group>
-		</code>
-		<code description="Enable Trip Import via USB">
-			<group id="3000">
-				<function start="61" end="61" mask="00000001b">Aktiv</function>
-			</group>
-		</code>
-		<code description="Rear Camera Zoom -Trailer Mode- Only With Rear Camera">
-			<group id="3001">
-				<function start="54" end="54" mask="00000001b">Aktiv</function>
-			</group>
-		</code>
-		<code description="Activate BLUETOOTH Data Profile (PAN/DUN Profile)">
-			<group id="3003">
-				<function start="3" end="3" mask="00000010b">Aktiv</function>
-				<function start="3" end="3" mask="00000100b">Aktiv</function>
-			</group>
-		</code>
-		<code description="Activate Siri Eyes-Free">
-			<group id="3003">
-				<function start="3" end="3" mask="00001000b">Aktiv</function>
-			</group>
-		</code>
-		<code description="Activate APPLE ENHANCEMENTS">
-			<group id="3000">
-				<function start="22" end="22" mask="10000000b">Aktiv</function>
-			</group>
-		</code>
-		<code description="Enable Traffic Information via TMC">
-			<group id="3000">
-				<function start="59" end="59" mask="00010000b">Aktiv</function>
-			</group>
-			<group id="3002">
-				<function start="23" end="23" mask="00000100b">Aktiv</function>
-				<function start="24" end="24" mask="00000010b">Aktiv</function>
-				<function start="23" end="23" mask="00100000b">Aktiv</function>
-			</group>
-		</code>
-		<code description="Speech to Text Dictate Email or SMS Response">
-			<group id="3003">
-				<function start="1" end="1" mask="00010000b">Aktiv</function>
-			</group>
-		</code>
-		<code description="Speech to Text Transformation Supported">
-			<group id="3003">
-				<function start="11" end="11" mask="00010000b">Aktiv</function>
-			</group>
-		</code>
-		<code description="Create New Voice Email">
-			<group id="3003">
-				<function start="12" end="12" mask="00000001b">Aktiv</function>
-			</group>
-		</code>
-		<code description="Adds GPS current location to the Nav menu items at the bottom of the screen.">
-			<group id="3000">
-				<function start="96" end="96" mask="10000000b">Aktiv</function>
-			</group>
-		</code>
+	<code description="Open Doors not interrupt windows">
+	<group id="3070">
+	<function start="0" end="0" mask="00000100b">00</function>
+	</group>
+	</code>
+	<code description="Memory Seatheating 15 minutes to 24h">
+	<group id="3050">
+	<function start="0" end="0" mask="00000110b">02</function>
+	</group>
+	</code>
 	</cafd>
+	<cafd id="0000000F" name="CAS_04" author="ruben_17non">
+<code description="Save last position START/STOP Memory">
+      <group id="3000">
+        <function start="3" end="3" mask="00100000b">01</function>
+      </group>
+    </code>
+	<code description="Disable START/STOP (Allways OFF)">
+      <group id="3000">
+        <function start="3" end="3" mask="00010000b">01</function>
+      </group>
+    </code>
+	<code description="Start Engine without press brake pedal">
+      <group id="3000">
+        <function start="1" end="1" mask="00000001b">00</function>
+      </group>
+    </code>
+	<code description="Unlock doors auto when you off engine">
+      <group id="3002">
+        <function start="1" end="1" mask="10000000b">01</function>
+      </group>
+    </code>
+	<code description="Close/Open Mirrors + Windows + Moon Roof through press key FOB">
+      <group id="3003">
+        <function start="2" end="2" mask="00000001b">00</function>
+		<function start="2" end="2" mask="00000010b">00</function>
+      </group>
+    </code>
+	<code description="Turn off navigation/radio when driver door is opened and engine is off">
+      <group id="3000">
+        <function start="2" end="2" mask="00000001b">01</function>
+      </group>
+    </code>
+  </cafd> 
+    <cafd id="00000911" name="ACSM_4B" author="ruben_17non">
+		<code description="Seatbelt reminder sound duration (5secs)">
+			<group id="3001">
+				<function start="3" end="3" mask="11111111b">5</function>
+			</group>
+		</code>
+		<code description="Disable seatbelt reminder sound">
+			<group id="3000">
+				<function start="15" end="15" mask="00000010b">00</function>
+				<function start="15" end="15" mask="00000100b">00</function>
+			</group>
+		</code>
+		<code description="Disable dashboard seatbelt icon">
+			<group id="3000">
+				<function start="15" end="15" mask="00001000b">00</function>
+				<function start="15" end="15" mask="00010000b">00</function>
+			</group>
+		</code>
+		<code description="Disable seatbelt sound on disconnect">
+			<group id="3000">
+				<function start="16" end="16" mask="00000001b">00</function>
+				<function start="16" end="16" mask="00000010b">00</function>
+			</group>
+		</code>
+		 </cafd>
+    <cafd id="00000552" name="FZD_04 DWA" author="ruben_17non">
+		<code description="Enable Panik Alarm (need more codes go to FRM and CAS)">
+			<group id="3002">
+				<function start="0" end="0" mask="00010000b">01</function>
+			</group>
+		</code>
+</cafd> 
+  <cafd id="000013F5" name="AAG_01 TEST">
+  </cafd>  
+<cafd id="0000028B" name="AMP_HIFILR02 TEST">
+  </cafd> 
+<cafd id="00000694" name="EPS_TK1 TEST">
+  </cafd> 
+<cafd id="00001162" name="EPS_TK2 TEST">
+  </cafd> 
+<cafd id="000002AF" name="FRR TEST">
+  </cafd> 
+<cafd id="00001043" name="SGGZA TEST">
+  </cafd> 
+<cafd id="00000018" name="JBBF_E3_PDC">
+  </cafd> 
+<cafd id="00001D75" name="iCAM Rear Cam only TEST">
+  </cafd> 
+<cafd id="00000160" name="HC2_01 TEST">
+  </cafd> 
+<cafd id="00001543" name="LMV_01 TEST">
+</cafd> 
+<cafd id="0000090B" name="ACSM_4C TEST">
+  </cafd> 
 </FDL>

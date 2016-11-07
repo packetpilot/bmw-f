@@ -1,6 +1,115 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <FDL>
 	<!--ruben_17non-->
+	<cafd id="00001EF6" name="HU_NBT_EVO" author="ruben_17non">
+	<code description="Old ZBE3 Touch with ID5/ID6 Correct buttons asignament"> <!-- ZBE_HARDKEY_LAYOUT_NEW  Nicht_Aktiv-->
+			<group id="3000">
+				<function start="16" end="16" mask="10000000b">Nitch_Aktiv</function>
+			</group>
+		</code>
+	<code description="HMI Version to ID5 Need updated EVO and Correct FSC Pack (Option 1 Choose only one)">  <!-- HMI_VERSION 01 and HMI_ID_VERSION 02 and ID5_COLOR_SET 00-->
+			<group id="3000">
+				<function start="21" end="21" mask="00000001b">01</function>
+				<function start="29" end="29" mask="00011100b">02</function>
+			</group>
+			<group id="300D">
+			<function start="2" end="2" mask="00100000b">00</function>
+			</group>
+		</code>
+		<code description="HMI Version to ID6 Need updated EVO and Correct FSC Pack (Option 2 Choose only one)">   <!-- HMI_VERSION 01 and HMI_ID_VERSION 03 and ID5_COLOR_SET 00-->
+			<group id="3000">
+				<function start="21" end="21" mask="00000001b">01</function>
+				<function start="29" end="29" mask="00011100b">03</function>
+			</group>
+			<group id="300D">
+			<function start="2" end="2" mask="00100000b">01</function>
+			</group>
+		</code>
+		<code description="Enable Miracast, Scrren of Phone Mirror (Only for ID5/ID6)"> <!-- ENT_MIRACAST_MULTIPLE_STREAMS and  ENT_MIRACAST -->
+			<group id="3000">
+				<function start="30" end="30" mask="00001000b">01</function>
+				<function start="6" end="6" mask="10000000b">01</function>
+				<function start="36" end="36" mask="00000010b">01</function>
+			</group>
+		</code>
+		<code description="Enable Carplay (Need FSC)">
+			<group id="3001">
+				<function start="29" end="29" mask="11111111b">15</function>
+			</group>
+			<group id="3004">
+				<function start="0" end="0" mask="00000100b">Aktiv</function>
+			</group>
+			<group id="3005">
+				<function start="67" end="67" mask="11111000b">16</function>
+			</group>
+			</code>
+			<code description="M Laptimer in Map Tab">
+			<group id="3006">
+				<function start="4" end="4" mask="01000000b">Aktiv</function>
+			</group>
+		</code>
+		<code description="Enable X View in menu">
+			<group id="3000">
+				<function start="15" end="15" mask="00000001b">Aktiv</function>
+			</group>
+		</code>
+		<code description="Blicker 5 Times Config in HMI">
+			<group id="3000">
+				<function start="36" end="36" mask="00000001b">Aktiv</function>
+			</group>
+		</code>
+	    <code description="Lock/Unlock Sound Confirm Checkbox With alarm only">
+			<group id="3000">
+				<function start="110" end="110" mask="00000001b">Aktiv</function>
+			</group>
+		</code>
+		<code description="Ambient light, MODERN to SPORT and Deactivation Check Box">
+			<group id="3000">
+				<function start="109" end="109" mask="01110000b">Sport</function>
+				<function start="35" end="35" mask="11000000b">deaktivierung_bmw</function>
+			</group>
+		</code>
+		<code description="M Performance Start Animation of HMI">
+			<group id="3001">
+				<function start="62" end="62" mask="00000110b">Animation</function>
+				<function start="62" end="62" mask="01111000b">variant_01</function>
+			</group>
+		</code>
+		<code description="Sport Display Power and Torque Gauge - Red/Silver M Performance">
+			<group id="3000">
+				<function start="133" end="133" mask="01000000b">Aktiv</function>
+				</group>
+				<group id="3009">
+				<function start="9" end="9" mask="00010000b">Aktiv</function>
+			</group>
+		</code>
+		<code description="Sports Mode Configuration Option in iDrive (STEP 2 Go to ICM for Part1)">
+			<group id="3008">
+				<function start="79" end="79" mask="11000000b">popup_and_config</function>
+			</group>
+		</code>
+		<code description="Show DRL Option in iDrive">
+			<group id="3000">
+				<function start="92" end="92" mask="00011000b">02</function>
+			</group>
+		</code>
+		<code description="Show Tire Pressure and Temperature in iDrive">
+			<group id="3001">
+				<function start="1" end="1" mask="00100000b">Aktiv</function>
+				<function start="66" end="66" mask="00001100b">02</function>
+			</group>
+		</code>
+		<code description="Rear Camera Zoom -Trailer Mode- Only With Rear Camera">
+			<group id="3001">
+				<function start="54" end="54" mask="00000001b">Aktiv</function>
+			</group>
+		</code>
+		<code description="Activate APPLE ENHANCEMENTS">
+			<group id="3000">
+				<function start="22" end="22" mask="10000000b">Aktiv</function>
+			</group>
+		</code>
+	</cafd>
 	<cafd id="00001AB7" name="PMA_PDC" author="ruben_17non">
 		<code description="Cameras/PDC in all speed This disable speed restriction -STEP 1 Go to ICAM for Part2-">
 			<group id="300B">

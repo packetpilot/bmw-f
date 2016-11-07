@@ -51,18 +51,18 @@
 		<code description="Enable X View in menu">
 			<group id="3000">
 				<function start="15" end="15" mask="00000001b">Aktiv</function>
-				<function start="110" end="110" comment="MOMENTDISTRIBUTION_MENU" mask="00000010b">aktiv</function>
+				<function start="110" end="110" mask="00000010b">aktiv</function>
 			</group>
 		</code>
 		<code description="Enables All Video Codecs and Video Import">
-<group id="3000">
-<function mask="00010000b" end="15" start="15" comment="ENT_CODEC_OGG">aktiv</function>
-<function mask="00100000b" end="15" start="15" comment="ENT_CODEC_XVID">aktiv</function>
-<function mask="01000000b" end="15" start="15" comment="ENT_CODEC_VCD">aktiv</function>
-<function mask="00000100b" end="13" start="13" comment="ENT_MC_VIDEO_SUPPORT">Aktiv</function>
-<function mask="00000110b" end="32" start="32" comment="API_USB_VIDEO">both</function>
-</group>
-</code>
+           <group id="3000">
+		   <function start="15" end="15" mask="00010000b">Aktiv</function>
+		    <function start="15" end="15" mask="00100000b">Aktiv</function>
+			 <function start="15" end="15" mask="01000000b">Aktiv</function>
+			  <function start="13" end="13" mask="00000100b">Aktiv</function>
+			   <function start="32" end="32" mask="00000110b">both</function>
+               </group>
+          </code>
 		<code description="Blicker 5 Times Config in HMI">
 			<group id="3000">
 				<function start="36" end="36" mask="00000001b">Aktiv</function>
@@ -73,10 +73,9 @@
 				<function start="110" end="110" mask="00000001b">Aktiv</function>
 			</group>
 		</code>
-		<code description="Ambient light, MODERN to SPORT and Deactivation Check Box">
+		<code description="Ambient light, MODERN to SPORT">
 			<group id="3000">
 				<function start="109" end="109" mask="01110000b">Sport</function>
-				<function start="35" end="35" mask="11000000b">deaktivierung_bmw</function>
 			</group>
 		</code>
 		<code description="M Performance Start Animation of HMI">

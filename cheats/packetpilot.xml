@@ -16,6 +16,22 @@
     !! I'm new at this; feedback is welcomed. !!
     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
   -->
+  <cafd id="00000909" name="ACSM_4C" author="packetpilot" series="F020,F030">
+    <!-- disable both seatbelt warnings -->
+    <code description="Disable seat-belt chime">
+      <group id="3000">
+        <function start="15" end="15" mask="00000010b">00</function>
+        <function start="15" end="15" mask="00000100b">00</function>
+      </group>
+    </code>
+    <code description="Enable seat-belt chime">
+      <group id="3000">
+        <function start="15" end="15" mask="00000010b">00</function>
+        <function start="15" end="15" mask="00000100b">00</function>
+      </group>
+    </code>
+  </cafd>
+
   <cafd id="00000794" name="FEM_01" author="packetpilot" series="F020,F030">
     <!-- remote close/open -->
     <code description="Fold/Unfold Mirrors, Ctrl Windows: Enable w/ Fob and Comfort Access, Min Delay">

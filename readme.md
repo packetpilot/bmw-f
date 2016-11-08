@@ -4,12 +4,12 @@
 
 ![Graphic](https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQ4IhZEzpOCraK_vByD8TGUfYKhZmEfe74ZjpaRwloceNOnkO9d7w)
 
-> srsly though don't fucking brick your car.
+> srsly though don't brick your car.
 
 ## Requirements
 
 ### Stack
-* F-chassis BMW 
+* BMW Vehicle 
 * [ENET Cable](https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&es_th=1&ie=UTF-8#q=bmw%20enet%20cable)
 * [E-SYS + PSDZData](http://f80.bimmerpost.com/forums/showthread.php?t=1040141)
 * [E-SYS Launcher Premium](https://mega.nz/#F!PV9lxa4J!wvP4wFcYZVF84JBfc__lAw)
@@ -27,9 +27,7 @@
 Share code: fork me, submit pull requests, ask to maintain the repo.
 
 ### Be friendly.
-Seriously. Even when someone's being a newb, especially when that someone is @thisisdave.  
-(But maybe be a snarky-but-friendly dick-with-a-smiley-face-emoji in other cases.)  
-joking not joking
+Seriously. Even when someone's being a newb.  
 
 ## List of ECUs/Modules | Functions
 *This is incomplete as it's been taken from a MY2016*  

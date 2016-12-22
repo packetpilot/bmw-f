@@ -10,7 +10,7 @@
 	</code>
   </cafd>
   -->
-	<!--Botho-->
+	<!--Botho 2016-12-22 -->
 	<cafd id="00000911" name="ACSM" author="Botho" series="F020">
 		<code description="Ceinture de sécurité : Durée du rappel à 10s">
 			<group id="3001">
@@ -192,14 +192,19 @@
 	
 	
 	<cafd id="000016EE" name="IHKA" author="Botho" series="F020">
-		<code description="Climatisation : Mémorise la dernière position AC (on/off)">
+		<code description="Climatisation : Mémorise la dernière position (on/off)">
 			<group id="3003">
 				<function start="0" end="0" mask="00000010b" comment="MEMORY_OFF">Aktiv</function>
 			</group>
 		</code>
-		<code description="Climatisation : Mémorise la dernière position AC (flux d'air)">
+		<code description="Climatisation : Mémorise la dernière position du flux d'air (par défaut, 15 minutes après arrêt du moteur)">
 			<group id="3003">
 				<function start="0" end="0" mask="00000001b" comment="MEMORY_UMLUFT">Aktiv</function>
+			</group>
+		</code>
+		<code description="Climatisation : AC off en mode AUTO">
+			<group id="3003">
+				<function start="0" end="0" mask="00000100b" comment="AC_ON_WITH_AUTO">nicht_aktiv</function>
 			</group>
 		</code>
 	</cafd>
@@ -274,10 +279,16 @@
 	</cafd>
 	
 	
-	<cafd id="0000067B" name="ICM" author="Botho" series="F020">
+	<cafd id="0000067B" name="ICMQL" author="Botho" series="F020">
 		<code description="Active Cruise Control : Distance minimum par défaut à 1">
 			<group id="3000">
 				<function start="184" end="184" mask="00000111b" comment="C_Abstandsstufe_init">Stufe_1</function>
+			</group>
+		</code>
+		<code description="Active Cruise Control : Activation à partir de 10 km/h (30 km/h par défaut)">
+			<group id="3000">
+				<function start="142" end="142" mask="11111111b" comment="C_Wunschgeschw_min_kmh">0A</function>
+				<function start="143" end="143" mask="11111111b" comment="C_Wunschgeschw_min_mph">06</function>
 			</group>
 		</code>
 		<code description="ECO PRO : Activation par défaut au démarrage">

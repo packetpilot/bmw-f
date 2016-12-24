@@ -10,7 +10,7 @@
 	</code>
   </cafd>
   -->
-	<!--Botho 2016-12-22 -->
+	<!--Botho 2016-12-24 -->
 	<cafd id="00000911" name="ACSM" author="Botho" series="F020">
 		<code description="Ceinture de sécurité : Durée du rappel à 10s">
 			<group id="3001">
@@ -135,17 +135,17 @@
 		</code>
 		<code description="Feux freinage d'urgence : activation mode clignotant">
 			<group id="3060">
-				<function start="16" end="16" mask="00000011b" comment="ESS_AKTIVIERBARER_AUSGANG">02</function>
+				<function start="16" end="16" mask="00000011b" comment="ESS_AKTIVIERBARER_AUSGANG">bremslicht_blinkend</function>
 			</group>
 		</code>
-		<code description="Feux freinage d'urgence : décéleration  minimum (3 metres par seconde)">
+		<code description="Feux freinage d'urgence : décéleration minimum à 3 mètres par seconde (par défaut : 7 mètres seconde)">
 			<group id="3060">
 				<function start="20" end="20" mask="00011111b" comment="ESS_AKTIVIERUNG_REALE_VERZ">06</function>
 			</group>
 		</code>
-		<code description="Feux freinage d'urgence : vitesse minimale (10 km/h)">
+		<code description="Feux freinage d'urgence : vitesse minimale à 20 km/h (par défaut : 50 km/h)">
 			<group id="3060">
-				<function start="17" end="17" mask="11111110b" comment="ESS_AKTIVIERUNG_GESCHW">0A</function>
+				<function start="17" end="17" mask="11111110b" comment="ESS_AKTIVIERUNG_GESCHW">14</function>
 			</group>
 		</code>
 		<code description="Désactive Auto Start/Stop par défaut">

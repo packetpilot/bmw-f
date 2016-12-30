@@ -10,7 +10,7 @@
 	</code>
   </cafd>
   -->
-	<!--Botho 2016-12-24 -->
+	<!--Botho 2016-12-30 -->
 	<cafd id="00000911" name="ACSM" author="Botho" series="F020">
 		<code description="Ceinture de sécurité : Durée du rappel à 10s">
 			<group id="3001">
@@ -158,14 +158,14 @@
 				<function start="0" end="0" mask="00100000b" comment="TCM_MSA_MEMORY">aktiv</function>
 			</group>
 		</code>
-		<code description="CLM_CCM_COOLANT_TEMP -- TODO">
+		<code description="Message en cas de haute température du liquide de refroidissement -- TESTING">
 			<group id="3040">
-				<function start="1" end="1" mask="00100000b" comment="CLM_CCM_COOLANT_TEMP">wert_01</function>
+				<function start="1" end="1" mask="10000000b" comment="CLM_CCM_COOLANT_TEMP">wert_01</function>
 			</group>
 		</code>
-		<code description="CLM_HORN_AT_SECURE -- TODO">
+		<code description="Double coup de Klaxon au vérouillage des portes moteur allumé">
 			<group id="3040">
-				<function start="1" end="1" mask="10000000b" comment="CLM_HORN_AT_SECURE">wert_01</function>
+				<function start="1" end="1" mask="00100000b" comment="CLM_HORN_AT_SECURE">aktiv</function>
 			</group>
 		</code>
 		<code description="Fermeture du coffre avec le pied (FA PRODUCTION DATE > 0315)">

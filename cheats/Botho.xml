@@ -382,9 +382,14 @@
 				<function start="110" end="110" mask="00000001b" comment="ACOUSTICAL_LOCK_CONFIRM">Aktiv</function>
 			</group>
 		</code>
-		<code description="iDrive (Eclairage) : Ajout feux de jour">
+		<code description="iDrive (Eclairage) : Ajout case à cocher feux de jour">
 			<group id="3000">
 				<function start="92" end="92" mask="00011000b" comment="DAYDRIVING_LIGHT">02</function>
+			</group>
+		</code>
+		<code description="iDrive (Eclairage) : Ajout case à cocher lumière d'ambiance">
+			<group id="3000">
+				<function start="35" end="35" mask="11000000b" comment="DEAKTIVIERUNGSMOEGLICHKEIT_AMBILIGHT">deaktivierung_bmw</function>
 			</group>
 		</code>
 		<code description="iDrive (Statut) : Affichage température et pression des pneus">

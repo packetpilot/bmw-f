@@ -1,16 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <FDL>
 	<!-- Sample Only
-  <cafd id="00000794" name="FEM_BODY" series="F020,F030">
-    <code description="Angel Eyes Parking Light Brightness 50%" series="F030">
-	  <group id="3062">
-	    <function start="68" end="68" mask="11111111b" comment="MAPPING_STANDL_V_L_PWM Level 1 : Left">32</function>
-		<function start="80" end="80" mask="11111111b" comment="This is a comment...">32</function>
-	  </group>
-	</code>
-  </cafd>
-  -->
-	<!--Botho 2016-12-31 -->
+	<cafd id="00000794" name="FEM_BODY" series="F020,F030">
+		<code description="Angel Eyes Parking Light Brightness 50%" series="F030">
+			<group id="3062">
+				<function start="68" end="68" mask="11111111b" comment="MAPPING_STANDL_V_L_PWM Level 1 - Left">32</function>
+				<function start="80" end="80" mask="11111111b" comment="This is a comment...">32</function>
+			</group>
+		</code>
+	</cafd>
+	
+**************************************
+*******   Botho 2017-01-08     *******
+**************************************
+
+	-->
+
 	<cafd id="00000911" name="ACSM" author="Botho" series="F020">
 		<code description="Ceinture de sécurité : Durée du rappel à 10s">
 			<group id="3001">
@@ -18,8 +23,8 @@
 			</group>
 		</code>
 	</cafd>
-	
-	
+
+
 	<cafd id="00000794" name="FEM_BODY" author="Botho" series="F020">
 		<code description="Vitres active lors de l'ouverture des portes avant">
 			<group id="3050">
@@ -158,7 +163,7 @@
 				<function start="0" end="0" mask="00100000b" comment="TCM_MSA_MEMORY">aktiv</function>
 			</group>
 		</code>
-		<code description="Message en cas de haute température du liquide de refroidissement -- TESTING">
+		<code description="Message en cas de haute température du liquide de refroidissement">
 			<group id="3040">
 				<function start="1" end="1" mask="10000000b" comment="CLM_CCM_COOLANT_TEMP">aktiv</function>
 			</group>
@@ -183,14 +188,14 @@
 				<function start="1" end="1" mask="00010000b" comment="?? UNBELEGT ?? NOT MAPPED">01</function>
 			</group>
 		</code>
-		<code description="ZZ TESTING KO 59.2 - Délais d'activation de la fonction confort">
+		<code description="ZZ TESTING (KO 59.2) - Délais d'activation de la fonction confort">
 			<group id="3053">
 				<function start="7" end="7" mask="11111111b" comment="KOMFORT_ANSTEUERZEIT">A0</function>
 			</group>
 		</code>
 	</cafd>
-	
-	
+
+
 	<cafd id="000016EE" name="IHKA" author="Botho" series="F020">
 		<code description="Climatisation : Mémorise la dernière position (on/off)">
 			<group id="3003">
@@ -208,8 +213,8 @@
 			</group>
 		</code>
 	</cafd>
-	
-	
+
+
 	<cafd id="000009C8" name="KOMBI" author="Botho" series="F020">
 		<code description="Tableau de bord : Affichage de la vitesse digitale">
 			<group id="3000">
@@ -249,12 +254,12 @@
 				<function start="1" end="1" mask="01000000b" comment="BC_V_KORREKTUR">nicht_aktiv</function>
 			</group>
 		</code>
-		<code description="ZZ TESTING 60.3 - Tableau de bord : Affichage de la température moteur">
+		<code description="ZZ TESTING (KO 60.3) - Tableau de bord : Affichage de la température moteur">
 			<group id="3000">
 				<function start="42" end="42" mask="00010000b" comment="BC_MOTORTEMP_ENABLE">Aktiv</function>
 			</group>
 		</code>
-		<code description="ZZ TESTING 60.3 - HUD : Affichage clignotants Step 1 (Step 2 dans HU_NBT)">
+		<code description="ZZ TESTING (KO 60.3) - HUD : Affichage clignotants Step 1 (Step 2 dans HU_NBT)">
 			<group id="3003">
 				<function start="4" end="4" mask="00000001b" comment="HUD_BLINKER_ENABLE">Aktiv</function>
 			</group>
@@ -268,8 +273,8 @@
 			</group>
 		</code>
 	</cafd>
-	
-	
+
+
 	<cafd id="000007A1" name="REM" author="Botho" series="F020">
 		<code description="Vitres : Activation à l'ouverture des portes arrière">
 			<group id="3050">
@@ -277,8 +282,8 @@
 			</group>
 		</code>
 	</cafd>
-	
-	
+
+
 	<cafd id="0000067B" name="ICMQL" author="Botho" series="F020">
 		<code description="Active Cruise Control : Distance minimum par défaut à 1">
 			<group id="3000">
@@ -297,8 +302,8 @@
 			</group>
 		</code>
 	</cafd>
-	
-	
+
+
 	<cafd id="000007C8" name="HKFM" author="Botho" series="F020">
 		<code description="Hayon : Activation fermeture via bouton au tableau de bord">
 			<group id="3010">
@@ -307,14 +312,14 @@
 				<function start="0" end="0" mask="00001000b" comment="TASTER_FBD">Aktiv</function>
 			</group>
 		</code>
-		<code description="ZZ TESTING KO 57.4 - Hayon : Activation fermeture sur pression de la main">
+		<code description="ZZ TESTING (KO 60.3) - Hayon : Activation fermeture sur pression de la main">
 			<group id="3010">
 				<function start="2" end="2" mask="00000010b" comment="MECH_DRUK_AUTO_SCH">Aktiv</function>
 			</group>
 		</code>
 	</cafd>
-	
-	
+
+
 	<cafd id="000000B5" name="SM2" author="Botho" series="F020">
 		<code description="Sièges électriques : Gong lors de la mémorisation">
 			<group id="3000">
@@ -337,8 +342,8 @@
 			</group>
 		</code>
 	</cafd>
-	
-	
+
+
 	<cafd id="00000DED" name="HU_NBT" author="Botho" series="F020">
 		<code description="iDrive (Media) : volume au démarrage à 30% (défaut 25%)">
 			<group id="3002">
@@ -486,50 +491,50 @@
 				<function start="26" end="26" mask="00111000b" comment="SOUND_SIGNAL_SET">bmw_i</function>
 			</group>
 		</code>
-		<code description="ZZ TESTING KO 59.3 - HUD : Affichage clignotants Step 1 (Step 2 dans KOMBI)">
+		<code description="ZZ TESTING (KO 60.3) - HUD : Affichage clignotants Step 1 (Step 2 dans KOMBI)">
 			<group id="3001">
 				<function start="55" end="55" mask="10000000b" comment="HUD_TURNSIGNAL">Aktiv</function>
 			</group>
 		</code>
-		<code description="ZZ TESTING KO 59.3 - iDrive (Eclairage) : Affichage assistant feux de route">
+		<code description="ZZ TESTING (KO 60.3) - iDrive (Eclairage) : Affichage assistant feux de route">
 			<group id="3000">
 				<function start="109" end="109" mask="10000000b" comment="HIGH_BEAM_ASSISTANT">Aktiv</function>
 			</group>
 		</code>
-		<code description="ZZ TESTING KO 59.3 - iDrive (Navigation) : Zoom automatique aux intersections">
+		<code description="ZZ TESTING (KO 60.3) - iDrive (Navigation) : Zoom automatique aux intersections">
 			<group id="3000">
 				<function start="111" end="111" mask="00000100b" comment="NAVI_AUTOZOOM">aktiv</function>
 			</group>
 		</code>
-		<code description="ZZ TESTING KO 59.3 - iDrive (Navigation) : Zoom automatique de la carte">
+		<code description="ZZ TESTING (KO 60.3) - iDrive (Navigation) : Zoom automatique de la carte">
 			<group id="3000">
 				<function start="16" end="16" mask="00001000b" comment="AUTO_MAP_ZOOM">aktiv</function>
 			</group>
 		</code>
-		<code description="ZZ TESTING KO 59.3 - iDrive (Réglage) : Activation GPS tracking (problème de réglementation CNIL en France je pense ...)">
+		<code description="ZZ TESTING (KO 60.3) - iDrive (Réglage) : Activation GPS tracking (problème de réglementation CNIL en France je pense ...)">
 			<group id="3003">
 				<function start="15" end="15" mask="00000001b" comment="ASSIST_SVR_SHOW">aktiv</function>
 				<function start="14" end="14" mask="10000000b" comment="ASSIST_VEHICLEFINDER_SHOW">aktiv</function>
 			</group>
 		</code>
-		<code description="ZZ TESTING KO 59.3 - iDrive (Multimédia) : version DB GRACENOTE">
+		<code description="ZZ TESTING (KO 60.3) - iDrive (Multimédia) : version DB GRACENOTE">
 			<group id="3000">
 				<function start="14" end="14" mask="01000000b" comment="ENT_GRACENOTE_INSTALLED">aktiv</function>
 			</group>
 		</code>
-		<code description="ZZ TESTING - iDrive (Navigation) : Ajoute le menu Route express dans les préférences de guidage">
+		<code description="ZZ TESTING (KO 60.3) - iDrive (Navigation) : Ajoute le menu Route express dans les préférences de guidage">
 			<group id="3000">
 				<function start="108" end="108" mask="00000100b" comment="NAVI_EXPRESS_ROADS">aktiv</function>
 			</group>
 		</code>
-		<code description="ZZ TESTING KO 59.3 - iDrive (Navigation) : Active le guidage en 2 etapes ?? No difference">
+		<code description="ZZ TESTING (KO 60.3) - iDrive (Navigation) : Active le guidage en 2 etapes ?? No difference">
 			<group id="3000">
 				<function start="111" end="111" mask="00000010b" comment="NAVI_VIOCE_OUTPUT_2_STEP">aktiv</function>
 			</group>
 		</code>
 	</cafd>
-	
-	
+
+
 	<cafd id="00000223" name="TRSVC" author="Botho" series="F020">
 		<code description="Activation des caméras latérales à haute vitesse">
 			<group id="3000">
@@ -538,8 +543,8 @@
 			</group>
 		</code>
 	</cafd>
-	
-	
+
+
 	<cafd id="00001148" name="KAFAS2" author="Botho" series="F020">
 		<code description="HUD : Affichage de l'assistant distance Step 3 (Step 1 dans KOMBI, Step 2 dans HU_NBT)">
 			<group id="3060">
@@ -548,8 +553,8 @@
 			</group>
 		</code>
 	</cafd>
-	
-	
+
+
 	<cafd id="00000A07" name="FZD" author="Botho" series="F020">
 		<code description="Activation Panic Alarme">
 			<group id="3002">
@@ -557,5 +562,4 @@
 			</group>
 		</code>
 	</cafd>
-	<!-- End Botho-->
 </FDL>

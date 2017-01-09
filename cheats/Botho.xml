@@ -11,7 +11,7 @@
 	</cafd>
 	
 **************************************
-*******   Botho 2017-01-08     *******
+*******   Botho 2017-01-09     *******
 **************************************
 
 	-->
@@ -138,12 +138,12 @@
 				<function start="9" end="9" mask="11111111b" comment="RC_TIME_DELAY_PANIC">28</function>
 			</group>
 		</code>
-		<code description="Feux freinage d'urgence : activation mode clignotant">
+		<code description="Feux freinage d'urgence : activation mode clignotement">
 			<group id="3060">
 				<function start="16" end="16" mask="00000011b" comment="ESS_AKTIVIERBARER_AUSGANG">bremslicht_blinkend</function>
 			</group>
 		</code>
-		<code description="Feux freinage d'urgence : décéleration minimum à 3 mètres par seconde (par défaut : 7 mètres seconde)">
+		<code description="Feux freinage d'urgence : décéleration minimum à 3 m/s (par défaut : 7 m/s)">
 			<group id="3060">
 				<function start="20" end="20" mask="00011111b" comment="ESS_AKTIVIERUNG_REALE_VERZ">06</function>
 			</group>
@@ -550,6 +550,12 @@
 			<group id="3060">
 				<function start="1" end="1" mask="00011000b" comment="DISPLAY_HEADWAY_DISTANCE">01</function>
 				<function start="1" end="1" mask="00000010b" comment="SEND_STATUS_IBRAKE">IBRAKE_STAT_on_F030</function>
+			</group>
+		</code>
+		<code description="Xenon : Feux de route auto au dessus de 55 km/h (70 km/h par defaut) et feux de croisement auto en dessous de 50 km/h (65 km/h par defaut)">
+			<group id="3020">
+				<function start="3" end="3" mask="11111111b" comment="THRV_AVAI_TLC_HIGH">37</function>
+				<function start="4" end="4" mask="11111111b" comment="THRV_AVAI_TLC_LOW">32</function>
 			</group>
 		</code>
 	</cafd>

@@ -11,12 +11,27 @@
     </code>
   </cafd>
   -->
-
   <!-- packetpilot
     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     !! I'm new at this; feedback is welcomed. !!
     !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
   -->
+  <cafd id="00000909" name="ACSM_4C" author="packetpilot" series="F020,F030">
+    <!-- disable both seatbelt warnings -->
+    <code description="Disable seat-belt chime">
+      <group id="3000">
+        <function start="15" end="15" mask="00000010b">00</function>
+        <function start="15" end="15" mask="00000100b">00</function>
+      </group>
+    </code>
+    <code description="Enable seat-belt chime">
+      <group id="3000">
+        <function start="15" end="15" mask="00000010b">00</function>
+        <function start="15" end="15" mask="00000100b">00</function>
+      </group>
+    </code>
+  </cafd>
+
   <cafd id="00000794" name="FEM_01" author="packetpilot" series="F020,F030">
     <!-- remote close/open -->
     <code description="Fold/Unfold Mirrors, Ctrl Windows: Enable w/ Fob and Comfort Access, Min Delay">
@@ -191,13 +206,13 @@
     </code>
   </cafd>
 
-  <cafd id="00001EF6" name="HU_NBT_EVO" author="packetpilot" series="F020,F030">
-    <code description="Digital Signal Processing: Enable B-and-O (Replacing Logic7)">
+  <cafd id="00001EF6" name="NBT" author="packetpilot">
+    <code description="Digital Signal Processing: Enable B-and-O DSP Override">
       <group id="3000">
         <function start="57" end="57" mask="00110000b">03</function>
       </group>
     </code>
-    <code description="Digital Signal Processing: Restore Logic7">
+    <code description="Digital Signal Processing: Disable B-and-O DSP Override">
       <group id="3000">
         <function start="57" end="57" mask="00110000b">00</function>
       </group>
@@ -205,16 +220,28 @@
   </cafd>
 
   <cafd id="000010BA" name="LHM2" author="packetpilot" series="F020,F030">
-    <code description="Front Fog-Like VLD: Enable Step 2a [dep: step 1 in FEM_Body]">
+    <code description="Front Fog-Like VLD noNGHB: Enable Step 2a [dep: step 1 in FEM_Body, no NGHB, LED pkg]">
       <group id="3000">
         <function start="0" end="6" mask="11111111b">FA, FA, 00, FA, C8, C8, 00</function>
         <function start="7" end="13" mask="11111111b">FA, FA, 00, FA, C8, C8, 00</function>
       </group>
     </code>
-    <code description="Front Fog-Like VLD: Disable Step 2a [reco: revert Step 1 in FEM_Body]">
+    <code description="Front Fog-Like VLD noNGHB: Disable Step 2a [reco: revert Step 1 in FEM_Body, req: no NGHB]">
       <group id="3000">
         <function start="0" end="6" mask="11111111b">FA, FA, 00, 00, C8, C8, 00</function>
         <function start="7" end="13" mask="11111111b">FA, FA, 00, 00, C8, C8, 00</function>
+      </group>
+    </code>
+    <code description="Front Fog-Like VLD w/ NGHB: Enable Step 2a [dep: step 1 in FEM_Body, NGHB, LED pkg]">
+      <group id="3000">
+        <function start="0" end="6" mask="11111111b">FA, 64, 00, FA, FA, FA, 00</function>
+        <function start="7" end="13" mask="11111111b">FA, 64, 00, FA, FA, FA, 00</function>
+      </group>
+    </code>
+    <code description="Front Fog-Like VLD w/ NGHB: Disable Step 2a [reco: revert Step 1 in FEM_Body, req: NGHB ]">
+      <group id="3000">
+        <function start="0" end="6" mask="11111111b">FA, 64, 00, 00, FA, FA, 00</function>
+        <function start="7" end="13" mask="11111111b">FA, 64, 00, 00, FA, FA, 00</function>
       </group>
     </code>
   </cafd>
@@ -273,22 +300,17 @@
   <cafd id="000000B5" name="SM2" author="packetpilot" series="F020,F030">
     <!-- copied and translated from Botho.xml
     !!! TODO: clarify language after testing -->
-    <code description="Easy Entry: Gong when Storing Position">
-      <group id="3000">
-        <function start="2" end="2" mask="00001000b" comment="MEMORY_GONG">Aktiv</function>
-      </group>
-    </code>
     <code description="Easy Entry: Enable">
       <group id="3000">
         <function start="0" end="0" mask="00011100b" comment="EINAUSSTIEGSHILFE">Modus_FA_SLV</function>
       </group>
     </code>
-    <code description="Easy Entry: Set Max Rearward Auto-Travel (mm from limit)">
+    <code description="Easy Entry: Set Max Rearward Auto-Travel (mm from limit?)">
       <group id="3012">
         <function start="4" end="5" mask="11111111b" comment="EAH_SCHUTZFREIRAUM_HINTEN_SLV_PHYS">00, 32</function>
       </group>
     </code>
-    <code description="Easy Entry: Set Desired Rearward Travel (mm)">
+    <code description="Easy Entry: Set Desired Rearward Travel (mm?)">
       <group id="3012">
         <function start="0" end="1" mask="11111111b" comment="EAH_VERFAHRWEG_SLV_PHYS">00, 32</function>
       </group>

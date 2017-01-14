@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FDL>
+	<!--tutuianu_daniel-->
+<cafd id="00000122" name="KAFAS" author="tutuianu_daniel">
+	<code description="SLI 1 Romania No speed limit info in this country (get your country code uppercase in hex http://www.unit-conversion.info/texttools/hexadecimal/  )">
+			<group id="3030">
+				<function start="2" end="3" comment="52,4F means R,O" mask="11111111b">52, 4F</function>
+			</group>
+			<group id="3010">
+				<function start="0" end="0" comment="COD_ELECTRICAL_HORIZON" mask="00010000b">aktiv</function>
+			</group>
+		</code>
+		</cafd>
+</FDL>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <FDL>
 	<!-- Sample Only
 	<cafd id="00000794" name="FEM_BODY" series="F020,F030">
@@ -11,7 +11,7 @@
 	</cafd>
 	
 **************************************
-*******   Botho 2017-01-09     *******
+*******   Botho 2017-01-14     *******
 **************************************
 
 	-->
@@ -402,6 +402,11 @@
 				<function start="1" end="1" mask="00100000b" comment="RDC_SAFETY">Aktiv</function>
 			</group>
 		</code>
+		<code description="iDrive (hidden menu) : Affichage du carnet d'entretien">
+			<group id="3000">
+				<function start="2" end="2" mask="00100000b" comment="SERVICE_HISTORY">Aktiv</function>
+			</group>
+		</code>
 		<code description="iDrive (Notice) : Utilisation de la notice en roulant">
 			<group id="3000">
 				<function start="0" end="0" mask="00100000b" comment="SL06_IBA_1">nicht_aktiv</function>
@@ -552,7 +557,7 @@
 				<function start="1" end="1" mask="00000010b" comment="SEND_STATUS_IBRAKE">IBRAKE_STAT_on_F030</function>
 			</group>
 		</code>
-		<code description="Xenon : Feux de route auto au dessus de 55 km/h (70 km/h par defaut) et feux de croisement auto en dessous de 50 km/h (65 km/h par defaut)">
+		<code description="Xenon : Feux de route auto au dessus de 55 km/h (par défaut : 70 km/ht) et feux de croisement auto en dessous de 50 km/h (par défaut : 65 km/h)">
 			<group id="3020">
 				<function start="3" end="3" mask="11111111b" comment="THRV_AVAI_TLC_HIGH">37</function>
 				<function start="4" end="4" mask="11111111b" comment="THRV_AVAI_TLC_LOW">32</function>

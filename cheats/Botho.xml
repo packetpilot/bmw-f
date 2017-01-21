@@ -11,7 +11,7 @@
 	</cafd>
 	
 **************************************
-*******   Botho 2017-01-14     *******
+*******   Botho 2017-01-21     *******
 **************************************
 
 	-->
@@ -118,9 +118,19 @@
 				<function start="5" end="5" mask="00000111b" comment="RLS_DEF_FLC_SCHWELLWERT_SATZ">03</function>
 			</group>
 		</code>
-		<code description="Activation de la lumière d'ambiance à l'ouverture">
+		<code description="Lumière d'ambiance : activation à l'ouverture">
 			<group id="3070">
 				<function start="1" end="1" mask="10000000b" comment="WELCOME_AMBIENTE">Aktiv</function>
+			</group>
+		</code>
+		<code description="Lumière d'ambiance : durée 60s après dévérouillage des portes (par défaut : 20s)">
+			<group id="3070">
+				<function start="9" end="9" mask="00011111b" comment="IB_EINSCHALT_BEGR_ULOK">3C</function>
+			</group>
+		</code>
+		<code description="Lumière d'ambiance : durée 20s après vérouillage sur portes déjà vérouillées (par défaut : 8s)">
+			<group id="3070">
+				<function start="10" end="10" mask="00011111b" comment="IB_EINSCHALT_BEGR_LOK">14</function>
 			</group>
 		</code>
 		<code description="Séparation du réglage de luminosité entre instrumentation et ambiance">

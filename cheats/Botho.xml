@@ -11,7 +11,7 @@
 	</cafd>
 	
 **************************************
-*******   Botho 2017-01-14     *******
+*******   Botho 2017-01-28     *******
 **************************************
 
 	-->
@@ -118,9 +118,19 @@
 				<function start="5" end="5" mask="00000111b" comment="RLS_DEF_FLC_SCHWELLWERT_SATZ">03</function>
 			</group>
 		</code>
-		<code description="Activation de la lumière d'ambiance à l'ouverture">
+		<code description="Lumière d'ambiance : activation à l'ouverture">
 			<group id="3070">
 				<function start="1" end="1" mask="10000000b" comment="WELCOME_AMBIENTE">Aktiv</function>
+			</group>
+		</code>
+		<code description="Lumière d'ambiance : durée 60s après dévérouillage des portes (par défaut : 20s)">
+			<group id="3070">
+				<function start="9" end="9" mask="00011111b" comment="IB_EINSCHALT_BEGR_ULOK">3C</function>
+			</group>
+		</code>
+		<code description="Lumière d'ambiance : durée 20s après vérouillage sur portes déjà vérouillées (par défaut : 8s)">
+			<group id="3070">
+				<function start="10" end="10" mask="00011111b" comment="IB_EINSCHALT_BEGR_LOK">14</function>
 			</group>
 		</code>
 		<code description="Séparation du réglage de luminosité entre instrumentation et ambiance">
@@ -221,6 +231,16 @@
 				<function start="1" end="1" mask="00000010b" comment="BC_DIGITAL_V">Aktiv</function>
 			</group>
 		</code>
+		<code description="Tableau de bord : Affichage permanent du logo M performance en bas à droite">
+			<group id="3003">
+				<function start="7" end="7" mask="00000100b" comment="MPM_ENABLE">Aktiv</function>
+			</group>
+		</code>
+		<code description="Tableau de bord : Logo M performance 50d">
+			<group id="3000">
+				<function start="43" end="43" mask="11110000b" comment="MPM_LOGO">05</function>
+			</group>
+		</code>
 		<code description="Tableau de bord : Affichage de l'heure en bas à droite du tableau de bord">
 			<group id="3000">
 				<function start="53" end="53" mask="01000000b" comment="BASISANZEIGE_VARIANTE">Aktiv</function>
@@ -247,16 +267,6 @@
 			</group>
 			<group id="3008">
 				<function start="6" end="6" mask="00100000b" comment="HUD_PIA_IBRAKE">Aktiv</function>
-			</group>
-		</code>
-		<code description="ZZ TESTING - Tableau de bord : Désactive la correction de la vitesse">
-			<group id="3000">
-				<function start="1" end="1" mask="01000000b" comment="BC_V_KORREKTUR">nicht_aktiv</function>
-			</group>
-		</code>
-		<code description="ZZ TESTING (KO 60.3) - Tableau de bord : Affichage de la température moteur">
-			<group id="3000">
-				<function start="42" end="42" mask="00010000b" comment="BC_MOTORTEMP_ENABLE">Aktiv</function>
 			</group>
 		</code>
 		<code description="ZZ TESTING (KO 60.3) - HUD : Affichage clignotants Step 1 (Step 2 dans HU_NBT)">
@@ -557,12 +567,12 @@
 				<function start="1" end="1" mask="00000010b" comment="SEND_STATUS_IBRAKE">IBRAKE_STAT_on_F030</function>
 			</group>
 		</code>
-		<code description="Xenon : Feux de route auto au dessus de 55 km/h (par défaut : 70 km/ht) et feux de croisement auto en dessous de 50 km/h (par défaut : 65 km/h)">
+		<code description="Avertisseur de franchissement de ligne : activation au dessus de 55 km/h (par défaut : 70 km/h) et désactivation en dessous de 50 km/h (par défaut : 65 km/h)">
 			<group id="3020">
 				<function start="3" end="3" mask="11111111b" comment="THRV_AVAI_TLC_HIGH">37</function>
 				<function start="4" end="4" mask="11111111b" comment="THRV_AVAI_TLC_LOW">32</function>
 			</group>
-		</code>
+		</code>		
 	</cafd>
 
 

@@ -231,6 +231,16 @@
 				<function start="1" end="1" mask="00000010b" comment="BC_DIGITAL_V">Aktiv</function>
 			</group>
 		</code>
+		<code description="Tableau de bord : Affichage permanent du logo M performance en bas à droite">
+			<group id="3003">
+				<function start="7" end="7" mask="00000100b" comment="MPM_ENABLE">Aktiv</function>
+			</group>
+		</code>
+		<code description="Tableau de bord : Logo M performance 50d">
+			<group id="3000">
+				<function start="43" end="43" mask="11110000b" comment="MPM_LOGO">05</function>
+			</group>
+		</code>
 		<code description="Tableau de bord : Affichage de l'heure en bas à droite du tableau de bord">
 			<group id="3000">
 				<function start="53" end="53" mask="01000000b" comment="BASISANZEIGE_VARIANTE">Aktiv</function>
@@ -257,16 +267,6 @@
 			</group>
 			<group id="3008">
 				<function start="6" end="6" mask="00100000b" comment="HUD_PIA_IBRAKE">Aktiv</function>
-			</group>
-		</code>
-		<code description="ZZ TESTING - Tableau de bord : Désactive la correction de la vitesse">
-			<group id="3000">
-				<function start="1" end="1" mask="01000000b" comment="BC_V_KORREKTUR">nicht_aktiv</function>
-			</group>
-		</code>
-		<code description="ZZ TESTING (KO 60.3) - Tableau de bord : Affichage de la température moteur">
-			<group id="3000">
-				<function start="42" end="42" mask="00010000b" comment="BC_MOTORTEMP_ENABLE">Aktiv</function>
 			</group>
 		</code>
 		<code description="ZZ TESTING (KO 60.3) - HUD : Affichage clignotants Step 1 (Step 2 dans HU_NBT)">

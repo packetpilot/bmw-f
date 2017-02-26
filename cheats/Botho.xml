@@ -11,7 +11,7 @@
 	</cafd>
 	
 **************************************
-*******   Botho 2017-01-28     *******
+*******   Botho 2017-02-26     *******
 **************************************
 
 	-->
@@ -231,12 +231,12 @@
 				<function start="1" end="1" mask="00000010b" comment="BC_DIGITAL_V">Aktiv</function>
 			</group>
 		</code>
-		<code description="Tableau de bord : Affichage permanent du logo M performance en bas à droite">
+		<code description="Tableau de bord : Affichage permanent du logo M performance en bas à droite (1/2)">
 			<group id="3003">
 				<function start="7" end="7" mask="00000100b" comment="MPM_ENABLE">Aktiv</function>
 			</group>
 		</code>
-		<code description="Tableau de bord : Logo M performance 50d">
+		<code description="Tableau de bord : Logo M performance M50d (2/2)">
 			<group id="3000">
 				<function start="43" end="43" mask="11110000b" comment="MPM_LOGO">05</function>
 			</group>
@@ -246,14 +246,19 @@
 				<function start="53" end="53" mask="01000000b" comment="BASISANZEIGE_VARIANTE">Aktiv</function>
 			</group>
 		</code>
-		<code description="Tableau de bord et HUD : Logo M performance">
+		<code description="Tableau de bord et HUD : Logo M performance au démarrage">
 			<group id="3000">
 				<function start="0" end="0" mask="11110000b" comment="BMW_LOGO">01</function>
 			</group>
 		</code>
-		<code description="Tableau de bord : Affichage rapports en mode Sport (S1 a S8 au lieu de DS)">
+		<code description="Tableau de bord : Affichage rapports en mode Sport (S1 à S8 au lieu de DS)">
 			<group id="3000">
 				<function start="41" end="41" mask="00010000b" comment="SPA_SPORT_ENABLE">Aktiv</function>
+			</group>
+		</code>
+		<code description="Tableau de bord : Dégroupage DTS (intérêt à valider - http://www.bimmerfest.com/forums/showthread.php?p=10034327)">
+			<group id="3000">
+				<function start="43" end="43" mask="00000010b" comment="DSC_OFF_ENTFLECHTUNG_ENABLE">Aktiv</function>
 			</group>
 		</code>
 		<code description="HUD : Durée de démarrage à 12s pour voir le logo plus longtemps (par défaut à 5s)">
@@ -275,11 +280,6 @@
 			</group>
 			<group id="3008">
 				<function start="5" end="5" mask="00000001b" comment="HUD_PIA_BLINKER">Aktiv</function>
-			</group>
-		</code>
-		<code description="ZZ TESTING - ??? HUD_POSITIONCHANGE_ENABLE ???">
-			<group id="3000">
-				<function start="53" end="53" mask="10000000b" comment="HUD_POSITIONCHANGE_ENABLE">Aktiv</function>
 			</group>
 		</code>
 	</cafd>
@@ -530,11 +530,6 @@
 			<group id="3003">
 				<function start="15" end="15" mask="00000001b" comment="ASSIST_SVR_SHOW">aktiv</function>
 				<function start="14" end="14" mask="10000000b" comment="ASSIST_VEHICLEFINDER_SHOW">aktiv</function>
-			</group>
-		</code>
-		<code description="ZZ TESTING (KO 60.3) - iDrive (Multimédia) : version DB GRACENOTE">
-			<group id="3000">
-				<function start="14" end="14" mask="01000000b" comment="ENT_GRACENOTE_INSTALLED">aktiv</function>
 			</group>
 		</code>
 		<code description="ZZ TESTING (KO 60.3) - iDrive (Navigation) : Ajoute le menu Route express dans les préférences de guidage">

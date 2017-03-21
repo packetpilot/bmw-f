@@ -321,6 +321,12 @@
 				<function start="0" end="0" mask="00001000b" comment="TASTER_FBD">Aktiv</function>
 			</group>
 		</code>
+		<code description="TESTING : Hayon : Activation Smart Closing (sans toucher à FA date)">
+			<group id="3120">
+				<function start="0" end="0" mask="00100000b" comment="FUNC_SMO">01</function>
+				<function start="0" end="0" mask="01000000b" comment="FUNC_BUZZER_SMO">01</function>
+			</group>
+		</code>
 		<code description="ZZ TESTING (KO 60.3) - Hayon : Activation fermeture sur pression de la main">
 			<group id="3010">
 				<function start="2" end="2" mask="00000010b" comment="MECH_DRUK_AUTO_SCH">Aktiv</function>
@@ -396,6 +402,17 @@
 				<function start="106" end="106" mask="00000111b" comment="DISPLAYTIME_LIST_HUD_KOMBI">06</function>
 			</group>
 		</code>
+		<code description="TESTING : iDrive (HUD) : Affichage de l'option Sport / changement rapports)">
+			<group id="3000">
+				<function start="18" end="18" mask="00000001b" comment="HUD_SPORTANZEIGE_ENABLE">Aktiv</function>
+				<function start="18" end="18" mask="00000100b" comment="HUD_SPORTANZEIGE_MS_GASSE_ENABLE">Aktiv</function>
+			</group>
+		</code>
+		<code description="-- Don't work -- iDrive (HUD) : Affichage clignotants Step 1 (Step 2 dans KOMBI)">
+			<group id="3001">
+				<function start="55" end="55" mask="10000000b" comment="HUD_TURNSIGNAL">Aktiv</function>
+			</group>
+		</code>
 		<code description="iDrive (Portes) : Ajout de l'alarme">
 			<group id="3000">
 				<function start="110" end="110" mask="00000001b" comment="ACOUSTICAL_LOCK_CONFIRM">Aktiv</function>
@@ -411,6 +428,11 @@
 				<function start="35" end="35" mask="11000000b" comment="DEAKTIVIERUNGSMOEGLICHKEIT_AMBILIGHT">deaktivierung_bmw</function>
 			</group>
 		</code>
+		<code description="-- Don't work -- iDrive (Eclairage) : Affichage assistant feux de route">
+			<group id="3000">
+				<function start="109" end="109" mask="10000000b" comment="HIGH_BEAM_ASSISTANT">Aktiv</function>
+			</group>
+		</code>
 		<code description="iDrive (Statut) : Affichage température et pression des pneus">
 			<group id="3001">
 				<function start="1" end="1" mask="00100000b" comment="RDC_SAFETY">Aktiv</function>
@@ -419,6 +441,11 @@
 		<code description="iDrive (Statut) : Affichage du carnet d'entretien">
 			<group id="3000">
 				<function start="2" end="2" mask="00100000b" comment="SERVICE_HISTORY">Aktiv</function>
+			</group>
+		</code>
+		<code description="TESTING : iDrive (Statut) : Affichage de l'état de la batterie">
+			<group id="3000">
+				<function start="134" end="134" mask="00000001b" comment="KI_SELECTION_SOC">Aktiv</function>
 			</group>
 		</code>
 		<code description="iDrive (Notice) : Utilisation de la notice en roulant">
@@ -484,6 +511,21 @@
 				<function start="111" end="111" mask="00010000b" comment="NAVI_ROUTENMAGNET">aktiv</function>
 			</group>
 		</code>
+		<code description="iDrive (Navigation) : Ajoute le menu Route express dans les préférences de guidage">
+			<group id="3000">
+				<function start="108" end="108" mask="00000100b" comment="NAVI_EXPRESS_ROADS">aktiv</function>
+			</group>
+		</code>
+		<code description="-- Don't work -- iDrive (Navigation) : Zoom automatique aux intersections">
+			<group id="3000">
+				<function start="111" end="111" mask="00000100b" comment="NAVI_AUTOZOOM">aktiv</function>
+			</group>
+		</code>
+		<code description="-- Don't work -- iDrive (Navigation) : Zoom automatique de la carte">
+			<group id="3000">
+				<function start="16" end="16" mask="00001000b" comment="AUTO_MAP_ZOOM">aktiv</function>
+			</group>
+		</code>
 		<code description="iDrive (Caméras) : Suppression des messages légaux">
 			<group id="3001">
 				<function start="52" end="52" mask="11111111b" comment="MACRO_CAM_LEGALDISCLAIMER">00</function>
@@ -510,40 +552,20 @@
 				<function start="26" end="26" mask="00111000b" comment="SOUND_SIGNAL_SET">bmw_i</function>
 			</group>
 		</code>
-		<code description="ZZ TESTING (KO 60.3) - HUD : Affichage clignotants Step 1 (Step 2 dans KOMBI)">
-			<group id="3001">
-				<function start="55" end="55" mask="10000000b" comment="HUD_TURNSIGNAL">Aktiv</function>
-			</group>
-		</code>
-		<code description="ZZ TESTING (KO 60.3) - iDrive (Eclairage) : Affichage assistant feux de route">
-			<group id="3000">
-				<function start="109" end="109" mask="10000000b" comment="HIGH_BEAM_ASSISTANT">Aktiv</function>
-			</group>
-		</code>
-		<code description="ZZ TESTING (KO 60.3) - iDrive (Navigation) : Zoom automatique aux intersections">
-			<group id="3000">
-				<function start="111" end="111" mask="00000100b" comment="NAVI_AUTOZOOM">aktiv</function>
-			</group>
-		</code>
-		<code description="ZZ TESTING (KO 60.3) - iDrive (Navigation) : Zoom automatique de la carte">
-			<group id="3000">
-				<function start="16" end="16" mask="00001000b" comment="AUTO_MAP_ZOOM">aktiv</function>
-			</group>
-		</code>
-		<code description="ZZ TESTING (KO 60.3) - iDrive (Réglage) : Activation GPS tracking (problème de réglementation CNIL en France je pense ...)">
+		<code description="-- Don't work -- iDrive (Réglage) : Activation GPS tracking (problème de réglementation CNIL en France je pense ...)">
 			<group id="3003">
 				<function start="15" end="15" mask="00000001b" comment="ASSIST_SVR_SHOW">aktiv</function>
 				<function start="14" end="14" mask="10000000b" comment="ASSIST_VEHICLEFINDER_SHOW">aktiv</function>
 			</group>
 		</code>
-		<code description="ZZ TESTING (KO 60.3) - iDrive (Navigation) : Ajoute le menu Route express dans les préférences de guidage">
-			<group id="3000">
-				<function start="108" end="108" mask="00000100b" comment="NAVI_EXPRESS_ROADS">aktiv</function>
-			</group>
-		</code>
-		<code description="ZZ TESTING (KO 60.3) - iDrive (Navigation) : Active le guidage en 2 etapes ?? No difference">
+		<code description="-- Don't work -- iDrive (Navigation) : Active le guidage en 2 etapes ?? No difference">
 			<group id="3000">
 				<function start="111" end="111" mask="00000010b" comment="NAVI_VIOCE_OUTPUT_2_STEP">aktiv</function>
+			</group>
+		</code>
+		<code description="ZZ TESTING iDrive : Active Cruise Control ?">
+			<group id="3000">
+				<function start="16" end="16" mask="01000000b" comment="ACC_SGN">Aktiv</function>
 			</group>
 		</code>
 	</cafd>

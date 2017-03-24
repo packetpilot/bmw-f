@@ -397,7 +397,7 @@
 				<function start="97" end="97" mask="00001000b" comment="HUD_DISTANCE_INFO">Aktiv</function>
 			</group>
 		</code>
-		<code description="TESTING : iDrive (HUD) : Délai d'affichage des informations multimédia dans le HUD (défaut 05)">
+		<code description="-- Don't work -- TESTING : iDrive (HUD) : Délai d'affichage des informations multimédia dans le HUD (défaut 05)">
 			<group id="3000">
 				<function start="106" end="106" mask="00000111b" comment="DISPLAYTIME_LIST_HUD_KOMBI">06</function>
 			</group>
@@ -418,12 +418,12 @@
 				<function start="110" end="110" mask="00000001b" comment="ACOUSTICAL_LOCK_CONFIRM">Aktiv</function>
 			</group>
 		</code>
-		<code description="iDrive (Eclairage) : Ajout case à cocher feux de jour">
+		<code description="iDrive (Eclairage) : Ajout feux de jour">
 			<group id="3000">
 				<function start="92" end="92" mask="00011000b" comment="DAYDRIVING_LIGHT">02</function>
 			</group>
 		</code>
-		<code description="iDrive (Eclairage) : Ajout case à cocher lumière d'ambiance">
+		<code description="-- Don't work -- iDrive (Eclairage) : Ajout lumière d'ambiance (F4x only)">
 			<group id="3000">
 				<function start="35" end="35" mask="11000000b" comment="DEAKTIVIERUNGSMOEGLICHKEIT_AMBILIGHT">deaktivierung_bmw</function>
 			</group>
@@ -535,11 +535,6 @@
 		<code description="iDrive (Options) : Activation menu développeur">
 			<group id="3000">
 				<function start="74" end="74" mask="01000000b" comment="ENTWICKLER_MENUE">00</function>
-			</group>
-		</code>
-		<code description="iDrive (Options) : Activation menu Car Service (carnet d'entretien)">
-			<group id="3000">
-				<function start="2" end="2" mask="00100000b" comment="SERVICE_HISTORY">aktiv</function>
 			</group>
 		</code>
 		<code description="iDrive (Téléphone) : Sonnerie du téléphone (iOS only)">

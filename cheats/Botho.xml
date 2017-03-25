@@ -11,7 +11,7 @@
 	</cafd>
 	
 **************************************
-*******   Botho 2017-03-20     *******
+*******   Botho 2017-03-25     *******
 **************************************
 
 	-->
@@ -31,14 +31,14 @@
 				<function start="0" end="0" mask="00000001b" comment="FH_TUERAUF_STOP_MAUT">nicht_aktiv</function>
 			</group>
 		</code>
-		<code description="Acces confort : Délais d'activation de la fonction confort à la fermeture (1,5s par défaut)">
+		<code description="Acces confort : Activation accès confort à la fermeture après 0,5s (1,5s par défaut)">
 			<group id="3053">
 				<function start="9" end="9" mask="11111111b" comment="KOMFORT_SCHLIESSEN">05</function>
 			</group>
 		</code>
-		<code description="Acces confort : Délais d'activation de la fonction confort à l'ouverture (1,9s par defaut)">
+		<code description="Acces confort : Activation accès confort à l'ouverture après 2s (2,5s par defaut)">
 			<group id="3053">
-				<function start="8" end="8" mask="11111111b" comment="KOMFORT_OEFFNEN">wert_01</function>
+				<function start="8" end="8" mask="11111111b" comment="KOMFORT_OEFFNEN">14</function>
 			</group>
 		</code>
 		<code description="Xenon : Angel Eyes Brightness 50% Xenon On">

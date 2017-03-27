@@ -103,7 +103,7 @@
 				<function start="9" end="9" mask="11111111b" comment="ASP_GESCHWINDIGKEIT_AUTO_AUSKLAPPEN or ASP_MAX_GESCHWINDIGKEIT_BEIKLAPPEN">31</function>
 			</group>
 		</code>
-		<code description="Clignotants : nb de clignotements à 4">
+		<code description="Clignotants : nb de clignotements à 5 (I-Step < F020_17-03-502)">
 			<group id="3060">
 				<function start="7" end="7" mask="00000111b" comment="BLINKZYKLEN_ANZAHL_TIPP">04</function>
 			</group>

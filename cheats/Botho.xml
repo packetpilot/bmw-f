@@ -11,7 +11,7 @@
 	</cafd>
 	
 **************************************
-*******   Botho 2017-03-27     *******
+*******   Botho 2017-04-02     *******
 **************************************
 
 	-->
@@ -31,12 +31,12 @@
 				<function start="0" end="0" mask="00000001b" comment="FH_TUERAUF_STOP_MAUT">nicht_aktiv</function>
 			</group>
 		</code>
-		<code description="Acces confort : Activation accès confort à la fermeture après 0,5s (1,5s par défaut)">
+		<code description="Accés confort : Activation accès confort à la fermeture après 0,5s (1,5s par défaut)">
 			<group id="3053">
 				<function start="9" end="9" mask="11111111b" comment="KOMFORT_SCHLIESSEN">05</function>
 			</group>
 		</code>
-		<code description="Acces confort : Activation accès confort à l'ouverture après 2s (2,5s par defaut)">
+		<code description="Accés confort : Activation accès confort à l'ouverture après 2s (2,5s par defaut)">
 			<group id="3053">
 				<function start="8" end="8" mask="11111111b" comment="KOMFORT_OEFFNEN">14</function>
 			</group>
@@ -108,7 +108,7 @@
 				<function start="7" end="7" mask="00000111b" comment="BLINKZYKLEN_ANZAHL_TIPP">04</function>
 			</group>
 		</code>
-		<code description="Eclairage d'acceuil : durée (120 s)">
+		<code description="Eclairage d'accueil : durée (120 s)">
 			<group id="3060">
 				<function start="15" end="15" mask="11111111b" comment="WL_TIMEOUT">78</function>
 			</group>
@@ -138,7 +138,7 @@
 				<function start="4" end="4" mask="10000000b" comment="AMBIENTE_NACHFUEHRUNG">nicht_aktiv</function>
 			</group>
 		</code>
-		<code description="Acces confort : Activation Panic Alarme et tempo télécommande 500ms (short = welcome) : MID = coffre : 3s (long = panic)">
+		<code description="Accés confort : Activation Panic Alarme et tempo télécommande 500ms (short = welcome) : MID = coffre : 3s (long = panic)">
 			<group id="30D0">
 				<function start="2" end="2" mask="00000100b" comment="RC_PANIC_ALARM">Aktiv</function>
 				<function start="3" end="3" mask="00001111b" comment="RC_DEFAULT_IDG_3RD_BUTTON_SHORT">04</function>
@@ -183,17 +183,17 @@
 				<function start="1" end="1" mask="00100000b" comment="CLM_HORN_AT_SECURE">aktiv</function>
 			</group>
 		</code>
-		<code description="Acces confort : Fermeture du coffre avec le pied (FA Zeitkriterium=0315 for Smart Closing)">
+		<code description="Accés confort : Fermeture du coffre avec le pied (FA Zeitkriterium=0315 for Smart Closing)">
 			<group id="3030">
 				<function start="5" end="5" mask="00000110b" comment="CAM_SMART_CLOSER">Aktiv</function>
 			</group>
 		</code>
-		<code description="Acces confort : Délais d'ouverture du coffre à 0,2s (par défaut 0,7s)">
+		<code description="Accés confort : Délais d'ouverture du coffre à 0,2s (par défaut 0,7s)">
 			<group id="3040">
 				<function start="12" end="12" mask="11111111b" comment="CLM_TIMEOUT_HK_SMO">wert_02</function>
 			</group>
 		</code>
-		<code description="ZZ TESTING - Fermeture des vitres à la fermeture des portes">
+		<code description="-- Don't work -- Fermeture des vitres à la fermeture des portes">
 			<group id="3053">
 				<function start="1" end="1" mask="00010000b" comment="?? UNBELEGT ?? NOT MAPPED">01</function>
 			</group>
@@ -273,7 +273,7 @@
 				<function start="6" end="6" mask="00100000b" comment="HUD_PIA_IBRAKE">Aktiv</function>
 			</group>
 		</code>
-		<code description="ZZ TESTING (KO 60.3) - HUD : Affichage clignotants Step 1 (Step 2 dans HU_NBT)">
+		<code description="-- Don't work -- HUD : Affichage clignotants Step 1 (Step 2 dans HU_NBT)">
 			<group id="3003">
 				<function start="4" end="4" mask="00000001b" comment="HUD_BLINKER_ENABLE">Aktiv</function>
 			</group>
@@ -327,7 +327,7 @@
 				<function start="0" end="0" mask="01000000b" comment="FUNC_BUZZER_SMO">01</function>
 			</group>
 		</code>
-		<code description="ZZ TESTING (KO 60.3) - Hayon : Activation fermeture sur pression de la main">
+		<code description="-- Don't work -- Hayon : Activation fermeture sur pression de la main">
 			<group id="3010">
 				<function start="2" end="2" mask="00000010b" comment="MECH_DRUK_AUTO_SCH">Aktiv</function>
 			</group>
@@ -397,12 +397,12 @@
 				<function start="97" end="97" mask="00001000b" comment="HUD_DISTANCE_INFO">Aktiv</function>
 			</group>
 		</code>
-		<code description="-- Don't work -- TESTING : iDrive (HUD) : Délai d'affichage des informations multimédia dans le HUD (défaut 05)">
+		<code description="-- Don't work -- iDrive (HUD) : Délai d'affichage des informations multimédia dans le HUD (défaut 05)">
 			<group id="3000">
 				<function start="106" end="106" mask="00000111b" comment="DISPLAYTIME_LIST_HUD_KOMBI">06</function>
 			</group>
 		</code>
-		<code description="TESTING : iDrive (HUD) : Affichage de l'option Sport / changement rapports)">
+		<code description="-- Don't work (Only M5) -- iDrive (HUD) : Affichage de l'option Sport / changement rapports)">
 			<group id="3000">
 				<function start="18" end="18" mask="00000001b" comment="HUD_SPORTANZEIGE_ENABLE">Aktiv</function>
 				<function start="18" end="18" mask="00000100b" comment="HUD_SPORTANZEIGE_MS_GASSE_ENABLE">Aktiv</function>
@@ -443,7 +443,7 @@
 				<function start="2" end="2" mask="00100000b" comment="SERVICE_HISTORY">Aktiv</function>
 			</group>
 		</code>
-		<code description="TESTING : iDrive (Statut) : Affichage de l'état de la batterie">
+		<code description="-- Don't work -- iDrive (Statut) : Affichage informations de la batterie ??">
 			<group id="3000">
 				<function start="134" end="134" mask="00000001b" comment="KI_SELECTION_SOC">Aktiv</function>
 			</group>
@@ -556,11 +556,6 @@
 		<code description="-- Don't work -- iDrive (Navigation) : Active le guidage en 2 etapes ?? No difference">
 			<group id="3000">
 				<function start="111" end="111" mask="00000010b" comment="NAVI_VIOCE_OUTPUT_2_STEP">aktiv</function>
-			</group>
-		</code>
-		<code description="ZZ TESTING iDrive : Active Cruise Control ?">
-			<group id="3000">
-				<function start="16" end="16" mask="01000000b" comment="ACC_SGN">Aktiv</function>
 			</group>
 		</code>
 	</cafd>

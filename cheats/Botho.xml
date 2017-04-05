@@ -31,12 +31,12 @@
 				<function start="0" end="0" mask="00000001b" comment="FH_TUERAUF_STOP_MAUT">nicht_aktiv</function>
 			</group>
 		</code>
-		<code description="Accés confort : Activation accès confort à la fermeture après 0,5s (1,5s par défaut)">
+		<code description="Accès confort : Activation accès confort à la fermeture après 0,5s (1,5s par défaut)">
 			<group id="3053">
 				<function start="9" end="9" mask="11111111b" comment="KOMFORT_SCHLIESSEN">05</function>
 			</group>
 		</code>
-		<code description="Accés confort : Activation accès confort à l'ouverture après 2s (2,5s par defaut)">
+		<code description="Accès confort : Activation accès confort à l'ouverture après 2s (2,5s par defaut)">
 			<group id="3053">
 				<function start="8" end="8" mask="11111111b" comment="KOMFORT_OEFFNEN">14</function>
 			</group>
@@ -138,7 +138,7 @@
 				<function start="4" end="4" mask="10000000b" comment="AMBIENTE_NACHFUEHRUNG">nicht_aktiv</function>
 			</group>
 		</code>
-		<code description="Accés confort : Activation Panic Alarme et tempo télécommande 500ms (short = welcome) : MID = coffre : 3s (long = panic)">
+		<code description="Accès confort : Activation Panic Alarme et tempo télécommande 500ms (short = welcome) : MID = coffre : 3s (long = panic)">
 			<group id="30D0">
 				<function start="2" end="2" mask="00000100b" comment="RC_PANIC_ALARM">Aktiv</function>
 				<function start="3" end="3" mask="00001111b" comment="RC_DEFAULT_IDG_3RD_BUTTON_SHORT">04</function>
@@ -183,12 +183,12 @@
 				<function start="1" end="1" mask="00100000b" comment="CLM_HORN_AT_SECURE">aktiv</function>
 			</group>
 		</code>
-		<code description="Accés confort : Fermeture du coffre avec le pied (FA Zeitkriterium=0315 for Smart Closing)">
+		<code description="Accès confort : Fermeture du coffre avec le pied (FA Zeitkriterium=0315 for Smart Closing)">
 			<group id="3030">
 				<function start="5" end="5" mask="00000110b" comment="CAM_SMART_CLOSER">Aktiv</function>
 			</group>
 		</code>
-		<code description="Accés confort : Délais d'ouverture du coffre à 0,2s (par défaut 0,7s)">
+		<code description="Accès confort : Délais d'ouverture du coffre à 0,2s (par défaut 0,7s)">
 			<group id="3040">
 				<function start="12" end="12" mask="11111111b" comment="CLM_TIMEOUT_HK_SMO">wert_02</function>
 			</group>
@@ -443,7 +443,7 @@
 				<function start="2" end="2" mask="00100000b" comment="SERVICE_HISTORY">Aktiv</function>
 			</group>
 		</code>
-		<code description="-- Don't work -- iDrive (Statut) : Affichage informations de la batterie ??">
+		<code description="-- Don't work -- iDrive (Statut) : Affichage informations de la batterie">
 			<group id="3000">
 				<function start="134" end="134" mask="00000001b" comment="KI_SELECTION_SOC">Aktiv</function>
 			</group>

@@ -8,4 +8,26 @@
 		</group>
 	</code>
 </cafd>
+
+<cafd id="00000A07" name="FZD" author="Botho (public)" series="F020">
+		<code description="Activation Panic Alarme">
+			<group id="3002">
+				<function start="0" end="0" mask="00000100b" comment="Panikalarm">Aktiv</function>
+			</group>
+		</code>
+		<code description="Alarme : son et fréquence du Buzzer (Original)">
+			<group id="3001">
+				<function start="34" end="34" mask="11111111b" comment="Buzzer level high">03</function>
+				<function start="35" end="35" mask="11111111b" comment="Buzzer frequency">8F</function>
+				<function start="36" end="36" mask="11111111b" comment="Buzzer duration">0A</function>
+			</group>
+		</code>
+		<code description="Alarme : son et fréquence du Buzzer (plus court et plus aigu)">
+			<group id="3001">
+				<function start="34" end="34" mask="11111111b" comment="Buzzer level high">04</function>
+				<function start="35" end="35" mask="11111111b" comment="Buzzer frequency">99</function>
+				<function start="36" end="36" mask="11111111b" comment="Buzzer duration">02</function>
+			</group>
+		</code>
+	</cafd>
 </FDL>

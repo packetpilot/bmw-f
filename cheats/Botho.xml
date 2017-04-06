@@ -10,7 +10,7 @@
 </cafd>
 
 <cafd id="00000794" name="FEM_BODY" author="Botho (public)" series="F020">
-	<code description="Vitres active lors de l'ouverture des portes avant">
+	<code description="Vitres actives lors de l'ouverture des portes avant">
 		<group id="3050">
 			<function start="0" end="0" mask="00000001b" comment="FH_TUERAUF_STOP_MAUT">nicht_aktiv</function>
 		</group>
@@ -87,7 +87,7 @@
 			<function start="9" end="9" mask="11111111b" comment="ASP_GESCHWINDIGKEIT_AUTO_AUSKLAPPEN or ASP_MAX_GESCHWINDIGKEIT_BEIKLAPPEN">31</function>
 		</group>
 	</code>
-	<code description="Clignotants : nb de clignotements à 5 (I-Step < F020_17-03-502)">
+	<code description="Clignotants : nb de clignotements à 5 (I-Step under F020_17-03-502)">
 		<group id="3060">
 			<function start="7" end="7" mask="00000111b" comment="BLINKZYKLEN_ANZAHL_TIPP">04</function>
 		</group>
@@ -112,7 +112,7 @@
 			<function start="9" end="9" mask="00011111b" comment="IB_EINSCHALT_BEGR_ULOK">3C</function>
 		</group>
 	</code>
-	<code description="Lumière d'ambiance : durée 20s après vérouillage sur portes déjà vérouillées (par défaut : 8s)">
+	<code description="Lumière d'ambiance : durée 20s après vérouillage si portes déjà vérouillées (par défaut : 8s)">
 		<group id="3070">
 			<function start="10" end="10" mask="00011111b" comment="IB_EINSCHALT_BEGR_LOK">14</function>
 		</group>
@@ -122,7 +122,7 @@
 			<function start="4" end="4" mask="10000000b" comment="AMBIENTE_NACHFUEHRUNG">nicht_aktiv</function>
 		</group>
 	</code>
-	<code description="Accès confort : Activation Panic Alarme et tempo télécommande 500ms (short = welcome) : MID = coffre : 3s (long = panic)">
+	<code description="Accès confort : Activation Panic Alarm et tempo télécommande 500ms (short = welcome) - MID = coffre - LONG = panic)">
 		<group id="30D0">
 			<function start="2" end="2" mask="00000100b" comment="RC_PANIC_ALARM">Aktiv</function>
 			<function start="3" end="3" mask="00001111b" comment="RC_DEFAULT_IDG_3RD_BUTTON_SHORT">04</function>

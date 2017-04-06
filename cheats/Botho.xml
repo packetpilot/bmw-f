@@ -31,6 +31,24 @@
 	</code>
 </cafd>
 
+<cafd id="000016EE" name="IHKA" author="Botho (public)" series="F020">
+	<code description="Climatisation : Mémorise la dernière position (on/off)">
+		<group id="3003">
+			<function start="0" end="0" mask="00000010b" comment="MEMORY_OFF">Aktiv</function>
+		</group>
+	</code>
+	<code description="Climatisation : Mémorise la dernière position du flux d'air (par défaut, 15 minutes après arrêt du moteur)">
+		<group id="3003">
+			<function start="0" end="0" mask="00000001b" comment="MEMORY_UMLUFT">Aktiv</function>
+		</group>
+	</code>
+	<code description="Climatisation : AC off en mode AUTO">
+		<group id="3003">
+			<function start="0" end="0" mask="00000100b" comment="AC_ON_WITH_AUTO">nicht_aktiv</function>
+		</group>
+	</code>
+</cafd>
+
 <cafd id="00001148" name="KAFAS2" author="Botho (public)" series="F020">
 	<code description="HUD : Affichage de l'assistant distance Step 3 (Step 1 dans KOMBI, Step 2 dans HU_NBT)">
 		<group id="3060">

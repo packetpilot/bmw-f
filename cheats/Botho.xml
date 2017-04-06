@@ -30,4 +30,22 @@
 			</group>
 		</code>
 	</cafd>
+
+<cafd id="00001148" name="KAFAS2" author="Botho (public)" series="F020">
+		<code description="HUD : Affichage de l'assistant distance Step 3 (Step 1 dans KOMBI, Step 2 dans HU_NBT)">
+			<group id="3060">
+				<function start="1" end="1" mask="00011000b" comment="DISPLAY_HEADWAY_DISTANCE">01</function>
+				<function start="1" end="1" mask="00000010b" comment="SEND_STATUS_IBRAKE">01</function>
+				<function start="1" end="1" mask="00000100b" comment="SEND_PARAM_IBRAKE">01</function>
+
+			</group>
+		</code>
+		<code description="Avertisseur de franchissement de ligne : activation au dessus de 55 km/h (par défaut : 70 km/h) et désactivation en dessous de 50 km/h (par défaut : 65 km/h)">
+			<group id="3020">
+				<function start="3" end="3" mask="11111111b" comment="THRV_AVAI_TLC_HIGH">37</function>
+				<function start="4" end="4" mask="11111111b" comment="THRV_AVAI_TLC_LOW">32</function>
+			</group>
+		</code>		
+	</cafd>
+
 </FDL>

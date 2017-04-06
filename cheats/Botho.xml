@@ -10,42 +10,51 @@
 </cafd>
 
 <cafd id="00000A07" name="FZD" author="Botho (public)" series="F020">
-		<code description="Activation Panic Alarme">
-			<group id="3002">
-				<function start="0" end="0" mask="00000100b" comment="Panikalarm">Aktiv</function>
-			</group>
-		</code>
-		<code description="Alarme : son et fréquence du Buzzer (Original)">
-			<group id="3001">
-				<function start="34" end="34" mask="11111111b" comment="Buzzer level high">03</function>
-				<function start="35" end="35" mask="11111111b" comment="Buzzer frequency">8F</function>
-				<function start="36" end="36" mask="11111111b" comment="Buzzer duration">0A</function>
-			</group>
-		</code>
-		<code description="Alarme : son et fréquence du Buzzer (plus court et plus aigu)">
-			<group id="3001">
-				<function start="34" end="34" mask="11111111b" comment="Buzzer level high">04</function>
-				<function start="35" end="35" mask="11111111b" comment="Buzzer frequency">99</function>
-				<function start="36" end="36" mask="11111111b" comment="Buzzer duration">02</function>
-			</group>
-		</code>
-	</cafd>
+	<code description="Activation Panic Alarme">
+		<group id="3002">
+			<function start="0" end="0" mask="00000100b" comment="Panikalarm">Aktiv</function>
+		</group>
+	</code>
+	<code description="Alarme : son et fréquence du Buzzer (Original)">
+		<group id="3001">
+			<function start="34" end="34" mask="11111111b" comment="Buzzer level high">03</function>
+			<function start="35" end="35" mask="11111111b" comment="Buzzer frequency">8F</function>
+			<function start="36" end="36" mask="11111111b" comment="Buzzer duration">0A</function>
+		</group>
+	</code>
+	<code description="Alarme : son et fréquence du Buzzer (plus court et plus aigu)">
+		<group id="3001">
+			<function start="34" end="34" mask="11111111b" comment="Buzzer level high">04</function>
+			<function start="35" end="35" mask="11111111b" comment="Buzzer frequency">99</function>
+			<function start="36" end="36" mask="11111111b" comment="Buzzer duration">02</function>
+		</group>
+	</code>
+</cafd>
 
 <cafd id="00001148" name="KAFAS2" author="Botho (public)" series="F020">
-		<code description="HUD : Affichage de l'assistant distance Step 3 (Step 1 dans KOMBI, Step 2 dans HU_NBT)">
-			<group id="3060">
-				<function start="1" end="1" mask="00011000b" comment="DISPLAY_HEADWAY_DISTANCE">01</function>
-				<function start="1" end="1" mask="00000010b" comment="SEND_STATUS_IBRAKE">01</function>
-				<function start="1" end="1" mask="00000100b" comment="SEND_PARAM_IBRAKE">01</function>
+	<code description="HUD : Affichage de l'assistant distance Step 3 (Step 1 dans KOMBI, Step 2 dans HU_NBT)">
+		<group id="3060">
+			<function start="1" end="1" mask="00011000b" comment="DISPLAY_HEADWAY_DISTANCE">01</function>
+			<function start="1" end="1" mask="00000010b" comment="SEND_STATUS_IBRAKE">01</function>
+			<function start="1" end="1" mask="00000100b" comment="SEND_PARAM_IBRAKE">01</function>
+		</group>
+	</code>
+	<code description="Avertisseur de franchissement de ligne : activation au dessus de 55 km/h (par défaut : 70 km/h) et désactivation en dessous de 50 km/h (par défaut : 65 km/h)">
+		<group id="3020">
+			<function start="3" end="3" mask="11111111b" comment="THRV_AVAI_TLC_HIGH">37</function>
+			<function start="4" end="4" mask="11111111b" comment="THRV_AVAI_TLC_LOW">32</function>
+		</group>
+	</code>		
+</cafd>
 
-			</group>
-		</code>
-		<code description="Avertisseur de franchissement de ligne : activation au dessus de 55 km/h (par défaut : 70 km/h) et désactivation en dessous de 50 km/h (par défaut : 65 km/h)">
-			<group id="3020">
-				<function start="3" end="3" mask="11111111b" comment="THRV_AVAI_TLC_HIGH">37</function>
-				<function start="4" end="4" mask="11111111b" comment="THRV_AVAI_TLC_LOW">32</function>
-			</group>
-		</code>		
-	</cafd>
+<cafd id="00000223" name="TRSVC" author="Botho (public)" series="F020">
+	<code description="Activation des caméras latérales à haute vitesse">
+		<group id="3000">
+			<function start="114" end="114" mask="11111111b" comment="SV_Activate_Speed_Limit">FF</function>
+			<function start="115" end="115" mask="11111111b" comment="SV_Deactivate_Speed">FF</function>
+		</group>
+	</code>
+</cafd>
+
 
 </FDL>

@@ -9,6 +9,182 @@
 	</code>
 </cafd>
 
+<cafd id="00000794" name="FEM_BODY" author="Botho (public)" series="F020">
+	<code description="Vitres active lors de l'ouverture des portes avant">
+		<group id="3050">
+			<function start="0" end="0" mask="00000001b" comment="FH_TUERAUF_STOP_MAUT">nicht_aktiv</function>
+		</group>
+	</code>
+	<code description="Accès confort : Activation accès confort à la fermeture après 0,5s (1,5s par défaut)">
+		<group id="3053">
+			<function start="9" end="9" mask="11111111b" comment="KOMFORT_SCHLIESSEN">05</function>
+		</group>
+	</code>
+	<code description="Accès confort : Activation accès confort à l'ouverture après 2s (2,5s par defaut)">
+		<group id="3053">
+			<function start="8" end="8" mask="11111111b" comment="KOMFORT_OEFFNEN">14</function>
+		</group>
+	</code>
+	<code description="Xenon : Angel Eyes Brightness 50% Xenon On">
+		<group id="3062">
+			<function start="46" end="46" mask="11111111b" comment="MAPPING_STANDL_V_L_PWM_LEVEL_STANDARD">32</function>
+			<function start="57" end="57" mask="11111111b" comment="MAPPING_STANDL_V_R_PWM_LEVEL_STANDARD">32</function>
+		</group>
+	</code>
+	<code description="Xenon : Angel Eyes Brightness 100% Xenon On">
+		<group id="3062">
+			<function start="46" end="46" mask="11111111b" comment="MAPPING_STANDL_V_L_PWM_LEVEL_STANDARD">64</function>
+			<function start="57" end="57" mask="11111111b" comment="MAPPING_STANDL_V_R_PWM_LEVEL_STANDARD">64</function>
+		</group>
+	</code>
+	<code description="Xenon : Angel Eyes Brightness 50% Parking Light On">
+		<group id="3062">
+			<function start="68" end="68" mask="11111111b" comment="MAPPING_PARKL_V_L_PWM_1_LEFT">32</function>
+			<function start="69" end="69" mask="11111111b" comment="MAPPING_PARKL_V_L_PWM_2_RIGHT">32</function>
+		</group>
+	</code>
+	<code description="Xenon : Angel Eyes Brightness 100% Parking Light On">
+		<group id="3062">
+			<function start="68" end="68" mask="11111111b" comment="MAPPING_PARKL_V_L_PWM_1_LEFT">64</function>
+			<function start="69" end="69" mask="11111111b" comment="MAPPING_PARKL_V_L_PWM_2_RIGHT">64</function>
+		</group>
+	</code>
+	<code description="Xenon : Angel Eyes Brightness 50% DRL On">
+		<group id="3062">
+			<function start="90" end="90" mask="11111111b" comment="MAPPING_TAGFAHRL_V_L_PWM_LEVEL_1">32</function>
+			<function start="101" end="101" mask="11111111b" comment="MAPPING_TAGFAHRL_V_R_PWM_LEVEL_1">32</function>
+		</group>
+	</code>
+	<code description="Xenon : Angel Eyes Brightness 100% DRL On">
+		<group id="3062">
+			<function start="90" end="90" mask="11111111b" comment="MAPPING_TAGFAHRL_V_L_PWM_LEVEL_1">64</function>
+			<function start="101" end="101" mask="11111111b" comment="MAPPING_TAGFAHRL_V_R_PWM_LEVEL_1">64</function>
+		</group>
+	</code>
+	<code description="Lave phare : Désactivation">
+		<group id="3080">
+			<function start="8" end="8" mask="00000001b" comment="WW_SCHEINWERFERREINIGUNG">nicht_aktiv</function>
+		</group>
+	</code>
+	<code description="Lave phare : Nombre de sprays">
+		<group id="3080">
+			<function start="8" end="8" mask="00011000b" comment="WW_ANZAHL_SPRITZIMPULSE_SRA">02</function>
+		</group>
+	</code>
+	<code description="Lave phare : Nombre de cycle de lave glace avant réactivation">
+		<group id="3080">
+			<function start="2" end="2" mask="00011110b" comment="WW_ANZAHL_WASCHBET_ZUR_SRA">0A</function>
+		</group>
+	</code>
+	<code description="Activation des anti-brouillard pour welcome light">
+		<group id="3063">
+			<function start="55" end="55" mask="11000000b" comment="MAPPING_NEBELSCHW_L_PART_OF_WL">Soft_On</function>
+			<function start="66" end="66" mask="11000000b" comment="MAPPING_NEBELSCHW_R_PART_OF_WL">Soft_On</function>
+		</group>
+	</code>
+	<code description="Rétroviseurs : fermeture retro autorisé en dessous de 39 km/h">
+		<group id="3110">
+			<function start="9" end="9" mask="11111111b" comment="ASP_GESCHWINDIGKEIT_AUTO_AUSKLAPPEN or ASP_MAX_GESCHWINDIGKEIT_BEIKLAPPEN">31</function>
+		</group>
+	</code>
+	<code description="Clignotants : nb de clignotements à 5 (I-Step < F020_17-03-502)">
+		<group id="3060">
+			<function start="7" end="7" mask="00000111b" comment="BLINKZYKLEN_ANZAHL_TIPP">04</function>
+		</group>
+	</code>
+	<code description="Eclairage d'accueil : durée (120 s)">
+		<group id="3060">
+			<function start="15" end="15" mask="11111111b" comment="WL_TIMEOUT">78</function>
+		</group>
+	</code>
+	<code description="Sensibilité du capteur éclairage automatique (moins sensible)">
+		<group id="3130">
+			<function start="5" end="5" mask="00000111b" comment="RLS_DEF_FLC_SCHWELLWERT_SATZ">03</function>
+		</group>
+	</code>
+	<code description="Lumière d'ambiance : activation à l'ouverture">
+		<group id="3070">
+			<function start="1" end="1" mask="10000000b" comment="WELCOME_AMBIENTE">Aktiv</function>
+		</group>
+	</code>
+	<code description="Lumière d'ambiance : durée 60s après dévérouillage des portes (par défaut : 20s)">
+		<group id="3070">
+			<function start="9" end="9" mask="00011111b" comment="IB_EINSCHALT_BEGR_ULOK">3C</function>
+		</group>
+	</code>
+	<code description="Lumière d'ambiance : durée 20s après vérouillage sur portes déjà vérouillées (par défaut : 8s)">
+		<group id="3070">
+			<function start="10" end="10" mask="00011111b" comment="IB_EINSCHALT_BEGR_LOK">14</function>
+		</group>
+	</code>
+	<code description="Séparation du réglage de luminosité entre instrumentation et ambiance">
+		<group id="3070">
+			<function start="4" end="4" mask="10000000b" comment="AMBIENTE_NACHFUEHRUNG">nicht_aktiv</function>
+		</group>
+	</code>
+	<code description="Accès confort : Activation Panic Alarme et tempo télécommande 500ms (short = welcome) : MID = coffre : 3s (long = panic)">
+		<group id="30D0">
+			<function start="2" end="2" mask="00000100b" comment="RC_PANIC_ALARM">Aktiv</function>
+			<function start="3" end="3" mask="00001111b" comment="RC_DEFAULT_IDG_3RD_BUTTON_SHORT">04</function>
+			<function start="3" end="3" mask="11110000b" comment="RC_DEFAULT_IDG_3RD_BUTTON_MID">02</function>
+			<function start="4" end="4" mask="00001111b" comment="RC_DEFAULT_IDG_3RD_BUTTON_LONG">03</function>
+			<function start="8" end="8" mask="11111111b" comment="RC_TIME_DELAY_BOOTLID">14</function>
+			<function start="9" end="9" mask="11111111b" comment="RC_TIME_DELAY_PANIC">28</function>
+		</group>
+	</code>
+	<code description="Feux freinage d'urgence : activation mode clignotement">
+		<group id="3060">
+			<function start="16" end="16" mask="00000011b" comment="ESS_AKTIVIERBARER_AUSGANG">bremslicht_blinkend</function>
+		</group>
+	</code>
+	<code description="Feux freinage d'urgence : décéleration minimum à 3 m/s (par défaut : 7 m/s)">
+		<group id="3060">
+			<function start="20" end="20" mask="00011111b" comment="ESS_AKTIVIERUNG_REALE_VERZ">06</function>
+		</group>
+	</code>
+	<code description="Feux freinage d'urgence : vitesse minimale à 20 km/h (par défaut : 50 km/h)">
+		<group id="3060">
+			<function start="17" end="17" mask="11111110b" comment="ESS_AKTIVIERUNG_GESCHW">14</function>
+		</group>
+	</code>
+	<code description="Auto Start/Stop : Désactive Auto Start/Stop par défaut">
+		<group id="3023">
+			<function start="0" end="0" mask="00010000b" comment="TCM_MSA_DEFAULT_OFF">aktiv</function>
+		</group>
+	</code>
+	<code description="Auto Start/Stop : Dernière position Auto Start/Stop">
+		<group id="3023">
+			<function start="0" end="0" mask="00100000b" comment="TCM_MSA_MEMORY">aktiv</function>
+		</group>
+	</code>
+	<code description="Message en cas de haute température du liquide de refroidissement">
+		<group id="3040">
+			<function start="1" end="1" mask="10000000b" comment="CLM_CCM_COOLANT_TEMP">aktiv</function>
+		</group>
+	</code>
+	<code description="Double coup de Klaxon au vérouillage des portes moteur allumé">
+		<group id="3040">
+			<function start="1" end="1" mask="00100000b" comment="CLM_HORN_AT_SECURE">aktiv</function>
+		</group>
+	</code>
+	<code description="Accès confort : Fermeture du coffre avec le pied (FA Zeitkriterium=0315 for Smart Closing)">
+		<group id="3030">
+			<function start="5" end="5" mask="00000110b" comment="CAM_SMART_CLOSER">Aktiv</function>
+		</group>
+	</code>
+	<code description="Accès confort : Délais d'ouverture du coffre à 0,2s (par défaut 0,7s)">
+		<group id="3040">
+			<function start="12" end="12" mask="11111111b" comment="CLM_TIMEOUT_HK_SMO">wert_02</function>
+		</group>
+	</code>
+	<code description="-- Don't work -- Fermeture des vitres à la fermeture des portes">
+		<group id="3053">
+			<function start="1" end="1" mask="00010000b" comment="?? UNBELEGT ?? NOT MAPPED">01</function>
+		</group>
+	</code>
+</cafd>
+
+
 <cafd id="00000A07" name="FZD" author="Botho (public)" series="F020">
 	<code description="Activation Panic Alarme">
 		<group id="3002">

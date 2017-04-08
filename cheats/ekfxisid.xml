@@ -1,0 +1,2694 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FDL>
+	<!--ekfxisidF030-->
+	<cafd id="00000911" name="ACSM_4B" author="ekfxisidF030" series="F020,F030">
+		<code description="안전벨트 경고음 3회 (5초)								[창원ll달탸냥]">
+			<group id="3001">
+				<function start="3" end="3" mask="11111111b" comment="GWF_SBR_WARNDAUER">05</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="00000F9B" name="ASD01" author="ekfxisidF30" series="F020,F030">
+		<code description="ASD M4 엑티브 사운드									[창원ll달탸냥]">
+			<group id="3000">
+				<function start="0" end="0" mask="11111111b" comment="Model Range">F082</function>
+				<function start="1" end="1" mask="11111111b" comment="Engine">S55B30</function>
+				<function start="2" end="2" mask="11111111b" comment="Audio Level">Hifi</function>
+				<function start="3" end="3" mask="11111111b" comment="Power Class">ML</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="00000794" name="FEM_BODY" author="ekfxisidF030" series="F020,F030">
+		<code description="사이드미러 락 폴딩 (원터치 작동)							[창원ll달탸냥]">
+			<group id="3053">
+				<function start="9" end="9" mask="11111111b" comment="KOMFORT_SCHLIESSEN">00</function>
+			</group>
+		</code>
+		<code description="문 열려있어도 윈도우 작동">
+			<group id="3050">
+				<function start="0" end="0" mask="00000001b" comment="FH_TUERAUF_STOP_MAUT">nicht_aktiv</function>
+			</group>
+		</code>
+		<code description="방향지시등 깜박이 5회">
+			<group id="3060">
+				<function start="7" end="7" mask="00000111b" comment="BLINKZYKLEN_ANZAHL_TIPP">04</function>
+			</group>
+		</code>
+		<code description="사이드미러 각도 조절(조수석) 1">
+			<group id="3110">
+				<function start="2" end="2" mask="11111111b" comment="ASP_BORDSTEINAUTOMAIK_DELTA">1E</function>
+			</group>
+		</code>
+		<code description="사이드미러 각도 조절(조수석) 1번 좌표가 안될때">
+			<group id="3110">
+				<function start="3" end="3" mask="11111111b" comment="ASP_HORIZONTALE_MIN_POS">1E</function>
+			</group>
+		</code>
+		<code description="Xenon : 엔젤아이 조도 30% Xenon On">
+			<group id="3062">
+				<function start="46" end="46" mask="11111111b" comment="MAPPING_STANDL_V_L_PWM_LEVEL_STANDARD">1E</function>
+				<function start="57" end="57" mask="11111111b" comment="MAPPING_STANDL_V_R_PWM_LEVEL_STANDARD">1E</function>
+			</group>
+		</code>
+		<code description="Xenon : 엔젤아이 조도 100% Xenon On">
+			<group id="3062">
+				<function start="46" end="46" mask="11111111b" comment="MAPPING_STANDL_V_L_PWM_LEVEL_STANDARD">64</function>
+				<function start="57" end="57" mask="11111111b" comment="MAPPING_STANDL_V_R_PWM_LEVEL_STANDARD">64</function>
+			</group>
+		</code>
+		<code description="Xenon : 엔젤아이 조도 50% Parking Light On">
+			<group id="3062">
+				<function start="68" end="68" mask="11111111b" comment="MAPPING_PARKL_V_L_PWM_1_LEFT">32</function>
+				<function start="69" end="69" mask="11111111b" comment="MAPPING_PARKL_V_L_PWM_2_RIGHT">32</function>
+			</group>
+		</code>
+		<code description="Xenon : 엔젤아이 조도 100% Parking Light On">
+			<group id="3062">
+				<function start="68" end="68" mask="11111111b" comment="MAPPING_PARKL_V_L_PWM_1_LEFT">64</function>
+				<function start="69" end="69" mask="11111111b" comment="MAPPING_PARKL_V_L_PWM_2_RIGHT">64</function>
+			</group>
+		</code>
+		<code description="Xenon : 엔젤아이 조도 50% DRL On">
+			<group id="3062">
+				<function start="90" end="90" mask="11111111b" comment="MAPPING_TAGFAHRL_V_L_PWM_LEVEL_1">32</function>
+				<function start="101" end="101" mask="11111111b" comment="MAPPING_TAGFAHRL_V_R_PWM_LEVEL_1">32</function>
+			</group>
+		</code>
+		<code description="Xenon : 엔젤아이 조도 100% DRL On">
+			<group id="3062">
+				<function start="90" end="90" mask="11111111b" comment="MAPPING_TAGFAHRL_V_L_PWM_LEVEL_1">64</function>
+				<function start="101" end="101" mask="11111111b" comment="MAPPING_TAGFAHRL_V_R_PWM_LEVEL_1">64</function>
+			</group>
+		</code>
+		<code description="안개등으로 어뎁티드 라이트 흉내내기 1/3">
+			<group id="3073">
+				<function start="66" end="66" mask="00000001b" comment="C_BLC_ENA">01</function>
+				<function start="218" end="218" mask="00000010b" comment="C_CLC_ENA">01</function>	
+			</group>
+		</code>
+		<code description="안개등으로 어뎁티드 라이트 흉내내기 2/3">
+			<group id="3066">
+				<function start="0" end="0" mask="00000001b" comment="KL_ENALBE_LI">KL_Ein</function>
+				<function start="80" end="80" mask="00000001b" comment="KL_ENABLE_RE">KL_Ein</function>	
+			</group>
+		</code>
+		<code description="안개등으로 어뎁티드 라이트 흉내내기 3/3">
+			<group id="3062">
+				<function start="110" end="110" mask="00111111b" comment="MAPPING_ABBIEGEL_L_OUTPUT">nsw_l</function>
+				<function start="121" end="121" mask="00111111b" comment="MAPPING_ABBIEGEL_L_OUTPUT">nsw_r</function>	
+			</group>
+		</code>
+		<code description="전조등 워셔액 활성 및 비활성">
+			<group id="3080">
+				<function start="8" end="8" mask="00000001b" comment="WW_SCHEINWERFERREINIGUNG">nicht_aktiv</function>
+			</group>
+		</code>
+		<code description="웰컴 안개등(Hard_on)">
+			<group id="3063">
+				<function start="55" end="55" mask="11000000b" comment="MAPPING_NEBELSCHW_L_PART_OF_WL">hard_On</function>
+				<function start="66" end="66" mask="11000000b" comment="MAPPING_NEBELSCHW_R_PART_OF_WL">hard_On</function>
+			</group>
+		</code>
+		<code description="웰컴 안개등(Soft_on)">
+			<group id="3063">
+				<function start="55" end="55" mask="11000000b" comment="MAPPING_NEBELSCHW_L_PART_OF_WL">soft_On</function>
+				<function start="66" end="66" mask="11000000b" comment="MAPPING_NEBELSCHW_R_PART_OF_WL">soft_On</function>
+			</group>
+		</code>
+		<code description="지정속도 초과하면 사이드미러 자동 펴짐 (40Km/h -> 25Km/h)">
+			<group id="3110">
+				<function start="10" end="10" mask="11111111b" comment="ASP_GESCHWINDIGKEIT_AUTO_AUSKLAPPEN">19</function>
+			</group>
+		</code>
+		<code description="오토라이트 센스조정">
+			<group id="3130">
+				<function start="5" end="5" mask="00000111b" comment="RLS_DEF_FLC_SCHWELLWERT_SATZ">unempfindlich</function>
+			</group>
+		</code>
+		<code description="후진시 도어 캐치라이트 점등">
+			<group id="3070">
+				<function start="11" end="11" mask="00010000b" comment="OVT_BEI_RUECKFAHRLICHT">aktiv</function>
+			</group>
+		</code>
+		<code description="웰컴 엠비언트">
+			<group id="3070">
+				<function start="1" end="1" mask="10000000b" comment="WELCOME_AMBIENTE">Aktiv</function>
+			</group>
+		</code>
+		<code description="엠비언트 최대 밝기">
+			<group id="3070">
+				<function start="5" end="5" mask="11111111b" comment="AMBIENTE_HELLGKELT">99</function>
+			</group>
+		</code>
+		<code description="시동끄고 문열면 오디오 및 네비 끄기">
+			<group id="3020">
+				<function start="1" end="1" mask="00000001b" comment="TCM_LOGIC_R_OFF_DOOR">01</function>
+			</group>
+		</code>
+		<code description="다이나믹 브레이크등 켜기">
+			<group id="3060">
+				<function start="16" end="16" mask="00000011b" comment="ESS_AKTIVIERBARER_AUSGANG">bremslicht_blinkend</function>
+				<function start="20" end="20" mask="00011111b" comment="ESS_AKTIVIERUNG_REALE_VERZ">04</function>
+				<function start="19" end="19" mask="00011111b" comment="ESS_DEAKTIVIERUNG_REALE_VERZ">04</function>
+				<function start="17" end="17" mask="11111110b" comment="ESS_AKTIVIERUNG_GESCHW">0A</function>
+			</group>
+		</code>
+		<code description="급제동시 비상등켜기 (50km/h)">
+			<group id="3060">
+				<function start="26" end="26" mask="00000001b" comment="WB_GB_ENABLE">aktiv</function>
+				<function start="23" end="24" mask="11111111b" comment="WB_GB_GEFAHRENWERT_MIN">00, 32</function>
+			</group>
+		</code>
+		<code description="Auto Start/Stop 마지막상태 기억">
+			<group id="3023">
+				<function start="0" end="0" mask="00100000b" comment="TCM_MSA_MEMORY">aktiv</function>
+			</group>
+		</code>
+		<code description="Auto Start/Stop DEFAULT OFF">
+			<group id="3023">
+				<function start="0" end="0" mask="00010000b" comment="TCM_MSA_DEFAULT_OFF">aktiv</function>
+			</group>
+		</code>
+		<code description="전방 안개등 --> LED 교환">
+			<group id="3061">
+				<function start="42" end="42" mask="00000001b" comment="NSW_L_KALTUEBERWACHUNG">nicht_aktiv</function>
+				<function start="42" end="42" mask="00000010b" comment="NSW_L_WARMUEBERWACHUNG">nicht_aktiv</function>
+				<function start="42" end="42" mask="00000100b" comment="NSW_L_KURZSCHLUSS">aktiv</function>
+				<function start="42" end="42" mask="00001000b" comment="NSW_L_IS_LED">aktiv</function>
+				<function start="46" end="46" mask="00000001b" comment="NSW_R_KALTUEBERWACHUNG">nicht_aktiv</function>
+				<function start="46" end="46" mask="00000010b" comment="NSW_R_WARMUEBERWACHUNG">nicht_aktiv</function>
+				<function start="46" end="46" mask="00000100b" comment="NSW_R_KURZSCHLUSS">aktiv</function>
+				<function start="46" end="46" mask="00001000b" comment="NSW_R_IS_LED">aktiv</function>
+			</group>
+		</code>
+		<code description="전방 방향지시등 --> LED 교환">
+			<group id="3061">
+				<function start="50" end="50" mask="00000001b" comment="FRA_V_L_KALTUEBERWACHUNG">nicht_aktiv</function>
+				<function start="50" end="50" mask="00000010b" comment="FRA_V_L_WARMUEBERWACHUNG">nicht_aktiv</function>
+				<function start="50" end="50" mask="00000100b" comment="FRA_V_L_KURZSCHLUSS">aktiv</function>
+				<function start="50" end="50" mask="00001000b" comment="FRA_V_L_IS_LED">aktiv</function>
+				<function start="50" end="54" mask="00000001b" comment="FRA_V_R_KALTUEBERWACHUNG">nicht_aktiv</function>
+				<function start="50" end="54" mask="00000010b" comment="FRA_V_R_WARMUEBERWACHUNG">nicht_aktiv</function>
+				<function start="50" end="54" mask="00000100b" comment="FRA_V_R_KURZSCHLUSS">aktiv</function>
+				<function start="50" end="54" mask="00001000b" comment="FRA_V_R_IS_LED">aktiv</function>
+			</group>
+		</code>
+		<code description="시동 켜둔채로 문잠그면 HORN 알람">
+   			<group id="3040">
+    				<function start="1" end="1" mask="00100000b" comment="CLM_HORN_AT_SECURE">aktiv</function>
+   			</group>
+  		</code>
+		<code description="자동 도어 잠금 속도(10km/h = 0A)">
+			<group id="3040">
+				<function start="6" end="6" mask="11111111b" comment="CLM_SPEED_LIMIT_PIA_AUTO_LOCK">0A</function>
+			</group>
+		</code>
+		<code description="잠금해제후 문을 개방하지 않으면 자동 잠금 (18초)">
+			<group id="3040">
+				<function start="5" end="5" mask="11111111b" comment="CLM_TIME_PIA_LOCK_AT_TIMEOUT">12</function>
+			</group>
+		</code>
+		<code description="엔진끄면 차량문 자동으로 잠금해제">
+			<group id="3040">
+				<function start="1" end="1" mask="00000010b" comment="CLM_UNLOCK_KL150OFF_AFTER_PIA_AUTO_LOCK">aktiv</function>
+			</group>
+		</code>
+		<code description="Panic Alarme 활성화 500ms (short = welcome) : MID = coffre : 3s (long = panic)">
+			<group id="30D0">
+				<function start="2" end="2" mask="00000100b" comment="RC_PANIC_ALARM">Aktiv</function>
+				<function start="3" end="3" mask="00001111b" comment="RC_DEFAULT_IDG_3RD_BUTTON_SHORT">04</function>
+				<function start="3" end="3" mask="11110000b" comment="RC_DEFAULT_IDG_3RD_BUTTON_MID">02</function>
+				<function start="4" end="4" mask="00001111b" comment="RC_DEFAULT_IDG_3RD_BUTTON_LONG">03</function>
+				<function start="8" end="8" mask="11111111b" comment="RC_TIME_DELAY_BOOTLID">14</function>
+				<function start="9" end="9" mask="11111111b" comment="RC_TIME_DELAY_PANIC">28</function>
+			</group>
+		</code>
+		<code description="패들쉬프트 활성화">
+			<group id="3190">
+				<function start="0" end="0" mask="000000001b" comment="PADDLES_VERBAUT">aktiv</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="000016EE" name="IHKA3" author="ekfxisidF030" series="F020,F030">
+		<code description="에어컨 on/off 마지막 상태 기억							[창원ll달탸냥]">
+			<group id="3003">
+				<function start="0" end="0" mask="00000010b" comment="MEMORY_OFF">Aktiv</function>
+			</group>
+		</code>
+		<code description="공기순환모드 마지막 상태 기억">
+			<group id="3003">
+				<function start="0" end="0" mask="00000001b" comment="MEMORY_UMLUFT">Aktiv</function>
+			</group>
+		</code>
+		<code description="AUTO 누르면 에어컨 자동으로 켜지는거 비활성">
+			<group id="3003">
+				<function start="0" end="0" mask="00000001b" comment="AC_NICHT_EIN_BEI_AUTO">Aktiv</function>
+			</group>
+		</code>
+		<code description="공기순환모드 고정">
+			<group id="3003">
+				<function start="0" end="0" mask="10000000b" comment="UMLUFT_AUTO_AUS">disable</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="00000A3F" name="IHKA" author="ekfxisidF030" series="F020,F030">
+		<code description="에어컨 on/off 마지막 상태 기억							[창원ll달탸냥]">
+			<group id="3002">
+				<function start="0" end="0" mask="00000010b" comment="MEMORY_OFF">Aktiv</function>
+			</group>
+		</code>
+		<code description="공기순환모드 마지막 상태 기억">
+			<group id="3002">
+				<function start="0" end="0" mask="00000001b" comment="MEMORY_UMLUFT">Aktiv</function>
+			</group>
+		</code>
+		<code description="AUTO 누르면 에어컨 자동으로 켜지는거 비활성">
+			<group id="3002">
+				<function start="0" end="0" mask="00000100b" comment="AC_NICHT_EIN_BEI_AUTO">Aktiv</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="000007C8" name="HKFM" author="ekfxisidF030" series="F020,F030">
+		<code description="전동트렁크 실내버턴으로 열고닫기							[창원ll달탸냥]">
+			<group id="3010">
+				<function start="2" end="2" mask="00001000b" comment="SCH_FBD">Aktiv</function>
+				<function start="2" end="2" mask="00000100b" comment="SCH_TOEHKI">Aktiv</function>
+				<function start="0" end="0" mask="00001000b" comment="TASTER_FBD">Aktiv</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="0000157F" name="HKFM" author="ekfxisidF030" series="F020,F030">
+		<code description="전동트렁크 실내버턴으로 열고닫기">
+			<group id="3010">
+				<function start="2" end="2" mask="00001000b" comment="SCH_FBD">Aktiv</function>
+				<function start="2" end="2" mask="00000100b" comment="SCH_TOEHKI">Aktiv</function>
+				<function start="0" end="0" mask="00001000b" comment="TASTER_FBD">Aktiv</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="000009C8" name="KOMBI" author="ekfxisidF030" series="F020,F030">
+		<code description="스포츠 + 모드 계기판 메뉴 활성화							[창원ll달탸냥]">
+			<group id="300C">
+				<function start="54" end="54" mask="11111111b" comment="FDS_MENUE">menue_3</function>
+			</group>
+		</code>
+		<code description="계기판 디지털 속도계">
+			<group id="3000">
+				<function start="1" end="1" mask="00000010b" comment="BC_DIGITAL_V">Aktiv</function>
+				<function start="1" end="1" mask="01000000b" comment="BC_V_KORREKTUR">nicht_aktiv</function>
+			</group>
+		</code>
+		<code description="계기판 Logo M performance">
+			<group id="3000">
+				<function start="0" end="0" mask="11110000b" comment="BMW_LOGO">01</function>
+			</group>
+		</code>
+		<code description="MOTOR TEMP 활성화">
+			<group id="3000">
+				<function start="3" end="3" mask="00010000b" comment="BC_MOTORTEMP_ENABLE">aktiv</function>
+			</group>
+		</code>
+		<code description="계기판 시계이동">
+			<group id="3000">
+				<function start="53" end="53" mask="01000000b" comment="BASISANZEEIGE_VARIANTE">Aktiv</function>
+			</group>
+		</code>
+		<code description="DS모드 수동기어 단수표시 M1 M2...M8">
+			<group id="3000">
+				<function start="41" end="41" mask="00010000b" comment="SPA_SPORT_ENABLE">Aktiv</function>
+			</group>
+		</code>
+		<code description="MPM 활성화">
+			<group id="3003">
+				<function start="7" end="7" mask="00000100b" comment="MPM_ENABLE">Aktiv</function>
+			</group>
+		</code>
+		<code description="MPM 로고 550d">
+			<group id="3000">
+				<function start="43" end="43" mask="11110000b" comment="MPM_LOGO">550d</function>
+			</group>
+		</code>
+		<code description="MPM 로고 50d">
+			<group id="3000">
+				<function start="43" end="43" mask="11110000b" comment="MPM_LOGO">550d</function>
+			</group>
+		</code>	
+	</cafd>
+	<cafd id="00000760" name="BKOMBI L7_BASIS" author="ekfxisidF030" series="F020,F030">
+		<code description="스포츠 + 모드 계기판 메뉴 활성화							[창원ll달탸냥]">
+			<group id="300C">
+				<function start="54" end="54" mask="11111111b" comment="FDS_MENUE">menue_3</function>
+			</group>
+		</code>
+		<code description="계기판 디지털 속도계">
+			<group id="3000">
+				<function start="1" end="1" mask="00000010b" comment="BC_DIGITAL_V">aktiv</function>
+				<function start="1" end="1" mask="01000000b" comment="BC_V_KORREKTUR">nicht_aktiv</function>
+			</group>
+		</code>
+		<code description="MOTOR TEMP 활성화">
+			<group id="3000">
+				<function start="3" end="3" mask="00010000b" comment="BC_MOTORTEMP_ENABLE">aktiv</function>
+			</group>
+		</code>
+		<code description="계기판 Logo M performance">
+			<group id="3000">
+				<function start="0" end="0" mask="11110000b" comment="BMW_LOGO">01</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="0000023F" name="EGS" author="ekfxisidF030" series="F020,F030">
+		<code description="DS모드에서 기어단수 표시 S1 S2.... S8						[창원ll달탸냥]">
+			<group id="3000">
+				<function start="0" end="0" mask="01000000b" comment="SPORTSCHALTER_ALT">aktiv</function>
+				<function start="1" end="1" mask="00000001b" comment="SPORTSCHALTER">aktiv</function>
+			</group>
+		</code>
+	</cafd>	
+	<cafd id="000007A1" name="REM" author="ekfxisidF030" series="F020,F030">
+		<code description="주간 테일램프(주간 전조등과 동조)							[창원ll달탸냥]">
+			<group id="3062">
+				<function start="200" end="200" mask="00111111b" comment="MAPPING_TAGFAHRL_H_L_OUTPUT">sl_l</function>
+				<function start="210" end="210" mask="00111111b" comment="MAPPING_TAGFAHRL_H_R_OUTPUT">sl_r</function>
+				<function start="220" end="220" mask="00111111b" comment="MAPPING_TAGFAHRL_H2_L_OUTPUT">sl_2_l</function>
+				<function start="230" end="230" mask="00111111b" comment="MAPPING_TAGFAHRL_H2_R_OUTPUT">sl_2_r</function>
+			</group>
+		</code>
+		<code description="후방카메라 항시 켜짐">
+			<group id="3203">
+				<function start="7" end="7" mask="11111111b" comment="V_SCHWELLE_1">FF</function>
+				<function start="8" end="8" mask="11111111b" comment="V_SCHWELLE_2">FF</function>
+				<function start="9" end="9" mask="11111111b" comment="D_SCHWELLE_1">FF</function>
+				<function start="10" end="10" mask="11111111b" comment="D_SCHWELLE_2">FF</function>
+			</group>
+		</code>
+		<code description="브레이크등 -> LED 교환">
+			<group id="3061">
+				<function start="18" end="18" mask="00000001b" comment="BL_L_KALTUEBERWCHUNG">nicht_aktiv</function>
+				<function start="18" end="18" mask="00000010b" comment="BL_L_WARMUEBERWCHUNG">nicht_aktiv</function>
+				<function start="18" end="18" mask="00001000b" comment="BL_L_IS_LED">aktiv</function>
+				<function start="22" end="22" mask="00000001b" comment="BL_R_KALTUEBERWCHUNG">nicht_aktiv</function>
+				<function start="22" end="22" mask="00000010b" comment="BL_R_WARMUEBERWCHUNG">nicht_aktiv</function>
+				<function start="22" end="22" mask="00001000b" comment="BL_R_IS_LED">aktiv</function>
+			</group>
+		</code>
+		<code description="후방 안개등 -> LED 교환">
+			<group id="3061">
+				<function start="34" end="34" mask="00000001b" comment="NSL_L_KALTUEBERWCHUNG">nicht_aktiv</function>
+				<function start="34" end="34" mask="00000010b" comment="NSL_L_WARMTUEBERWCHUNG">nicht_aktiv</function>
+				<function start="34" end="34" mask="00001000b" comment="NSL_L_IS_LED">aktiv</function>
+				<function start="38" end="38" mask="00000001b" comment="NSL_R_KALTUEBERWCHUNG">nicht_aktiv</function>
+				<function start="38" end="38" mask="00000010b" comment="NSL_R_WARMUEBERWCHUNG">nicht_aktiv</function>
+				<function start="38" end="38" mask="00001000b" comment="NSL_R_IS_LED">aktiv</function>
+			</group>
+		</code>
+		<code description="후진등 -> LED 교환">
+			<group id="3061">
+				<function start="42" end="42" mask="00000001b" comment="RFS_L_KALTUEBERWCHUNG">nicht_aktiv</function>
+				<function start="42" end="42" mask="00000010b" comment="RFSL_L_WARMTUEBERWCHUNG">nicht_aktiv</function>
+				<function start="42" end="42" mask="00001000b" comment="RFS_L_IS_LED">aktiv</function>
+				<function start="46" end="46" mask="00000001b" comment="RFS_R_KALTUEBERWCHUNG">nicht_aktiv</function>
+				<function start="46" end="46" mask="00000010b" comment="RFS_R_WARMUEBERWCHUNG">nicht_aktiv</function>
+				<function start="46" end="46" mask="00001000b" comment="RFS_R_IS_LED">aktiv</function>
+			</group>
+		</code>
+		<code description="후방 방향지시등 -> LED 교환">
+			<group id="3061">
+				<function start="50" end="50" mask="00000001b" comment="FRAFRA_L_KALTUEBERWCHUNG">nicht_aktiv</function>
+				<function start="50" end="50" mask="00000010b" comment="FRAL_L_WARMTUEBERWCHUNG">nicht_aktiv</function>
+				<function start="50" end="50" mask="00001000b" comment="FRA_L_IS_LED">aktiv</function>
+				<function start="54" end="54" mask="00000001b" comment="FRA_R_KALTUEBERWCHUNG">nicht_aktiv</function>
+				<function start="54" end="54" mask="00000010b" comment="FRA_R_WARMUEBERWCHUNG">nicht_aktiv</function>
+				<function start="54" end="54" mask="00001000b" comment="FRA_R_IS_LED">aktiv</function>
+			</group>
+		</code>
+		<code description="== 모든 후방라이트 -> LED 교환 ==">
+			<group id="3061">
+				<function start="10" end="10" mask="00000001b">00</function>
+				<function start="10" end="10" mask="00000010b">00</function>
+				<function start="10" end="10" mask="00001000b">01</function>
+				<function start="14" end="14" mask="00000001b">00</function>
+				<function start="14" end="14" mask="00000010b">00</function>
+				<function start="14" end="14" mask="00001000b">01</function>
+				<function start="18" end="18" mask="00000001b">00</function>
+				<function start="18" end="18" mask="00000010b">00</function>
+				<function start="18" end="18" mask="00001000b">01</function>
+				<function start="22" end="22" mask="00000001b">00</function>
+				<function start="22" end="22" mask="00000010b">00</function>
+				<function start="22" end="22" mask="00001000b">01</function>
+				<function start="26" end="26" mask="00000001b">00</function>
+				<function start="26" end="26" mask="00000010b">00</function>
+				<function start="26" end="26" mask="00001000b">01</function>
+				<function start="30" end="30" mask="00000001b">00</function>
+				<function start="30" end="30" mask="00000010b">00</function>
+				<function start="30" end="30" mask="00001000b">01</function>
+				<function start="34" end="34" mask="00000001b">00</function>
+				<function start="34" end="34" mask="00000010b">00</function>
+				<function start="34" end="34" mask="00001000b">01</function>
+				<function start="38" end="38" mask="00000001b">00</function>
+				<function start="38" end="38" mask="00000010b">00</function>
+				<function start="38" end="38" mask="00001000b">01</function>
+				<function start="42" end="42" mask="00000001b">00</function>
+				<function start="42" end="42" mask="00000010b">00</function>
+				<function start="42" end="42" mask="00001000b">01</function>
+				<function start="46" end="46" mask="00000001b">00</function>
+				<function start="46" end="46" mask="00000010b">00</function>
+				<function start="46" end="46" mask="00001000b">01</function>
+				<function start="50" end="50" mask="00000001b">00</function>
+				<function start="50" end="50" mask="00000010b">00</function>
+				<function start="50" end="50" mask="00001000b">01</function>
+				<function start="54" end="54" mask="00000001b">00</function>
+				<function start="54" end="54" mask="00000010b">00</function>
+				<function start="54" end="54" mask="00001000b">01</function>
+				<function start="66" end="66" mask="00001000b">01</function>
+				<function start="70" end="70" mask="00001000b">01</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="0000067B" name="ICMQL" author="ekfxisidF030" series="F020,F030">
+		<code description="스포츠 + 모드 활성화 -> KOMBI							[창원ll달탸냥]">
+			<group id="3000">
+				<function start="28" end="28" mask="11111111b" comment="IcmKod_B_Sportlenkung">verbaut</function>
+			</group>
+		</code>
+		<code description="주행모드를 ECO PRO모드를 기본으로">
+			<group id="3000">
+				<function start="36" end="36" mask="00001000b" comment="IcmKod_B_InitEco">verbaut</function>
+			</group>
+		</code>
+		<code description="오토크루즈 활성화 -> KOMBI">
+			<group id="3000">
+				<function start="128" end="128" mask="00001110b" comment="C_Fahrfunktion">verbaut</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="000000B5" name="SM2" author="ekfxisidF030" series="F020,F030">
+		<code description="이지 억세스 1/3(Easy Entry)								[창원ll달탸냥]">
+			<group id="3000">
+				<function start="0" end="0" mask="00011100b" comment="EINAUSSTIEGSHILFE">Modus_FA_SLV</function>
+			</group>
+		</code>
+		<code description="이지 억세스 2/3(Easy Entry)">
+			<group id="3012">
+				<function start="4" end="5" mask="11111111b" comment="EAH_SCHUTZFREIRAUM_HINTEN_SLV_PHYS">00, 1E</function>
+			</group>
+		</code>
+		<code description="이지 억세스 3/3(Easy Entry)">
+			<group id="3012">
+				<function start="0" end="1" mask="11111111b" comment="EAH_VERFAHRWEG_SLV_PHYS">00, 46</function>
+			</group>
+		</code>
+		<code description="MEMORY GONG 알람 소리설정">
+			<group id="3000">
+				<function start="2" end="2" mask="00001000b" comment="MEMORY_GONG">Aktiv</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="00000DED" name="HU_NBT" author="ekfxisidF030" series="F020,F030">
+		<code description="DMB DVD Navi 주행락 해제								[창원ll달탸냥]">
+			<group id="3000">
+				<function start="72" end="72" mask="11111111b" comment="SPEEDLOCK_X_KMH_MAX">FF</function>
+				<function start="71" end="71" mask="11111111b" comment="SPEEDLOCK_X_KMH_MIN">FF</function>
+				<function start="5" end="5" mask="00010000b" comment="VIDEO_FRONT_LOCKED">nicht_aktiv</function>
+				<function start="5" end="5" mask="00000100b" comment="VIDEO_HANDBRAKE">nicht_aktiv</function>
+				<function start="57" end="57" mask="00000111b" comment="VIDEO_SPEEDLOCK_CONDITION">None</function>
+			</group>
+		</code>
+		<code description="M performance">
+			<group id="3001">
+				<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM">01</function>
+			</group>
+		</code>
+		<code description="X - Drive">
+			<group id="3000">
+				<function start="5" end="5" mask="00000001b" comment="COMPASS">aktiv</function>
+				<function start="15" end="15" mask="00000001b" comment="X_VIEW">aktiv</function>
+				<function start="26" end="26" mask="00110000b" comment="X_VIEW_GRAPHIC_SLOP">trajectory1</function>
+				<function start="26" end="26" mask="11000000b" comment="X_VIEW_GRAPHIC_ROLL">trajectory1</function>
+				<function start="110" end="110" mask="00000010b" comment="MOMENTDISTRIBUTION_MENU">aktiv</function>
+			</group>
+		</code>
+		<code description="경고음 사운드 변경">
+			<group id="3002">
+				<function start="26" end="26" mask="00111000b" comment="SOUND_SIGNAL_SET">rolls_royce</function>
+			</group>
+		</code>
+		<code description="USB 동영상 활성화 1/2">
+			<group id="3000">
+				<function start="15" end="15" mask="00010000b" comment="ENT_CODEC_OGG">aktiv</function>
+				<function start="15" end="15" mask="00100000b" comment="ENT_CODEC_XVID">aktiv</function>
+				<function start="15" end="15" mask="01000000b" comment="ENT_CODEC_VCD">aktiv</function>
+				<function start="13" end="13" mask="00000100b" comment="ENT_MC_VIDEO_SUPPORT">aktiv</function>
+			</group>
+		</code>
+		<code description="USB 동영상 활성화 2/2">
+			<group id="3003">
+				<function start="33" end="33" mask="00000110b" comment="API_USB_VIDEO">both</function>
+				<function start="33" end="33" mask="00011000b" comment="API_IPOD_VIEDO">both</function>
+			</group>
+		</code>
+		<code description="경고문구 모두 삭제">
+			<group id="3001">
+				<function start="52" end="52" mask="11111111b" comment="MACRO_CAM_LEGALDISCLAIMER">00</function>
+				<function start="58" end="58" mask="11111111b" comment="LEGAL_DISCLAIMER_TIME">00</function>
+			</group>
+		</code>
+		<code description="시간자동설정 활성화">
+			<group id="3000">
+				<function start="19" end="19" mask="00000110b" comment="SETTINGS_TIME_AUTOMATIC">navigation</function>
+				<function start="105" end="105" mask="00100000b" comment="CLOCK_CHANGE_AUTOMATIC">aktiv</function>
+			</group>
+		</code>
+		<code description="후방카메라 줌인">
+			<group id="3001">
+				<function start="54" end="54" mask="00000001b" comment="MACRO_TRAILER_COUPLING">aktiv</function>
+			</group>
+		</code>
+		<code description="Day Light 활성화">
+			<group id="3000">
+				<function start="92" end="92" mask="00011000b" comment="DAYDRIVING_LIGHT">02</function>
+			</group>
+		</code>
+		<code description="전화벨 소리 스피커로(iOS only)">
+			<group id="3003">
+				<function start="6" end="6" mask="10000000b" comment="INBAND_RINGING">aktiv</function>
+			</group>
+		</code>
+		<code description="스포츠모드 구성 1/3">
+			<group id="3000">
+				<function start="101" end="101" mask="00010000b" comment="EFF_DYN_SPORT_CID">aktiv</function>
+			</group>
+		</code>
+		<code description="스포츠모드 구성 2/3">
+			<group id="3000">
+				<function start="107" end="107" mask="00000100b" comment="EFF_DYN_SPORT_UNIT">aktiv</function>
+			</group>
+		</code>
+		<code description="스포츠모드 구성 3/3">
+			<group id="3001">
+				<function start="55" end="55" mask="00011000b" comment="MACRO_FDS">popup_and_config</function>
+			</group>
+		</code>
+		<code description="뱅엔웁스 프로필">
+			<group id="3000">
+				<function start="21" end="21" mask="01100000b" comment="HIGH_END_AUDIO_B_UND_W">keine_insz</function>
+			</group>
+		</code>
+		<code description="로직7 활성화 (S667A HiFi 옵션차량)">
+			<group id="3000">
+				<function start="22" end="22" mask="00001000b" comment="LOGIC7_SYMBOL">aktiv</function>
+			</group>
+		</code>
+		<code description="도어 Lock/Unlock 알람음 (M5외 도난장치묘듈 옵션차량)">
+			<group id="3000">
+				<function start="110" end="110" mask="00000001b" comment="ACOUSTICAL_LOCK_CONFIRM">Aktiv</function>
+			</group>
+		</code>
+		<code description="TPMC 타이어 압력온도 활성화">
+			<group id="3001">
+				<function start="1" end="1" mask="00100000b" comment="RDC_SAFETY">Aktiv</function>
+			</group>
+		</code>
+		<code description="M Sport 디스플레이 계기판 색변경">
+			<group id="3000">
+				<function start="133" end="133" mask="01000000b" comment="M_VEHICLE">aktiv</function>
+			</group>
+		</code>
+		<code description="하이빔 어시스턴트">
+			<group id="3000">
+				<function start="109" end="109" mask="10000000b" comment="HIGH_BEAM_ASSISTANT">01</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="00001EF6" name="HU_NBT2" author="ekfxisidF030" series="F020,F030">
+		<code description="DMB DVD Navi 주행락 해제 1/2								[창원ll달탸냥]">
+			<group id="3006">
+				<function start="25" end="25" mask="11111111b" comment="SPEEDLOCK_X_KMH_MAX">FF</function>
+				<function start="26" end="26" mask="11111111b" comment="SPEEDLOCK_X_KMH_MIN">FF</function>
+			</group>
+		</code>
+		<code description="DMB DVD Navi 주행락 해제 2/2">
+			<group id="3000">
+				<function start="5" end="5" mask="00010000b" comment="VIDEO_FRONT_LOCKED">nicht_aktiv</function>
+				<function start="5" end="5" mask="00000100b" comment="VIDEO_HANDBRAKE">nicht_aktiv</function>
+				<function start="2" end="2" mask="00000111b" comment="VIDEO_SPEEDLOCK_CONDITION">None</function>
+			</group>
+		</code>
+		<code description="M performance">
+			<group id="3001">
+				<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM">01</function>
+			</group>
+		</code>
+		<code description="X - Drive">
+			<group id="3000">
+				<function start="5" end="5" mask="00000001b" comment="COMPASS">aktiv</function>
+				<function start="15" end="15" mask="00000001b" comment="X_VIEW">aktiv</function>
+				<function start="26" end="26" mask="00110000b" comment="X_VIEW_GRAPHIC_SLOP">trajectory1</function>
+				<function start="26" end="26" mask="11000000b" comment="X_VIEW_GRAPHIC_ROLL">trajectory1</function>
+				<function start="110" end="110" mask="00000010b" comment="MOMENTDISTRIBUTION_MENU">aktiv</function>
+			</group>
+		</code>
+		<code description="경고음 사운드 변경">
+			<group id="3002">
+				<function start="26" end="26" mask="00111000b" comment="SOUND_SIGNAL_SET">rolls_royce</function>
+			</group>
+		</code>
+		<code description="USB 동영상 활성화 1/2">
+			<group id="3000">
+				<function start="15" end="15" mask="00010000b" comment="ENT_CODEC_OGG">aktiv</function>
+				<function start="15" end="15" mask="00100000b" comment="ENT_CODEC_XVID">aktiv</function>
+				<function start="15" end="15" mask="01000000b" comment="ENT_CODEC_VCD">aktiv</function>
+				<function start="13" end="13" mask="00000100b" comment="ENT_MC_VIDEO_SUPPORT">aktiv</function>
+			</group>
+		</code>
+		<code description="USB 동영상 활성화 2/2">
+			<group id="3003">
+				<function start="33" end="33" mask="00000110b" comment="API_USB_VIDEO">both</function>
+				<function start="33" end="33" mask="00011000b" comment="API_IPOD_VIEDO">both</function>
+			</group>
+		</code>
+		<code description="경고문구 모두 삭제">
+			<group id="3001">
+				<function start="52" end="52" mask="11111111b" comment="MACRO_CAM_LEGALDISCLAIMER">00</function>
+				<function start="58" end="58" mask="11111111b" comment="LEGAL_DISCLAIMER_TIME">00</function>
+			</group>
+		</code>
+		<code description="시간자동설정 활성화">
+			<group id="3000">
+				<function start="19" end="19" mask="00000110b" comment="SETTINGS_TIME_AUTOMATIC">navigation</function>
+				<function start="105" end="105" mask="00100000b" comment="CLOCK_CHANGE_AUTOMATIC">aktiv</function>
+			</group>
+		</code>
+		<code description="후방카메라 줌인">
+			<group id="3001">
+				<function start="54" end="54" mask="00000001b" comment="MACRO_TRAILER_COUPLING">aktiv</function>
+			</group>
+		</code>
+		<code description="Day Light 활성화">
+			<group id="3000">
+				<function start="92" end="92" mask="00011000b" comment="DAYDRIVING_LIGHT">02</function>
+			</group>
+		</code>
+		<code description="전화벨 소리 스피커로(iOS only)">
+			<group id="3003">
+				<function start="6" end="6" mask="10000000b" comment="INBAND_RINGING">aktiv</function>
+			</group>
+		</code>
+		<code description="스포츠모드 구성 1/3">
+			<group id="3009">
+				<function start="9" end="9" mask="00010000b" comment="EFF_DYN_SPORT_CID">aktiv</function>
+			</group>
+		</code>
+		<code description="스포츠모드 구성 2/3">
+			<group id="3009">
+				<function start="9" end="9" mask="00100000b" comment="EFF_DYN_SPORT_UNIT">aktiv</function>
+			</group>
+		</code>
+		<code description="스포츠모드 구성 3/3">
+			<group id="3008">
+				<function start="79" end="79" mask="11000000b" comment="MACRO_FDS">popup_and_config</function>
+			</group>
+		</code>
+		<code description="뱅엔웁스 프로필">
+			<group id="3000">
+				<function start="21" end="21" mask="01100000b" comment="HIGH_END_AUDIO_B_UND_W">keine_insz</function>
+			</group>
+		</code>
+		<code description="로직7 활성화 (S667A HiFi 옵션차량)">
+			<group id="3000">
+				<function start="22" end="22" mask="00001000b" comment="LOGIC7_SYMBOL">aktiv</function>
+			</group>
+		</code>
+		<code description="HUD : Affichage de l'assistant collision Step 2 (Step 1 dans KOMBI)">
+			<group id="300C">
+				<function start="0" end="0" mask="00010000b" comment="HUD_DISTANCE_INFO">Aktiv</function>
+			</group>
+		</code>
+		<code description="도어 Lock/Unlock 알람음 (M5외 도난장치묘듈 옵션차량)">
+			<group id="3000">
+				<function start="110" end="110" mask="00000001b" comment="ACOUSTICAL_LOCK_CONFIRM">Aktiv</function>
+			</group>
+		</code>
+		<code description="TPMC 타이어 압력온도 활성화">
+			<group id="3001">
+				<function start="1" end="1" mask="00100000b" comment="RDC_SAFETY">Aktiv</function>
+			</group>
+		</code>
+		<code description="M Sport 디스플레이 계기판 색변경">
+			<group id="3000">
+				<function start="133" end="133" mask="01000000b" comment="M_VEHICLE">aktiv</function>
+			</group>
+		</code>
+		<code description="하이빔 어시스턴트">
+			<group id="3000">
+				<function start="109" end="109" mask="10000000b" comment="HIGH_BEAM_ASSISTANT">01</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="000000F9" name="HU_CICHB" author="ekfxisidF030" series="F020,F030">
+		<code description="DMB DVD Navi 주행락 해제							[창원ll달탸냥]">
+			<group id="3000">
+				<function start="23" end="23" mask="11111111b" comment="SPEEDLOCK_X_KMH_MIN">FF</function>
+				<function start="24" end="24" mask="11111111b" comment="SPEEDLOCK_X_KMH_MAX">FF</function>
+			</group>
+		</code>
+		<code description="후방카메라 줌인">
+			<group id="3001">
+				<function start="23" end="23" mask="00000001b" comment="MACRO_TRAILER_COUPLING">aktiv</function>
+			</group>
+		</code>
+		<code description="스포츠모드 구성 1/3">
+			<group id="3000">
+				<function start="47" end="47" mask="00010000b" comment="EFF_DYN_SPORT_CID">aktiv</function>
+			</group>
+		</code>
+		<code description="스포츠모드 구성 2/3">
+			<group id="3000">
+				<function start="61" end="61" mask="00000100b" comment="EFF_DYN_SPORT_UNIT">aktiv</function>
+			</group>
+		</code>
+		<code description="스포츠모드 구성 3/3">
+			<group id="3000">
+				<function start="7" end="7" mask="00110000b" comment="MACRO_FDS">popup_and_config</function>
+			</group>
+		</code>
+	</cafd>
+	<!-- End ekfxisidF030-->
+
+	<!--ekfxisidF010-->
+	<cafd id="0000000F" name="CAS_04" author="ekfxisidF010" series="F010,F001,F007">
+  		<code description="1. Auto Start/Stop DEFAULT OFF						[창원ll달탸냥]">
+   			<group id="3000">
+    				<function start="3" end="3" mask="00010000b" comment="TCM_MSA_DEFAULT_OFF">01</function>
+   			</group>
+  		</code>
+  		<code description="2. Auto Start/Stop 마지막상태 기억">
+   			<group id="3000">
+    				<function start="3" end="3" mask="00100000b"  comment="TCM_MSA_MEMORY">aktiv</function>
+   			</group>
+  		</code>
+		<code description="3. 브레이크 밟지않고 엔진시동">
+   			<group id="3000">
+    				<function start="1" end="1" mask="00000001b" comment="TC_STARTLOCK_BRAKE">nicht_aktiv</function>
+   			</group>
+   			<group id="3000">
+    				<function start="1" end="1" mask="00010000b" comment="TC_STARTLOCK_DRIVINGREADINESS">nicht_aktiv</function>
+   			</group>
+		</code>
+		<code description="4. 사이드미러 락 폴딩">
+   			<group id="3003">
+    				<function start="12" end="12" mask="11111111b" comment="KMFRT_SCHLESSEN">00</function>
+   			</group>
+		</code>
+		<code description="5. 시동끄고 문열면 오디오/네비 끄짐">
+   			<group id="3000">
+    				<function start="2" end="2" mask="00000001b" comment="TC_LOGIC_KLR_OFF_DOOR">aktiv</function>
+   			</group>
+  		</code>
+		<code description="6. 시동 켜둔채로 문잠그면 HORN 알람">
+   			<group id="3002">
+    				<function start="0" end="0" mask="00100000b" comment="CLM_HORN_AT_SECURE">aktiv</function>
+   			</group>
+  		</code>
+	</cafd>
+	<cafd id="000005B6" name="COMBOX" author="ekfxisidF010" series="F010,F001,F007">
+	<code description="1. 전화벨 소리 스피커로(iOS only)								[창원ll달탸냥]">
+			<group id="3001">
+				<function start="1" end="1" mask="10000000b" comment="INBAND_RINGING">aktiv</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="00000F9B" name="ASD01" author="ekfxisidF010" series="F010,F001,F007">
+		<code description="1. ASD M4 엑티브 사운드									[창원ll달탸냥]">
+			<group id="3000">
+				<function start="0" end="0" mask="11111111b" comment="Model Range">F082</function>
+				<function start="1" end="1" mask="11111111b" comment="Engine">S55B30</function>
+				<function start="2" end="2" mask="11111111b" comment="Audio Level">Hifi</function>
+				<function start="3" end="3" mask="11111111b" comment="Power Class">ML</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="00001060" name="DKOMBI 6WB" author="ekfxisidF010" series="F010,F001,F007">
+		<code description="스포츠 + 모드 계기판에 메뉴						[창원ll달탸냥]">
+			<group id="300C">
+				<function start="51" end="51" mask="11111111b" comment="FDS_MENUE">menue_3</function>
+			</group>
+		</code>
+		<code description="계기판에 나침판 활성화">
+			<group id="3003">
+				<function start="12" end="12" mask="00010000b" comment="KOMPASS_GRAPH_ENABLE">aktiv</function>
+			</group>
+		</code>
+		<code description="계기판에 속도 km/마일 활성화">
+			<group id="3000">
+				<function start="42" end="42" mask="11110000b" comment="DIGITAL_TACHO_ENABLE">kmh_kmh</function>
+			</group>
+		</code>
+		<code description="M 퍼포먼스 활성화 - MPM">
+			<group id="3000">
+				<function start="44" end="44" mask="00001111b" comment="BMW_LOGO">mpm</function>
+			</group>
+		</code>
+		<code description="M 퍼포먼스 - X5M">
+			<group id="3000">
+				<function start="44" end="44" mask="00001111b"  comment="BMW_LOGO">mpm_x5</function>
+			</group>
+		</code>
+		<code description="M 퍼포먼스 - X6M">
+			<group id="3000">
+				<function start="44" end="44" mask="00001111b"  comment="BMW_LOGO">mpm_x6</function>
+			</group>
+		</code>
+		<code description="MPM 활성화">
+			<group id="3003">
+				<function start="3" end="3" mask="00000010b" comment="MPM_ENABLE">aktiv</function>
+			</group>
+		</code>
+		<code description="MPM 로고 - BMW">
+			<group id="3000">
+				<function start="44" end="44" mask="11110000b" comment="MPM_LOGO">bmw</function>
+			</group>
+		</code>
+		<code description="MPM 로고 - MPM">
+			<group id="3000">
+				<function start="44" end="44" mask="11110000b" comment="MPM_LOGO">mpm</function>
+			</group>
+		</code>
+		<code description="MPM 로고 - X5M">
+			<group id="3000">
+				<function start="44" end="44" mask="11110000b" comment="MPM_LOGO">mpm_x5</function>
+			</group>
+		</code>
+		<code description="MPM 로고 - X6M">
+			<group id="3000">
+				<function start="44" end="44" mask="11110000b" comment="MPM_LOGO">mpm_x6</function>
+			</group>
+		</code>
+		<code description="계기판 디지털 속도계">
+			<group id="3000">
+				<function start="1" end="1" mask="00000010b" comment="BC_DIGITAL_V">Aktiv</function>
+				<function start="1" end="1" mask="01000000b" comment="BC_V_KORREKTUR">nicht_aktiv</function>
+			</group>
+		</code>
+		<code description="DS모드 수동기어 단수표시 M1 M2...M8">
+			<group id="3000">
+				<function start="39" end="39" mask="00010000b" comment="SPA_SPORT_ENABLE">Aktiv</function>
+			</group>
+		</code>
+		<code description="HUD 엔트테인먼트 활성화">
+			<group id="3003">
+				<function start="10" end="10" mask="00000001b" comment="HUD_ENTERTAINMENT_ENABLE">Aktiv</function>
+			</group>
+		</code>
+		<code description="3도이하 온도 알람음 비활성화">
+			<group id="3000">
+				<function start="50" end="50" mask="00000001b" comment="CC_TEMPERATURWARNUNG">nicht_aktiv</function>
+			</group>
+		</code>
+		<code description="계기판에 마력 출력 표시 활성화">
+			<group id="3003">
+				<function start="11" end="11" mask="00000010b" comment="MOTORLEISTUNG_ENABLE">aktiv</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="00001148" name="KAFAS2" author="ekfxisidF010" series="F010,F001,F007">
+  		<code description="하이빔 어시스턴트 1/4 -> 제일 먼저 코딩하여야 에러가 안남">
+			<group id="3050">
+				<function start="1" end="1" mask="00000001b" comment="FLA_ON_OFF">FLA_on</function>
+			</group>
+		</code>
+ 	</cafd>
+	<cafd id="0000106D" name="FRM" author="ekfxisidF010" series="F010,F001,F007">
+  		<code description="하이빔 어시스턴트 2/4 --> KAFAS2 1/4를 제일 먼저 코딩">
+   			<group id="3050">
+    				<function start="20" end="20" mask="00010000b" comment="FLA_VERBAUT">aktiv</function>
+   			</group>
+  		</code>
+		<code description="하이빔 어시스턴트 3/4 --> HU_NBT 4/4를 마지막으로 코딩HU_NBT 4/4를 마지막으로 코딩"> 
+   			<group id="3050">
+    				<function start="20" end="20" mask="00100000b" comment="FLA_AUTO_AKTIV">automatisch</function>
+   			</group>
+		</code>
+		<code description="사이드미러 각도 조절(조수석)">
+			<group id="3020">
+				<function start="1" end="1" mask="11111111b" comment="ASP_BORDSTEINAUTOMAIK_DELTA">1E</function>
+			</group>
+		</code>
+		<code description="지정속도 초과하면 사이드미러 자동 펴짐 (40Km/h -> 25Km/h)">
+			<group id="3020">
+				<function start="9" end="9" mask="11111111b" comment="ASP_GESCHWINDIGKEIT_AUTO_AUSKLAPPEN">19</function>
+			</group>
+		</code>
+		<code description="문 열려있어도 윈도우 작동 1/2 (앞문) --> JBBF 2/2 (뒷문)">
+			<group id="3030">
+				<function start="1" end="1" mask="00000100b" comment="FH_TUER_AUF_STOP_MAUT">nicht aktiv</function>
+			</group>
+		</code>
+		<code description="테일램프 주간등">
+			<group id="3050">
+				<function start="20" end="20" mask="00001110b" comment="DRL_MODUS">drl_s</function>
+			</group>
+		</code>
+		<code description="다이나믹 브레이크등 켜기">
+			<group id="3050">
+				<function start="23" end="23" mask="01110000b" comment="ESS_ERSCHEINUNGSBILD">02</function>
+				<function start="24" end="24" mask="01111111b" comment="ESS_GESCHW_SCHWELLE">US</function>
+				<function start="21" end="21" mask="00011111b" comment="ESS_ON_VERZ">04</function>
+				<function start="22" end="22" mask="00011111b" comment="ESS_OFF_VERZ">04</function>
+			</group>
+		</code>
+		<code description="급제동시 비상등켜기">
+			<group id="3050">
+				<function start="2" end="2" mask="10000000b" comment="WB_GB_ENABLE">aktiv</function>
+			</group>
+		</code>
+		<code description="엔젤아이 조도 30% 업">
+			<group id="3060">
+				<function start="1" end="1" mask="11111111b" comment="U_EFF_POL">1E</function>
+			</group>
+		</code>
+		<code description="웰컴 라이트 안개등 (Hard_on)">
+			<group id="3050">
+				<function start="29" end="29" mask="00001100b" comment="WL_FUNKTION_NSW">Hard_on</function>
+			</group>
+		</code>
+		<code description="웰컴 라이트 안개등 (Soft_on)">
+			<group id="3050">
+				<function start="29" end="29" mask="00001100b" comment="WL_FUNKTION_NSW">Soft_on</function>
+			</group>
+		</code>
+		<code description="전방 안개등 --> LED 교환 및 경고등삭제">
+			<group id="3090">
+				<function start="79" end="79" mask="00000001b" comment="AUSG_11_NSW_L_WARM_UEBERW_AKTIV">00</function>
+				<function start="79" end="79" mask="00000010b" comment="AUSG_11_NSW_L_KALT_UEBERW_AKTIV">00</function>
+				<function start="79" end="79" mask="00001000b" comment="AUSG_11_NSW_L_IS_LED">aktiv</function>
+				<function start="83" end="83" mask="00000001b" comment="AUSG_12_NSW_R_WARM_UEBERW_AKTIV">00</function>
+				<function start="83" end="83" mask="00000010b" comment="AUSG_12_NSW_R_KALT_UEBERW_AKTIV">00</function>
+				<function start="83" end="83" mask="00001000b" comment="AUSG_12_NSW_R_IS_LED">aktiv</function>
+			</group>
+		</code>
+		<code description="후진등 --> LED 교환">
+			<group id="3090">
+				<function start="131" end="131" mask="00000001b" comment="AUSG_24_RFS_L_WARM_UEBERW_AKTIV">nicht_aktiv</function>
+				<function start="131" end="131" mask="00000010b" comment="AUSG_24_RFS_L_KALT_UEBERW_AKTIV">nicht_aktiv</function>
+				<function start="131" end="131" mask="00001000b" comment="AUSG_24_RFS_L_IS_LED">aktiv</function>
+				<function start="135" end="135" mask="00000001b" comment="AUSG_25_RFS_R_WARM_UEBERW_AKTIV">nicht_aktiv</function>
+				<function start="135" end="135" mask="00000010b" comment="AUSG_25_RFS_R_KALT_UEBERW_AKTIV">nicht_aktiv</function>
+				<function start="135" end="135" mask="00001000b" comment="AUSG_25_RFS_R_IS_LED">aktiv</function>
+			</group>
+		</code>
+ 	</cafd>
+	<cafd id="0000012F" name="FRM" author="ekfxisidF010" series="F010,F001,F007">
+  		<code description="하이빔 어시스턴트 2/4 --> KAFAS2 1/4를 제일 먼저 코딩">
+   			<group id="3050">
+    				<function start="20" end="20" mask="00010000b" comment="FLA_VERBAUT">aktiv</function>
+   			</group>
+  		</code>
+		<code description="하이빔 어시스턴트 3/4 --> HU_NBT 4/4를 마지막으로 코딩HU_NBT 4/4를 마지막으로 코딩"> 
+   			<group id="3050">
+    				<function start="20" end="20" mask="00100000b" comment="FLA_AUTO_AKTIV">automatisch</function>
+   			</group>
+		</code>
+		<code description="사이드미러 각도 조절(조수석)">
+			<group id="3020">
+				<function start="1" end="1" mask="11111111b" comment="ASP_BORDSTEINAUTOMAIK_DELTA">1E</function>
+			</group>
+		</code>
+		<code description="지정속도 초과하면 사이드미러 자동 펴짐 (40Km/h -> 25Km/h)">
+			<group id="3020">
+				<function start="9" end="9" mask="11111111b" comment="ASP_GESCHWINDIGKEIT_AUTO_AUSKLAPPEN">19</function>
+			</group>
+		</code>
+		<code description="문 열려있어도 윈도우 작동 1/2 (앞문) --> JBBF 2/2 (뒷문)">
+			<group id="3030">
+				<function start="1" end="1" mask="00000100b" comment="FH_TUER_AUF_STOP_MAUT">nicht aktiv</function>
+			</group>
+		</code>
+		<code description="테일램프 주간등">
+			<group id="3050">
+				<function start="20" end="20" mask="00001110b" comment="DRL_MODUS">drl_s</function>
+			</group>
+		</code>
+		<code description="다이나믹 브레이크등 켜기">
+			<group id="3050">
+				<function start="23" end="23" mask="01110000b" comment="ESS_ERSCHEINUNGSBILD">bremslicht_blinkend</function>
+				<function start="24" end="24" mask="01111111b" comment="ESS_GESCHW_SCHWELLE">US</function>
+				<function start="21" end="21" mask="00011111b" comment="ESS_ON_VERZ">04</function>
+				<function start="22" end="22" mask="00011111b" comment="ESS_OFF_VERZ">04</function>
+			</group>
+		</code>
+		<code description="급제동시 비상등켜기">
+			<group id="3050">
+				<function start="2" end="2" mask="10000000b" comment="WB_GB_ENABLE">aktiv</function>
+			</group>
+		</code>
+		<code description="엔젤아이 조도 30% 업">
+			<group id="3060">
+				<function start="1" end="1" mask="11111111b" comment="U_EFF_POL">1E</function>
+			</group>
+		</code>
+		<code description="웰컴 라이트 안개등 (Hard_on)">
+			<group id="3050">
+				<function start="29" end="29" mask="00001100b" comment="WL_FUNKTION_NSW">Hard_on</function>
+			</group>
+		</code>
+		<code description="웰컴 라이트 안개등 (Soft_on)">
+			<group id="3050">
+				<function start="29" end="29" mask="00001100b" comment="WL_FUNKTION_NSW">Soft_on</function>
+			</group>
+		</code>
+		<code description="전방 안개등 --> LED 교환 및 경고등삭제">
+			<group id="3090">
+				<function start="79" end="79" mask="00000001b" comment="AUSG_11_NSW_L_WARM_UEBERW_AKTIV">00</function>
+				<function start="79" end="79" mask="00000010b" comment="AUSG_11_NSW_L_KALT_UEBERW_AKTIV">00</function>
+				<function start="79" end="79" mask="00001000b" comment="AUSG_11_NSW_L_IS_LED">aktiv</function>
+				<function start="83" end="83" mask="00000001b" comment="AUSG_11_NSW_R_WARM_UEBERW_AKTIV">00</function>
+				<function start="83" end="83" mask="00000010b" comment="AUSG_11_NSW_R_KALT_UEBERW_AKTIV">00</function>
+				<function start="83" end="83" mask="00001000b" comment="AUSG_11_NSW_R_IS_LED">aktiv</function>
+			</group>
+		</code>
+		<code description="후진등 --> LED 교환">
+			<group id="3090">
+				<function start="131" end="131" mask="00000001b" comment="AUSG_24_RFS_L_WARM_UEBERW_AKTIV">nicht_aktiv</function>
+				<function start="131" end="131" mask="00000010b" comment="AUSG_24_RFS_L_KALT_UEBERW_AKTIV">nicht_aktiv</function>
+				<function start="131" end="131" mask="00001000b" comment="AUSG_24_RFS_L_IS_LED">aktiv</function>
+				<function start="135" end="135" mask="00000001b" comment="AUSG_24_RFS_R_WARM_UEBERW_AKTIV">nicht_aktiv</function>
+				<function start="135" end="135" mask="00000010b" comment="AUSG_24_RFS_R_KALT_UEBERW_AKTIV">nicht_aktiv</function>
+				<function start="135" end="135" mask="00001000b" comment="AUSG_24_RFS_R_IS_LED">aktiv</function>
+			</group>
+		</code>
+ 	</cafd>
+	<cafd id="00000014" name="JBBFE" author="ekfxisidF010" series="F010,F001,F007">
+		<code description="전조등 워셔액 비활성화							[창원ll달탸냥]">
+			<group id="3000">
+				<function start="8" end="8" mask="00000001b" comment="SCHEINWERFERREINIGUNG">nicht_aktiv</function>
+			</group>
+		</code>
+		<code description="문열어도 윈도우 작동 2/2 (뒷문)">
+			<group id="3070">
+				<function start="0" end="0" mask="00000100b" comment="FH_TUERAUF_STOP_MAUT">nicht_aktiv</function>
+			</group>
+		</code>
+		<code description="오토라이트 센스조정">
+			<group id="3530">
+				<function start="5" end="5" mask="00111000b" comment="RLS_FLC_SCHWELLWERT_SATZ">unempfindlich</function>
+			</group>
+		</code>
+		<code description="레인센스 조정">
+			<group id="3530">
+				<function start="5" end="5" mask="00000111b" comment="RLS_DEF_FLC_SCHWELLWERT_SATZ">unempfindlich</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="00000909" name="ACSM_4C" author="ekfxisidF010" series="F010,F001,F007">
+		<code description="안전벨트 경고음 3회 (5초)							[창원ll달탸냥]">
+			<group id="3001">
+				<function start="3" end="3" mask="11111111b" comment="GWF_SBR_WARNDAUER">05</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="0000009C" name="ACSM" author="ekfxisidF010" series="F010,F001,F007">
+		<code description="안전벨트 경고음 3회 (5초)							[창원ll달탸냥]">
+			<group id="3001">
+				<function start="3" end="3" mask="11111111b" comment="GWF_SBR_WARNDAUER">05</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="000011AB" name="ACSM" author="ekfxisidF010" series="F010,F001,F007">
+		<code description="안전벨트 경고음 3회 (5초)							[창원ll달탸냥]">
+			<group id="3001">
+				<function start="11" end="11" mask="11111111b" comment="GWF_SBR_WARNDAUER">05</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="000016EE" name="IHKA3" author="ekfxisidF010" series="F010,F001,F007">
+		<code description="에어컨 on/off 마지막 상태 기억						[창원ll달탸냥]">
+			<group id="3003">
+				<function start="0" end="0" mask="00000010b" comment="MEMORY_OFF">Aktiv</function>
+			</group>
+		</code>
+		<code description="공기순환모드 마지막 상태 기억">
+			<group id="3003">
+				<function start="0" end="0" mask="00000001b" comment="MEMORY_UMLUFT">Aktiv</function>
+			</group>
+		</code>
+		<code description="공기순환모드 고정">
+			<group id="3003">
+				<function start="0" end="0" mask="10000000b" comment="UMLUFT_AUTO_AUS">disable</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="00000A3F" name="IHKA" author="ekfxisidF010" series="F010,F001,F007">
+		<code description="에어컨 on/off 마지막 상태 기억						[창원ll달탸냥]">
+			<group id="3002">
+				<function start="0" end="0" mask="00000010b" comment="MEMORY_OFF">Aktiv</function>
+			</group>
+		</code>
+		<code description="공기순환모드 마지막 상태 기억">
+			<group id="3002">
+				<function start="0" end="0" mask="00000001b" comment="MEMORY_UMLUFT">Aktiv</function>
+			</group>
+		</code>
+		<code description="AUTO 누르면 에어컨 자동으로 켜지는거 비활성">
+			<group id="3002">
+				<function start="0" end="0" mask="00000100b" comment="AC_NICHT_EIN_BEI_AUTO">Aktiv</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="00000092" name="IHKA" author="ekfxisidF010" series="F010,F001,F007">
+		<code description="에어컨 on/off 마지막 상태 기억						[창원ll달탸냥]">
+			<group id="3000">
+				<function start="5" end="5" mask="00010000b" comment="OFF_MEMORY">Aktiv</function>
+			</group>
+		</code>
+		<code description="공기순환모드 마지막 상태 기억">
+			<group id="3000">
+				<function start="0" end="0" mask="00000100b" comment="MEMORY_UMLUFT">Aktiv</function>
+			</group>
+		</code>
+		<code description="AUTO 누르면 에어컨 자동으로 켜지는거 비활성">
+			<group id="3000">
+				<function start="5" end="5" mask="00001000b" comment="AC_NICHT_EIN_BEI_AUTO">Aktiv</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="000007C8" name="HKFM" author="ekfxisidF010" series="F010,F001,F007">
+		<code description="전동트렁크 실내버턴으로 열고닫기						[창원ll달탸냥]">
+			<group id="3010">
+				<function start="2" end="2" mask="00001000b" comment="SCH_FBD">Aktiv</function>
+				<function start="2" end="2" mask="00000100b" comment="SCH_TOEHKI">Aktiv</function>
+				<function start="0" end="0" mask="00001000b" comment="TASTER_FBD">Aktiv</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="00000076" name="HKFM" author="ekfxisidF010" series="F010,F001,F007">
+		<code description="전동트렁크 실내버턴으로 열고닫기						[창원ll달탸냥]">
+			<group id="3010">
+				<function start="2" end="2" mask="00001000b" comment="SCH_FBD">Aktiv</function>
+				<function start="2" end="2" mask="00000100b" comment="SCH_TOEHKI">Aktiv</function>
+				<function start="0" end="0" mask="00001000b" comment="TASTER_FBD">Aktiv</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="00000069" name="KOMBI" author="ekfxisidF010" series="F010,F001,F007">
+		<code description="스포츠 + 모드 계기판 메뉴 활성화						[창원ll달탸냥]">
+			<group id="300C">
+				<function start="0" end="0" mask="00001111b" comment="FDS_MENUE_TEXT_1">menue_3</function>
+				<function start="0" end="0" mask="11110000b" comment="FDS_MENUE_SIGNAL_1">menue_3</function>
+				<function start="1" end="1" mask="00001111b" comment="FDS_MENUE_TEXT_2">menue_3</function>
+				<function start="1" end="1" mask="11110000b" comment="FDS_MENUE_SIGNAL_2">menue_3</function>
+				<function start="2" end="2" mask="00001111b" comment="FDS_MENUE_TEXT_3">menue_3</function>
+				<function start="2" end="2" mask="11110000b" comment="FDS_MENUE_SIGNAL_3">menue_3</function>
+				<function start="3" end="3" mask="00001111b" comment="FDS_MENUE_TEXT_4">menue_3</function>
+				<function start="3" end="3" mask="11110000b" comment="FDS_MENUE_SIGNAL_4">menue_3</function>
+			</group>
+		</code>
+		<code description="계기판 디지털 속도계">
+			<group id="3000">
+				<function start="1" end="1" mask="00000010b" comment="BC_DIGITAL_V">Aktiv</function>
+				<function start="1" end="1" mask="01000000b" comment="BC_V_KORREKTUR">nicht_aktiv</function>
+			</group>
+		</code>
+		<code description="DS모드 수동기어 단수표시 M1 M2...M8">
+			<group id="3000">
+				<function start="39" end="39" mask="00010000b" comment="SPA_SPORT_ENABLE">Aktiv</function>
+			</group>
+		</code>
+		<code description="HUD 엔트테인먼트 활성화">
+			<group id="3000">
+				<function start="41" end="41" mask="00001000b" comment="HUD_ENTERTAINMENT_ENABLE">Aktiv</function>
+			</group>
+		</code>
+		<code description="HUD 폰북 활성화">
+			<group id="3000">
+				<function start="41" end="41" mask="00010000b" comment="HUD_TELEFONANRUF_ENABLE">Aktiv</function>
+				<function start="41" end="41" mask="00100000b" comment="HUD_TELEFONBUCH_ENABLE">Aktiv</function>
+				<function start="41" end="41" mask="01000000b" comment="HUD_SPRACHEINGABE_ENABLE">Aktiv</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="0000023F" name="EGS" author="ekfxisidF010" series="F010,F001,F007">
+		<code description="DS모드에서 기어단수 표시 S1 S2.... S8					[창원ll달탸냥]">
+			<group id="3000">
+				<function start="0" end="0" mask="01000000b" comment="SPORTSCHALTER_ALT">aktiv</function>
+				<function start="1" end="1" mask="00000001b" comment="SPORTSCHALTER">aktiv</function>
+			</group>
+		</code>
+	</cafd>	
+	<cafd id="0000067B" name="ICM" author="ekfxisidF010" series="F010,F001,F007">
+		<code description="스포츠 + 모드 활성화 -> KOMBI						[창원ll달탸냥]">
+			<group id="3000">
+				<function start="18" end="18" mask="11111111b" comment="IcmKod_B_S2TBA">verbaut</function>
+			</group>
+		</code>
+		<code description="주행모드를 ECO PRO모드를 기본으로">
+			<group id="3000">
+				<function start="36" end="36" mask="00001000b" comment="IcmKod_B_InitEco">verbaut</function>
+			</group>
+		</code>
+		<code description="오토크루즈 활성화 -> KOMBI">
+			<group id="3000">
+				<function start="128" end="128" mask="00001110b" comment="C_Fahrfunktion">verbaut</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="000000B5" name="SM(6d)" author="ekfxisidF010" series="F010,F001,F007">
+		<code description="이지 억세스 1/3(Easy Entry)							[창원ll달탸냥]">
+			<group id="3000">
+				<function start="0" end="0" mask="00011100b" comment="EINAUSSTIEGSHILFE">Modus_FA_SLV</function>
+			</group>
+		</code>
+		<code description="이지 억세스 2/3(Easy Entry)">
+			<group id="3012">
+				<function start="4" end="5" mask="11111111b" comment="EAH_SCHUTZFREIRAUM_HINTEN_SLV_PHYS">00, 1E</function>
+			</group>
+		</code>
+		<code description="이지 억세스 3/3(Easy Entry)">
+			<group id="3012">
+				<function start="0" end="1" mask="11111111b" comment="EAH_VERFAHRWEG_SLV_PHYS">00, 46</function>
+			</group>
+		</code>
+		<code description="MEMORY GONG 알람 소리설정">
+			<group id="3000">
+				<function start="2" end="2" mask="00001000b" comment="MEMORY_GONG">Aktiv</function>
+			</group>
+		</code>
+		<code description="젠틀맨  --> SM(6e)">
+			<group id="3000">
+				<function start="1" end="1" mask="00000001b" comment="GENTELMAN">aktiv</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="000000B6" name="SM(6e)" author="ekfxisidF010" series="F010,F001,F007">
+	<code description="젠틀맨  --> SM(6d)									[창원ll달탸냥]">
+			<group id="3000">
+				<function start="1" end="1" mask="00000001b" comment="GENTELMAN">aktiv</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="00000DED" name="HU_NBT" author="ekfxisidF010" series="F010,F001,F007">
+		<code description="DMB DVD Navi 주행락 해제							[창원ll달탸냥]">
+			<group id="3000">
+				<function start="72" end="72" mask="11111111b" comment="SPEEDLOCK_X_KMH_MAX">FF</function>
+				<function start="71" end="71" mask="11111111b" comment="SPEEDLOCK_X_KMH_MIN">FF</function>
+				<function start="5" end="5" mask="00010000b" comment="VIDEO_FRONT_LOCKED">nicht_aktiv</function>
+				<function start="5" end="5" mask="00000100b" comment="VIDEO_HANDBRAKE">nicht_aktiv</function>
+				<function start="57" end="57" mask="00000111b" comment="VIDEO_SPEEDLOCK_CONDITION">None</function>
+			</group>
+		</code>
+		<code description="M performance">
+			<group id="3001">
+				<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM">01</function>
+			</group>
+		</code>
+		<code description="X - Drive">
+			<group id="3000">
+				<function start="5" end="5" mask="00000001b" comment="COMPASS">aktiv</function>
+				<function start="15" end="15" mask="00000001b" comment="X_VIEW">aktiv</function>
+				<function start="26" end="26" mask="00110000b" comment="X_VIEW_GRAPHIC_SLOP">trajectory1</function>
+				<function start="26" end="26" mask="11000000b" comment="X_VIEW_GRAPHIC_ROLL">trajectory1</function>
+				<function start="110" end="110" mask="00000010b" comment="MOMENTDISTRIBUTION_MENU">aktiv</function>
+			</group>
+		</code>
+		<code description="경고음 사운드 변경">
+			<group id="3002">
+				<function start="26" end="26" mask="00111000b" comment="SOUND_SIGNAL_SET">rolls_royce</function>
+			</group>
+		</code>
+		<code description="USB 동영상 활성화 1/2">
+			<group id="3000">
+				<function start="15" end="15" mask="00010000b" comment="ENT_CODEC_OGG">aktiv</function>
+				<function start="15" end="15" mask="00100000b" comment="ENT_CODEC_XVID">aktiv</function>
+				<function start="15" end="15" mask="01000000b" comment="ENT_CODEC_VCD">aktiv</function>
+				<function start="13" end="13" mask="00000100b" comment="ENT_MC_VIDEO_SUPPORT">aktiv</function>
+			</group>
+		</code>
+		<code description="USB 동영상 활성화 2/2">
+			<group id="3003">
+				<function start="33" end="33" mask="00000110b" comment="API_USB_VIDEO">both</function>
+				<function start="33" end="33" mask="00011000b" comment="API_IPOD_VIEDO">both</function>
+			</group>
+		</code>
+		<code description="경고문구 모두 삭제">
+			<group id="3001">
+				<function start="52" end="52" mask="11111111b" comment="MACRO_CAM_LEGALDISCLAIMER">00</function>
+				<function start="58" end="58" mask="11111111b" comment="LEGAL_DISCLAIMER_TIME">00</function>
+			</group>
+		</code>
+		<code description="시간자동설정 활성화">
+			<group id="3000">
+				<function start="19" end="19" mask="00000110b" comment="SETTINGS_TIME_AUTOMATIC">navigation</function>
+				<function start="105" end="105" mask="00100000b" comment="CLOCK_CHANGE_AUTOMATIC">aktiv</function>
+			</group>
+		</code>
+		<code description="후방카메라 줌인">
+			<group id="3001">
+				<function start="54" end="54" mask="00000001b" comment="MACRO_TRAILER_COUPLING">aktiv</function>
+			</group>
+		</code>
+		<code description="볼륨조절 디스플레이 활성화">
+			<group id="3002">
+				<function start="52" end="52" mask="01000000b" comment="VOLUME_POPUP_DISPLAY">01</function>
+			</group>
+		</code>
+		<code description="Day Light 활성화">
+			<group id="3000">
+				<function start="92" end="92" mask="00011000b" comment="DAYDRIVING_LIGHT">02</function>
+			</group>
+		</code>
+		<code description="전화벨 소리 스피커로(iOS only)">
+			<group id="3003">
+				<function start="6" end="6" mask="10000000b" comment="INBAND_RINGING">aktiv</function>
+			</group>
+		</code>
+		<code description="스포츠모드 구성 1/3">
+			<group id="3000">
+				<function start="101" end="101" mask="00010000b" comment="EFF_DYN_SPORT_CID">aktiv</function>
+			</group>
+		</code>
+		<code description="스포츠모드 구성 2/3">
+			<group id="3000">
+				<function start="107" end="107" mask="00000100b" comment="EFF_DYN_SPORT_UNIT">aktiv</function>
+			</group>
+		</code>
+		<code description="스포츠모드 구성 3/3">
+			<group id="3001">
+				<function start="55" end="55" mask="00011000b" comment="MACRO_FDS">popup_and_config</function>
+			</group>
+		</code>
+		<code description="뱅엔웁스 프로필">
+			<group id="3000">
+				<function start="21" end="21" mask="01100000b" comment="HIGH_END_AUDIO_B_UND_W">keine_insz</function>
+			</group>
+		</code>
+		<code description="로직7 활성화 (S667A HiFi 옵션차량)">
+			<group id="3000">
+				<function start="22" end="22" mask="00001000b" comment="LOGIC7_SYMBOL">aktiv</function>
+			</group>
+		</code>
+		<code description="도어 Lock/Unlock 알람음(M5외 도난장치묘듈 옵션차량)">
+			<group id="3000">
+				<function start="110" end="110" mask="00000001b" comment="ACOUSTICAL_LOCK_CONFIRM">Aktiv</function>
+			</group>
+		</code>
+		<code description="TPMC 타이어 압력온도 활성화">
+			<group id="3001">
+				<function start="1" end="1" mask="00100000b" comment="RDC_SAFETY">Aktiv</function>
+			</group>
+		</code>
+		<code description="M Sport 디스플레이 계기판 색변경">
+			<group id="3000">
+				<function start="133" end="133" mask="01000000b" comment="M_VEHICLE">aktiv</function>
+			</group>
+		</code>
+		<code description="하이빔 어시스턴트 4/4 -->> KAFAS2 1/4, FRM 2/4, 3/4">
+			<group id="3000">
+				<function start="109" end="109" mask="10000000b" comment="HIGH_BEAM_ASSISTANT">01</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="000000F9" name="HU_CIC" author="ekfxisidF010" series="F010,F001,F007">
+		<code description="DMB DVD Navi 주행락 해제							[창원ll달탸냥]">
+			<group id="3000">
+				<function start="23" end="23" mask="11111111b" comment="SPEEDLOCK_X_KMH_MAX">FF</function>
+				<function start="24" end="24" mask="11111111b" comment="SPEEDLOCK_X_KMH_MIN">FF</function>
+				<function start="8" end="8" mask="01000000b" comment="VIDEO_NUR_MIT_HANDBREMSE">nicht_aktiv</function>
+			</group>
+		</code>
+		<code description="후방카메라 줌인">
+			<group id="3001">
+				<function start="23" end="23" mask="00000001b" comment="MACRO_TRAILER_COUPLING">aktiv</function>
+			</group>
+		</code>
+		<code description="스포츠모드 구성 1/3">
+			<group id="3000">
+				<function start="47" end="47" mask="00010000b" comment="EFF_DYN_SPORT_CID">aktiv</function>
+			</group>
+		</code>
+		<code description="스포츠모드 구성 2/3">
+			<group id="3000">
+				<function start="61" end="61" mask="00000100b" comment="EFF_DYN_SPORT_UNIT">aktiv</function>
+			</group>
+		</code>
+		<code description="스포츠모드 구성 3/3">
+			<group id="3000">
+				<function start="7" end="7" mask="00110000b" comment="MACRO_FDS">popup_and_config</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="00001EF6" name="HU_NBT2" author="ekfxisidF010" series="F010,F001,F007">
+		<code description="DMB DVD Navi 주행락 해제 1/2							[창원ll달탸냥]">
+			<group id="3006">
+				<function start="25" end="25" mask="11111111b" comment="SPEEDLOCK_X_KMH_MAX">FF</function>
+				<function start="26" end="26" mask="11111111b" comment="SPEEDLOCK_X_KMH_MIN">FF</function>
+			</group>
+		</code>
+		<code description="DMB DVD Navi 주행락 해제 2/2">
+			<group id="3000">
+				<function start="5" end="5" mask="00010000b" comment="VIDEO_FRONT_LOCKED">nicht_aktiv</function>
+				<function start="5" end="5" mask="00000100b" comment="VIDEO_HANDBRAKE">nicht_aktiv</function>
+				<function start="2" end="2" mask="00000111b" comment="VIDEO_SPEEDLOCK_CONDITION">None</function>
+			</group>
+		</code>
+		<code description="M performance">
+			<group id="3001">
+				<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM">01</function>
+			</group>
+		</code>
+		<code description="X - Drive">
+			<group id="3000">
+				<function start="5" end="5" mask="00000001b" comment="COMPASS">aktiv</function>
+				<function start="15" end="15" mask="00000001b" comment="X_VIEW">aktiv</function>
+				<function start="26" end="26" mask="00110000b" comment="X_VIEW_GRAPHIC_SLOP">trajectory1</function>
+				<function start="26" end="26" mask="11000000b" comment="X_VIEW_GRAPHIC_ROLL">trajectory1</function>
+				<function start="110" end="110" mask="00000010b" comment="MOMENTDISTRIBUTION_MENU">aktiv</function>
+			</group>
+		</code>
+		<code description="경고음 사운드 변경">
+			<group id="3002">
+				<function start="26" end="26" mask="00111000b" comment="SOUND_SIGNAL_SET">rolls_royce</function>
+			</group>
+		</code>
+		<code description="USB 동영상 활성화 1/2">
+			<group id="3000">
+				<function start="15" end="15" mask="00010000b" comment="ENT_CODEC_OGG">aktiv</function>
+				<function start="15" end="15" mask="00100000b" comment="ENT_CODEC_XVID">aktiv</function>
+				<function start="15" end="15" mask="01000000b" comment="ENT_CODEC_VCD">aktiv</function>
+				<function start="13" end="13" mask="00000100b" comment="ENT_MC_VIDEO_SUPPORT">aktiv</function>
+			</group>
+		</code>
+		<code description="USB 동영상 활성화 2/2">
+			<group id="3003">
+				<function start="33" end="33" mask="00000110b" comment="API_USB_VIDEO">both</function>
+				<function start="33" end="33" mask="00011000b" comment="API_IPOD_VIEDO">both</function>
+			</group>
+		</code>
+		<code description="경고문구 모두 삭제">
+			<group id="3001">
+				<function start="52" end="52" mask="11111111b" comment="MACRO_CAM_LEGALDISCLAIMER">00</function>
+				<function start="58" end="58" mask="11111111b" comment="LEGAL_DISCLAIMER_TIME">00</function>
+			</group>
+		</code>
+		<code description="시간자동설정 활성화">
+			<group id="3000">
+				<function start="19" end="19" mask="00000110b" comment="SETTINGS_TIME_AUTOMATIC">navigation</function>
+				<function start="105" end="105" mask="00100000b" comment="CLOCK_CHANGE_AUTOMATIC">aktiv</function>
+			</group>
+		</code>
+		<code description="후방카메라 줌인">
+			<group id="3001">
+				<function start="54" end="54" mask="00000001b" comment="MACRO_TRAILER_COUPLING">aktiv</function>
+			</group>
+		</code>
+		<code description="Day Light 활성화">
+			<group id="3000">
+				<function start="92" end="92" mask="00011000b" comment="DAYDRIVING_LIGHT">02</function>
+			</group>
+		</code>
+		<code description="전화벨 소리 스피커로(iOS only)">
+			<group id="3003">
+				<function start="6" end="6" mask="10000000b" comment="INBAND_RINGING">aktiv</function>
+			</group>
+		</code>
+		<code description="스포츠모드 구성 1/3">
+			<group id="3009">
+				<function start="9" end="9" mask="00010000b" comment="EFF_DYN_SPORT_CID">aktiv</function>
+			</group>
+		</code>
+		<code description="스포츠모드 구성 2/3">
+			<group id="3009">
+				<function start="9" end="9" mask="00100000b" comment="EFF_DYN_SPORT_UNIT">aktiv</function>
+			</group>
+		</code>
+		<code description="스포츠모드 구성 3/3">
+			<group id="3008">
+				<function start="79" end="79" mask="11000000b" comment="MACRO_FDS">popup_and_config</function>
+			</group>
+		</code>
+		<code description="뱅엔웁스 프로필">
+			<group id="3000">
+				<function start="21" end="21" mask="01100000b" comment="HIGH_END_AUDIO_B_UND_W">keine_insz</function>
+			</group>
+		</code>
+		<code description="로직7 활성화 (S667A HiFi 옵션차량)">
+			<group id="3000">
+				<function start="22" end="22" mask="00001000b" comment="LOGIC7_SYMBOL">aktiv</function>
+			</group>
+		</code>
+		<code description="HUD : Affichage de l'assistant collision Step 2 (Step 1 dans KOMBI)">
+			<group id="300C">
+				<function start="0" end="0" mask="00010000b" comment="HUD_DISTANCE_INFO">Aktiv</function>
+			</group>
+		</code>
+		<code description="도어 Lock/Unlock 알람음">
+			<group id="3000">
+				<function start="110" end="110" mask="00000001b" comment="ACOUSTICAL_LOCK_CONFIRM">Aktiv</function>
+			</group>
+		</code>
+		<code description="TPMC 타이어 압력온도 활성화">
+			<group id="3001">
+				<function start="1" end="1" mask="00100000b" comment="RDC_SAFETY">Aktiv</function>
+			</group>
+		</code>
+		<code description="M Sport 디스플레이 계기판 색변경">
+			<group id="3000">
+				<function start="133" end="133" mask="01000000b" comment="M_VEHICLE">aktiv</function>
+			</group>
+		</code>
+		<code description="하이빔 어시스턴트 4/4 -->> KAFAS2 1/4, FRM 2/4, 3/4">
+			<group id="3000">
+				<function start="109" end="109" mask="10000000b" comment="HIGH_BEAM_ASSISTANT">01</function>
+			</group>
+		</code>
+	</cafd>
+	<!-- End ekfxisidF010-->
+
+	<!--ekfxisidF025-->
+	<cafd id="000017BE" name="BDC_01" author="ekfxisidF025" series="F015,F016,F025">
+		<code description="시동끄고 문열면 오디오 및 네비 끄기							[창원ll달탸냥]">
+			<group id="3020">
+				<function start="9" end="9" mask="00000001b" comment="TCM_LOGIC_R_OFF_DOOR">aktiv</function>
+			</group>
+		</code>
+		<code description="Auto Start/Stop 마지막상태 기억">
+			<group id="3023">
+				<function start="0" end="0" mask="00100000b" comment="TCM_MSA_MEMORY">aktiv</function>
+			</group>
+		</code>
+		<code description="ECO Pro 모드에서 Auto Start/Stop OFF">
+			<group id="3023">
+				<function start="1" end="1" mask="00000100b" comment="TCM_MSA_ECO_MODE">nicht_aktiv</function>
+			</group>
+		</code>
+		<code description="Comfort 모드에서 Auto Start/Stop OFF">
+			<group id="3023">
+				<function start="0" end="0" mask="00010000b" comment="TCM_MSA_DEFAULT_OFF">aktiv</function>
+			</group>
+		</code>
+		<code description="문 열려있어도 윈도우 작동">
+			<group id="3050">
+				<function start="0" end="0" mask="00000001b" comment="FH_TUERAUF_STOP_MAUT">nicht_aktiv</function>
+			</group>
+		</code>
+		<code description="사이드미러 락 폴딩 (원터치 작동)">
+			<group id="3056">
+				<function start="10" end="10" mask="11111111b" comment="KOMFORT_SCHLIESSEN">00</function>
+			</group>
+		</code>
+		<code description="사이드미러 각도 조절(조수석)">
+			<group id="3110">
+				<function start="1" end="1" mask="11111111b" comment="ASP_BORDSTEINAUTOMAIK_DELTA">1E</function>
+			</group>
+		</code>
+		<code description="방향지시등 깜박이 5회">
+			<group id="3068">
+				<function start="7" end="7" mask="00000111b" comment="BLINKZYKLEN_ANZAHL_TIPP">04</function>
+			</group>
+		</code>
+		<code description="급제동시 비상등켜기(50km/h)">
+			<group id="3068">
+				<function start="26" end="26" mask="00000001b" comment="WB_GB_ENABLE">aktiv</function>
+				<function start="23" end="24" mask="11111111b" comment="WB_GB_GEFAHRENWERT_MIN">00, 32</function>
+			</group>
+		</code>
+		<code description="다이나믹 브레이크등 켜기">
+			<group id="3068">
+				<function start="16" end="16" mask="00000011b" comment="ESS_AKTIVIERBARER_AUSGANG">bremslicht_blinkend</function>
+				<function start="20" end="20" mask="00011111b" comment="ESS_AKTIVIERUNG_REALE_VERZ">04</function>
+				<function start="19" end="19" mask="00011111b" comment="ESS_DEAKTIVIERUNG_REALE_VERZ">04</function>
+				<function start="17" end="17" mask="11111110b" comment="ESS_AKTIVIERUNG_GESCHW">05</function>
+			</group>
+		</code>
+		<code description="지정속도 초과하면 사이드미러 자동 펴짐 (40Km/h -> 25Km/h)">
+			<group id="3110">
+				<function start="9" end="9" mask="11111111b" comment="ASP_GESCHWINDIGKEIT_AUTO_AUSKLAPPEN">19</function>
+			</group>
+		</code>
+		<code description="후진시 도어 캐치라이트 점등">
+			<group id="3070">
+				<function start="128" end="128" mask="00000001b" comment="OVT_BEI_RUECKFAHRLICHT">aktiv</function>
+			</group>
+		</code>
+		<code description="전방 방향지시등 --> LED 교환">
+			<group id="3060">
+				<function start="98" end="98" mask="00000001b" comment="FRA_V_L_KALTUEBERWACHUNG">nicht_aktiv</function>
+				<function start="98" end="98" mask="00000010b" comment="FRA_V_L_WARMUEBERWACHUNG">nicht_aktiv</function>
+				<function start="98" end="98" mask="00000100b" comment="FRA_V_L_KURZSCHLUSS">aktiv</function>
+				<function start="98" end="98" mask="00001000b" comment="FRA_V_L_IS_LED">aktiv</function>
+				<function start="106" end="106" mask="00000001b" comment="FRA_V_R_KALTUEBERWACHUNG">nicht_aktiv</function>
+				<function start="106" end="106" mask="00000010b" comment="FRA_V_R_WARMUEBERWACHUNG">nicht_aktiv</function>
+				<function start="106" end="106" mask="00000100b" comment="FRA_V_R_KURZSCHLUSS">aktiv</function>
+				<function start="106" end="106" mask="00001000b" comment="FRA_V_R_IS_LED">aktiv</function>
+			</group>
+		</code>
+		<code description="후방 방향지시등 --> LED 교환">
+			<group id="3061">
+				<function start="98" end="98" mask="00000001b" comment="FRA_H_L_KALTUEBERWACHUNG">nicht_aktiv</function>
+				<function start="98" end="98" mask="00000010b" comment="FRA_H_L_WARMUEBERWACHUNG">nicht_aktiv</function>
+				<function start="98" end="98" mask="00000100b" comment="FRA_H_L_KURZSCHLUSS">aktiv</function>
+				<function start="98" end="98" mask="00001000b" comment="FRA_H_L_IS_LED">aktiv</function>
+				<function start="106" end="106" mask="00000001b" comment="FRA_H_R_KALTUEBERWACHUNG">nicht_aktiv</function>
+				<function start="106" end="106" mask="00000010b" comment="FRA_H_R_WARMUEBERWACHUNG">nicht_aktiv</function>
+				<function start="106" end="106" mask="00000100b" comment="FRA_H_R_KURZSCHLUSS">aktiv</function>
+				<function start="106" end="106" mask="00001000b" comment="FRA_H_R_IS_LED">aktiv</function>
+			</group>
+		</code>
+		<code description="전방 안개등 --> LED 교환 및 경고등삭제">
+			<group id="3060">
+				<function start="82" end="82" mask="00000001b" comment="NSW_L_KALTUEBERWACHUNG">nicht_aktiv</function>
+				<function start="82" end="82" mask="00000010b" comment="NSW_L_WARMUEBERWACHUNG">nicht_aktiv</function>
+				<function start="82" end="82" mask="00000100b" comment="NSW_L_KURZSCHLUSS">aktiv</function>
+				<function start="82" end="82" mask="00001000b" comment="NSW_L_IS_LED">aktiv</function>
+				<function start="90" end="90" mask="00000001b" comment="NSW_R_KALTUEBERWACHUNG">nicht_aktiv</function>
+				<function start="90" end="90" mask="00000010b" comment="NSW_R_WARMUEBERWACHUNG">nicht_aktiv</function>
+				<function start="90" end="90" mask="00000100b" comment="NSW_R_KURZSCHLUSS">aktiv</function>
+				<function start="90" end="90" mask="00001000b" comment="NSW_R_IS_LED">aktiv</function>
+			</group>
+		</code>
+		<code description="주간 테일램프(주간 전조등과 동조) 1/3">
+			<group id="3068">
+				<function start="31" end="31" mask="00110000b" comment="TFL_MODUS">drl_s</function>
+			</group>
+		</code>
+		<code description="주간 테일램프(주간 전조등과 동조) 2/3">
+			<group id="3064">
+				<function start="221" end="221" mask="00111111b" comment="MAPPING_TAGFAHRL_1_H_L_OUTPUT">sl_l</function>
+				<function start="234" end="234" mask="00111111b" comment="MAPPING_TAGFAHRL_1_H_R_OUTPUT">sl_r</function>
+			</group>
+		</code>
+		<code description="주간 테일램프(주간 전조등과 동조) 3/3">
+			<group id="3065">
+				<function start="78" end="78" mask="00111111b" comment="MAPPING_TAGFAHRL_2_H_L_OUTPUT">sl_2_l</function>
+				<function start="91" end="91" mask="00111111b" comment="MAPPING_TAGFAHRL_2_H_R_OUTPUT">sl_2_r</function>	
+			</group>
+		</code>
+	</cafd>
+	<cafd id="00000909" name="ACSM_4C" author="ekfxisidF025" series="F015,F016,F025">
+		<code description="안전벨트 경고음 3회 (5초)							[창원ll달탸냥]">
+			<group id="3001">
+				<function start="3" end="3" mask="11111111b" comment="GWF_SBR_WARNDAUER">05</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="000011AB" name="ACSM" author="ekfxisidF025" series="F015,F016,F025,F026">
+		<code description="안전벨트 경고음 3회 (5초)							[창원ll달탸냥]">
+			<group id="3001">
+				<function start="11" end="11" mask="11111111b" comment="GWF_SBR_WARNDAUER">05</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="00001148" name="KAFAS2" author="ekfxisidF025" series="F015,F016,F025">
+  		<code description="하이빔 어시스턴트 1/4 -> 제일 먼저 코딩하여야 에러가 안남">
+			<group id="3050">
+				<function start="1" end="1" mask="00000001b" comment="FLA_ON_OFF">FLA_on</function>
+			</group>
+		</code>
+ 	</cafd>
+	<cafd id="000007C8" name="HKFM" author="ekfxisidF025" series="F015,F016,F025">
+		<code description="전동트렁크 실내버턴으로 열고닫기						[창원ll달탸냥]">
+			<group id="3010">
+				<function start="2" end="2" mask="00001000b" comment="SCH_FBD">Aktiv</function>
+				<function start="2" end="2" mask="00000100b" comment="SCH_TOEHKI">Aktiv</function>
+				<function start="0" end="0" mask="00001000b" comment="TASTER_FBD">Aktiv</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="000016EE" name="IHKA3" author="ekfxisidF025" series="F015,F016,F025,F026">
+		<code description="에어컨 on/off 마지막 상태 기억						[창원ll달탸냥]">
+			<group id="3003">
+				<function start="0" end="0" mask="00000010b" comment="MEMORY_OFF">Aktiv</function>
+			</group>
+		</code>
+		<code description="공기순환모드 마지막 상태 기억">
+			<group id="3003">
+				<function start="0" end="0" mask="00000001b" comment="MEMORY_UMLUFT">Aktiv</function>
+			</group>
+		</code>
+		<code description="공기순환모드 고정">
+			<group id="3003">
+				<function start="0" end="0" mask="10000000b" comment="UMLUFT_AUTO_AUS">disable</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="0000067B" name="ICM" author="ekfxisidF025" series="F015,F016,F025">
+		<code description="스포츠 + 모드 활성화 -> KOMBI						[창원ll달탸냥]">
+			<group id="3000">
+				<function start="28" end="28" mask="11111111b" comment="IcmKod_B_Sportlenkung">verbaut</function>
+			</group>
+		</code>
+		<code description="주행모드를 ECO PRO모드를 기본으로">
+			<group id="3000">
+				<function start="36" end="36" mask="00001000b" comment="IcmKod_B_InitEco">verbaut</function>
+			</group>
+		</code>
+		<code description="오토크루즈 활성화 -> KOMBI">
+			<group id="3000">
+				<function start="128" end="128" mask="00001110b" comment="C_Fahrfunktion">verbaut</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="00000069" name="KOMBI" author="ekfxisidF025" series="F015,F016,F025">
+		<code description="스포츠 + 모드 계기판 메뉴 활성화						[창원ll달탸냥]">
+			<group id="300C">
+				<function start="0" end="0" mask="00001111b" comment="FDS_MENUE_TEXT_1">menue_3</function>
+				<function start="0" end="0" mask="11110000b" comment="FDS_MENUE_SIGNAL_1">menue_3</function>
+				<function start="1" end="1" mask="00001111b" comment="FDS_MENUE_TEXT_2">menue_3</function>
+				<function start="1" end="1" mask="11110000b" comment="FDS_MENUE_SIGNAL_2">menue_3</function>
+				<function start="2" end="2" mask="00001111b" comment="FDS_MENUE_TEXT_3">menue_3</function>
+				<function start="2" end="2" mask="11110000b" comment="FDS_MENUE_SIGNAL_3">menue_3</function>
+				<function start="3" end="3" mask="00001111b" comment="FDS_MENUE_TEXT_4">menue_3</function>
+				<function start="3" end="3" mask="11110000b" comment="FDS_MENUE_SIGNAL_4">menue_3</function>
+			</group>
+		</code>
+		<code description="계기판 디지털 속도계">
+			<group id="3000">
+				<function start="1" end="1" mask="00000010b" comment="BC_DIGITAL_V">Aktiv</function>
+				<function start="1" end="1" mask="01000000b" comment="BC_V_KORREKTUR">nicht_aktiv</function>
+			</group>
+		</code>
+		<code description="DS모드 수동기어 단수표시 M1 M2...M8">
+			<group id="3000">
+				<function start="39" end="39" mask="00010000b" comment="SPA_SPORT_ENABLE">Aktiv</function>
+			</group>
+		</code>
+		<code description="HUD 엔트테인먼트 활성화">
+			<group id="3000">
+				<function start="41" end="41" mask="00001000b" comment="HUD_ENTERTAINMENT_ENABLE">Aktiv</function>
+			</group>
+		</code>
+		<code description="HUD 폰북 활성화">
+			<group id="3000">
+				<function start="41" end="41" mask="00010000b" comment="HUD_TELEFONANRUF_ENABLE">Aktiv</function>
+				<function start="41" end="41" mask="00100000b" comment="HUD_TELEFONBUCH_ENABLE">Aktiv</function>
+				<function start="41" end="41" mask="01000000b" comment="HUD_SPRACHEINGABE_ENABLE">Aktiv</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="000009C8" name="KOMBI" author="ekfxisidF025" series="F015,F016,F025,F026">
+		<code description="스포츠 + 모드 계기판 메뉴 활성화           					[창원ll달탸냥]">
+			<group id="300C">
+				<function start="54" end="54" mask="11111111b" comment="FDS_MENUE">menue_3</function>
+			</group>
+		</code>
+		<code description="계기판 디지털 속도계">
+			<group id="3000">
+				<function start="1" end="1" mask="00000010b" comment="BC_DIGITAL_V">Aktiv</function>
+				<function start="1" end="1" mask="01000000b" comment="BC_V_KORREKTUR">nicht_aktiv</function>
+			</group>
+		</code>
+		<code description="Logo M performance">
+			<group id="3000">
+				<function start="0" end="0" mask="11110000b" comment="BMW_LOGO">01</function>
+			</group>
+		</code>
+		<code description="계기판 시계이동">
+			<group id="3000">
+				<function start="53" end="53" mask="01000000b" comment="BASISANZEEIGE_VARIANTE">Aktiv</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="000000B5" name="SM2" author="ekfxisidF025" series="F015,F016,F025">
+		<code description="이지 억세스 1/3(Easy Entry)							[창원ll달탸냥]">
+			<group id="3000">
+				<function start="0" end="0" mask="00011100b" comment="EINAUSSTIEGSHILFE">Modus_FA_SLV</function>
+			</group>
+		</code>
+		<code description="이지 억세스 2/3(Easy Entry)">
+			<group id="3012">
+				<function start="4" end="5" mask="11111111b" comment="EAH_SCHUTZFREIRAUM_HINTEN_SLV_PHYS">00, 1E</function>
+			</group>
+		</code>
+		<code description="이지 억세스 3/3(Easy Entry)">
+			<group id="3012">
+				<function start="0" end="1" mask="11111111b" comment="EAH_VERFAHRWEG_SLV_PHYS">00, 46</function>
+			</group>
+		</code>
+		<code description="MEMORY GONG 알람 소리설정">
+			<group id="3000">
+				<function start="2" end="2" mask="00001000b" comment="MEMORY_GONG">Aktiv</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="0000000F" name="CAS_04" author="ekfxisidF025" series="F015,F016,F025">
+  		<code description="Auto Start/Stop DEFAULT OFF							[창원ll달탸냥]">
+   			<group id="3000">
+    				<function start="3" end="3" mask="00010000b" comment="TCM_MSA_DEFAULT_OFF">01</function>
+   			</group>
+  		</code>
+  		<code description="Auto Start/Stop 마지막상태 기억">
+   			<group id="3000">
+    				<function start="3" end="3" mask="00100000b"  comment="TCM_MSA_MEMORY">aktiv</function>
+   			</group>
+  		</code>
+		<code description="브레이크 밟지않고 엔진시동 1/2">
+   			<group id="3000">
+    				<function start="1" end="1" mask="00000001b" comment="TC_STARTLOCK_BRAKE">nicht_aktiv</function>
+   			</group>
+  		</code>
+		<code description="브레이크 밟지않고 엔진시동 2/2">
+   			<group id="3000">
+    				<function start="1" end="1" mask="00010000b" comment="TC_STARTLOCK_DRIVINGREADINESS">nicht_aktiv</function>
+   			</group>
+		</code>
+		<code description="사이드미러 락 폴딩">
+   			<group id="3003">
+    				<function start="12" end="12" mask="11111111b" comment="KMFRT_SCHLESSEN">00</function>
+   			</group>
+		</code>
+		<code description="시동끄고 문열면 오디오/네비 끄짐">
+   			<group id="3000">
+    				<function start="2" end="2" mask="00000001b" comment="TC_LOGIC_KLR_OFF_DOOR">aktiv</function>
+   			</group>
+  		</code>
+		<code description="시동 켜둔채로 문잠그면 HORN 알람">
+   			<group id="3002">
+    				<function start="0" end="0" mask="00100000b" comment="CLM_HORN_AT_SECURE">aktiv</function>
+   			</group>
+  		</code>
+	</cafd>
+	<cafd id="0000012F" name="FRM" author="ekfxisidF025" series="F015,F016,F025">
+  		<code description="하이빔 어시스턴트 2/4 --> KAFAS2 1/4를 제일 먼저 코딩			[창원ll달탸냥]">
+   			<group id="3050">
+    				<function start="20" end="20" mask="00010000b" comment="FLA_VERBAUT">aktiv</function>
+   			</group>
+  		</code>
+		<code description="하이빔 어시스턴트 3/4 --> HU_NBT 4/4를 마지막으로 코딩HU_NBT 4/4를 마지막으로 코딩"> 
+   			<group id="3050">
+    				<function start="20" end="20" mask="00100000b" comment="FLA_AUTO_AKTIV">automatisch</function>
+   			</group>
+		</code>
+		<code description="사이드미러 각도 조절(조수석)">
+			<group id="3020">
+				<function start="1" end="1" mask="11111111b" comment="ASP_BORDSTEINAUTOMAIK_DELTA">1E</function>
+			</group>
+		</code>
+		<code description="지정속도 초과하면 사이드미러 자동 펴짐 (40Km/h -> 25Km/h)">
+			<group id="3020">
+				<function start="9" end="9" mask="11111111b" comment="ASP_GESCHWINDIGKEIT_AUTO_AUSKLAPPEN">19</function>
+			</group>
+		</code>
+		<code description="문 열려있어도 윈도우 작동 1/2 (앞문) --> JBBF 2/2 (뒷문)">
+			<group id="3030">
+				<function start="1" end="1" mask="00000100b" comment="FH_TUER_AUF_STOP_MAUT">nicht aktiv</function>
+			</group>
+		</code>
+		<code description="테일램프 주간등">
+			<group id="3050">
+				<function start="20" end="20" mask="00001110b" comment="DRL_MODUS">drl_s</function>
+			</group>
+		</code>
+		<code description="다이나믹 브레이크등 켜기">
+			<group id="3050">
+				<function start="23" end="23" mask="01110000b" comment="ESS_ERSCHEINUNGSBILD">bremslicht blinkend</function>
+				<function start="24" end="24" mask="01111111b" comment="ESS_GESCHW_SCHWELLE">US</function>
+				<function start="21" end="21" mask="00011111b" comment="ESS_ON_VERZ">04</function>
+				<function start="22" end="22" mask="00011111b" comment="ESS_OFF_VERZ">04</function>
+			</group>
+		</code>
+		<code description="급제동시 비상등켜기">
+			<group id="3050">
+				<function start="2" end="2" mask="10000000b" comment="WB_GB_ENABLE">aktiv</function>
+			</group>
+		</code>
+		<code description="엔젤아이 조도 30% 업">
+			<group id="3060">
+				<function start="1" end="1" mask="11111111b" comment="U_EFF_POL">1E</function>
+			</group>
+		</code>
+		<code description="웰컴 라이트 안개등 (Hard_on)">
+			<group id="3050">
+				<function start="29" end="29" mask="00001100b" comment="WL_FUNKTION_NSW">Hard_on</function>
+			</group>
+		</code>
+		<code description="웰컴 라이트 안개등 (Soft_on)">
+			<group id="3050">
+				<function start="29" end="29" mask="00001100b" comment="WL_FUNKTION_NSW">Soft_on</function>
+			</group>
+		</code>
+		<code description="전방 안개등 --> LED 교환 및 경고등삭제">
+			<group id="3090">
+				<function start="79" end="79" mask="00000001b" comment="AUSG_11_NSW_L_WARM_UEBERW_AKTIV">00</function>
+				<function start="79" end="79" mask="00000010b" comment="AUSG_11_NSW_L_KALT_UEBERW_AKTIV">00</function>
+				<function start="79" end="79" mask="00001000b" comment="AUSG_11_NSW_L_IS_LED">aktiv</function>
+				<function start="83" end="83" mask="00000001b" comment="AUSG_11_NSW_R_WARM_UEBERW_AKTIV">00</function>
+				<function start="83" end="83" mask="00000010b" comment="AUSG_11_NSW_R_KALT_UEBERW_AKTIV">00</function>
+				<function start="83" end="83" mask="00001000b" comment="AUSG_11_NSW_R_IS_LED">aktiv</function>
+			</group>
+		</code>
+		<code description="후진등 --> LED 교환">
+			<group id="3090">
+				<function start="131" end="131" mask="00000001b" comment="AUSG_24_RFS_L_WARM_UEBERW_AKTIV">nicht_aktiv</function>
+				<function start="131" end="131" mask="00000010b" comment="AUSG_24_RFS_L_KALT_UEBERW_AKTIV">nicht_aktiv</function>
+				<function start="131" end="131" mask="00001000b" comment="AUSG_24_RFS_L_IS_LED">aktiv</function>
+				<function start="135" end="135" mask="00000001b" comment="AUSG_24_RFS_R_WARM_UEBERW_AKTIV">nicht_aktiv</function>
+				<function start="135" end="135" mask="00000010b" comment="AUSG_24_RFS_R_KALT_UEBERW_AKTIV">nicht_aktiv</function>
+				<function start="135" end="135" mask="00001000b" comment="AUSG_24_RFS_R_IS_LED">aktiv</function>
+			</group>
+		</code>
+ 	</cafd>
+	<cafd id="00000014" name="JBBFE" author="ekfxisidF025" series="F015,F016,F025">
+		<code description="전조등 워셔액 비활성화								[창원ll달탸냥]">
+			<group id="3000">
+				<function start="8" end="8" mask="00000001b" comment="SCHEINWERFERREINIGUNG">nicht_aktiv</function>
+			</group>
+		</code>
+		<code description="문열어도 윈도우 작동 2/2 (뒷문)">
+			<group id="3070">
+				<function start="0" end="0" mask="00000100b" comment="FH_TUERAUF_STOP_MAUT">nicht_aktiv</function>
+			</group>
+		</code>
+		<code description="오토라이트 센스조정">
+			<group id="3530">
+				<function start="5" end="5" mask="00111000b" comment="RLS_FLC_SCHWELLWERT_SATZ">unempfindlich</function>
+			</group>
+		</code>
+		<code description="레인센스 조정">
+			<group id="3530">
+				<function start="5" end="5" mask="00000111b" comment="RLS_DEF_FLC_SCHWELLWERT_SATZ">unempfindlich</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="000000F9" name="HU_CIC" author="ekfxisidF025" series="F015,F016,F025">
+		<code description="DMB DVD Navi 주행락 해제								[창원ll달탸냥]">
+			<group id="3000">
+				<function start="23" end="23" mask="11111111b" comment="SPEEDLOCK_X_KMH_MAX">FF</function>
+				<function start="24" end="24" mask="11111111b" comment="SPEEDLOCK_X_KMH_MIN">FF</function>
+				<function start="8" end="8" mask="01000000b" comment="VIDEO_NUR_MIT_HANDBREMSE">nicht_aktiv</function>
+			</group>
+		</code>
+		<code description="후방카메라 줌인">
+			<group id="3001">
+				<function start="23" end="23" mask="00000001b" comment="MACRO_TRAILER_COUPLING">aktiv</function>
+			</group>
+		</code>
+		<code description="스포츠모드 구성 1/3">
+			<group id="3000">
+				<function start="47" end="47" mask="00010000b" comment="EFF_DYN_SPORT_CID">aktiv</function>
+			</group>
+		</code>
+		<code description="스포츠모드 구성 2/3">
+			<group id="3000">
+				<function start="61" end="61" mask="00000100b" comment="EFF_DYN_SPORT_UNIT">aktiv</function>
+			</group>
+		</code>
+		<code description="스포츠모드 구성 3/3">
+			<group id="3000">
+				<function start="7" end="7" mask="00110000b" comment="MACRO_FDS">popup_and_config</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="0000106D" name="FRM" author="ekfxisidF025" series="F015,F016,F025">
+  		<code description="하이빔 어시스턴트 2/4 --> KAFAS2 1/4를 제일 먼저 코딩				[창원ll달탸냥]">
+   			<group id="3050">
+    				<function start="20" end="20" mask="00010000b" comment="FLA_VERBAUT">aktiv</function>
+   			</group>
+  		</code>
+		<code description="하이빔 어시스턴트 3/4 --> HU_NBT 4/4를 마지막으로 코딩HU_NBT 4/4를 마지막으로 코딩"> 
+   			<group id="3050">
+    				<function start="20" end="20" mask="00100000b" comment="FLA_AUTO_AKTIV">automatisch</function>
+   			</group>
+		</code>
+		<code description="사이드미러 각도 조절(조수석)">
+			<group id="3020">
+				<function start="1" end="1" mask="11111111b" comment="ASP_BORDSTEINAUTOMAIK_DELTA">1E</function>
+			</group>
+		</code>
+		<code description="지정속도 초과하면 사이드미러 자동 펴짐 (40Km/h -> 25Km/h)">
+			<group id="3020">
+				<function start="9" end="9" mask="11111111b" comment="ASP_GESCHWINDIGKEIT_AUTO_AUSKLAPPEN">19</function>
+			</group>
+		</code>
+		<code description="문 열려있어도 윈도우 작동 1/2 (앞문) --> JBBF 2/2 (뒷문)">
+			<group id="3030">
+				<function start="1" end="1" mask="00000100b" comment="FH_TUER_AUF_STOP_MAUT">nicht aktiv</function>
+			</group>
+		</code>
+		<code description="테일램프 주간등">
+			<group id="3050">
+				<function start="20" end="20" mask="00001110b" comment="DRL_MODUS">drl_s</function>
+			</group>
+		</code>
+		<code description="다이나믹 브레이크등 켜기">
+			<group id="3050">
+				<function start="23" end="23" mask="01110000b" comment="ESS_ERSCHEINUNGSBILD">02</function>
+				<function start="24" end="24" mask="01111111b" comment="ESS_GESCHW_SCHWELLE">US</function>
+				<function start="21" end="21" mask="00011111b" comment="ESS_ON_VERZ">04</function>
+				<function start="22" end="22" mask="00011111b" comment="ESS_OFF_VERZ">04</function>
+			</group>
+		</code>
+		<code description="급제동시 비상등켜기">
+			<group id="3050">
+				<function start="2" end="2" mask="10000000b" comment="WB_GB_ENABLE">aktiv</function>
+			</group>
+		</code>
+		<code description="엔젤아이 조도 30% 업">
+			<group id="3060">
+				<function start="1" end="1" mask="11111111b" comment="U_EFF_POL">1E</function>
+			</group>
+		</code>
+		<code description="웰컴 라이트 안개등 (Hard_on)">
+			<group id="3050">
+				<function start="29" end="29" mask="00001100b" comment="WL_FUNKTION_NSW">Hard_on</function>
+			</group>
+		</code>
+		<code description="웰컴 라이트 안개등 (Soft_on)">
+			<group id="3050">
+				<function start="29" end="29" mask="00001100b" comment="WL_FUNKTION_NSW">Soft_on</function>
+			</group>
+		</code>
+		<code description="전방 안개등 --> LED 교환 및 경고등삭제">
+			<group id="3090">
+				<function start="79" end="79" mask="00000001b" comment="AUSG_11_NSW_L_WARM_UEBERW_AKTIV">00</function>
+				<function start="79" end="79" mask="00000010b" comment="AUSG_11_NSW_L_KALT_UEBERW_AKTIV">00</function>
+				<function start="79" end="79" mask="00001000b" comment="AUSG_11_NSW_L_IS_LED">aktiv</function>
+				<function start="83" end="83" mask="00000001b" comment="AUSG_12_NSW_R_WARM_UEBERW_AKTIV">00</function>
+				<function start="83" end="83" mask="00000010b" comment="AUSG_12_NSW_R_KALT_UEBERW_AKTIV">00</function>
+				<function start="83" end="83" mask="00001000b" comment="AUSG_12_NSW_R_IS_LED">aktiv</function>
+			</group>
+		</code>
+		<code description="후진등 --> LED 교환">
+			<group id="3090">
+				<function start="131" end="131" mask="00000001b" comment="AUSG_24_RFS_L_WARM_UEBERW_AKTIV">nicht_aktiv</function>
+				<function start="131" end="131" mask="00000010b" comment="AUSG_24_RFS_L_KALT_UEBERW_AKTIV">nicht_aktiv</function>
+				<function start="131" end="131" mask="00001000b" comment="AUSG_24_RFS_L_IS_LED">aktiv</function>
+				<function start="135" end="135" mask="00000001b" comment="AUSG_25_RFS_R_WARM_UEBERW_AKTIV">nicht_aktiv</function>
+				<function start="135" end="135" mask="00000010b" comment="AUSG_25_RFS_R_KALT_UEBERW_AKTIV">nicht_aktiv</function>
+				<function start="135" end="135" mask="00001000b" comment="AUSG_25_RFS_R_IS_LED">aktiv</function>
+			</group>
+		</code>
+ 	</cafd>
+	<cafd id="00001EF6" name="HU_NBT2" author="ekfxisidF025" series="F015,F016,F025,F026">
+		<code description="DMB DVD Navi 주행락 해제          						[창원ll달탸냥]">
+			<group id="3006">
+				<function start="25" end="25" mask="11111111b" comment="SPEEDLOCK_X_KMH_MIN">FF</function>
+				<function start="26" end="26" mask="11111111b" comment="SPEEDLOCK_X_KMH_MAX">FF</function>
+			</group>
+		</code>
+		<code description="M performance">
+			<group id="3001">
+				<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM">01</function>
+			</group>
+		</code>
+		<code description="X - Drive">
+			<group id="3000">
+				<function start="5" end="5" mask="00000001b" comment="COMPASS">aktiv</function>
+				<function start="15" end="15" mask="00000001b" comment="X_VIEW">aktiv</function>
+			</group>
+		</code>
+		<code description="경고음 사운드 변경">
+			<group id="3002">
+				<function start="26" end="26" mask="00111000b" comment="SOUND_SIGNAL_SET">rolls_royce</function>
+			</group>
+		</code>
+		<code description="USB 동영상 활성화">
+			<group id="3000">
+				<function start="15" end="15" mask="00010000b" comment="ENT_CODEC_OGG">aktiv</function>
+				<function start="15" end="15" mask="00100000b" comment="ENT_CODEC_XVID">aktiv</function>
+				<function start="15" end="15" mask="01000000b" comment="ENT_CODEC_VCD">aktiv</function>
+				<function start="13" end="13" mask="00000100b" comment="ENT_MC_VIDEO_SUPPORT">aktiv</function>
+			</group>
+			<group id="3003">
+				<function start="33" end="33" mask="00000110b" comment="API_USB_VIDEO">both</function>
+				<function start="33" end="33" mask="00011000b" comment="API_IPOD_VIEDO">both</function>
+			</group>
+		</code>
+		<code description="경고문구 모두 삭제">
+			<group id="3001">
+				<function start="52" end="52" mask="11111111b" comment="MACRO_CAM_LEGALDISCLAIMER">00</function>
+				<function start="58" end="58" mask="11111111b" comment="LEGAL_DISCLAIMER_TIME">00</function>
+			</group>
+		</code>
+		<code description="시간자동설정 활성화">
+			<group id="3000">
+				<function start="19" end="19" mask="00000110b" comment="SETTINGS_TIME_AUTOMATIC">navigation</function>
+				<function start="105" end="105" mask="00100000b" comment="CLOCK_CHANGE_AUTOMATIC">aktiv</function>
+			</group>
+		</code>
+		<code description="후방카메라 줌인">
+			<group id="3001">
+				<function start="54" end="54" mask="00000001b" comment="MACRO_TRAILER_COUPLING">aktiv</function>
+			</group>
+		</code>
+		<code description="전화벨 소리 스피커로(iOS only)">
+			<group id="3003">
+				<function start="6" end="6" mask="10000000b" comment="INBAND_RINGING">aktiv</function>
+			</group>
+		</code>
+		<code description="스포츠모드 구성">
+			<group id="3009">
+				<function start="9" end="9" mask="00010000b" comment="EFF_DYN_SPORT_CID">aktiv</function>
+			</group>
+			<group id="3009">
+				<function start="9" end="9" mask="00100000b" comment="EFF_DYN_SPORT_UNIT">aktiv</function>
+			</group>
+			<group id="3008">
+				<function start="79" end="79" mask="11000000b" comment="MACRO_FDS">popup_and_config</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="00000DED" name="HU_NBT" author="ekfxisidF025" series="F015,F016,F025">
+		<code description="DMB DVD Navi 주행락 해제							[창원ll달탸냥]">
+			<group id="3000">
+				<function start="72" end="72" mask="11111111b" comment="SPEEDLOCK_X_KMH_MAX">FF</function>
+				<function start="71" end="71" mask="11111111b" comment="SPEEDLOCK_X_KMH_MIN">FF</function>
+				<function start="5" end="5" mask="00010000b" comment="VIDEO_FRONT_LOCKED">nicht_aktiv</function>
+				<function start="5" end="5" mask="00000100b" comment="VIDEO_HANDBRAKE">nicht_aktiv</function>
+				<function start="57" end="57" mask="00000111b" comment="VIDEO_SPEEDLOCK_CONDITION">None</function>
+			</group>
+		</code>
+		<code description="M performance">
+			<group id="3001">
+				<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM">01</function>
+			</group>
+		</code>
+		<code description="X - Drive">
+			<group id="3000">
+				<function start="5" end="5" mask="00000001b" comment="COMPASS">aktiv</function>
+				<function start="15" end="15" mask="00000001b" comment="X_VIEW">aktiv</function>
+				<function start="26" end="26" mask="00110000b" comment="X_VIEW_GRAPHIC_SLOP">trajectory1</function>
+				<function start="26" end="26" mask="11000000b" comment="X_VIEW_GRAPHIC_ROLL">trajectory1</function>
+				<function start="110" end="110" mask="00000010b" comment="MOMENTDISTRIBUTION_MENU">aktiv</function>
+			</group>
+		</code>
+		<code description="경고음 사운드 변경">
+			<group id="3002">
+				<function start="26" end="26" mask="00111000b" comment="SOUND_SIGNAL_SET">rolls_royce</function>
+			</group>
+		</code>
+		<code description="USB 동영상 활성화 1/2">
+			<group id="3000">
+				<function start="15" end="15" mask="00010000b" comment="ENT_CODEC_OGG">aktiv</function>
+				<function start="15" end="15" mask="00100000b" comment="ENT_CODEC_XVID">aktiv</function>
+				<function start="15" end="15" mask="01000000b" comment="ENT_CODEC_VCD">aktiv</function>
+				<function start="13" end="13" mask="00000100b" comment="ENT_MC_VIDEO_SUPPORT">aktiv</function>
+			</group>
+		</code>
+		<code description="USB 동영상 활성화 2/2">
+			<group id="3003">
+				<function start="33" end="33" mask="00000110b" comment="API_USB_VIDEO">both</function>
+				<function start="33" end="33" mask="00011000b" comment="API_IPOD_VIEDO">both</function>
+			</group>
+		</code>
+		<code description="경고문구 모두 삭제">
+			<group id="3001">
+				<function start="52" end="52" mask="11111111b" comment="MACRO_CAM_LEGALDISCLAIMER">00</function>
+				<function start="58" end="58" mask="11111111b" comment="LEGAL_DISCLAIMER_TIME">00</function>
+			</group>
+		</code>
+		<code description="시간자동설정 활성화">
+			<group id="3000">
+				<function start="19" end="19" mask="00000110b" comment="SETTINGS_TIME_AUTOMATIC">navigation</function>
+				<function start="105" end="105" mask="00100000b" comment="CLOCK_CHANGE_AUTOMATIC">aktiv</function>
+			</group>
+		</code>
+		<code description="후방카메라 줌인">
+			<group id="3001">
+				<function start="54" end="54" mask="00000001b" comment="MACRO_TRAILER_COUPLING">aktiv</function>
+			</group>
+		</code>
+		<code description="볼륨조절 디스플레이 활성화">
+			<group id="3002">
+				<function start="52" end="52" mask="01000000b" comment="VOLUME_POPUP_DISPLAY">01</function>
+			</group>
+		</code>
+		<code description="Day Light 활성화">
+			<group id="3000">
+				<function start="92" end="92" mask="00011000b" comment="DAYDRIVING_LIGHT">02</function>
+			</group>
+		</code>
+		<code description="전화벨 소리 스피커로(iOS only)">
+			<group id="3003">
+				<function start="6" end="6" mask="10000000b" comment="INBAND_RINGING">aktiv</function>
+			</group>
+		</code>
+		<code description="스포츠모드 구성 1/3">
+			<group id="3000">
+				<function start="101" end="101" mask="00010000b" comment="EFF_DYN_SPORT_CID">aktiv</function>
+			</group>
+		</code>
+		<code description="스포츠모드 구성 2/3">
+			<group id="3000">
+				<function start="107" end="107" mask="00000100b" comment="EFF_DYN_SPORT_UNIT">aktiv</function>
+			</group>
+		</code>
+		<code description="스포츠모드 구성 3/3">
+			<group id="3001">
+				<function start="55" end="55" mask="00011000b" comment="MACRO_FDS">popup_and_config</function>
+			</group>
+		</code>
+		<code description="뱅엔웁스 프로필">
+			<group id="3000">
+				<function start="21" end="21" mask="01100000b" comment="HIGH_END_AUDIO_B_UND_W">keine_insz</function>
+			</group>
+		</code>
+		<code description="로직7 활성화 (S667A HiFi 옵션차량)">
+			<group id="3000">
+				<function start="22" end="22" mask="00001000b" comment="LOGIC7_SYMBOL">aktiv</function>
+			</group>
+		</code>
+		<code description="도어 Lock/Unlock 알람음(M5외 도난장치묘듈 옵션차량)">
+			<group id="3000">
+				<function start="110" end="110" mask="00000001b" comment="ACOUSTICAL_LOCK_CONFIRM">Aktiv</function>
+			</group>
+		</code>
+		<code description="TPMC 타이어 압력온도 활성화">
+			<group id="3001">
+				<function start="1" end="1" mask="00100000b" comment="RDC_SAFETY">Aktiv</function>
+			</group>
+		</code>
+		<code description="M Sport 디스플레이 계기판 색변경">
+			<group id="3000">
+				<function start="133" end="133" mask="01000000b" comment="M_VEHICLE">aktiv</function>
+			</group>
+		</code>
+		<code description="하이빔 어시스턴트 4/4 -->> KAFAS2 1/4, FRM 2/4, 3/4">
+			<group id="3000">
+				<function start="109" end="109" mask="10000000b" comment="HIGH_BEAM_ASSISTANT">01</function>
+			</group>
+		</code>
+	</cafd>
+	<!-- End ekfxisidF025-->
+
+	<!--ekfxisidF056-->
+	<cafd id="000017BE" name="BDC_01" author="ekfxisidF056" series="F056">
+		<code description="시동끄고 문열면 오디오 및 네비 끄기								[창원ll달탸냥]">
+			<group id="3020">
+				<function start="9" end="9" mask="00000001b" comment="TCM_LOGIC_R_OFF_DOOR">aktiv</function>
+			</group>
+		</code>
+		<code description="Auto Start/Stop 마지막상태 기억">
+			<group id="3023">
+				<function start="0" end="0" mask="00100000b" comment="TCM_MSA_MEMORY">aktiv</function>
+			</group>
+		</code>
+		<code description="Comfort 모드에서 Auto Start/Stop OFF">
+			<group id="3023">
+				<function start="0" end="0" mask="00010000b" comment="TCM_MSA_DEFAULT_OFF">aktiv</function>
+			</group>
+		</code>
+		<code description="문 열려있어도 윈도우 작동">
+			<group id="3050">
+				<function start="0" end="0" mask="00000001b" comment="FH_TUERAUF_STOP_MAUT">nicht_aktiv</function>
+			</group>
+		</code>
+		<code description="사이드미러 락 폴딩 (원터치 작동)">
+			<group id="3056">
+				<function start="10" end="10" mask="11111111b" comment="KOMFORT_SCHLIESSEN">00</function>
+			</group>
+		</code>
+		<code description="사이드미러 각도 조절(조수석)">
+			<group id="3110">
+				<function start="1" end="1" mask="11111111b" comment="ASP_BORDSTEINAUTOMAIK_DELTA">1E</function>
+			</group>
+		</code>
+		<code description="방향지시등 깜박이 5회">
+			<group id="3068">
+				<function start="7" end="7" mask="00000111b" comment="BLINKZYKLEN_ANZAHL_TIPP">04</function>
+			</group>
+		</code>
+		<code description="급제동시 비상등켜기(50km/h)">
+			<group id="3068">
+				<function start="26" end="26" mask="00000001b" comment="WB_GB_ENABLE">aktiv</function>
+				<function start="23" end="24" mask="11111111b" comment="WB_GB_GEFAHRENWERT_MIN">00, 32</function>
+			</group>
+		</code>
+		<code description="다이나믹 브레이크등 켜기">
+			<group id="3068">
+				<function start="16" end="16" mask="00000011b" comment="ESS_AKTIVIERBARER_AUSGANG">bremslicht_blinkend</function>
+				<function start="20" end="20" mask="00011111b" comment="ESS_AKTIVIERUNG_REALE_VERZ">04</function>
+				<function start="19" end="19" mask="00011111b" comment="ESS_DEAKTIVIERUNG_REALE_VERZ">04</function>
+				<function start="17" end="17" mask="11111110b" comment="ESS_AKTIVIERUNG_GESCHW">05</function>
+			</group>
+		</code>
+		<code description="지정속도 초과하면 사이드미러 자동 펴짐 (40Km/h -> 25Km/h)">
+			<group id="3110">
+				<function start="9" end="9" mask="11111111b" comment="ASP_GESCHWINDIGKEIT_AUTO_AUSKLAPPEN">19</function>
+			</group>
+		</code>
+		<code description="후진시 도어 캐치라이트 점등">
+			<group id="3070">
+				<function start="128" end="128" mask="00000001b" comment="OVT_BEI_RUECKFAHRLICHT">aktiv</function>
+			</group>
+		</code>
+		<code description="전방 방향지시등 --> LED 교환">
+			<group id="3060">
+				<function start="98" end="98" mask="00000001b" comment="FRA_V_L_KALTUEBERWACHUNG">nicht_aktiv</function>
+				<function start="98" end="98" mask="00000010b" comment="FRA_V_L_WARMUEBERWACHUNG">nicht_aktiv</function>
+				<function start="98" end="98" mask="00000100b" comment="FRA_V_L_KURZSCHLUSS">aktiv</function>
+				<function start="98" end="98" mask="00001000b" comment="FRA_V_L_IS_LED">aktiv</function>
+				<function start="106" end="106" mask="00000001b" comment="FRA_V_R_KALTUEBERWACHUNG">nicht_aktiv</function>
+				<function start="106" end="106" mask="00000010b" comment="FRA_V_R_WARMUEBERWACHUNG">nicht_aktiv</function>
+				<function start="106" end="106" mask="00000100b" comment="FRA_V_R_KURZSCHLUSS">aktiv</function>
+				<function start="106" end="106" mask="00001000b" comment="FRA_V_R_IS_LED">aktiv</function>
+			</group>
+		</code>
+		<code description="후방 방향지시등 --> LED 교환">
+			<group id="3061">
+				<function start="98" end="98" mask="00000001b" comment="FRA_H_L_KALTUEBERWACHUNG">nicht_aktiv</function>
+				<function start="98" end="98" mask="00000010b" comment="FRA_H_L_WARMUEBERWACHUNG">nicht_aktiv</function>
+				<function start="98" end="98" mask="00000100b" comment="FRA_H_L_KURZSCHLUSS">aktiv</function>
+				<function start="98" end="98" mask="00001000b" comment="FRA_H_L_IS_LED">aktiv</function>
+				<function start="106" end="106" mask="00000001b" comment="FRA_H_R_KALTUEBERWACHUNG">nicht_aktiv</function>
+				<function start="106" end="106" mask="00000010b" comment="FRA_H_R_WARMUEBERWACHUNG">nicht_aktiv</function>
+				<function start="106" end="106" mask="00000100b" comment="FRA_H_R_KURZSCHLUSS">aktiv</function>
+				<function start="106" end="106" mask="00001000b" comment="FRA_H_R_IS_LED">aktiv</function>
+			</group>
+		</code>
+		<code description="전방 안개등 --> LED 교환 및 경고등삭제">
+			<group id="3060">
+				<function start="82" end="82" mask="00000001b" comment="NSW_L_KALTUEBERWACHUNG">nicht_aktiv</function>
+				<function start="82" end="82" mask="00000010b" comment="NSW_L_WARMUEBERWACHUNG">nicht_aktiv</function>
+				<function start="82" end="82" mask="00000100b" comment="NSW_L_KURZSCHLUSS">aktiv</function>
+				<function start="82" end="82" mask="00001000b" comment="NSW_L_IS_LED">aktiv</function>
+				<function start="90" end="90" mask="00000001b" comment="NSW_R_KALTUEBERWACHUNG">nicht_aktiv</function>
+				<function start="90" end="90" mask="00000010b" comment="NSW_R_WARMUEBERWACHUNG">nicht_aktiv</function>
+				<function start="90" end="90" mask="00000100b" comment="NSW_R_KURZSCHLUSS">aktiv</function>
+				<function start="90" end="90" mask="00001000b" comment="NSW_R_IS_LED">aktiv</function>
+			</group>
+		</code>
+		<code description="주간 테일램프(주간 전조등과 동조) 1/3">
+			<group id="3068">
+				<function start="31" end="31" mask="00110000b" comment="TFL_MODUS">drl_s</function>
+			</group>
+		</code>
+		<code description="주간 테일램프(주간 전조등과 동조) 2/3">
+			<group id="3064">
+				<function start="221" end="221" mask="00111111b" comment="MAPPING_TAGFAHRL_1_H_L_OUTPUT">sl_l</function>
+				<function start="234" end="234" mask="00111111b" comment="MAPPING_TAGFAHRL_1_H_R_OUTPUT">sl_r</function>
+			</group>
+		</code>
+		<code description="주간 테일램프(주간 전조등과 동조) 3/3">
+			<group id="3065">
+				<function start="78" end="78" mask="00111111b" comment="MAPPING_TAGFAHRL_2_H_L_OUTPUT">sl_2_l</function>
+				<function start="91" end="91" mask="00111111b" comment="MAPPING_TAGFAHRL_2_H_R_OUTPUT">sl_2_r</function>	
+			</group>
+		</code>
+	</cafd>
+	<cafd id="000011AB" name="ACSM_4i" author="ekfxisidF056" series="F056">
+		<code description="안전벨트 경고음 3회 (5초)									[창원ll달탸냥]">
+			<group id="3001">
+				<function start="11" end="11" mask="11111111b" comment="GWF_SBR_WARNDAUER">05</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="000016EE" name="IHKA3" author="ekfxisidF056" series="F056">
+		<code description="에어컨 on/off 마지막 상태 기억								[창원ll달탸냥]">
+			<group id="3003">
+				<function start="0" end="0" mask="00000010b" comment="MEMORY_OFF">Aktiv</function>
+			</group>
+		</code>
+		<code description="공기순환모드 마지막 상태 기억">
+			<group id="3003">
+				<function start="0" end="0" mask="00000001b" comment="MEMORY_UMLUFT">Aktiv</function>
+			</group>
+		</code>
+		<code description="공기순환모드 고정">
+			<group id="3003">
+				<function start="0" end="0" mask="10000000b" comment="UMLUFT_AUTO_AUS">disable</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="000000B5" name="SM2" author="ekfxisidF056" series="F056">
+		<code description="이지 억세스 1/3(Easy Entry)									[창원ll달탸냥]">
+			<group id="3000">
+				<function start="0" end="0" mask="00011100b" comment="EINAUSSTIEGSHILFE">Modus_FA_SLV</function>
+			</group>
+		</code>
+		<code description="이지 억세스 2/3(Easy Entry)">
+			<group id="3012">
+				<function start="4" end="5" mask="11111111b" comment="EAH_SCHUTZFREIRAUM_HINTEN_SLV_PHYS">00, 1E</function>
+			</group>
+		</code>
+		<code description="이지 억세스 3/3(Easy Entry)">
+			<group id="3012">
+				<function start="0" end="1" mask="11111111b" comment="EAH_VERFAHRWEG_SLV_PHYS">00, 46</function>
+			</group>
+		</code>
+		<code description="MEMORY GONG 알람 소리설정">
+			<group id="3000">
+				<function start="2" end="2" mask="00001000b" comment="MEMORY_GONG">Aktiv</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="00001EF6" name="HU_NBT2" author="ekfxisidF056" series="F056">
+		<code description="DMB DVD Navi 주행락 해제 1/2									[창원ll달탸냥]">
+			<group id="3006">
+				<function start="25" end="25" mask="11111111b" comment="SPEEDLOCK_X_KMH_MAX">FF</function>
+				<function start="26" end="26" mask="11111111b" comment="SPEEDLOCK_X_KMH_MIN">FF</function>
+			</group>
+		</code>
+		<code description="DMB DVD Navi 주행락 해제 2/2">
+			<group id="3000">
+				<function start="5" end="5" mask="00010000b" comment="VIDEO_FRONT_LOCKED">nicht_aktiv</function>
+				<function start="5" end="5" mask="00000100b" comment="VIDEO_HANDBRAKE">nicht_aktiv</function>
+				<function start="2" end="2" mask="00000111b" comment="VIDEO_SPEEDLOCK_CONDITION">None</function>
+			</group>
+		</code>
+		<code description="M performance">
+			<group id="3001">
+				<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM">01</function>
+			</group>
+		</code>
+		<code description="X - Drive">
+			<group id="3000">
+				<function start="5" end="5" mask="00000001b" comment="COMPASS">aktiv</function>
+				<function start="15" end="15" mask="00000001b" comment="X_VIEW">aktiv</function>
+				<function start="26" end="26" mask="00110000b" comment="X_VIEW_GRAPHIC_SLOP">trajectory1</function>
+				<function start="26" end="26" mask="11000000b" comment="X_VIEW_GRAPHIC_ROLL">trajectory1</function>
+				<function start="110" end="110" mask="00000010b" comment="MOMENTDISTRIBUTION_MENU">aktiv</function>
+			</group>
+		</code>
+		<code description="경고음 사운드 변경">
+			<group id="3002">
+				<function start="26" end="26" mask="00111000b" comment="SOUND_SIGNAL_SET">rolls_royce</function>
+			</group>
+		</code>
+		<code description="USB 동영상 활성화 1/2">
+			<group id="3000">
+				<function start="15" end="15" mask="00010000b" comment="ENT_CODEC_OGG">aktiv</function>
+				<function start="15" end="15" mask="00100000b" comment="ENT_CODEC_XVID">aktiv</function>
+				<function start="15" end="15" mask="01000000b" comment="ENT_CODEC_VCD">aktiv</function>
+				<function start="13" end="13" mask="00000100b" comment="ENT_MC_VIDEO_SUPPORT">aktiv</function>
+			</group>
+		</code>
+		<code description="USB 동영상 활성화 2/2">
+			<group id="3003">
+				<function start="32" end="32" mask="00000110b" comment="API_USB_VIDEO">both</function>
+				<function start="32" end="32" mask="00011000b" comment="API_IPOD_VIEDO">both</function>
+			</group>
+		</code>
+		<code description="경고문구 모두 삭제">
+			<group id="3001">
+				<function start="52" end="52" mask="11111111b" comment="MACRO_CAM_LEGALDISCLAIMER">00</function>
+				<function start="58" end="58" mask="11111111b" comment="LEGAL_DISCLAIMER_TIME">00</function>
+			</group>
+		</code>
+		<code description="시간자동설정 활성화">
+			<group id="3000">
+				<function start="19" end="19" mask="00000110b" comment="SETTINGS_TIME_AUTOMATIC">navigation</function>
+				<function start="105" end="105" mask="00100000b" comment="CLOCK_CHANGE_AUTOMATIC">aktiv</function>
+			</group>
+		</code>
+		<code description="후방카메라 줌인">
+			<group id="3001">
+				<function start="54" end="54" mask="00000001b" comment="MACRO_TRAILER_COUPLING">aktiv</function>
+			</group>
+		</code>
+		<code description="Day Light 활성화">
+			<group id="3000">
+				<function start="92" end="92" mask="00011000b" comment="DAYDRIVING_LIGHT">02</function>
+			</group>
+		</code>
+		<code description="전화벨 소리 스피커로(iOS only)">
+			<group id="3003">
+				<function start="6" end="6" mask="10000000b" comment="INBAND_RINGING">aktiv</function>
+			</group>
+		</code>
+		<code description="스포츠모드 구성 1/3">
+			<group id="3009">
+				<function start="9" end="9" mask="00010000b" comment="EFF_DYN_SPORT_CID">aktiv</function>
+			</group>
+		</code>
+		<code description="스포츠모드 구성 2/3">
+			<group id="3009">
+				<function start="9" end="9" mask="00100000b" comment="EFF_DYN_SPORT_UNIT">aktiv</function>
+			</group>
+		</code>
+		<code description="스포츠모드 구성 3/3">
+			<group id="3008">
+				<function start="79" end="79" mask="11000000b" comment="MACRO_FDS">popup_and_config</function>
+			</group>
+		</code>
+		<code description="뱅엔웁스 프로필">
+			<group id="3000">
+				<function start="21" end="21" mask="01100000b" comment="HIGH_END_AUDIO_B_UND_W">keine_insz</function>
+			</group>
+		</code>
+		<code description="로직7 활성화 (S667A HiFi 옵션차량)">
+			<group id="3000">
+				<function start="22" end="22" mask="00001000b" comment="LOGIC7_SYMBOL">aktiv</function>
+			</group>
+		</code>
+		<code description="HUD : Affichage de l'assistant collision Step 2 (Step 1 dans KOMBI)">
+			<group id="300C">
+				<function start="0" end="0" mask="00010000b" comment="HUD_DISTANCE_INFO">Aktiv</function>
+			</group>
+		</code>
+		<code description="JCW = HUD에 타코메타 활성화 1/2 --> KOMBI 2/2">
+			<group id="300C">
+				<function start="0" end="0" mask="00000001b" comment="HUD_SPORTANZEIGE_ENABLE">aktiv</function>
+				<function start="0" end="0" mask="00000010b" comment="HUD_SPORTANZEIGE_FES_ENABLE">aktiv</function>
+				<function start="0" end="0" mask="00000100b" comment="HUD_SPORTANZEIGE_MS_GASSE_ENABLE">aktiv</function>
+			</group> 
+		</code>
+		<code description="도어 Lock/Unlock 알람음 (M5외 도난장치묘듈 옵션차량)">
+			<group id="3000">
+				<function start="110" end="110" mask="00000001b" comment="ACOUSTICAL_LOCK_CONFIRM">Aktiv</function>
+			</group>
+		</code>
+		<code description="TPMC 타이어 압력온도 활성화">
+			<group id="3001">
+				<function start="1" end="1" mask="00100000b" comment="RDC_SAFETY">Aktiv</function>
+			</group>
+		</code>
+		<code description="M Sport 디스플레이 계기판 색변경">
+			<group id="3000">
+				<function start="133" end="133" mask="01000000b" comment="M_VEHICLE">aktiv</function>
+			</group>
+		</code>
+		<code description="하이빔 어시스턴트">
+			<group id="3000">
+				<function start="109" end="109" mask="10000000b" comment="HIGH_BEAM_ASSISTANT">01</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="00000DED" name="HU_NBT" author="ekfxisidF056" series="F056">
+		<code description="DMB DVD Navi 주행락 해제									[창원ll달탸냥]">
+			<group id="3000">
+				<function start="72" end="72" mask="11111111b" comment="SPEEDLOCK_X_KMH_MAX">FF</function>
+				<function start="71" end="71" mask="11111111b" comment="SPEEDLOCK_X_KMH_MIN">FF</function>
+				<function start="5" end="5" mask="00010000b" comment="VIDEO_FRONT_LOCKED">nicht_aktiv</function>
+				<function start="5" end="5" mask="00000100b" comment="VIDEO_HANDBRAKE">nicht_aktiv</function>
+				<function start="57" end="57" mask="00000111b" comment="VIDEO_SPEEDLOCK_CONDITION">None</function>
+			</group>
+		</code>
+		<code description="M performance">
+			<group id="3001">
+				<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM">01</function>
+			</group>
+		</code>
+		<code description="X - Drive">
+			<group id="3000">
+				<function start="5" end="5" mask="00000001b" comment="COMPASS">aktiv</function>
+				<function start="15" end="15" mask="00000001b" comment="X_VIEW">aktiv</function>
+				<function start="26" end="26" mask="00110000b" comment="X_VIEW_GRAPHIC_SLOP">trajectory1</function>
+				<function start="26" end="26" mask="11000000b" comment="X_VIEW_GRAPHIC_ROLL">trajectory1</function>
+				<function start="110" end="110" mask="00000010b" comment="MOMENTDISTRIBUTION_MENU">aktiv</function>
+			</group>
+		</code>
+		<code description="경고음 사운드 변경">
+			<group id="3002">
+				<function start="26" end="26" mask="00111000b" comment="SOUND_SIGNAL_SET">rolls_royce</function>
+			</group>
+		</code>
+		<code description="USB 동영상 활성화 1/2">
+			<group id="3000">
+				<function start="15" end="15" mask="00010000b" comment="ENT_CODEC_OGG">aktiv</function>
+				<function start="15" end="15" mask="00100000b" comment="ENT_CODEC_XVID">aktiv</function>
+				<function start="15" end="15" mask="01000000b" comment="ENT_CODEC_VCD">aktiv</function>
+				<function start="13" end="13" mask="00000100b" comment="ENT_MC_VIDEO_SUPPORT">aktiv</function>
+			</group>
+		</code>
+		<code description="USB 동영상 활성화 2/2">
+			<group id="3003">
+				<function start="33" end="33" mask="00000110b" comment="API_USB_VIDEO">both</function>
+				<function start="33" end="33" mask="00011000b" comment="API_IPOD_VIEDO">both</function>
+			</group>
+		</code>
+		<code description="경고문구 모두 삭제">
+			<group id="3001">
+				<function start="52" end="52" mask="11111111b" comment="MACRO_CAM_LEGALDISCLAIMER">00</function>
+				<function start="58" end="58" mask="11111111b" comment="LEGAL_DISCLAIMER_TIME">00</function>
+			</group>
+		</code>
+		<code description="후방카메라 줌인">
+			<group id="3001">
+				<function start="54" end="54" mask="00000001b" comment="MACRO_TRAILER_COUPLING">aktiv</function>
+			</group>
+		</code>
+		<code description="Day Light 활성화">
+			<group id="3000">
+				<function start="92" end="92" mask="00011000b" comment="DAYDRIVING_LIGHT">02</function>
+			</group>
+		</code>
+		<code description="TPMC 타이어 압력온도 활성화">
+			<group id="3001">
+				<function start="1" end="1" mask="00100000b" comment="RDC_SAFETY">Aktiv</function>
+			</group>
+		</code>
+		<code description="JCW = HUD에 타코메타 활성화 1/2 --> KOMBI 2/2">
+			<group id="3000">
+				<function start="18" end="18" mask="00000001b" comment="HUD_SPORTANZEIGE_ENABLE">aktiv</function>
+				<function start="18" end="18" mask="00000010b" comment="HUD_SPORTANZEIGE_FES_ENABLE">aktiv</function>
+				<function start="18" end="18" mask="00000100b" comment="HUD_SPORTANZEIGE_MS_GASSE_ENABLE">aktiv</function>
+			</group> 
+		</code>
+		<code description="전화벨 소리 스피커로(iOS only)">
+			<group id="3003">
+				<function start="6" end="6" mask="10000000b" comment="INBAND_RINGING">aktiv</function>
+			</group>
+		</code>
+		<code description="스포츠모드 구성 1/3">
+			<group id="3000">
+				<function start="101" end="101" mask="00010000b" comment="EFF_DYN_SPORT_CID">aktiv</function>
+			</group>
+		</code>
+		<code description="스포츠모드 구성 2/3">
+			<group id="3000">
+				<function start="107" end="107" mask="00000100b" comment="EFF_DYN_SPORT_UNIT">aktiv</function>
+			</group>
+		</code>
+		<code description="스포츠모드 구성 3/3">
+			<group id="3001">
+				<function start="55" end="55" mask="00011000b" comment="MACRO_FDS">popup_and_config</function>
+			</group>
+		</code>
+		<code description="시간자동설정 활성화">
+			<group id="3000">
+				<function start="19" end="19" mask="00000110b" comment="SETTINGS_TIME_AUTOMATIC">navigation</function>
+				<function start="105" end="105" mask="00100000b" comment="CLOCK_CHANGE_AUTOMATIC">aktiv</function>
+			</group>
+		</code>
+		<code description="볼륨조절 디스플레이 활성화">
+			<group id="3002">
+				<function start="52" end="52" mask="01000000b" comment="VOLUME_POPUP_DISPLAY">01</function>
+			</group>
+		</code>
+		<code description="뱅엔웁스 프로필">
+			<group id="3000">
+				<function start="21" end="21" mask="01100000b" comment="HIGH_END_AUDIO_B_UND_W">keine_insz</function>
+			</group>
+		</code>
+		<code description="로직7 활성화 (S667A HiFi 옵션차량)">
+			<group id="3000">
+				<function start="22" end="22" mask="00001000b" comment="LOGIC7_SYMBOL">aktiv</function>
+			</group>
+		</code>
+		<code description="도어 Lock/Unlock 알람음(M5외 도난장치묘듈 옵션차량)">
+			<group id="3000">
+				<function start="110" end="110" mask="00000001b" comment="ACOUSTICAL_LOCK_CONFIRM">Aktiv</function>
+			</group>
+		</code>
+		<code description="M Sport 디스플레이 계기판 색변경">
+			<group id="3000">
+				<function start="133" end="133" mask="01000000b" comment="M_VEHICLE">aktiv</function>
+			</group>
+		</code>
+		<code description="하이빔 어시스턴트 4/4 -->> KAFAS2 1/4, FRM 2/4, 3/4">
+			<group id="3000">
+				<function start="109" end="109" mask="10000000b" comment="HIGH_BEAM_ASSISTANT">01</function>
+			</group>
+		</code>
+	</cafd>
+	<!-- End ekfxisidF056-->
+</FDL>

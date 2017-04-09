@@ -209,18 +209,18 @@
 <cafd id="0000067B" name="ICMQL" author="Botho (public)" series="F020">
 	<code description="Active Cruise Control : Distance minimum par défaut à 1">
 		<group id="3000">
-			<function start="184" end="184" mask="00000111b" comment="C_Abstandsstufe_init">Stufe_1</function>
+			<function start="184" end="184" mask="00000111b" comment="C_Abstandsstufe_init (défaut : 03)">01</function>
 		</group>
 	</code>
-	<code description="Active Cruise Control : Activation à partir de 10 km/h (30 km/h par défaut)">
+	<code description="Active Cruise Control : Activation à partir de 10 km/h (30 km/h ou 20 mph par défaut)">
 		<group id="3000">
-			<function start="142" end="142" mask="11111111b" comment="C_Wunschgeschw_min_kmh">0A</function>
-			<function start="143" end="143" mask="11111111b" comment="C_Wunschgeschw_min_mph">06</function>
+			<function start="142" end="142" mask="11111111b" comment="C_Wunschgeschw_min_kmh (défaut : 1E)">0A</function>
+			<function start="143" end="143" mask="11111111b" comment="C_Wunschgeschw_min_mph (défaut : 14)">06</function>
 		</group>
 	</code>
 	<code description="ECO PRO : Activation par défaut au démarrage">
 		<group id="3000">
-			<function start="36" end="36" mask="00001000b" comment="IcmKod_B_InitEco">verbaut</function>
+			<function start="36" end="36" mask="00001000b" comment="IcmKod_B_InitEco (défaut : 00)">01</function>
 		</group>
 	</code>
 </cafd>

@@ -2,9 +2,9 @@
 <FDL>
 	<!--Botho - Public Release (2017-04-06) -->
 <cafd id="00000911" name="ACSM" author="Botho (public)" series="F020">
-	<code description="Ceinture de sécurité : Durée du rappel à 10s">
+	<code description="Ceinture de sécurité : Durée du rappel à 10s (100s par défaut)">
 		<group id="3001">
-			<function start="3" end="3" mask="11111111b" comment="GWF_SBR_WARNDAUER">0A</function>
+			<function start="3" end="3" mask="11111111b" comment="GWF_SBR_WARNDAUER (défaut : 64)">0A</function>
 		</group>
 	</code>
 </cafd>
@@ -187,21 +187,21 @@
 <cafd id="00000A07" name="FZD" author="Botho (public)" series="F020">
 	<code description="Activation Panic Alarme">
 		<group id="3002">
-			<function start="0" end="0" mask="00000100b" comment="Panikalarm">Aktiv</function>
+			<function start="0" end="0" mask="00000100b" comment="Panikalarm (défaut : nicht_aktiv)">Aktiv</function>
 		</group>
 	</code>
 	<code description="Alarme : son et fréquence du Buzzer (Original)">
 		<group id="3001">
-			<function start="34" end="34" mask="11111111b" comment="Buzzer level high">03</function>
-			<function start="35" end="35" mask="11111111b" comment="Buzzer frequency">8F</function>
-			<function start="36" end="36" mask="11111111b" comment="Buzzer duration">0A</function>
+			<function start="34" end="34" mask="11111111b" comment="Buzzer level high (original value)">03</function>
+			<function start="35" end="35" mask="11111111b" comment="Buzzer frequency (original value)">8F</function>
+			<function start="36" end="36" mask="11111111b" comment="Buzzer duration (original value)">0A</function>
 		</group>
 	</code>
 	<code description="Alarme : son et fréquence du Buzzer (plus court et plus aigu)">
 		<group id="3001">
-			<function start="34" end="34" mask="11111111b" comment="Buzzer level high">04</function>
-			<function start="35" end="35" mask="11111111b" comment="Buzzer frequency">99</function>
-			<function start="36" end="36" mask="11111111b" comment="Buzzer duration">02</function>
+			<function start="34" end="34" mask="11111111b" comment="Buzzer level high (défaut : 03)">04</function>
+			<function start="35" end="35" mask="11111111b" comment="Buzzer frequency (défaut : 8F)">99</function>
+			<function start="36" end="36" mask="11111111b" comment="Buzzer duration (défaut : 0A)">02</function>
 		</group>
 	</code>
 </cafd>
@@ -209,18 +209,18 @@
 <cafd id="0000067B" name="ICMQL" author="Botho (public)" series="F020">
 	<code description="Active Cruise Control : Distance minimum par défaut à 1">
 		<group id="3000">
-			<function start="184" end="184" mask="00000111b" comment="C_Abstandsstufe_init">Stufe_1</function>
+			<function start="184" end="184" mask="00000111b" comment="C_Abstandsstufe_init (défaut : 03)">01</function>
 		</group>
 	</code>
-	<code description="Active Cruise Control : Activation à partir de 10 km/h (30 km/h par défaut)">
+	<code description="Active Cruise Control : Activation à partir de 10 km/h (30 km/h ou 20 mph par défaut)">
 		<group id="3000">
-			<function start="142" end="142" mask="11111111b" comment="C_Wunschgeschw_min_kmh">0A</function>
-			<function start="143" end="143" mask="11111111b" comment="C_Wunschgeschw_min_mph">06</function>
+			<function start="142" end="142" mask="11111111b" comment="C_Wunschgeschw_min_kmh (défaut : 1E)">0A</function>
+			<function start="143" end="143" mask="11111111b" comment="C_Wunschgeschw_min_mph (défaut : 14)">06</function>
 		</group>
 	</code>
 	<code description="ECO PRO : Activation par défaut au démarrage">
 		<group id="3000">
-			<function start="36" end="36" mask="00001000b" comment="IcmKod_B_InitEco">verbaut</function>
+			<function start="36" end="36" mask="00001000b" comment="IcmKod_B_InitEco (défaut : 00)">01</function>
 		</group>
 	</code>
 </cafd>
@@ -228,17 +228,17 @@
 <cafd id="000016EE" name="IHKA" author="Botho (public)" series="F020">
 	<code description="Climatisation : Mémorise la dernière position (on/off)">
 		<group id="3003">
-			<function start="0" end="0" mask="00000010b" comment="MEMORY_OFF">Aktiv</function>
+			<function start="0" end="0" mask="00000010b" comment="MEMORY_OFF (défaut : aktiv)">Aktiv</function>
 		</group>
 	</code>
 	<code description="Climatisation : Mémorise la dernière position du flux d'air (par défaut, 15 minutes après arrêt du moteur)">
 		<group id="3003">
-			<function start="0" end="0" mask="00000001b" comment="MEMORY_UMLUFT">Aktiv</function>
+			<function start="0" end="0" mask="00000001b" comment="MEMORY_UMLUFT (défaut : nicht_aktiv)">Aktiv</function>
 		</group>
 	</code>
 	<code description="Climatisation : AC off en mode AUTO">
 		<group id="3003">
-			<function start="0" end="0" mask="00000100b" comment="AC_ON_WITH_AUTO">nicht_aktiv</function>
+			<function start="0" end="0" mask="00000100b" comment="AC_ON_WITH_AUTO (défaut : nicht_aktiv)">nicht_aktiv</function>
 		</group>
 	</code>
 </cafd>
@@ -246,15 +246,15 @@
 <cafd id="00001148" name="KAFAS2" author="Botho (public)" series="F020">
 	<code description="HUD : Affichage de l'assistant distance Step 3 (Step 1 dans KOMBI, Step 2 dans HU_NBT)">
 		<group id="3060">
-			<function start="1" end="1" mask="00011000b" comment="DISPLAY_HEADWAY_DISTANCE">01</function>
-			<function start="1" end="1" mask="00000010b" comment="SEND_STATUS_IBRAKE">01</function>
-			<function start="1" end="1" mask="00000100b" comment="SEND_PARAM_IBRAKE">01</function>
+			<function start="1" end="1" mask="00011000b" comment="DISPLAY_HEADWAY_DISTANCE (défaut : 00)">01</function>
+			<function start="1" end="1" mask="00000010b" comment="SEND_STATUS_IBRAKE (défaut : 00)">01</function>
+			<function start="1" end="1" mask="00000100b" comment="SEND_PARAM_IBRAKE (défaut : 00)">01</function>
 		</group>
 	</code>
 	<code description="Avertisseur de franchissement de ligne : activation au dessus de 55 km/h (par défaut : 70 km/h) et désactivation en dessous de 50 km/h (par défaut : 65 km/h)">
 		<group id="3020">
-			<function start="3" end="3" mask="11111111b" comment="THRV_AVAI_TLC_HIGH">37</function>
-			<function start="4" end="4" mask="11111111b" comment="THRV_AVAI_TLC_LOW">32</function>
+			<function start="3" end="3" mask="11111111b" comment="THRV_AVAI_TLC_HIGH (défaut : 46)">37</function>
+			<function start="4" end="4" mask="11111111b" comment="THRV_AVAI_TLC_LOW (défaut : 41)">32</function>
 		</group>
 	</code>		
 </cafd>
@@ -380,9 +380,9 @@
 	</code>
 	<code description="iDrive (Notice) : Utilisation de la notice en roulant">
 		<group id="3000">
-			<function start="0" end="0" mask="00100000b" comment="SL06_IBA_1 (défaut : todo)">nicht_aktiv</function>
-			<function start="0" end="0" mask="01000000b" comment="SL07_IBA_2 (défaut : todo)">nicht_aktiv</function>
-			<function start="2" end="2" mask="00010000b" comment="SL21_IBA_3 (défaut : todo)">nicht_aktiv</function>
+			<function start="0" end="0" mask="00100000b" comment="SL06_IBA_1 (défaut : aktiv)">nicht_aktiv</function>
+			<function start="0" end="0" mask="01000000b" comment="SL07_IBA_2 (défaut : nicht_aktiv)">nicht_aktiv</function>
+			<function start="2" end="2" mask="00010000b" comment="SL21_IBA_3 (défaut : nicht_aktiv)">nicht_aktiv</function>
 		</group>
 	</code>
 	<code description="iDrive (Messages) : Affichage des SMS en entier (défaut : 3 lignes)">
@@ -407,12 +407,12 @@
 	</code>
 	<code description="iDrive (Navigation) : Ajoute prévisualisation de la route dans les options">
 		<group id="3000">
-			<function start="59" end="59" mask="00100000b" comment="NAVI_ROAD_PREVIEW (défaut : todo)">aktiv</function>
+			<function start="59" end="59" mask="00100000b" comment="NAVI_ROAD_PREVIEW (défaut : nicht_aktiv)">aktiv</function>
 		</group>
 	</code>
 	<code description="iDrive (Navigation) : Ajoute une préférence de calcul des trajets par les serveurs BMW">
 		<group id="3000">
-			<function start="112" end="112" mask="00000010b" comment="NAVI_ONLINE_OPTIMIZATION_BUTTON (défaut : todo)">aktiv</function>
+			<function start="112" end="112" mask="00000010b" comment="NAVI_ONLINE_OPTIMIZATION_BUTTON (défaut : nicht_aktiv)">aktiv</function>
 		</group>
 	</code>
 	<code description="iDrive (Navigation) : Affichage de la vue sortie autoroute dans HUD">
@@ -443,7 +443,7 @@
 	</code>
 	<code description="iDrive (Navigation) : Ajoute le menu Route express dans les préférences de guidage">
 		<group id="3000">
-			<function start="108" end="108" mask="00000100b" comment="NAVI_EXPRESS_ROADS (défaut : todo)">aktiv</function>
+			<function start="108" end="108" mask="00000100b" comment="NAVI_EXPRESS_ROADS (défaut : nicht_aktiv)">aktiv</function>
 		</group>
 	</code>
 	<code description="-- Don't work -- iDrive (Navigation) : Zoom automatique aux intersections">

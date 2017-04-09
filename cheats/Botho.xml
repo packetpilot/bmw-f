@@ -61,6 +61,20 @@
 			<function start="101" end="101" mask="11111111b" comment="MAPPING_TAGFAHRL_V_R_PWM_LEVEL_1 (défaut : 64)">64</function>
 		</group>
 	</code>
+	<code description="Xenon : activation de l'éclairage de virage (cornering light) - phares anti-brouillard nécessaires">
+		<group id="3073">
+			<function start="218" end="218" mask="00000010b" comment="C_CLC_ENA (défaut : 01)">01</function>
+			<function start="66" end="66" mask="00000001b" comment="C_BLC_ENA (défaut : 01)">01</function>
+		</group>
+		<group id="3066">
+			<function start="0" end="0" mask="00000001b" comment="KL_ENABLE_LI (défaut : 01)">01</function>
+			<function start="80" end="80" mask="00000001b" comment="KL_ENABLE_RE (défaut : 01)">01</function>
+		</group>
+		<group id="3062">
+			<function start="110" end="110" mask="00111111b" comment="MAPPING_abbiegel_L_output (défaut : 0B)">0B</function>
+			<function start="121" end="121" mask="00111111b" comment="MAPPING_abbiegel_R_output (défaut : 0C)">0C</function>
+		</group>
+	</code>
 	<code description="Laves phares : Désactivation">
 		<group id="3080">
 			<function start="8" end="8" mask="00000001b" comment="WW_SCHEINWERFERREINIGUNG (défaut : aktiv)">nicht_aktiv</function>
@@ -88,8 +102,8 @@
 	</code>
 	<code description="Welcome light : Activation des anti-brouillard">
 		<group id="3063">
-			<function start="55" end="55" mask="11000000b" comment="MAPPING_NEBELSCHW_L_PART_OF_WL (défaut : not_active)">Soft_On</function>
-			<function start="66" end="66" mask="11000000b" comment="MAPPING_NEBELSCHW_R_PART_OF_WL (défaut : not_active)">Soft_On</function>
+			<function start="55" end="55" mask="11000000b" comment="MAPPING_NEBELSCHW_L_PART_OF_WL (défaut : 00)">01</function>
+			<function start="66" end="66" mask="11000000b" comment="MAPPING_NEBELSCHW_R_PART_OF_WL (défaut : 00)">01</function>
 		</group>
 	</code>
 	<code description="Rétroviseurs : fermeture rétroviseurs autorisée en dessous de 49 km/h (défaut : 20 km/h)">

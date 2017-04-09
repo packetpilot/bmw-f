@@ -228,17 +228,17 @@
 <cafd id="000016EE" name="IHKA" author="Botho (public)" series="F020">
 	<code description="Climatisation : Mémorise la dernière position (on/off)">
 		<group id="3003">
-			<function start="0" end="0" mask="00000010b" comment="MEMORY_OFF">Aktiv</function>
+			<function start="0" end="0" mask="00000010b" comment="MEMORY_OFF (défaut : aktiv)">Aktiv</function>
 		</group>
 	</code>
 	<code description="Climatisation : Mémorise la dernière position du flux d'air (par défaut, 15 minutes après arrêt du moteur)">
 		<group id="3003">
-			<function start="0" end="0" mask="00000001b" comment="MEMORY_UMLUFT">Aktiv</function>
+			<function start="0" end="0" mask="00000001b" comment="MEMORY_UMLUFT (défaut : nicht_aktiv)">Aktiv</function>
 		</group>
 	</code>
 	<code description="Climatisation : AC off en mode AUTO">
 		<group id="3003">
-			<function start="0" end="0" mask="00000100b" comment="AC_ON_WITH_AUTO">nicht_aktiv</function>
+			<function start="0" end="0" mask="00000100b" comment="AC_ON_WITH_AUTO (défaut : nicht_aktiv)">nicht_aktiv</function>
 		</group>
 	</code>
 </cafd>

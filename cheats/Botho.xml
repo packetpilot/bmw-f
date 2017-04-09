@@ -262,20 +262,29 @@
 <cafd id="000007C8" name="HKFM" author="Botho (public)" series="F020">
 	<code description="Hayon : Activation fermeture via bouton au tableau de bord (FA Zeitkriterium=0315 for Smart Closing)">
 		<group id="3010">
-			<function start="2" end="2" mask="00001000b" comment="SCH_FBD">Aktiv</function>
-			<function start="2" end="2" mask="00000100b" comment="SCH_TOEHKI">Aktiv</function>
-			<function start="0" end="0" mask="00001000b" comment="TASTER_FBD">Aktiv</function>
+			<function start="2" end="2" mask="00001000b" comment="SCH_FBD (défaut : aktiv)">Aktiv</function>
+			<function start="2" end="2" mask="00000100b" comment="SCH_TOEHKI (défaut : aktiv)">Aktiv</function>
+			<function start="0" end="0" mask="00001000b" comment="TASTER_FBD (défaut : nicht_aktiv)">Aktiv</function>
 		</group>
 	</code>
-	<code description="TESTING : Hayon : Activation Smart Closing (sans toucher à FA date)">
+	<code description="-- TESTING -- Hayon : Activation Smart Closing (sans toucher à FA date)">
 		<group id="3120">
-			<function start="0" end="0" mask="00100000b" comment="FUNC_SMO">01</function>
-			<function start="0" end="0" mask="01000000b" comment="FUNC_BUZZER_SMO">01</function>
+			<function start="0" end="0" mask="00100000b" comment="FUNC_SMO (défaut : 00)">01</function>
+			<function start="0" end="0" mask="01000000b" comment="FUNC_BUZZER_SMO (défaut : 00)">01</function>
 		</group>
 	</code>
-	<code description="-- Don't work -- Hayon : Activation fermeture sur pression de la main">
+	<code description="-- TESTING -- Hayon : Activation fermeture sur pression de la main (exercer une pression pour fermer au moins 5% du hayon en moins de 2s)">
 		<group id="3010">
-			<function start="2" end="2" mask="00000010b" comment="MECH_DRUK_AUTO_SCH">Aktiv</function>
+			<function start="2" end="2" mask="00000010b" comment="MECH_DRUK_AUTO_SCH (défaut : nicht_aktiv)">Aktiv</function>
+			<function start="4" end="4" mask="11111111b" comment="MECH_DRUCK_AUTO_ZEIT (défaut : 0A). Duréee * 100ms de la pression à exercer.">14</function>
+			<function start="5" end="5" mask="11111111b" comment="MECH_DRUCK_AUTO_WINKEL (défaut : 02). Angle * 5 pourcents minimum pour enclecncher la fermeture automatique.">01</function>
+		</group>
+	</code>
+	<code description="-- TESTING -- Hayon : Activation ouverture sur pression de la main (exercer une pression pour ouvrir au moins 5% du hayon en moins de 2s)">
+		<group id="3010">
+			<function start="2" end="2" mask="00000001b" comment="MECH_DRUCK_AUTO_OEF (défaut : nicht_aktiv)">Aktiv</function>
+			<function start="4" end="4" mask="11111111b" comment="MECH_DRUCK_AUTO_ZEIT (défaut : 0A). Duréee * 100ms de la pression à exercer.">14</function>
+			<function start="5" end="5" mask="11111111b" comment="MECH_DRUCK_AUTO_WINKEL (défaut : 02). Angle * 5 pourcents minimum pour enclecncher la fermeture automatique.">01</function>
 		</group>
 	</code>
 </cafd>

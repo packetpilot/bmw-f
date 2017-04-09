@@ -2,9 +2,9 @@
 <FDL>
 	<!--Botho - Public Release (2017-04-06) -->
 <cafd id="00000911" name="ACSM" author="Botho (public)" series="F020">
-	<code description="Ceinture de sécurité : Durée du rappel à 10s">
+	<code description="Ceinture de sécurité : Durée du rappel à 10s (100s par défaut)">
 		<group id="3001">
-			<function start="3" end="3" mask="11111111b" comment="GWF_SBR_WARNDAUER">0A</function>
+			<function start="3" end="3" mask="11111111b" comment="GWF_SBR_WARNDAUER (défaut : 64)">0A</function>
 		</group>
 	</code>
 </cafd>

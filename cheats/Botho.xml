@@ -246,15 +246,15 @@
 <cafd id="00001148" name="KAFAS2" author="Botho (public)" series="F020">
 	<code description="HUD : Affichage de l'assistant distance Step 3 (Step 1 dans KOMBI, Step 2 dans HU_NBT)">
 		<group id="3060">
-			<function start="1" end="1" mask="00011000b" comment="DISPLAY_HEADWAY_DISTANCE">01</function>
-			<function start="1" end="1" mask="00000010b" comment="SEND_STATUS_IBRAKE">01</function>
-			<function start="1" end="1" mask="00000100b" comment="SEND_PARAM_IBRAKE">01</function>
+			<function start="1" end="1" mask="00011000b" comment="DISPLAY_HEADWAY_DISTANCE (défaut : 00)">01</function>
+			<function start="1" end="1" mask="00000010b" comment="SEND_STATUS_IBRAKE (défaut : 00)">01</function>
+			<function start="1" end="1" mask="00000100b" comment="SEND_PARAM_IBRAKE (défaut : 00)">01</function>
 		</group>
 	</code>
 	<code description="Avertisseur de franchissement de ligne : activation au dessus de 55 km/h (par défaut : 70 km/h) et désactivation en dessous de 50 km/h (par défaut : 65 km/h)">
 		<group id="3020">
-			<function start="3" end="3" mask="11111111b" comment="THRV_AVAI_TLC_HIGH">37</function>
-			<function start="4" end="4" mask="11111111b" comment="THRV_AVAI_TLC_LOW">32</function>
+			<function start="3" end="3" mask="11111111b" comment="THRV_AVAI_TLC_HIGH (défaut : 46)">37</function>
+			<function start="4" end="4" mask="11111111b" comment="THRV_AVAI_TLC_LOW (défaut : 41)">32</function>
 		</group>
 	</code>		
 </cafd>
@@ -380,9 +380,9 @@
 	</code>
 	<code description="iDrive (Notice) : Utilisation de la notice en roulant">
 		<group id="3000">
-			<function start="0" end="0" mask="00100000b" comment="SL06_IBA_1 (défaut : todo)">nicht_aktiv</function>
-			<function start="0" end="0" mask="01000000b" comment="SL07_IBA_2 (défaut : todo)">nicht_aktiv</function>
-			<function start="2" end="2" mask="00010000b" comment="SL21_IBA_3 (défaut : todo)">nicht_aktiv</function>
+			<function start="0" end="0" mask="00100000b" comment="SL06_IBA_1 (défaut : aktiv)">nicht_aktiv</function>
+			<function start="0" end="0" mask="01000000b" comment="SL07_IBA_2 (défaut : nicht_aktiv)">nicht_aktiv</function>
+			<function start="2" end="2" mask="00010000b" comment="SL21_IBA_3 (défaut : nicht_aktiv)">nicht_aktiv</function>
 		</group>
 	</code>
 	<code description="iDrive (Messages) : Affichage des SMS en entier (défaut : 3 lignes)">
@@ -407,12 +407,12 @@
 	</code>
 	<code description="iDrive (Navigation) : Ajoute prévisualisation de la route dans les options">
 		<group id="3000">
-			<function start="59" end="59" mask="00100000b" comment="NAVI_ROAD_PREVIEW (défaut : todo)">aktiv</function>
+			<function start="59" end="59" mask="00100000b" comment="NAVI_ROAD_PREVIEW (défaut : nicht_aktiv)">aktiv</function>
 		</group>
 	</code>
 	<code description="iDrive (Navigation) : Ajoute une préférence de calcul des trajets par les serveurs BMW">
 		<group id="3000">
-			<function start="112" end="112" mask="00000010b" comment="NAVI_ONLINE_OPTIMIZATION_BUTTON (défaut : todo)">aktiv</function>
+			<function start="112" end="112" mask="00000010b" comment="NAVI_ONLINE_OPTIMIZATION_BUTTON (défaut : nicht_aktiv)">aktiv</function>
 		</group>
 	</code>
 	<code description="iDrive (Navigation) : Affichage de la vue sortie autoroute dans HUD">
@@ -443,7 +443,7 @@
 	</code>
 	<code description="iDrive (Navigation) : Ajoute le menu Route express dans les préférences de guidage">
 		<group id="3000">
-			<function start="108" end="108" mask="00000100b" comment="NAVI_EXPRESS_ROADS (défaut : todo)">aktiv</function>
+			<function start="108" end="108" mask="00000100b" comment="NAVI_EXPRESS_ROADS (défaut : nicht_aktiv)">aktiv</function>
 		</group>
 	</code>
 	<code description="-- Don't work -- iDrive (Navigation) : Zoom automatique aux intersections">

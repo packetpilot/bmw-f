@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <FDL>
 	<!--Botho - Public Release (2017-04-06) -->
-<cafd id="00000911" name="ACSM" author="Botho (public)" series="F020">
+<cafd id="00000911" name="ACSM_4B" author="Botho (public)" series="F020">
 	<code description="Ceinture de sécurité : Durée du rappel à 10s (défaut : 100s)">
 		<group id="3001">
 			<function start="3" end="3" mask="11111111b" comment="GWF_SBR_WARNDAUER (défaut : 64)">0A</function>
@@ -9,7 +9,7 @@
 	</code>
 </cafd>
 
-<cafd id="00000794" name="FEM_BODY" author="Botho (public)" series="F020">
+<cafd id="00000794" name="FEM_01" author="Botho (public)" series="F020">
 	<code description="Vitres avant : actives lors de l'ouverture des portes avant">
 		<group id="3050">
 			<function start="0" end="0" mask="00000001b" comment="FH_TUERAUF_STOP_MAUT (défaut : aktiv)">nicht_aktiv</function>
@@ -25,37 +25,52 @@
 			<function start="8" end="8" mask="11111111b" comment="KOMFORT_OEFFNEN (défaut : 19)">14</function>
 		</group>
 	</code>
-	<code description="Xenon : Angel Eyes Brightness 50% Xenon On">
+	<code description="Accès confort : Fermeture du coffre avec le pied (FA Zeitkriterium=0315 for Smart Closing)">
+		<group id="3030">
+			<function start="5" end="5" mask="00000110b" comment="CAM_SMART_CLOSER (défaut : nicht_aktiv)">Aktiv</function>
+		</group>
+	</code>
+	<code description="Accès confort : Délais d'ouverture du coffre à 0,2s (défaut 0,7s)">
+		<group id="3040">
+			<function start="12" end="12" mask="11111111b" comment="CLM_TIMEOUT_HK_SMO (défaut : wert_03)">wert_02</function>
+		</group>
+	</code>
+	<code description="Angel Eyes (DRL) : Activation des feux de jour (Step 1 sur 3 - voir HU-NBT and REM)">
+		<group id="3060">
+			<function start="31" end="31" mask="00110000b" comment="TFL_MODUS (défaut : 02)">02</function>
+		</group>
+	</code>
+	<code description="Angel Eyes (DRL) : Luminosité des feux de jour à 50% lorsque les Xenons sont allumés">
 		<group id="3062">
 			<function start="46" end="46" mask="11111111b" comment="MAPPING_STANDL_V_L_PWM_LEVEL_STANDARD (défaut : 8)">32</function>
 			<function start="57" end="57" mask="11111111b" comment="MAPPING_STANDL_V_R_PWM_LEVEL_STANDARD (défaut : 8)">32</function>
 		</group>
 	</code>
-	<code description="Xenon : Angel Eyes Brightness 100% Xenon On">
+	<code description="Angel Eyes (DRL) : Luminosité des feux de jour à 100% lorsque les Xenons sont allumés">
 		<group id="3062">
 			<function start="46" end="46" mask="11111111b" comment="MAPPING_STANDL_V_L_PWM_LEVEL_STANDARD (défaut : 8)">64</function>
 			<function start="57" end="57" mask="11111111b" comment="MAPPING_STANDL_V_R_PWM_LEVEL_STANDARD (défaut : 8)">64</function>
 		</group>
 	</code>
-	<code description="Xenon : Angel Eyes Brightness 50% Parking Light On">
+	<code description="Angel Eyes (DRL) : Luminosité des feux de jour à 50% lorsque les feux de parking sont allumés">
 		<group id="3062">
 			<function start="68" end="68" mask="11111111b" comment="MAPPING_PARKL_V_L_PWM_1_LEFT (défaut : 8)">32</function>
 			<function start="69" end="69" mask="11111111b" comment="MAPPING_PARKL_V_L_PWM_2_RIGHT (défaut : 8)">32</function>
 		</group>
 	</code>
-	<code description="Xenon : Angel Eyes Brightness 100% Parking Light On">
+	<code description="Angel Eyes (DRL) : Luminosité des feux de jour à 100% lorsque les feux de parking sont allumés">
 		<group id="3062">
 			<function start="68" end="68" mask="11111111b" comment="MAPPING_PARKL_V_L_PWM_1_LEFT (défaut : 8)">64</function>
 			<function start="69" end="69" mask="11111111b" comment="MAPPING_PARKL_V_L_PWM_2_RIGHT (défaut : 8)">64</function>
 		</group>
 	</code>
-	<code description="Xenon : Angel Eyes Brightness 50% DRL On">
+	<code description="Angel Eyes (DRL) : Luminosité des feux de jour à 50% lorsque les feux de jour sont allumés">
 		<group id="3062">
 			<function start="90" end="90" mask="11111111b" comment="MAPPING_TAGFAHRL_V_L_PWM_LEVEL_1 (défaut : 64)">32</function>
 			<function start="101" end="101" mask="11111111b" comment="MAPPING_TAGFAHRL_V_R_PWM_LEVEL_1 (défaut : 64)">32</function>
 		</group>
 	</code>
-	<code description="Xenon : Angel Eyes Brightness 100% DRL On">
+	<code description="Angel Eyes (DRL) : Luminosité des feux de jour à 100% lorsque les feux de jour sont allumés">
 		<group id="3062">
 			<function start="90" end="90" mask="11111111b" comment="MAPPING_TAGFAHRL_V_L_PWM_LEVEL_1 (défaut : 64)">64</function>
 			<function start="101" end="101" mask="11111111b" comment="MAPPING_TAGFAHRL_V_R_PWM_LEVEL_1 (défaut : 64)">64</function>
@@ -100,12 +115,6 @@
 			<function start="2" end="2" mask="00011110b" comment="WW_ANZAHL_WASCHBET_ZUR_SRA (défaut : 0A)">05</function>
 		</group>
 	</code>
-	<code description="Welcome light : Activation des anti-brouillard">
-		<group id="3063">
-			<function start="55" end="55" mask="11000000b" comment="MAPPING_NEBELSCHW_L_PART_OF_WL (défaut : 00)">01</function>
-			<function start="66" end="66" mask="11000000b" comment="MAPPING_NEBELSCHW_R_PART_OF_WL (défaut : 00)">01</function>
-		</group>
-	</code>
 	<code description="Rétroviseurs : fermeture rétroviseurs autorisée en dessous de 49 km/h (défaut : 20 km/h)">
 		<group id="3110">
 			<function start="9" end="9" mask="11111111b" comment="ASP_GESCHWINDIGKEIT_AUTO_AUSKLAPPEN or ASP_MAX_GESCHWINDIGKEIT_BEIKLAPPEN (défaut : 14)">31</function>
@@ -116,12 +125,48 @@
 			<function start="7" end="7" mask="00000111b" comment="BLINKZYKLEN_ANZAHL_TIPP (défaut : 02)">04</function>
 		</group>
 	</code>
+	<code description="Feux anti-brouillard arrières : Activation (Step 2 sur 2 - voir REM_01)">
+		<group id="3060">
+			<function start="7" end="7" mask="00001000b" comment="NSL_Verbaut (défaut : 01)">01</function>
+		</group>
+	</code>
+	<code description="Feux anti-brouillard arrières : Désactivation (Step 2 sur 2 - voir REM_01)">
+		<group id="3060">
+			<function start="7" end="7" mask="00001000b" comment="NSL_Verbaut (défaut : 01)">00</function>
+		</group>
+	</code>
+	<code description="Feux anti-brouillard : permet aux phares anti-brouillard de rester allumés même en plein phares">
+		<group id="3060">
+			<function start="20" end="20" mask="00100000b" comment="NSW_AUS_BEI_FL (défaut : 00)">00</function>
+		</group>
+	</code>
+	<code description="Feux anti-brouillard : permet aux phares anti-brouillard de rester allumés avec les phares de parking">
+		<group id="3060">
+			<function start="29" end="29" mask="01000000b" comment="NSW_EIN_AUF_LDS_STL (défaut : 00 dans certains pays comme les USA)">01</function>
+		</group>
+	</code>
+	<code description="Eclairage d'accueil : activation de l'éclairage des portes lors de la marche arrière">
+		<group id="3070">
+			<function start="11" end="11" mask="00010000b" comment="OVT_BEI_RUECKFAHRLICHT (défaut : nicht_aktiv)">Aktiv</function>
+		</group>
+	</code>
+	<code description="Eclairage d'accueil: Activation des anti-brouillard">
+		<group id="3063">
+			<function start="55" end="55" mask="11000000b" comment="MAPPING_NEBELSCHW_L_PART_OF_WL (défaut : 00)">01</function>
+			<function start="66" end="66" mask="11000000b" comment="MAPPING_NEBELSCHW_R_PART_OF_WL (défaut : 00)">01</function>
+		</group>
+	</code>
+	<code description="Eclairage d'accueil : Luminosité des feux de jour à 50% (défaut 100%)">
+		<group id="3070">
+			<function start="14" end="14" mask="11111111b" comment="WL_HELLIGKEIT (défaut : 64)">32</function>
+		</group>
+	</code>
 	<code description="Eclairage d'accueil : durée 120s (défaut : 60s)">
 		<group id="3060">
 			<function start="15" end="15" mask="11111111b" comment="WL_TIMEOUT (défaut : 3C)">78</function>
 		</group>
 	</code>
-	<code description="Sensibilité du capteur éclairage automatique (moins sensible)">
+	<code description="Eclairage : Sensibilité du capteur éclairage automatique (moins sensible)">
 		<group id="3130">
 			<function start="5" end="5" mask="00000111b" comment="RLS_DEF_FLC_SCHWELLWERT_SATZ (défaut : 00)">03</function>
 		</group>
@@ -136,7 +181,7 @@
 			<function start="9" end="9" mask="00011111b" comment="IB_EINSCHALT_BEGR_ULOK (défaut : 14)">3C</function>
 		</group>
 	</code>
-	<code description="Lumière d'ambiance : durée 20s après vérouillage si portes déjà vérouillées (par défaut : 8s)">
+	<code description="Lumière d'ambiance : durée 20s après vérouillage des portes (par défaut : 8s)">
 		<group id="3070">
 			<function start="10" end="10" mask="00011111b" comment="IB_EINSCHALT_BEGR_LOK (défaut : 08)">14</function>
 		</group>
@@ -176,7 +221,7 @@
 			<function start="0" end="0" mask="00010000b" comment="TCM_MSA_DEFAULT_OFF (défaut : nicht_aktiv)">aktiv</function>
 		</group>
 	</code>
-	<code description="Auto Start/Stop : Dernière position Auto Start/Stop">
+	<code description="Auto Start/Stop : Mémorise la dernière position Auto Start/Stop">
 		<group id="3023">
 			<function start="0" end="0" mask="00100000b" comment="TCM_MSA_MEMORY (défaut : nicht_aktiv)">aktiv</function>
 		</group>
@@ -184,16 +229,6 @@
 	<code description="Double coup de Klaxon au vérouillage des portes moteur allumé">
 		<group id="3040">
 			<function start="1" end="1" mask="00100000b" comment="CLM_HORN_AT_SECURE (défaut : aktiv)">aktiv</function>
-		</group>
-	</code>
-	<code description="Accès confort : Fermeture du coffre avec le pied (FA Zeitkriterium=0315 for Smart Closing)">
-		<group id="3030">
-			<function start="5" end="5" mask="00000110b" comment="CAM_SMART_CLOSER (défaut : nicht_aktiv)">Aktiv</function>
-		</group>
-	</code>
-	<code description="Accès confort : Délais d'ouverture du coffre à 0,2s (défaut 0,7s)">
-		<group id="3040">
-			<function start="12" end="12" mask="11111111b" comment="CLM_TIMEOUT_HK_SMO (défaut : wert_03)">wert_02</function>
 		</group>
 	</code>
 	<code description="-- Don't work -- Fermeture des vitres à la fermeture des portes">
@@ -208,7 +243,7 @@
 	</code>
 </cafd>
 
-<cafd id="00000A07" name="FZD" author="Botho (public)" series="F020">
+<cafd id="00000A07" name="FZD__07" author="Botho (public)" series="F020">
 	<code description="Activation Panic Alarme">
 		<group id="3002">
 			<function start="0" end="0" mask="00000100b" comment="Panikalarm (défaut : nicht_aktiv)">Aktiv</function>
@@ -249,7 +284,7 @@
 	</code>
 </cafd>
 
-<cafd id="000016EE" name="IHKA" author="Botho (public)" series="F020">
+<cafd id="000016EE" name="IHKA_VA02" author="Botho (public)" series="F020">
 	<code description="Climatisation : Mémorise la dernière position (on/off)">
 		<group id="3003">
 			<function start="0" end="0" mask="00000010b" comment="MEMORY_OFF (défaut : aktiv)">Aktiv</function>
@@ -268,7 +303,7 @@
 </cafd>
 
 <cafd id="00001148" name="KAFAS2" author="Botho (public)" series="F020">
-	<code description="HUD : Affichage de l'assistant distance Step 3 (Step 1 dans KOMBI, Step 2 dans HU_NBT)">
+	<code description="HUD : Affichage de l'assistant distance (Step 3 sur 3 - voir KOMBI et HU_NBT)">
 		<group id="3060">
 			<function start="1" end="1" mask="00011000b" comment="DISPLAY_HEADWAY_DISTANCE (défaut : 00)">01</function>
 			<function start="1" end="1" mask="00000010b" comment="SEND_STATUS_IBRAKE (défaut : 00)">01</function>
@@ -346,7 +381,7 @@
 			<function start="57" end="57" mask="00000111b" comment="VIDEO_SPEEDLOCK_CONDITION (défaut : 00)">00</function>
 		</group>
 	</code>
-	<code description="iDrive (HUD) : Affichage de l'assistant distance Step 2 (Step 1 dans KOMBI, Step 3 dans KAFAS2)">
+	<code description="iDrive (HUD) : Affichage de l'assistant distance (Step 2 sur 3 - voir KOMBI et KAFAS2)">
 		<group id="3000">
 			<function start="97" end="97" mask="00001000b" comment="HUD_DISTANCE_INFO (défaut : nicht_aktiv)">Aktiv</function>
 		</group>
@@ -362,7 +397,7 @@
 			<function start="18" end="18" mask="00000100b" comment="HUD_SPORTANZEIGE_MS_GASSE_ENABLE (défaut : nicht_aktiv)">Aktiv</function>
 		</group>
 	</code>
-	<code description="-- Don't work -- iDrive (HUD) : Affichage clignotants Step 1 (Step 2 dans KOMBI)">
+	<code description="-- Don't work -- iDrive (HUD) : Affichage clignotants (Step 1 sur 2 - voir KOMBI)">
 		<group id="3001">
 			<function start="55" end="55" mask="10000000b" comment="HUD_TURNSIGNAL (défaut : nicht_aktiv)">Aktiv</function>
 		</group>
@@ -372,7 +407,7 @@
 			<function start="110" end="110" mask="00000001b" comment="ACOUSTICAL_LOCK_CONFIRM (défaut : nicht_aktiv)">Aktiv</function>
 		</group>
 	</code>
-	<code description="iDrive (Eclairage) : Ajout feux de jour">
+	<code description="iDrive (Eclairage) : Ajout feux de jour (Step 2 sur 3 - voir FEM_BODY et REM)">
 		<group id="3000">
 			<function start="92" end="92" mask="00011000b" comment="DAYDRIVING_LIGHT (défaut : 01)">02</function>
 		</group>
@@ -514,7 +549,7 @@
 	</code>
 </cafd>
 
-<cafd id="000009C8" name="KOMBI" author="Botho (public)" series="F020">
+<cafd id="000009C8" name="KOMBI L7_MID" author="Botho (public)" series="F020">
 	<code description="Tableau de bord : Affichage de la vitesse digitale">
 		<group id="3000">
 			<function start="1" end="1" mask="00000010b" comment="BC_DIGITAL_V (défaut : nicht_aktiv)">Aktiv</function>
@@ -555,7 +590,7 @@
 			<function start="20" end="20" mask="11111111b" comment="HUD_STARTUP_TIME (défaut : 32)">78</function>
 		</group>
 	</code>
-	<code description="HUD : Affichage de l'assistant distance Step 1 (Step 2 dans HU_NBT, Step 3 dans KAFAS2)">
+	<code description="HUD : Affichage de l'assistant distance (Step 1 sur 3 - voir KAFAS2 et HU_NBT)">
 		<group id="3000">
 			<function start="1" end="1" mask="00000001b" comment="IBRAKE_ABSTAND_ENABLE (défaut : nicht_aktiv)">Aktiv</function>
 		</group>
@@ -567,7 +602,7 @@
 			<function start="6" end="6" mask="00100000b" comment="HUD_PIA_IBRAKE (défaut : nicht_aktiv)">Aktiv</function>
 		</group>
 	</code>
-	<code description="-- Don't work -- HUD : Affichage clignotants Step 1 (Step 2 dans HU_NBT)">
+	<code description="-- Don't work -- HUD : Affichage clignotants (Step 1 sur 2 - voir HU_NBT)">
 		<group id="3003">
 			<function start="4" end="4" mask="00000001b" comment="HUD_BLINKER_ENABLE (défaut : nicht_aktiv)">Aktiv</function>
 		</group>
@@ -577,15 +612,39 @@
 	</code>
 </cafd>
 
-<cafd id="000007A1" name="REM" author="Botho (public)" series="F020">
+<cafd id="000007A1" name="REM_01" author="Botho (public)" series="F020">
 	<code description="Vitres arrières : Activation à l'ouverture des portières arrières">
 		<group id="3050">
 			<function start="0" end="0" mask="00000001b" comment="FH_TUERAUF_STOP_MAUT (défaut : aktiv)">nicht_aktiv</function>
 		</group>
 	</code>
+	<code description="Angel Eyes (DRL) : Activation  feux de jour sur le hayon arrière (Step 3 sur 3 - voir HU-NBT et FEM_BODY)">
+		<group id="3062">
+			<function start="220" end="220" mask="00111111b" comment="MAPPING_TAGFAHRL_H2_L_OUTPUT LED hayon intérieur gauche (défaut : 00)">16</function>
+			<function start="230" end="230" mask="00111111b" comment="MAPPING_TAGFAHRL_H2_R_OUTPUT LED hayon intérieur droit (défaut : 00)">17</function>
+			<function start="200" end="200" mask="00111111b" comment="MAPPING_TAGFAHRL_H_L_OUTPUT LED hayon exterieur gauche (défaut : 00)">14</function>
+			<function start="210" end="210" mask="00111111b" comment="MAPPING_TAGFAHRL_H_R_OUTPUT LED hayon exterieur droit (défaut : 00)">15</function>
+		</group>
+	</code>
+	<code description="Feux anti-brouillard arrières : Activation (Step 1 sur 2 - voir FEM_BODY)">
+		<group id="3063">
+			<function start="40" end="40" mask="00111111b" comment="Mapping_Nebelschlussl_L_output lampe hayon gauche (défaut : 1C)">1C</function>
+			<function start="41" end="41" mask="00011111b" comment="Mapping_Nebelschlussl_L_Function lampe hayon gauche (défaut : 0E)">0E</function>
+			<function start="50" end="50" mask="00111111b" comment="Mapping_Nebelschlussl_R_output lampe hayon droit (défaut : 1D)">1D</function>
+			<function start="51" end="51" mask="00011111b" comment="Mapping_Nebelschlussl_R_Function lampe hayon droit (défaut : 0E)">0E</function>
+		</group>
+	</code>
+	<code description="Feux anti-brouillard arrières : Désactivation (Step 1 sur 2 - voir FEM_BODY)">
+		<group id="3063">
+			<function start="40" end="40" mask="00111111b" comment="Mapping_Nebelschlussl_L_output lampe hayon gauche (défaut : 1C)">00</function>
+			<function start="41" end="41" mask="00011111b" comment="Mapping_Nebelschlussl_L_Function lampe hayon gauche (défaut : 0E)">0E</function>
+			<function start="50" end="50" mask="00111111b" comment="Mapping_Nebelschlussl_R_output lampe hayon droit (défaut : 1D)">00</function>
+			<function start="51" end="51" mask="00011111b" comment="Mapping_Nebelschlussl_R_Function lampe hayon droit (défaut : 0E)">0E</function>
+		</group>
+	</code>
 </cafd>
 
-<cafd id="000000B5" name="SM2" author="Botho (public)" series="F020">
+<cafd id="000000B5" name="CFAS_PLX_1" author="Botho (public)" series="F020">
 	<code description="Sièges électriques : Gong sonore lors de la mémorisation">
 		<group id="3000">
 			<function start="2" end="2" mask="00001000b" comment="MEMORY_GONG (défaut : nicht_aktiv production date avant 0714)">Aktiv</function>

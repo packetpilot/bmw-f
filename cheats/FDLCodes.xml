@@ -193,12 +193,7 @@
 			</group>
 		</code>
 
-		<code description="Video Support">
-			<group id="3000">
-				<function start="13" end="13" mask="00000100b">01</function>
-			</group>
-		</code>
-
+		
 		<code description="Enable Import of Customer Playlists Through the Optical Drive">
 			<group id="3000">
 				<function start="13" end="13" mask="00001000b">01</function>
@@ -226,24 +221,6 @@
 		<code description="Gracenote via USB Enable">
 			<group id="3000">
 				<function start="15" end="15" mask="00000010b">01</function>
-			</group>
-		</code>
-
-		<code description="Video Codec OGG">
-			<group id="3000">
-				<function start="15" end="15" mask="00010000b">01</function>
-			</group>
-		</code>
-
-		<code description="Video Codec XVID">
-			<group id="3000">
-				<function start="15" end="15" mask="00100000b">01</function>
-			</group>
-		</code>
-
-		<code description="Video Codec VCD">
-			<group id="3000">
-				<function start="15" end="15" mask="01000000b">01</function>
 			</group>
 		</code>
 

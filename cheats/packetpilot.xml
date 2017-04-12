@@ -220,25 +220,25 @@
   </cafd>
 
   <cafd id="000010BA" name="LHM2" author="packetpilot" series="F020,F030">
-    <code description="Front Fog-Like VLD noNGHB: Enable Step 2a [dep: step 1 in FEM_Body, no NGHB, LED pkg]">
+    <code description="Front Fog-Like VLD noGFHB: Enable Step 2a [dep: step 1 in FEM_Body, no GFHB, LED pkg]">
       <group id="3000">
         <function start="0" end="6" mask="11111111b">FA, FA, 00, FA, C8, C8, 00</function>
         <function start="7" end="13" mask="11111111b">FA, FA, 00, FA, C8, C8, 00</function>
       </group>
     </code>
-    <code description="Front Fog-Like VLD noNGHB: Disable Step 2a [reco: revert Step 1 in FEM_Body, req: no NGHB]">
+    <code description="Front Fog-Like VLD noGFHB: Disable Step 2a [reco: revert Step 1 in FEM_Body, req: no GFHB]">
       <group id="3000">
         <function start="0" end="6" mask="11111111b">FA, FA, 00, 00, C8, C8, 00</function>
         <function start="7" end="13" mask="11111111b">FA, FA, 00, 00, C8, C8, 00</function>
       </group>
     </code>
-    <code description="Front Fog-Like VLD w/ NGHB: Enable Step 2a [dep: step 1 in FEM_Body, NGHB, LED pkg]">
+    <code description="Front Fog-Like VLD w/ GFHB: Enable Step 2a [dep: step 1 in FEM_Body, GFHB, LED pkg]">
       <group id="3000">
         <function start="0" end="6" mask="11111111b">FA, 64, 00, FA, FA, FA, 00</function>
         <function start="7" end="13" mask="11111111b">FA, 64, 00, FA, FA, FA, 00</function>
       </group>
     </code>
-    <code description="Front Fog-Like VLD w/ NGHB: Disable Step 2a [reco: revert Step 1 in FEM_Body, req: NGHB ]">
+    <code description="Front Fog-Like VLD w/ GFHB: Disable Step 2a [reco: revert Step 1 in FEM_Body, req: GFHB ]">
       <group id="3000">
         <function start="0" end="6" mask="11111111b">FA, 64, 00, 00, FA, FA, 00</function>
         <function start="7" end="13" mask="11111111b">FA, 64, 00, 00, FA, FA, 00</function>
@@ -247,16 +247,28 @@
   </cafd>
 
   <cafd id="000016BF" name="LHM2" author="packetpilot" series="F020,F030">
-    <code description="Front Fog-Like VLD: Enable Step 2b [dep: step 1 in FEM_Body]">
+    <code description="Front Fog-Like VLD noGFHB: Enable Step 2b [dep: step 1 in FEM_Body]">
       <group id="3000">
         <function start="0" end="6" mask="11111111b">FA, FA, 00, FA, C8, C8, 00</function>
         <function start="7" end="13" mask="11111111b">FA, FA, 00, FA, C8, C8, 00</function>
       </group>
     </code>
-    <code description="Front Fog-Like VLD: Disable Step 2b [reco: revert Step 1 in FEM_Body]">
+    <code description="Front Fog-Like VLD noGFHB: Disable Step 2b [reco: revert Step 1 in FEM_Body]">
       <group id="3000">
         <function start="0" end="6" mask="11111111b">FA, FA, 00, 00, C8, C8, 00</function>
         <function start="7" end="13" mask="11111111b">FA, FA, 00, 00, C8, C8, 00</function>
+      </group>
+    </code>
+    <code description="Front Fog-Like VLD w/ GFHB: Enable Step 2b [dep: step 1 in FEM_Body, GFHB, LED pkg]">
+      <group id="3000">
+        <function start="0" end="6" mask="11111111b">FA, 64, 00, FA, FA, FA, 00</function>
+        <function start="7" end="13" mask="11111111b">FA, 64, 00, FA, FA, FA, 00</function>
+      </group>
+    </code>
+    <code description="Front Fog-Like VLD w/ GFHB: Disable Step 2b [reco: revert Step 1 in FEM_Body, req: GFHB ]">
+      <group id="3000">
+        <function start="0" end="6" mask="11111111b">FA, 64, 00, 00, FA, FA, 00</function>
+        <function start="7" end="13" mask="11111111b">FA, 64, 00, 00, FA, FA, 00</function>
       </group>
     </code>
   </cafd>

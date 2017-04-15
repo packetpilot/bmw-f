@@ -925,7 +925,7 @@
 			</group>
 		</code>
 	</cafd>
-<cafd id="000009C8" name="KOMBI L7_MID" author="Almaretto">
+<cafd id="000009C8" name="KOMBI L7_MID" author="Almaretto" series="F020,F030">
 	<code description="Trip Computer Auto Reset (Never)">
 			<group id="3000">
 				<function start="44" end="44" comment="BC_AUTORESET_ZEIT" mask="11111111b">FF</function>
@@ -1914,7 +1914,7 @@
 		</code>
 	</cafd>
 <cafd id="00000794" name="FEM_BODY" author="Almaretto" series="F030,F080">
-		<code description="F3x and F8x NGHB. Step 3 of 3. See LHM43/44.">
+	<code description="F3x and F8x NGHB. Step 3 of 3. See LHM43/44.">
 			<group id="3073">
 				<function start="176" end="184" comment="NGHB PDF Step 3" mask="11111111b">00, 00, 00, 15, 00, 00, 0A, 15, 1F</function>
 			</group>
@@ -1928,57 +1928,57 @@
 				<function start="63" end="63" comment="P3.59 improvement" mask="11111111b">E1</function>
 			</group>
 		</code>
-		<code description="ENABLE Unlock doors when STOP engine – if auto-locked">
+	<code description="ENABLE Unlock doors when STOP engine – if auto-locked">
 			<group id="3040">
 				<function start="1" end="1" comment="CLM_UNLOCK_KL15OFF_AFTER_PIA_AUTO_LOCK" mask="00000010b">aktiv</function>
 			</group>
 		</code>
-		<code description="Allow front windows roll up while doors opened. REM for Rear">
+	<code description="DISABLE FRONT Window Safety (Continued movement when doors opened). REM for Rear">
 			<group id="3050">
 				<function start="0" end="0" comment="FH_TUERAUF_STOP_MAUT" mask="00000001b">nicht_aktiv</function>
 			</group>
 		</code>
-		<code description="ENABLE Rear Tail-light with DRL (8TL). Part 1 of 2. See REM">
+	<code description="ENABLE Rear Tail-light with DRL (8TL). Part 1 of 2. See REM">
 			<group id="3060">
 				<function start="31" end="31" mask="00110000b">TFL_S</function>
 			</group>
 		</code>
-		<code description="Reduce Automatic Headlamp Sensitivity">
+	<code description="Reduce Automatic Headlamp Sensitivity">
 			<group id="3130">
 				<function start="5" end="5" mask="00000111b">unempfindlich</function>
 			</group>
 		</code>
-		<code description="Increase Soft Triple Blinker to Five (5)">
+	<code description="Increase Soft Triple Blinker to Five (5) (EXCLUDES P3.61.x)">
 			<group id="3060">
 				<function start="7" end="7" mask="00000111b">04</function>
 			</group>
 		</code>
-		<code description="ENABLE EU Brake Light Behavior (Blink)">
+	<code description="ENABLE EU Brake Light Behavior (Blink)">
 			<group id="3060">
 				<function start="16" end="16" mask="00000011b">bremslicht_blinkend</function>
 			</group>
 		</code>
-		<code description="ENABLE Door Handle LED Lights while in reverse">
+	<code description="ENABLE Door Handle LED Lights while in reverse">
 			<group id="3070">
 				<function start="11" end="11" mask="00010000b">aktiv</function>
 			</group>
 		</code>
-		<code description="ENABLE Fog Lights with High Beams">
+	<code description="ENABLE Fog Lights with High Beams">
 			<group id="3060">
 				<function start="20" end="20" mask="00100000b">nicht_aktiv</function>
 			</group>
 		</code>
-		<code description="ENABLE Fog Lights with Parking Lights">
+	<code description="ENABLE Fog Lights with Parking Lights">
 			<group id="3060">
 				<function start="29" end="29" mask="01000000b">aktiv</function>
 			</group>
 		</code>
-		<code description="Separates Ambient Light Level and Instrument Cluster Light Level">
+	<code description="Separates Ambient Light Level and Instrument Cluster Light Level">
 			<group id="3070">
 				<function start="4" end="4" mask="10000000b">aktiv</function>
 			</group>
 		</code>
-		<code description="Open Windows/ Fold Mirrors with Keyfob or CA (Newer I-Step)">
+	<code description="Open Windows/ Fold Mirrors with Keyfob or CA (Newer I-Step)">
 			<group id="3110">
 				<function start="8" end="8" comment="ASP_AUSKLAPPEN_NACH_KOMFORTSCHLIESSEN" mask="00000001b">aktiv</function>
 				<function start="1" end="1" comment="ASP_BEIKLAPPEN_BEI_KOMFORTSCHLIESSEN" mask="00000001b">aktiv</function>
@@ -1991,7 +1991,7 @@
 				<function start="1" end="1" comment="KOMFORTSCHLIESSUNG_PA" mask="00000100b">aktiv</function>
 			</group>
 		</code>
-		<code description="Open Windows/ Fold Mirrors with Keyfob or CA (Older I-Step)">
+	<code description="Open Windows/ Fold Mirrors with Keyfob or CA (Older I-Step)">
 			<group id="3110">
 				<function start="7" end="7" comment="ASP_AUSKLAPPEN_NACH_KOMFORTSCHLIESSEN" mask="00000001b">aktiv</function>
 				<function start="0" end="0" comment="ASP_BEIKLAPPEN_BEI_KOMFORTSCHLIESSEN" mask="10000000b">aktiv</function>
@@ -2004,30 +2004,45 @@
 				<function start="1" end="1" comment="KOMFORTSCHLIESSUNG_PA" mask="00000100b">aktiv</function>
 			</group>
 		</code>
-		<code description="Remove open/ close window and mirror initiation delay">
+	<code description="Remove open/ close window and mirror initiation delay">
 			<group id="3053">
 				<function start="9" end="9" comment="KOMFORT_SCHLIESSEN" mask="11111111b">00</function>
 			</group>
 		</code>
-		<code description="Removes Trunk Opening Delay - 0 seconds (Older I-Step)">
+	<code description="Removes Trunk Opening Delay - 0 seconds (Older I-Step)">
 			<group id="3040">
 				<function start="10" end="10" comment="CLM_TIMEOUT_HK_SMO" mask="11111111b">00</function>
 			</group>
 		</code>
-		<code description="Removes Trunk Opening Delay - 0 seconds (Newer I-Step)">
+	<code description="Removes Trunk Opening Delay - 0 seconds (Newer I-Step)">
 			<group id="3040">
 				<function start="4" end="4" comment="CLM_TIME_DELAY_BOOTLID" mask="11111111b">00</function>
 			</group>
 		</code>
-		<code description="Turn off taillight flashing when opening trunk via Comfort Access">
+	<code description="Turn off taillight flashing when opening trunk via Comfort Access">
 			<group id="3040">
 				<function start="2" end="2" comment="CLM_SMO_INDICATOR" mask="00000100b">nicht_aktiv</function>
 			</group>
 		</code>
-		<code description="Turn On LED Fog Lights with Welcome Lights">
+	<code description="Turn On LED Fog Lights with Welcome Lights">
 			<group id="3063">
 				<function start="55" end="55" comment="MAPPING_NEBELSCHW_L_PART_OF_WL" mask="11000000b">01</function>
 				<function start="66" end="66" comment="MAPPING_NEBELSCHW_R_PART_OF_WL" mask="11000000b">01</function>
+			</group>
+		</code>
+	<code description="ENABLE Increased Passenger Mirror Tilt (Curb View) in Reverse (OLD FIRMWARE)">
+			<group id="3110">
+				<function start="1" end="1" comment="ASP_BORDSTEINAUTOMATIK_DELTA" mask="11111111b">5A</function>
+			</group>
+		</code>
+	<code description="ENABLE Increased Passenger Mirror Tilt (Curb View) in Reverse (P3.61.2)">
+			<group id="3110">
+				<function start="2" end="2" comment="ASP_BORDSTEINAUTOMATIK_DELTA" mask="11111111b">5A</function>
+			</group>
+		</code>	
+	<code description="ENABLE Smart Trunk Closing (Requires 322, 316, and 11-14 Prod Date">
+			<group id="3030">
+				<function start="5" end="5" comment="CAM_SMART_CLOSER" mask="00000110b">01</function>
 			</group>
 		</code>
 	</cafd>

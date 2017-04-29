@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <FDL>
 	<!--Botho - Public Release (2017-04-10) -->
-<cafd id="00000911" name="ACSM_4B" author="Botho (public)" series="F020">
+<cafd id="00000911" name="ACSM_4B" author="Botho (public)" series="F020,F030">
 	<code description="Ceinture de sécurité : Durée du rappel à 10s (défaut : 100s)">
 		<group id="3001">
 			<function start="3" end="3" mask="11111111b" comment="GWF_SBR_WARNDAUER (défaut : 64)">0A</function>
@@ -9,7 +9,7 @@
 	</code>
 </cafd>
 
-<cafd id="0000023F" name="GKEB23" author="Botho (public)" series="F020">
+<cafd id="0000023F" name="GKEB23" author="Botho (public)" series="F020,F030">
 	<code description="Activation Launch Control (défaut : aktiv)">
 		<group id="3000">
 			<function start="1" end="1" mask="10000000b" comment="LC (défaut : aktiv)">01</function>
@@ -17,7 +17,7 @@
 	</code>
 </cafd>
 
-<cafd id="00000794" name="FEM_01" author="Botho (public)" series="F020">
+<cafd id="00000794" name="FEM_01" author="Botho (public)" series="F020,F030">
 	<code description="Vitres avant : actives lors de l'ouverture des portes avant">
 		<group id="3050">
 			<function start="0" end="0" mask="00000001b" comment="FH_TUERAUF_STOP_MAUT (défaut : aktiv)">nicht_aktiv</function>
@@ -48,7 +48,7 @@
 			<function start="8" end="8" mask="11111111b" comment="KOMFORT_OEFFNEN (défaut : 19)">14</function>
 		</group>
 	</code>
-	<code description="Accès confort : Fermeture du coffre avec le pied (FA Zeitkriterium=0315 for Smart Closing)">
+	<code description="Accès confort : Fermeture du coffre avec le pied (nécessite 322, 316 et VO coding avec production date 11-14)">
 		<group id="3030">
 			<function start="5" end="5" mask="00000110b" comment="CAM_SMART_CLOSER (défaut : nicht_aktiv)">Aktiv</function>
 		</group>
@@ -58,6 +58,11 @@
 			<function start="12" end="12" mask="11111111b" comment="CLM_TIMEOUT_HK_SMO (défaut : wert_03)">wert_02</function>
 		</group>
 	</code>
+	<code description="Dévérouillage des portes à l'arrêt du moteur (uniquement si le vérouillage automatique activé)">
+  		<group id="3040">
+  			<function start="1" end="1" comment="CLM_UNLOCK_KL15OFF_AFTER_PIA_AUTO_LOCK (défaut aktiv)" mask="00000010b">aktiv</function>
+  		</group>
+  	</code>	
 	<code description="Angel Eyes (DRL) : Activation des feux de jour (Step 1 sur 3 - voir HU-NBT and REM)">
 		<group id="3060">
 			<function start="31" end="31" mask="00110000b" comment="TFL_MODUS (défaut : 02)">02</function>
@@ -146,6 +151,16 @@
 	<code description="Rétroviseurs : ouverture automatique à partir de 20 km/h (défaut : 40 km/h)">
 		<group id="3110">
 			<function start="10" end="10" mask="11111111b" comment="ASP_GESCHWINDIGKEIT_AUTO_AUSKLAPPEN (défaut : 28)">14</function>
+		</group>
+	</code>
+	<code description="Rétroviseurs passager : Augmente le débattement lors de la marche arrière à 85 digits (défaut : 59 digits - I-Step under F020_17-03-502)">
+		<group id="3110">
+			<function start="1" end="1" mask="11111111b" comment="ASP_BORDSTEINAUTOMATIK_DELTA (défaut : 3B)">55</function>
+		</group>
+	</code>
+	<code description="Rétroviseurs passager : Augmente le débattement lors de la marche arrière à 85 digits (défaut : 59 digits - I-Step above F020_17-03-502)">
+		<group id="3110">
+			<function start="2" end="2" mask="11111111b" comment="ASP_BORDSTEINAUTOMATIK_DELTA (défaut : 3B)">55</function>
 		</group>
 	</code>
 	<code description="Clignotants : nb de clignotements à 5 (défaut : 3 - I-Step under F020_17-03-502)">
@@ -271,7 +286,7 @@
 	</code>
 </cafd>
 
-<cafd id="00000A07" name="FZD__07" author="Botho (public)" series="F020">
+<cafd id="00000A07" name="FZD__07" author="Botho (public)" series="F020,F030">
 	<code description="Activation Panic Alarme">
 		<group id="3002">
 			<function start="0" end="0" mask="00000100b" comment="Panikalarm (défaut : nicht_aktiv)">Aktiv</function>
@@ -293,7 +308,7 @@
 	</code>
 </cafd>
 
-<cafd id="0000067B" name="ICMQL" author="Botho (public)" series="F020">
+<cafd id="0000067B" name="ICMQL" author="Botho (public)" series="F020,F030">
 	<code description="Active Cruise Control : Distance minimum par défaut à 1">
 		<group id="3000">
 			<function start="184" end="184" mask="00000111b" comment="C_Abstandsstufe_init (défaut : 03)">01</function>
@@ -332,7 +347,7 @@
 	</code>
 </cafd>
 
-<cafd id="000016EE" name="IHKA_VA02" author="Botho (public)" series="F020">
+<cafd id="000016EE" name="IHKA_VA02" author="Botho (public)" series="F020,F030">
 	<code description="Climatisation : Mémorise la dernière position (on/off)">
 		<group id="3003">
 			<function start="0" end="0" mask="00000010b" comment="MEMORY_OFF (défaut : aktiv)">Aktiv</function>
@@ -350,7 +365,7 @@
 	</code>
 </cafd>
 
-<cafd id="00001148" name="KAFAS2" author="Botho (public)" series="F020">
+<cafd id="00001148" name="KAFAS2" author="Botho (public)" series="F020,F030">
 	<code description="HUD : Affichage de l'assistant distance (Step 3 sur 3 - voir KOMBI et HU_NBT)">
 		<group id="3060">
 			<function start="1" end="1" mask="00011000b" comment="DISPLAY_HEADWAY_DISTANCE (défaut : 00)">01</function>
@@ -366,7 +381,7 @@
 	</code>		
 </cafd>
 
-<cafd id="000007C8" name="HKFM" author="Botho (public)" series="F020">
+<cafd id="000007C8" name="HKFM" author="Botho (public)" series="F020,F030">
 	<code description="Hayon : Activation fermeture via bouton au tableau de bord (FA Zeitkriterium=0315 for Smart Closing)">
 		<group id="3010">
 			<function start="2" end="2" mask="00001000b" comment="SCH_FBD (défaut : aktiv)">Aktiv</function>
@@ -396,7 +411,7 @@
 	</code>
 </cafd>
 
-<cafd id="00000DED" name="HU_NBT" author="Botho (public)" series="F020">
+<cafd id="00000DED" name="HU_NBT" author="Botho (public)" series="F020,F030">
 	<code description="iDrive (Media) : volume au démarrage à 30% (défaut 25%)">
 		<group id="3002">
 			<function start="3" end="3" mask="11111111b" comment="VOL_MAX_ON (défaut : 19)">1E</function>
@@ -682,7 +697,7 @@
 	</code>
 </cafd>
 
-<cafd id="000009C8" name="KOMBI L7_MID" author="Botho (public)" series="F020">
+<cafd id="000009C8" name="KOMBI L7_MID" author="Botho (public)" series="F020,F030">
 	<code description="Tableau de bord : Affichage de la vitesse digitale">
 		<group id="3000">
 			<function start="1" end="1" mask="00000010b" comment="BC_DIGITAL_V (défaut : nicht_aktiv)">Aktiv</function>
@@ -745,7 +760,7 @@
 	</code>
 </cafd>
 
-<cafd id="000007A1" name="REM_01" author="Botho (public)" series="F020">
+<cafd id="000007A1" name="REM_01" author="Botho (public)" series="F020,F030">
 	<code description="Vitres arrières : Activation à l'ouverture des portières arrières">
 		<group id="3050">
 			<function start="0" end="0" mask="00000001b" comment="FH_TUERAUF_STOP_MAUT (défaut : aktiv)">nicht_aktiv</function>
@@ -777,7 +792,7 @@
 	</code>
 </cafd>
 
-<cafd id="000000B5" name="CFAS_PLX_1" author="Botho (public)" series="F020">
+<cafd id="000000B5" name="CFAS_PLX_1" author="Botho (public)" series="F020,F030">
 	<code description="Sièges électriques : Gong sonore lors de la mémorisation">
 		<group id="3000">
 			<function start="2" end="2" mask="00001000b" comment="MEMORY_GONG (défaut : nicht_aktiv production date avant 0714)">Aktiv</function>
@@ -800,7 +815,7 @@
 	</code>
 </cafd>
 
-<cafd id="00000223" name="TRSVC" author="Botho (public)" series="F020">
+<cafd id="00000223" name="TRSVC" author="Botho (public)" series="F020,F030">
 	<code description="Caméras latérales : Activation sans limite de vitesse">
 		<group id="3000">
 			<function start="114" end="114" mask="11111111b" comment="SV_Activate_Speed_Limit (défaut : 0F)">FF</function>

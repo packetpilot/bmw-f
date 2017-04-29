@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <FDL>
-	<!--Botho - Public Release (2017-04-10) -->
+	<!--Botho - Public Release (2017-04-29) -->
 <cafd id="00000911" name="ACSM_4B" author="Botho (public)" series="F020,F030">
 	<code description="Ceinture de sécurité : Durée du rappel à 10s (défaut : 100s)">
 		<group id="3001">

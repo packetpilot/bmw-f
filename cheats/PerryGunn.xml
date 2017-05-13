@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FDL> 
+
+  <!--PerryGunn-->
+  <cafd id="0000000F" name="CAS_04" author="PerryGunn" series="F025">
+    <code description="Unlock/open the tailgate from fob only if the vehicle is unlocked">
+      <group id="3002">
+        <function start="9" end="9" comment="HK_GESPERRT_IN_GESICHERT" mask="00010000b">aktiv</function>
+      </group>
+    </code>
+    <code description="Unlock/open the tailgate from fob if the vehicle is locked or unlocked">
+      <group id="3002">
+        <function start="9" end="9" comment="HK_GESPERRT_IN_GESICHERT" mask="00010000b">nicht_aktiv</function>
+      </group>
+    </code>
+  </cafd>
+
+</FDL>

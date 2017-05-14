@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <FDL>
-	<!--Botho - Public Release (2017-04-29) -->
+	<!--Botho - Public Release (2017-05-14) -->
 <cafd id="00000911" name="ACSM_4B" author="Botho (public)" series="F020,F030">
 	<code description="Ceinture de sécurité : Durée du rappel à 10s (défaut : 100s)">
 		<group id="3001">
@@ -9,33 +9,10 @@
 	</code>
 </cafd>
 
-<cafd id="0000023F" name="GKEB23" author="Botho (public)" series="F020,F030">
-	<code description="Activation Launch Control (défaut : aktiv)">
-		<group id="3000">
-			<function start="1" end="1" mask="10000000b" comment="LC (défaut : aktiv)">01</function>
-		</group>
-	</code>
-</cafd>
-
-<cafd id="00000794" name="FEM_01" author="Botho (public)" series="F020,F030">
+<cafd id="00000794" name="FEM_01" author="Botho (public)" series="F020">
 	<code description="Vitres avant : actives lors de l'ouverture des portes avant">
 		<group id="3050">
 			<function start="0" end="0" mask="00000001b" comment="FH_TUERAUF_STOP_MAUT (défaut : aktiv)">nicht_aktiv</function>
-		</group>
-	</code>
-	<code description="Accès confort : Délai de fermeture automatique à 30s sans action sur les portes (défaut : 120s)">
-		<group id="3040">
-			<function start="7" end="7" mask="11111111b" comment="CLM_TIME_PIA_LOCK_AT_TIMEOUT (défaut : 0C)">03</function>
-		</group>
-	</code>
-	<code description="Accès confort : Activation Panic Alarm et tempo télécommande 500ms (short=welcome - MID=coffre - LONG=panic)">
-		<group id="30D0">
-			<function start="2" end="2" mask="00000100b" comment="RC_PANIC_ALARM (défaut : nicht_aktiv)">Aktiv</function>
-			<function start="3" end="3" mask="00001111b" comment="RC_DEFAULT_IDG_3RD_BUTTON_SHORT (défaut : 00)">04</function>
-			<function start="3" end="3" mask="11110000b" comment="RC_DEFAULT_IDG_3RD_BUTTON_MID (défaut : 02)">02</function>
-			<function start="4" end="4" mask="00001111b" comment="RC_DEFAULT_IDG_3RD_BUTTON_LONG (défaut : 02)">03</function>
-			<function start="8" end="8" mask="11111111b" comment="RC_TIME_DELAY_BOOTLID (défaut : 05)">14</function>
-			<function start="9" end="9" mask="11111111b" comment="RC_TIME_DELAY_PANIC (défaut : 14)">28</function>
 		</group>
 	</code>
 	<code description="Accès confort : Activation accès confort à la fermeture après 0,5s (défaut : 1,5s)">
@@ -48,7 +25,7 @@
 			<function start="8" end="8" mask="11111111b" comment="KOMFORT_OEFFNEN (défaut : 19)">14</function>
 		</group>
 	</code>
-	<code description="Accès confort : Fermeture du coffre avec le pied (nécessite 322, 316 et VO coding avec production date 11-14)">
+	<code description="Accès confort : Fermeture du coffre avec le pied (FA Zeitkriterium=0315 for Smart Closing)">
 		<group id="3030">
 			<function start="5" end="5" mask="00000110b" comment="CAM_SMART_CLOSER (défaut : nicht_aktiv)">Aktiv</function>
 		</group>
@@ -58,11 +35,6 @@
 			<function start="12" end="12" mask="11111111b" comment="CLM_TIMEOUT_HK_SMO (défaut : wert_03)">wert_02</function>
 		</group>
 	</code>
-	<code description="Dévérouillage des portes à l'arrêt du moteur (uniquement si le vérouillage automatique activé)">
-  		<group id="3040">
-  			<function start="1" end="1" comment="CLM_UNLOCK_KL15OFF_AFTER_PIA_AUTO_LOCK (défaut aktiv)" mask="00000010b">aktiv</function>
-  		</group>
-  	</code>	
 	<code description="Angel Eyes (DRL) : Activation des feux de jour (Step 1 sur 3 - voir HU-NBT and REM)">
 		<group id="3060">
 			<function start="31" end="31" mask="00110000b" comment="TFL_MODUS (défaut : 02)">02</function>
@@ -143,24 +115,9 @@
 			<function start="2" end="2" mask="00011110b" comment="WW_ANZAHL_WASCHBET_ZUR_SRA (défaut : 0A)">05</function>
 		</group>
 	</code>
-	<code description="Rétroviseurs : fermeture autorisée en dessous de 255km/h (défaut : 20km/h)">
+	<code description="Rétroviseurs : fermeture rétroviseurs autorisée en dessous de 49 km/h (défaut : 20 km/h)">
 		<group id="3110">
-			<function start="9" end="9" mask="11111111b" comment="ASP_MAX_GESCHWINDIGKEIT_BEIKLAPPEN (défaut : 14)">FF</function>
-		</group>
-	</code>
-	<code description="Rétroviseurs : ouverture automatique à partir de 20 km/h (défaut : 40 km/h)">
-		<group id="3110">
-			<function start="10" end="10" mask="11111111b" comment="ASP_GESCHWINDIGKEIT_AUTO_AUSKLAPPEN (défaut : 28)">14</function>
-		</group>
-	</code>
-	<code description="Rétroviseurs passager : Augmente le débattement lors de la marche arrière à 85 digits (défaut : 59 digits - I-Step under F020_17-03-502)">
-		<group id="3110">
-			<function start="1" end="1" mask="11111111b" comment="ASP_BORDSTEINAUTOMATIK_DELTA (défaut : 3B)">55</function>
-		</group>
-	</code>
-	<code description="Rétroviseurs passager : Augmente le débattement lors de la marche arrière à 85 digits (défaut : 59 digits - I-Step above F020_17-03-502)">
-		<group id="3110">
-			<function start="2" end="2" mask="11111111b" comment="ASP_BORDSTEINAUTOMATIK_DELTA (défaut : 3B)">55</function>
+			<function start="9" end="9" mask="11111111b" comment="ASP_GESCHWINDIGKEIT_AUTO_AUSKLAPPEN or ASP_MAX_GESCHWINDIGKEIT_BEIKLAPPEN (défaut : 14)">31</function>
 		</group>
 	</code>
 	<code description="Clignotants : nb de clignotements à 5 (défaut : 3 - I-Step under F020_17-03-502)">
@@ -188,12 +145,12 @@
 			<function start="29" end="29" mask="01000000b" comment="NSW_EIN_AUF_LDS_STL (défaut : 00 dans certains pays comme les USA)">01</function>
 		</group>
 	</code>
-	<code description="Eclairage d'accueil : Activation de l'éclairage des portes lors de la marche arrière">
+	<code description="Eclairage d'accueil : activation de l'éclairage des portes lors de la marche arrière">
 		<group id="3070">
 			<function start="11" end="11" mask="00010000b" comment="OVT_BEI_RUECKFAHRLICHT (défaut : nicht_aktiv)">Aktiv</function>
 		</group>
 	</code>
-	<code description="Eclairage d'accueil : Activation des anti-brouillard">
+	<code description="Eclairage d'accueil: Activation des anti-brouillard">
 		<group id="3063">
 			<function start="55" end="55" mask="11000000b" comment="MAPPING_NEBELSCHW_L_PART_OF_WL (défaut : 00)">01</function>
 			<function start="66" end="66" mask="11000000b" comment="MAPPING_NEBELSCHW_R_PART_OF_WL (défaut : 00)">01</function>
@@ -234,6 +191,16 @@
 			<function start="4" end="4" mask="10000000b" comment="AMBIENTE_NACHFUEHRUNG (défaut : aktiv)">nicht_aktiv</function>
 		</group>
 	</code>
+	<code description="Accès confort : Activation Panic Alarm et tempo télécommande 500ms (short=welcome - MID=coffre - LONG=panic)">
+		<group id="30D0">
+			<function start="2" end="2" mask="00000100b" comment="RC_PANIC_ALARM (défaut : nicht_aktiv)">Aktiv</function>
+			<function start="3" end="3" mask="00001111b" comment="RC_DEFAULT_IDG_3RD_BUTTON_SHORT (défaut : 00)">04</function>
+			<function start="3" end="3" mask="11110000b" comment="RC_DEFAULT_IDG_3RD_BUTTON_MID (défaut : 02)">02</function>
+			<function start="4" end="4" mask="00001111b" comment="RC_DEFAULT_IDG_3RD_BUTTON_LONG (défaut : 02)">03</function>
+			<function start="8" end="8" mask="11111111b" comment="RC_TIME_DELAY_BOOTLID (défaut : 05)">14</function>
+			<function start="9" end="9" mask="11111111b" comment="RC_TIME_DELAY_PANIC (défaut : 14)">28</function>
+		</group>
+	</code>
 	<code description="Feux freinage d'urgence : activation mode clignotement">
 		<group id="3060">
 			<function start="16" end="16" mask="00000011b" comment="ESS_AKTIVIERBARER_AUSGANG (défaut : bremslicht_blinkend)">bremslicht_blinkend</function>
@@ -262,16 +229,6 @@
 	<code description="Double coup de Klaxon au vérouillage des portes moteur allumé">
 		<group id="3040">
 			<function start="1" end="1" mask="00100000b" comment="CLM_HORN_AT_SECURE (défaut : aktiv)">aktiv</function>
-		</group>
-	</code>
-	<code description="Désactivation de la radio / navigation à l'ouverture de la porte conducteur (défaut : activé)">
-		<group id="3020">
-			<function start="1" end="1" mask="00000001b" comment="TCM_LOGIC_R_OFF_DOOR (défaut : nicht_aktiv)">aktiv</function>
-		</group>
-	</code>
-	<code description="Activation de la radio / navigation à l'ouverture de la porte conducteur (défaut : activé)">
-		<group id="3020">
-			<function start="1" end="1" mask="00000001b" comment="TCM_LOGIC_R_OFF_DOOR (défaut : nicht_aktiv)">nicht_aktiv</function>
 		</group>
 	</code>
 	<code description="-- Don't work -- Fermeture des vitres à la fermeture des portes">
@@ -325,26 +282,6 @@
 			<function start="36" end="36" mask="00001000b" comment="IcmKod_B_InitEco (défaut : 00)">01</function>
 		</group>
 	</code>
-	<code description="Détection angle mort : Activation à 10km/h (défaut : 20km/h">
-		<group id="3000">
-			<function start="190" end="190" mask="00111111b" comment="C_ZSW_Aktivierunggeschwindigkeit_Funktion_low (défaut : 01)">00</function>
-		</group>
-	</code>
-	<code description="Détection angle mort : Activation à 20km/h (défaut : 20km/h">
-		<group id="3000">
-			<function start="190" end="190" mask="00111111b" comment="C_ZSW_Aktivierunggeschwindigkeit_Funktion_low (défaut : 01)">01</function>
-		</group>
-	</code>
-	<code description="Détection angle mort : Activation à 30km/h (défaut : 20km/h">
-		<group id="3000">
-			<function start="190" end="190" mask="00111111b" comment="C_ZSW_Aktivierunggeschwindigkeit_Funktion_low (défaut : 01)">02</function>
-		</group>
-	</code>
-	<code description="Détection angle mort : Activation à 50km/h (défaut : 20km/h">
-		<group id="3000">
-			<function start="190" end="190" mask="00111111b" comment="C_ZSW_Aktivierunggeschwindigkeit_Funktion_low (défaut : 01)">03</function>
-		</group>
-	</code>
 </cafd>
 
 <cafd id="000016EE" name="IHKA_VA02" author="Botho (public)" series="F020,F030">
@@ -389,24 +326,24 @@
 			<function start="0" end="0" mask="00001000b" comment="TASTER_FBD (défaut : nicht_aktiv)">Aktiv</function>
 		</group>
 	</code>
-	<code description="Hayon : Activation fermeture sur pression de la main (exercer une pression pour fermer au moins 5% du hayon en moins de 2s)">
+	<code description="-- TESTING -- Hayon : Activation Smart Closing (sans toucher à FA date)">
+		<group id="3120">
+			<function start="0" end="0" mask="00100000b" comment="FUNC_SMO (défaut : 00)">01</function>
+			<function start="0" end="0" mask="01000000b" comment="FUNC_BUZZER_SMO (défaut : 00)">01</function>
+		</group>
+	</code>
+	<code description="-- TESTING -- Hayon : Activation fermeture sur pression de la main (exercer une pression pour fermer au moins 5% du hayon en moins de 2s)">
 		<group id="3010">
 			<function start="2" end="2" mask="00000010b" comment="MECH_DRUK_AUTO_SCH (défaut : nicht_aktiv)">Aktiv</function>
 			<function start="4" end="4" mask="11111111b" comment="MECH_DRUCK_AUTO_ZEIT (défaut : 0A). Duréee * 100ms de la pression à exercer.">14</function>
 			<function start="5" end="5" mask="11111111b" comment="MECH_DRUCK_AUTO_WINKEL (défaut : 02). Angle * 5 pourcents minimum pour enclecncher la fermeture automatique.">01</function>
 		</group>
 	</code>
-	<code description="Hayon : Activation ouverture sur pression de la main (exercer une pression pour ouvrir au moins 5% du hayon en moins de 2s)">
+	<code description="-- TESTING -- Hayon : Activation ouverture sur pression de la main (exercer une pression pour ouvrir au moins 5% du hayon en moins de 2s)">
 		<group id="3010">
 			<function start="2" end="2" mask="00000001b" comment="MECH_DRUCK_AUTO_OEF (défaut : nicht_aktiv)">Aktiv</function>
 			<function start="4" end="4" mask="11111111b" comment="MECH_DRUCK_AUTO_ZEIT (défaut : 0A). Duréee * 100ms de la pression à exercer.">14</function>
 			<function start="5" end="5" mask="11111111b" comment="MECH_DRUCK_AUTO_WINKEL (défaut : 02). Angle * 5 pourcents minimum pour enclecncher la fermeture automatique.">01</function>
-		</group>
-	</code>
-	<code description="-- TESTING -- Hayon : Activation Smart Closing (sans toucher à FA date)">
-		<group id="3120">
-			<function start="0" end="0" mask="00100000b" comment="FUNC_SMO (défaut : 00)">01</function>
-			<function start="0" end="0" mask="01000000b" comment="FUNC_BUZZER_SMO (défaut : 00)">01</function>
 		</group>
 	</code>
 </cafd>
@@ -517,6 +454,11 @@
 			<function start="133" end="133" mask="01000000b" comment="M_VEHICLE (défaut : nicht_aktiv)">aktiv</function>
 		</group>
 	</code>
+	<code description="iDrive (Sport) : Ecran de demarrage personnalisé (M performance)">
+		<group id="3001">
+			<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">01</function>
+		</group>
+	</code>
 	<code description="iDrive (Navigation) : Alerte quand proche du POI">
 		<group id="3000">
 			<function start="111" end="111" mask="10000000b" comment="NAVI_ALERT_POI (défaut : nicht_aktiv)">aktiv</function>
@@ -589,99 +531,9 @@
 			<function start="6" end="6" mask="10000000b" comment="INBAND_RINGING (défaut : nicht_aktiv)">aktiv</function>
 		</group>
 	</code>
-	<code description="iDrive (Téléphone) : Sonnerie BMW (défaut : BMW)">
-		<group id="3003">
-			<function start="8" end="8" mask="00000011b" comment="RINGTONE (défaut : 00)">00</function>
-		</group>
-	</code>
-	<code description="iDrive (Téléphone) : Sonnerie MINI (défaut : BMW)">
-		<group id="3003">
-			<function start="8" end="8" mask="00000011b" comment="RINGTONE (défaut : 00)">01</function>
-		</group>
-	</code>
-	<code description="iDrive (Téléphone) : Sonnerie BMW_i (défaut : BMW)">
-		<group id="3003">
-			<function start="8" end="8" mask="00000011b" comment="RINGTONE (défaut : 00)">02</function>
-		</group>
-	</code>
-	<code description="iDrive (Téléphone) : Sonnerie Rolls Royce (défaut : BMW)">
-		<group id="3003">
-			<function start="8" end="8" mask="00000011b" comment="RINGTONE (défaut : 00)">03</function>
-		</group>
-	</code>
-	<code description="iDrive (Téléphone) : Activation de Sire Eyes Free (défaut : aktiv)">
-		<group id="3003">
-			<function start="3" end="3" mask="00001000b" comment="CE_DEVICE_SPEECH_RECOGNITION (défaut : 00)">01</function>
-		</group>
-	</code>
-	<code description="iDrive (Réglage) : Son du Gong BMW (défaut : BMW)">
-		<group id="3002">
-			<function start="26" end="26" mask="00111000b" comment="SOUND_SIGNAL_SET (défaut : 00)">00</function>
-		</group>
-	</code>
-	<code description="iDrive (Réglage) : Son du Gong MINI (défaut : BMW)">
-		<group id="3002">
-			<function start="26" end="26" mask="00111000b" comment="SOUND_SIGNAL_SET (défaut : 00)">01</function>
-		</group>
-	</code>
-	<code description="iDrive (Réglage) : Son du Gong Rolls Royce (défaut : BMW)">
-		<group id="3002">
-			<function start="26" end="26" mask="00111000b" comment="SOUND_SIGNAL_SET (défaut : 00)">02</function>
-		</group>
-	</code>
-	<code description="iDrive (Réglage) : Son du Gong BMW_i (défaut : BMW)">
+	<code description="iDrive (Réglage) : Son du Gong iBMW plus moderne (défaut bmw)">
 		<group id="3002">
 			<function start="26" end="26" mask="00111000b" comment="SOUND_SIGNAL_SET (défaut : 00)">03</function>
-		</group>
-	</code>
-	<code description="iDrive (réglage) : Ecran de démarrage BMW Connected Drive 1 (défaut : BMW)">
-		<group id="3001">
-			<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">00</function>
-		</group>
-	</code>
-	<code description="iDrive (réglage) : Ecran de démarrage BMW Connected Drive 2 (défaut : BMW)">
-		<group id="3001">
-			<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">02</function>
-		</group>
-	</code>
-	<code description="iDrive (réglage) : Ecran de démarrage BMW Connected Drive 3 (défaut : BMW)">
-		<group id="3001">
-			<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">06</function>
-		</group>
-	</code>
-	<code description="iDrive (réglage) : Ecran de démarrage M Performance (défaut : BMW)">
-		<group id="3001">
-			<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">01</function>
-		</group>
-	</code>
-	<code description="iDrive (réglage) : Ecran de démarrage MINI (défaut : BMW)">
-		<group id="3001">
-			<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">04</function>
-		</group>
-	</code>
-	<code description="iDrive (réglage) : Ecran de démarrage BMW_i (défaut : BMW)">
-		<group id="3001">
-			<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">03</function>
-		</group>
-	</code>
-	<code description="iDrive (réglage) : Ecran de démarrage Rolls Royce (défaut : BMW)">
-		<group id="3001">
-			<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">05</function>
-		</group>
-	</code>
-	<code description="iDrive (réglage) : Ecran de démarrage BMW White (défaut : BMW)">
-		<group id="3001">
-			<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">07</function>
-		</group>
-	</code>
-	<code description="iDrive (réglage) : Ecran de démarrage BMW Brown (défaut : BMW)">
-		<group id="3001">
-			<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">08</function>
-		</group>
-	</code>
-	<code description="iDrive (réglage) : Ecran de démarrage BMW Noel & Nouvel an (défaut : BMW)">
-		<group id="3001">
-			<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">09</function>
 		</group>
 	</code>
 	<code description="-- Don't work -- iDrive (Réglage) : Activation GPS tracking (problème de réglementation CNIL en France je pense ...)">

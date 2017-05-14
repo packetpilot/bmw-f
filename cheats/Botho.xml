@@ -518,6 +518,11 @@
 			<function start="133" end="133" mask="01000000b" comment="M_VEHICLE (défaut : nicht_aktiv)">aktiv</function>
 		</group>
 	</code>
+	<code description="iDrive (Sport) : Ecran de demarrage personnalisé (M performance)">
+		<group id="3001">
+			<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">01</function>
+		</group>
+	</code>
 	<code description="iDrive (Navigation) : Alerte quand proche du POI">
 		<group id="3000">
 			<function start="111" end="111" mask="10000000b" comment="NAVI_ALERT_POI (défaut : nicht_aktiv)">aktiv</function>
@@ -590,7 +595,22 @@
 			<function start="6" end="6" mask="10000000b" comment="INBAND_RINGING (défaut : nicht_aktiv)">aktiv</function>
 		</group>
 	</code>
-	<code description="iDrive (Réglage) : Son du Gong iBMW plus moderne (défaut bmw)">
+	<code description="iDrive (Réglage) : Son du Gong BMW (défaut : BMW)">
+		<group id="3002">
+			<function start="26" end="26" mask="00111000b" comment="SOUND_SIGNAL_SET (défaut : 00)">00</function>
+		</group>
+	</code>
+	<code description="iDrive (Réglage) : Son du Gong MINI (défaut : BMW)">
+		<group id="3002">
+			<function start="26" end="26" mask="00111000b" comment="SOUND_SIGNAL_SET (défaut : 00)">01</function>
+		</group>
+	</code>
+	<code description="iDrive (Réglage) : Son du Gong Rolls Royce (défaut : BMW)">
+		<group id="3002">
+			<function start="26" end="26" mask="00111000b" comment="SOUND_SIGNAL_SET (défaut : 00)">02</function>
+		</group>
+	</code>
+	<code description="iDrive (Réglage) : Son du Gong BMW_i (défaut : BMW)">
 		<group id="3002">
 			<function start="26" end="26" mask="00111000b" comment="SOUND_SIGNAL_SET (défaut : 00)">03</function>
 		</group>

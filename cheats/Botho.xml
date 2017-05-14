@@ -518,11 +518,6 @@
 			<function start="133" end="133" mask="01000000b" comment="M_VEHICLE (défaut : nicht_aktiv)">aktiv</function>
 		</group>
 	</code>
-	<code description="iDrive (Sport) : Ecran de demarrage personnalisé (M performance)">
-		<group id="3001">
-			<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">01</function>
-		</group>
-	</code>
 	<code description="iDrive (Navigation) : Alerte quand proche du POI">
 		<group id="3000">
 			<function start="111" end="111" mask="10000000b" comment="NAVI_ALERT_POI (défaut : nicht_aktiv)">aktiv</function>
@@ -595,6 +590,31 @@
 			<function start="6" end="6" mask="10000000b" comment="INBAND_RINGING (défaut : nicht_aktiv)">aktiv</function>
 		</group>
 	</code>
+	<code description="iDrive (Téléphone) : Sonnerie BMW (défaut : BMW)">
+		<group id="3003">
+			<function start="8" end="8" mask="00000011b" comment="RINGTONE (défaut : 00)">00</function>
+		</group>
+	</code>
+	<code description="iDrive (Téléphone) : Sonnerie MINI (défaut : BMW)">
+		<group id="3003">
+			<function start="8" end="8" mask="00000011b" comment="RINGTONE (défaut : 00)">01</function>
+		</group>
+	</code>
+	<code description="iDrive (Téléphone) : Sonnerie BMW_i (défaut : BMW)">
+		<group id="3003">
+			<function start="8" end="8" mask="00000011b" comment="RINGTONE (défaut : 00)">02</function>
+		</group>
+	</code>
+	<code description="iDrive (Téléphone) : Sonnerie Rolls Royce (défaut : BMW)">
+		<group id="3003">
+			<function start="8" end="8" mask="00000011b" comment="RINGTONE (défaut : 00)">03</function>
+		</group>
+	</code>
+	<code description="iDrive (Téléphone) : Activation de Sire Eyes Free (défaut : aktiv)">
+		<group id="3003">
+			<function start="3" end="3" mask="00001000b" comment="CE_DEVICE_SPEECH_RECOGNITION (défaut : 00)">01</function>
+		</group>
+	</code>
 	<code description="iDrive (Réglage) : Son du Gong BMW (défaut : BMW)">
 		<group id="3002">
 			<function start="26" end="26" mask="00111000b" comment="SOUND_SIGNAL_SET (défaut : 00)">00</function>
@@ -613,6 +633,56 @@
 	<code description="iDrive (Réglage) : Son du Gong BMW_i (défaut : BMW)">
 		<group id="3002">
 			<function start="26" end="26" mask="00111000b" comment="SOUND_SIGNAL_SET (défaut : 00)">03</function>
+		</group>
+	</code>
+	<code description="iDrive (réglage) : Ecran de démarrage BMW Connected Drive 1 (défaut : BMW)">
+		<group id="3001">
+			<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">00</function>
+		</group>
+	</code>
+	<code description="iDrive (réglage) : Ecran de démarrage M Performance (défaut : BMW)">
+		<group id="3001">
+			<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">01</function>
+		</group>
+	</code>
+	<code description="iDrive (réglage) : Ecran de démarrage BMW Connected Drive 2 (défaut : BMW)">
+		<group id="3001">
+			<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">02</function>
+		</group>
+	</code>
+	<code description="iDrive (réglage) : Ecran de démarrage BMW_i (défaut : BMW)">
+		<group id="3001">
+			<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">03</function>
+		</group>
+	</code>
+	<code description="iDrive (réglage) : Ecran de démarrage MINI (défaut : BMW)">
+		<group id="3001">
+			<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">04</function>
+		</group>
+	</code>
+	<code description="iDrive (réglage) : Ecran de démarrage Rolls Royce (défaut : BMW)">
+		<group id="3001">
+			<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">05</function>
+		</group>
+	</code>
+	<code description="iDrive (réglage) : Ecran de démarrage BMW Connected Drive 3 (défaut : BMW)">
+		<group id="3001">
+			<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">06</function>
+		</group>
+	</code>
+	<code description="iDrive (réglage) : Ecran de démarrage BMW White (défaut : BMW)">
+		<group id="3001">
+			<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">07</function>
+		</group>
+	</code>
+	<code description="iDrive (réglage) : Ecran de démarrage BMW Brown (défaut : BMW)">
+		<group id="3001">
+			<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">08</function>
+		</group>
+	</code>
+	<code description="iDrive (réglage) : Ecran de démarrage BMW Noel et Nouvel an (défaut : BMW)">
+		<group id="3001">
+			<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">09</function>
 		</group>
 	</code>
 	<code description="-- Don't work -- iDrive (Réglage) : Activation GPS tracking (problème de réglementation CNIL en France je pense ...)">

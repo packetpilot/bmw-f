@@ -518,6 +518,11 @@
 			<function start="133" end="133" mask="01000000b" comment="M_VEHICLE (défaut : nicht_aktiv)">aktiv</function>
 		</group>
 	</code>
+	<code description="iDrive (Sport) : Ecran de demarrage personnalisé (M performance)">
+		<group id="3001">
+			<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">01</function>
+		</group>
+	</code>
 	<code description="iDrive (Navigation) : Alerte quand proche du POI">
 		<group id="3000">
 			<function start="111" end="111" mask="10000000b" comment="NAVI_ALERT_POI (défaut : nicht_aktiv)">aktiv</function>

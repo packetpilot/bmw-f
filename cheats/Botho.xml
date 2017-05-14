@@ -595,7 +595,22 @@
 			<function start="6" end="6" mask="10000000b" comment="INBAND_RINGING (défaut : nicht_aktiv)">aktiv</function>
 		</group>
 	</code>
-	<code description="iDrive (Réglage) : Son du Gong iBMW plus moderne (défaut bmw)">
+	<code description="iDrive (Réglage) : Son du Gong BMW (défaut : BMW)">
+		<group id="3002">
+			<function start="26" end="26" mask="00111000b" comment="SOUND_SIGNAL_SET (défaut : 00)">00</function>
+		</group>
+	</code>
+	<code description="iDrive (Réglage) : Son du Gong MINI (défaut : BMW)">
+		<group id="3002">
+			<function start="26" end="26" mask="00111000b" comment="SOUND_SIGNAL_SET (défaut : 00)">01</function>
+		</group>
+	</code>
+	<code description="iDrive (Réglage) : Son du Gong Rolls Royce (défaut : BMW)">
+		<group id="3002">
+			<function start="26" end="26" mask="00111000b" comment="SOUND_SIGNAL_SET (défaut : 00)">02</function>
+		</group>
+	</code>
+	<code description="iDrive (Réglage) : Son du Gong BMW_i (défaut : BMW)">
 		<group id="3002">
 			<function start="26" end="26" mask="00111000b" comment="SOUND_SIGNAL_SET (défaut : 00)">03</function>
 		</group>

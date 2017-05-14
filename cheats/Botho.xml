@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <FDL>
-	<!--Botho - Public Release (2017-04-29) -->
+	<!--Botho - Public Release (2017-05-14) -->
+	
 <cafd id="00000911" name="ACSM_4B" author="Botho (public)" series="F020,F030">
 	<code description="Ceinture de sécurité : Durée du rappel à 10s (défaut : 100s)">
 		<group id="3001">
@@ -60,7 +61,7 @@
 	</code>
 	<code description="Dévérouillage des portes à l'arrêt du moteur (uniquement si le vérouillage automatique activé)">
   		<group id="3040">
-  			<function start="1" end="1" comment="CLM_UNLOCK_KL15OFF_AFTER_PIA_AUTO_LOCK (défaut aktiv)" mask="00000010b">aktiv</function>
+  			<function start="1" end="1" mask="00000010b" comment="CLM_UNLOCK_KL15OFF_AFTER_PIA_AUTO_LOCK (défaut aktiv)">aktiv</function>
   		</group>
   	</code>	
 	<code description="Angel Eyes (DRL) : Activation des feux de jour (Step 1 sur 3 - voir HU-NBT and REM)">
@@ -392,15 +393,15 @@
 	<code description="Hayon : Activation fermeture sur pression de la main (exercer une pression pour fermer au moins 5% du hayon en moins de 2s)">
 		<group id="3010">
 			<function start="2" end="2" mask="00000010b" comment="MECH_DRUK_AUTO_SCH (défaut : nicht_aktiv)">Aktiv</function>
-			<function start="4" end="4" mask="11111111b" comment="MECH_DRUCK_AUTO_ZEIT (défaut : 0A). Duréee * 100ms de la pression à exercer.">14</function>
-			<function start="5" end="5" mask="11111111b" comment="MECH_DRUCK_AUTO_WINKEL (défaut : 02). Angle * 5 pourcents minimum pour enclecncher la fermeture automatique.">01</function>
+			<function start="4" end="4" mask="11111111b" comment="MECH_DRUCK_AUTO_ZEIT (défaut : 0A) - Duréee x 100ms de la pression à exercer">14</function>
+			<function start="5" end="5" mask="11111111b" comment="MECH_DRUCK_AUTO_WINKEL (défaut : 02) - Angle x 5% minimum pour enclecncher la fermeture automatique">01</function>
 		</group>
 	</code>
 	<code description="Hayon : Activation ouverture sur pression de la main (exercer une pression pour ouvrir au moins 5% du hayon en moins de 2s)">
 		<group id="3010">
 			<function start="2" end="2" mask="00000001b" comment="MECH_DRUCK_AUTO_OEF (défaut : nicht_aktiv)">Aktiv</function>
-			<function start="4" end="4" mask="11111111b" comment="MECH_DRUCK_AUTO_ZEIT (défaut : 0A). Duréee * 100ms de la pression à exercer.">14</function>
-			<function start="5" end="5" mask="11111111b" comment="MECH_DRUCK_AUTO_WINKEL (défaut : 02). Angle * 5 pourcents minimum pour enclecncher la fermeture automatique.">01</function>
+			<function start="4" end="4" mask="11111111b" comment="MECH_DRUCK_AUTO_ZEIT (défaut : 0A) - Duréee x 100ms de la pression à exercer">14</function>
+			<function start="5" end="5" mask="11111111b" comment="MECH_DRUCK_AUTO_WINKEL (défaut : 02) - Angle x 5% minimum pour enclecncher la fermeture automatique">01</function>
 		</group>
 	</code>
 	<code description="-- TESTING -- Hayon : Activation Smart Closing (sans toucher à FA date)">
@@ -589,99 +590,9 @@
 			<function start="6" end="6" mask="10000000b" comment="INBAND_RINGING (défaut : nicht_aktiv)">aktiv</function>
 		</group>
 	</code>
-	<code description="iDrive (Téléphone) : Sonnerie BMW (défaut : BMW)">
-		<group id="3003">
-			<function start="8" end="8" mask="00000011b" comment="RINGTONE (défaut : 00)">00</function>
-		</group>
-	</code>
-	<code description="iDrive (Téléphone) : Sonnerie MINI (défaut : BMW)">
-		<group id="3003">
-			<function start="8" end="8" mask="00000011b" comment="RINGTONE (défaut : 00)">01</function>
-		</group>
-	</code>
-	<code description="iDrive (Téléphone) : Sonnerie BMW_i (défaut : BMW)">
-		<group id="3003">
-			<function start="8" end="8" mask="00000011b" comment="RINGTONE (défaut : 00)">02</function>
-		</group>
-	</code>
-	<code description="iDrive (Téléphone) : Sonnerie Rolls Royce (défaut : BMW)">
-		<group id="3003">
-			<function start="8" end="8" mask="00000011b" comment="RINGTONE (défaut : 00)">03</function>
-		</group>
-	</code>
-	<code description="iDrive (Téléphone) : Activation de Sire Eyes Free (défaut : aktiv)">
-		<group id="3003">
-			<function start="3" end="3" mask="00001000b" comment="CE_DEVICE_SPEECH_RECOGNITION (défaut : 00)">01</function>
-		</group>
-	</code>
-	<code description="iDrive (Réglage) : Son du Gong BMW (défaut : BMW)">
-		<group id="3002">
-			<function start="26" end="26" mask="00111000b" comment="SOUND_SIGNAL_SET (défaut : 00)">00</function>
-		</group>
-	</code>
-	<code description="iDrive (Réglage) : Son du Gong MINI (défaut : BMW)">
-		<group id="3002">
-			<function start="26" end="26" mask="00111000b" comment="SOUND_SIGNAL_SET (défaut : 00)">01</function>
-		</group>
-	</code>
-	<code description="iDrive (Réglage) : Son du Gong Rolls Royce (défaut : BMW)">
-		<group id="3002">
-			<function start="26" end="26" mask="00111000b" comment="SOUND_SIGNAL_SET (défaut : 00)">02</function>
-		</group>
-	</code>
-	<code description="iDrive (Réglage) : Son du Gong BMW_i (défaut : BMW)">
+	<code description="iDrive (Réglage) : Son du Gong iBMW plus moderne (défaut bmw)">
 		<group id="3002">
 			<function start="26" end="26" mask="00111000b" comment="SOUND_SIGNAL_SET (défaut : 00)">03</function>
-		</group>
-	</code>
-	<code description="iDrive (réglage) : Ecran de démarrage BMW Connected Drive 1 (défaut : BMW)">
-		<group id="3001">
-			<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">00</function>
-		</group>
-	</code>
-	<code description="iDrive (réglage) : Ecran de démarrage BMW Connected Drive 2 (défaut : BMW)">
-		<group id="3001">
-			<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">02</function>
-		</group>
-	</code>
-	<code description="iDrive (réglage) : Ecran de démarrage BMW Connected Drive 3 (défaut : BMW)">
-		<group id="3001">
-			<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">06</function>
-		</group>
-	</code>
-	<code description="iDrive (réglage) : Ecran de démarrage M Performance (défaut : BMW)">
-		<group id="3001">
-			<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">01</function>
-		</group>
-	</code>
-	<code description="iDrive (réglage) : Ecran de démarrage MINI (défaut : BMW)">
-		<group id="3001">
-			<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">04</function>
-		</group>
-	</code>
-	<code description="iDrive (réglage) : Ecran de démarrage BMW_i (défaut : BMW)">
-		<group id="3001">
-			<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">03</function>
-		</group>
-	</code>
-	<code description="iDrive (réglage) : Ecran de démarrage Rolls Royce (défaut : BMW)">
-		<group id="3001">
-			<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">05</function>
-		</group>
-	</code>
-	<code description="iDrive (réglage) : Ecran de démarrage BMW White (défaut : BMW)">
-		<group id="3001">
-			<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">07</function>
-		</group>
-	</code>
-	<code description="iDrive (réglage) : Ecran de démarrage BMW Brown (défaut : BMW)">
-		<group id="3001">
-			<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">08</function>
-		</group>
-	</code>
-	<code description="iDrive (réglage) : Ecran de démarrage BMW Noel & Nouvel an (défaut : BMW)">
-		<group id="3001">
-			<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">09</function>
 		</group>
 	</code>
 	<code description="-- Don't work -- iDrive (Réglage) : Activation GPS tracking (problème de réglementation CNIL en France je pense ...)">

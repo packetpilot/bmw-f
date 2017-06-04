@@ -2071,12 +2071,13 @@
 	<code description="ENABLE Outer Light Flashing with EU Brake Force - LED Only">
 			<group id="3062">
 				<function start="110" end="110" comment="MAPPING_BRAKEFORCED_L_OUTPUT" mask="00111111b">bl_l</function>
+				<function start="120" end="120" comment="MAPPING_BRAKEFORCED_R_OUTPUT" mask="00111111b">bl_r</function>
 			</group>
 		</code>
 	<code description="Increase Outer Light Flashing with EU Brake Force - LED Only">
 			<group id="3064">
 				<function start="17" end="17" comment="ESS_BLINKFREQ_1" mask="00001110b">05</function>
-				<function start="17" end="17" comment="ESS_BLINKFREQ_1" mask="01110000b">05</function>
+				<function start="17" end="17" comment="ESS_BLINKFREQ_2" mask="01110000b">05</function>
 			</group>
 		</code>
 	</cafd>

@@ -154,17 +154,12 @@
 			<function start="10" end="10" mask="11111111b" comment="ASP_GESCHWINDIGKEIT_AUTO_AUSKLAPPEN (défaut : 28)">14</function>
 		</group>
 	</code>
-	<code description="Rétroviseurs passager : Augmente le débattement lors de la marche arrière à 85 digits (défaut : 59 digits - I-Step under F020_17-03-502)">
-		<group id="3110">
-			<function start="1" end="1" mask="11111111b" comment="ASP_BORDSTEINAUTOMATIK_DELTA (défaut : 3B)">55</function>
-		</group>
-	</code>
-	<code description="Rétroviseurs passager : Augmente le débattement lors de la marche arrière à 85 digits (défaut : 59 digits - I-Step above F020_17-03-502)">
+	<code description="Rétroviseurs passager : Augmente le débattement lors de la marche arrière à 85 digits (défaut : 59 digits - I-Step 61.0)">
 		<group id="3110">
 			<function start="2" end="2" mask="11111111b" comment="ASP_BORDSTEINAUTOMATIK_DELTA (défaut : 3B)">55</function>
 		</group>
 	</code>
-	<code description="Clignotants : nb de clignotements à 5 (défaut : 3 - I-Step under F020_17-03-502)">
+	<code description="Clignotants : nb de clignotements à 5 (défaut : 3 - I-Step under 61.0)">
 		<group id="3060">
 			<function start="7" end="7" mask="00000111b" comment="BLINKZYKLEN_ANZAHL_TIPP (défaut : 02)">04</function>
 		</group>
@@ -714,9 +709,9 @@
 			<function start="43" end="43" mask="11110000b" comment="MPM_LOGO (défaut : 00)">05</function>
 		</group>
 	</code>
-	<code description="Tableau de bord : Affichage de l'heure en bas à droite du tableau de bord">
+	<code description="Tableau de bord : Affichage de l'heure en bas à droite du tableau de bord (I-Step above 54.3)">
 		<group id="3000">
-			<function start="53" end="53" mask="01000000b" comment="BASISANZEIGE_VARIANTE (défaut : nicht_aktiv for production date under 1114)">Aktiv</function>
+			<function start="53" end="53" mask="01000000b" comment="BASISANZEIGE_VARIANTE (défaut : nicht_aktiv)">Aktiv</function>
 		</group>
 	</code>
 	<code description="Tableau de bord et HUD : Logo M performance au démarrage">
@@ -767,7 +762,7 @@
 			<function start="0" end="0" mask="00000001b" comment="FH_TUERAUF_STOP_MAUT (défaut : aktiv)">nicht_aktiv</function>
 		</group>
 	</code>
-	<code description="Angel Eyes (DRL) : Activation  feux de jour sur le hayon arrière (Step 3 sur 3 - voir HU-NBT et FEM_BODY)">
+	<code description="Angel Eyes (DRL) : Activation feux de jour sur le hayon arrière (Step 3 sur 3 - voir HU-NBT et FEM_BODY)">
 		<group id="3062">
 			<function start="220" end="220" mask="00111111b" comment="MAPPING_TAGFAHRL_H2_L_OUTPUT LED hayon intérieur gauche (défaut : 00)">16</function>
 			<function start="230" end="230" mask="00111111b" comment="MAPPING_TAGFAHRL_H2_R_OUTPUT LED hayon intérieur droit (défaut : 00)">17</function>
@@ -791,7 +786,28 @@
 			<function start="51" end="51" mask="00011111b" comment="Mapping_Nebelschlussl_R_Function lampe hayon droit (défaut : 0E)">0E</function>
 		</group>
 	</code>
+	<code description="Caméra arrière : Activation sans limite de vitesse (caméras latérales : voir TRSVC)">
+		<group id="3203">
+			<function start="7" end="7" mask="11111111b" comment="V_SCHWELLE_1 : vitesse de désactivation caméras rétroviseurs (défaut : 0F)">FF</function>
+			<function start="8" end="8" mask="11111111b" comment="V_SCHWELLE_2 : vitesse de désactivation caméra arrière (défaut : 0F)">FF</function>
+			<function start="9" end="9" mask="11111111b" comment="D_SCHWELLE_1 : distance de désactivation caméras rétroviseurs (défaut : 32)">FF</function>
+			<function start="10" end="10" mask="11111111b" comment="D_SCHWELLE_2 : distance de désactivation caméra arrière (défaut : 0A)">FF</function>
+		</group>
+	</code>
+	<code description="Feux freinage d'urgence : activation LED arrères (défaut : activé)">
+		<group id="3062">
+			<function start="110" end="110" mask="00111111b" comment="MAPPING_BRAKEFORCED_L_OUTPUT (défaut : bl_l)">bl_l</function>
+			<function start="120" end="120" mask="00111111b" comment="MAPPING_BRAKEFORCED_R_OUTPUT (défaut : bl_r)">bl_r</function>
+		</group>
+	</code>
+	<code description="Feux freinage d'urgence : augmentation fréquence de clignotement LED arrères (défaut : 03)">
+			<group id="3064">
+				<function start="17" end="17" mask="00001110b" comment="ESS_BLINKFREQ_1">05</function>
+				<function start="17" end="17" mask="01110000b" comment="ESS_BLINKFREQ_2">05</function>
+			</group>
+		</code>	
 </cafd>
+
 
 <cafd id="000000B5" name="CFAS_PLX_1" author="Botho (public)" series="F020,F030">
 	<code description="Sièges électriques : Gong sonore lors de la mémorisation">
@@ -817,7 +833,7 @@
 </cafd>
 
 <cafd id="00000223" name="TRSVC" author="Botho (public)" series="F020,F030">
-	<code description="Caméras latérales : Activation sans limite de vitesse">
+	<code description="Caméras latérales : Activation sans limite de vitesse (caméra arrière : voir REM_01)">
 		<group id="3000">
 			<function start="114" end="114" mask="11111111b" comment="SV_Activate_Speed_Limit (défaut : 0F)">FF</function>
 			<function start="115" end="115" mask="11111111b" comment="SV_Deactivate_Speed (défaut : 0F)">FF</function>

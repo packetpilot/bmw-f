@@ -1,0 +1,707 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<FDL>
+	<!--Cryptocar_Personal-->
+	<cafd id="00000909" name="ACSM_4C" author="Cryptocar_Personal" series="F025">
+		<code description="Disable Seat Belt Instrument Cluster Status">
+			<group id="3000">
+				<function start="15" end="15" mask="00010000b">nicht_aktiv</function> 
+			</group>
+		</code>
+		<code description="Disable Seat Belt Instrument Cluster Status">
+			<group id="3000">
+				<function start="15" end="15" mask="00001000b">nicht_aktiv</function> 
+			</group>
+		</code>
+		<code description="Disable Seat Belt Reminder Chime">
+			<group id="3000">
+				<function start="15" end="15" mask="00000010b">nicht_aktiv</function> 
+			</group>
+		</code>
+		<code description="Disable Seat Belt Reminder Chime">
+			<group id="3000">
+				<function start="15" end="15" mask="00000100b">nicht_aktiv</function> 
+			</group>
+		</code>
+		<code description="Disable Initial Belt Warning Chime">
+			<group id="3000">
+				<function start="15" end="15" mask="00000001b">nicht_aktiv</function> 
+			</group>
+		</code>
+		<code description="Disable Seat Belt Reminder PreWarning Chime">
+			<group id="3000">
+				<function start="16" end="16" mask="00000001b">nicht_aktiv</function> 
+			</group>
+		</code>
+		<code description="Disable Seat Belt Reminder PreWarning Chime">
+			<group id="3000">
+				<function start="16" end="16" mask="00000010b">nicht_aktiv</function> 
+			</group>
+		</code>
+	</cafd>
+	<cafd id="0000000F" name="CAS_04" author="Cryptocar_Personal" series="F010,F025">
+		<code description="Disables Auto Start Stop (ASS) by Default">
+			<group id="3000">
+				<function start="3" end="3" mask="00010000b">aktiv</function> 
+			</group>
+		</code>
+		<code description="Enables Auto Start Stop (ASS) Memory - Shutdown Setting">
+			<group id="3000">
+				<function start="3" end="3" mask="00100000b">aktiv</function> 
+			</group>
+		</code>
+		<code description="Enables Open/ Close windows and mirrors via keyFOB/ CA (NA Cars). Part 2 of 2. See FRM">
+			<group id="3003">
+				<function start="2" end="2" mask="00000001b">aktiv</function> 
+				<function start="2" end="2" mask="00000010b">aktiv</function>
+				<function start="2" end="2" mask="00000100b">aktiv</function>
+				<function start="2" end="2" mask="00001000b">aktiv</function>
+				<function start="2" end="2" mask="00100000b">aktiv</function>
+			</group>
+		</code>
+		<code description="Removes Initiation Delay for Mirrors/ Windows">
+			<group id="3003">
+				<function start="12" end="12" mask="11111111b">00</function> 
+			</group>
+		</code>
+		<code description="Enables Auto Unlock doors when engine stopped (Requires Auto-Lock)">
+			<group id="3002">
+				<function start="1" end="1" comment="Single pull to open" mask="10000000b">aktiv</function> 
+			</group>
+		</code>
+		<code description="Disables Auto Unlock doors when engine stopped (Requires Auto-Lock)">
+			<group id="3002">
+				<function start="1" end="1" comment="Single pull to open" mask="10000000b">nicht_aktiv</function> 
+			</group>
+		</code>
+		<code description="Disables Horn Lock Confirmation while engine running">
+			<group id="3002">
+				<function start="0" end="0" comment="CLM_HORN_AT_SECURE" mask="00100000b">nicht_aktiv</function> 
+			</group>
+		</code>
+		<code description="Enables Horn Lock Confirmation while engine running">
+			<group id="3002">
+				<function start="0" end="0" comment="CLM_HORN_AT_SECURE" mask="00100000b">aktiv</function> 
+			</group>
+		</code>
+		<code description="Enables Follow Me Home Lighting with Short Press of Panic Button">
+			<group id="3002">
+				<function start="1" end="1" comment="REMOTE_KEY_SPECIAL_FCT" mask="00000010b">aktiv</function> 
+			</group>
+		</code>
+		<code description="Disables Follow Me Home Lighting with Short Press of Panic Button">
+			<group id="3002">
+				<function start="1" end="1" comment="REMOTE_KEY_SPECIAL_FCT" mask="00000010b">nicht_aktiv</function> 
+			</group>
+		</code>
+		<code description="Enables Engine Start without Brake Pedal (Press Start Twice with Second Hold)">
+			<group id="3000">
+				<function start="1" end="1" comment="TC_STARTLOCK_BRAKE" mask="00000001b">nicht_aktiv</function>
+				<function start="1" end="1" comment="TC_STARTLOCK_DRIVINGREADINESS" mask="00010000b">nicht_aktiv</function>  
+			</group>
+		</code>
+		<code description="Disable Engine Start without Brake Pedal (Press Start Twice with Second Hold)">
+			<group id="3000">
+				<function start="1" end="1" comment="TC_STARTLOCK_BRAKE" mask="00000001b">aktiv</function>
+				<function start="1" end="1" comment="TC_STARTLOCK_DRIVINGREADINESS" mask="00010000b">aktiv</function>  
+			</group>
+		</code>
+		<code description="Enables  Radio and Nav Off when drivers door opened">
+			<group id="3000">
+				<function start="2" end="2" comment="TC_LOGIC_KLR_OFF_DOOR" mask="00000001b">aktiv</function> 
+			</group>
+		</code>
+	</cafd>
+	<cafd id="0000106D" name="FRM_03CT" author="Cryptocar_Personal" series="F025">
+		<code description="Opening front doors does NOT stop windows">
+			<group id="3030">
+				<function start="1" end="1" comment="FH_TUER_AUF_STOP_MAUT" mask="00000100b">nicht_aktiv</function>
+			</group>
+		</code>
+		<code description="Fog lamps stay on with high beams on">
+			<group id="3050">
+				<function start="16" end="16" comment="NSW_AUS_BEI_FL" mask="00000100b">nicht_aktiv</function>
+			</group>
+		</code>
+		<code description="Rear tail lights and halos stay on as DRLs">
+			<group id="3050">
+				<function start="20" end="20" comment="DRL_MODUS" mask="00001110b">drl_s</function>
+			</group>
+		</code>
+		<code description="Sets emergency braking to EU Spec, Flashing instead of Two-Stage">
+			<group id="3050">
+				<function start="23" end="23" comment="ESS_ERSCHEINUNGSBILD" mask="01110000b">bremslicht_blinkend</function>
+			</group>
+		</code>
+		<code description="Set Emergency Braking to US Spec">
+			<group id="3050">
+				<function start="21" end="21" comment="ESS_ON_VERZ" mask="00011111b">US</function>
+			</group>
+		</code>
+		<code description="Sets emergency braking to US Spec 2">
+			<group id="3050">
+				<function start="24" end="24" comment="ESS_GESCHW_SCHWELLE" mask="01111111b">US</function>
+			</group>
+		</code>
+		<code description="Auto High Beam Assistant Part 1">
+			<group id="3050">
+				<function start="20" end="20" comment="FLA_AUTOAKITV" mask="00100000b">automatisch</function>
+			</group>
+		</code>
+		<code description="Auto High Beam Assistant Part 2">
+			<group id="3050">
+				<function start="20" end="20" comment="FLA_VERBAUT" mask="00010000b">aktiv</function>
+			</group>
+		</code>
+		<code description="Adds Low Beams to Welcome Lights">
+			<group id="3050">
+				<function start="30" end="30" comment="WL_FUNKTION_AL" mask="00001100b">soft_on</function>
+			</group>
+		</code>
+		<code description="Sets Halos to soft on during Welcome Lights">
+			<group id="3050">
+				<function start="30" end="30" comment="WL_FUNKTION_POL" mask="00000011b">soft_on</function>
+			</group>
+		</code>
+		<code description="Sets Turn Signals to soft on during Welcome Lights">
+			<group id="3050">
+				<function start="29" end="29" comment="WL_FUNKTION_KZL" mask="00110000b">soft_on</function>
+			</group>
+		</code>
+		<code description="Removes Turn Signals from Welcome Lights">
+			<group id="3050">
+				<function start="29" end="29" comment="WL_FUNKTION_KZL" mask="00110000b">nicht_aktiv</function>
+			</group>
+		</code>
+		<code description="Adds Fog Lights soft on to Welcome Lights">
+			<group id="3050">
+				<function start="29" end="29" comment="WL_FUNKTION_NSW" mask="00001100b">soft_on</function>
+			</group>
+		</code>
+		<code description="Sets Tail Lights To soft on for Welcome Lights">
+			<group id="3050">
+				<function start="29" end="29" comment="WL_FUNKTION_SSL" mask="11000000b">soft_on</function>
+			</group>
+		</code>
+		<code description="Tilt passenger mirror farther down in reverse">
+			<group id="3020">
+				<function start="1" end="1" comment="ASP_BORDSTEINAUTOMATIK_DELTA" mask="11111111b">4B</function>
+			</group>
+		</code>
+		<code description="Close Mirrors with key fob or Comfort Access">
+			<group id="3030">
+				<function start="1" end="1" comment="ASP_BEIKLAPPEN_BEI_KOMFORTSCHLIESSEN" mask="10000000b">aktiv</function>
+			</group>
+		</code>
+		<code description="Halos Full Brightness with headleamps on">
+			<group id="3060">
+				<function start="1" end="1" comment="U_EFF_POL" mask="11111111b">46</function>
+			</group>
+		</code>
+		<code description="Disables warming check for halogen bulbs Left Rear Fog Light (LED Replacement)">
+			<group id="3090">
+				<function start="87" end="87" comment="AUSG_13_NSL_L_WARM_UEBERW_AKTIV" mask="00000001b">nicht_aktiv</function>
+			</group>
+		</code>
+		<code description="Disables cold check for halogen bulbs Left Rear Fog Light (LED Replacement)">
+			<group id="3090">
+				<function start="87" end="87" comment="AUSG_13_NSL_L_KALT_UEBERW_AKTIV" mask="00000010b">nicht_aktiv</function>
+			</group>
+		</code>
+		<code description="Enables Left Rear Fog Light as LED (LED Replacement)">
+			<group id="3090">
+				<function start="87" end="87" comment="AUSG_13_NSL_L_IS_LED" mask="00001000b">aktiv</function>
+			</group>
+		</code>
+		<code description="Disables warming check for halogen bulbs Right Rear Fog Light (LED Replacement)">
+			<group id="3090">
+				<function start="91" end="91" comment="AUSG_14_NSL_R_WARM_UEBERW_AKTIV" mask="00000001b">nicht_aktiv</function>
+			</group>
+		</code>
+		<code description="Disables cold check for halogen bulbs Right Rear Fog Light (LED Replacement)">
+			<group id="3090">
+				<function start="91" end="91" comment="AUSG_14_NSL_R_KALT_UEBERW_AKTIV" mask="00000010b">nicht_aktiv</function>
+			</group>
+		</code>
+		<code description="Enables LED for Left Rear Fog Light (LED Replacement)">
+			<group id="3090">
+				<function start="91" end="91" comment="AUSG_14_NSL_R_IS_LED" mask="00001000b">aktiv</function>
+			</group>
+		</code>
+		<code description="Disables warming check for halogen bulbs Left Reverse Light (LED Replacement)">
+			<group id="3090">
+				<function start="131" end="131" comment="AUSG_24_RFS_L_WARM_UEBERW_AKTIV" mask="00000001b">nicht_aktiv</function>
+			</group>
+		</code>
+		<code description="Disables cold check for halogen bulbs Left Reverse Light (LED Replacement)">
+			<group id="3090">
+				<function start="131" end="131" comment="AUSG_24_RFS_L_KALT_UEBERW_AKTIV" mask="00000010b">nicht_aktiv</function>
+			</group>
+		</code>
+		<code description="Enables left reverse Light for LED (LED Replacement)">
+			<group id="3090">
+				<function start="131" end="131" comment="AUSG_24_RFS_L_IS_LED" mask="00001000b">aktiv</function>
+			</group>
+		</code>
+		<code description="Disables warming check for halogen bulbs Right Reverse Light (LED Replacement)">
+			<group id="3090">
+				<function start="135" end="135" comment="AUSG_25_RFS_R_WARM_UEBERW_AKTIV" mask="00000001b">nicht_aktiv</function>
+			</group>
+		</code>
+		<code description="Disables cold check for halogen bulbs Right Reverse Light (LED Replacement)">
+			<group id="3090">
+				<function start="135" end="135" comment="AUSG_25_RFS_R_KALT_UEBERW_AKTIV" mask="00000010b">nicht_aktiv</function>
+			</group>
+		</code>
+		<code description="Enables Right Reverse Light for LED (LED Replacement)">
+			<group id="3090">
+				<function start="135" end="135" comment="AUSG_25_RFS_R_IS_LED" mask="00001000b">aktiv</function>
+			</group>
+		</code>
+		<code description="Disables warming check for halogen bulbs Rear Left Turnsignal">
+			<group id="3090">
+				<function start="115" end="115" comment="AUSG_20_FRA_HL_WARM_UEBERW_AKTIV" mask="00000001b">nicht_aktiv</function>
+			</group>
+		</code>
+		<code description="Disables cold check for halogen bulbs Rear Left Turnsignal (LED Replacement)">
+			<group id="3090">
+				<function start="115" end="115" comment="AUSG_20_FRA_HL_KALT_UEBERW_AKTIV" mask="00000010b">nicht_aktiv</function>
+			</group>
+		</code>
+		<code description="Enables Left Rear Turnsignal for LED (LED Replacement)">
+			<group id="3090">
+				<function start="115" end="115" comment="AUSG_20_FRA_HL_IS_LED" mask="00001000b">aktiv</function>
+			</group>
+		</code>
+		<code description="Disables warming check for halogen bulbs Rear Right Turnsignal">
+			<group id="3090">
+				<function start="119" end="119" comment="AUSG_21_FRA_HR_WARM_UEBERW_AKTIV" mask="00000001b">nicht_aktiv</function>
+			</group>
+		</code>
+		<code description="Disables cold check for halogen bulbs Rear Right Turnsignal (LED Replacement)">
+			<group id="3090">
+				<function start="119" end="119" comment="AUSG_21_FRA_HR_KALT_UEBERW_AKTIV" mask="00000010b">nicht_aktiv</function>
+			</group>
+		</code>
+		<code description="Enables Right Rear Turnsignal for LED (LED Replacement)">
+			<group id="3090">
+				<function start="119" end="119" comment="AUSG_21_FRA_HR_IS_LED" mask="00001000b">aktiv</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="000007C8" name="HKFM" author="Cryptocar_Personal" series="F025">
+		<code description="Close/Open the trunk from the key fob and Kick panel/driver door">
+			<group id="3010">
+				<function start="2" end="2" comment="SCH_TOEHKI" mask="00000100b">aktiv</function>
+			</group>
+		</code>
+		<code description="Close/Open the trunk from the key fob and Kick panel/driver door">
+			<group id="3010">
+				<function start="2" end="2" comment="SCHD_FBD" mask="00001000b">aktiv</function>
+			</group>
+		</code>
+		<code description="Close/Open the trunk from the key fob and Kick panel/driver door">
+			<group id="3010">
+				<function start="0" end="0" comment="TASTER_FBD" mask="00001000b">aktiv</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="00000DED" name="HU_NBT" author="Cryptocar_Personal" series="F025">
+	<code description="Eneables time-stamp display for call log">
+			<group id="3003">
+				<function start="1" end="1" comment="TIMESTAMP_DISPLAY" mask="01000000b">aktiv</function>
+			</group>
+		</code>
+	<code description="Displays TPMS info in iDrive">
+			<group id="3001">
+				<function start="1" end="1" comment="RDC_SAFETY" mask="00100000b">aktiv</function>
+			</group>
+		</code>
+	<code description="Remove legal disclaimer Part 1">
+			<group id="3001">
+				<function start="58" end="58" comment="LEGAL_DISCLAIMER_TIME" mask="11111111b">kein_ld</function>
+			</group>
+		</code>
+	<code description="Remove legal disclaimers part 2">
+			<group id="3001">
+				<function start="52" end="52" comment="MACRO_CAM_LEGALDISCLAIMER" mask="11111111b">kein_ld</function>
+			</group>
+		</code>
+	<code description="Sets head unit startup type to an animation">
+			<group id="3001">
+				<function start="62" end="62" comment="STARTUP_TYPE" mask="00000110b">animation</function>
+			</group>
+		</code>
+	<code description="Sets head unit startup type to black">
+			<group id="3001">
+				<function start="62" end="62" comment="STARTUP_TYPE" mask="00000110b">black</function>
+			</group>
+		</code>
+	<code description="Sets head unit startup type to a splash screen">
+			<group id="3001">
+				<function start="62" end="62" comment="STARTUP_TYPE" mask="00000110b">splash</function>
+			</group>
+		</code>
+	<code description="Changes animation to ///M Logo">
+			<group id="3001">
+				<function start="62" end="62" comment="STARTUP_EMBLEM" mask="01111000b">variant_01</function>
+			</group>
+		</code>
+	<code description="Changes animation to BMW Connected Drive">
+			<group id="3001">
+				<function start="62" end="62" comment="STARTUP_EMBLEM" mask="01111000b">variant_6</function>
+			</group>
+		</code>
+	<code description="Changes animation to BMW i">
+			<group id="3001">
+				<function start="62" end="62" comment="STARTUP_EMBLEM" mask="01111000b">variant_3</function>
+			</group>
+		</code>
+	<code description="Changes animation to Rolls-Royce">
+			<group id="3001">
+				<function start="62" end="62" comment="STARTUP_EMBLEM" mask="01111000b">variant_5</function>
+			</group>
+		</code>
+	<code description="Changes animation to MINI">
+			<group id="3001">
+				<function start="62" end="62" comment="STARTUP_EMBLEM" mask="01111000b">variant_4</function>
+			</group>
+		</code>
+	<code description="Changes animation to BMW Brown Theme">
+			<group id="3001">
+				<function start="62" end="62" comment="STARTUP_EMBLEM" mask="01111000b">variant_8</function>
+			</group>
+		</code>
+	<code description="Changes animation to BMW White Theme">
+			<group id="3001">
+				<function start="62" end="62" comment="STARTUP_EMBLEM" mask="01111000b">variant_7</function>
+			</group>
+		</code>
+	<code description="Changes animation to Merry Xmas and a Happy New Year">
+			<group id="3001">
+				<function start="62" end="62" comment="STARTUP_EMBLEM" mask="01111000b">variant_9</function>
+			</group>
+		</code>
+	<code description="Sets the sound notification signal to BMW i">
+			<group id="3002">
+				<function start="26" end="26" comment="SOUND_SIGNAL_SET" mask="00111000b">bmw_i</function>
+			</group>
+		</code>
+	<code description="Sets the sound notification signal to BMW (Default)">
+			<group id="3002">
+				<function start="26" end="26" comment="SOUND_SIGNAL_SET" mask="00111000b">bmw</function>
+			</group>
+		</code>
+	<code description="Sets the sound notification signal to Mini">
+			<group id="3002">
+				<function start="26" end="26" comment="SOUND_SIGNAL_SET" mask="00111000b">mini</function>
+			</group>
+		</code>
+	<code description="Sets the sound notification signal to Rolls-Royce">
+			<group id="3002">
+				<function start="26" end="26" comment="SOUND_SIGNAL_SET" mask="00111000b">rolls_royce</function>
+			</group>
+		</code>
+	<code description="Chnage Sport Display Gauge Color from Amber to Red and Silver">
+			<group id="3000">
+				<function start="133" end="133" comment="M_VEHICLE" mask="01000000b">aktiv</function>
+			</group>
+		</code>
+	<code description="Enables Junction View on the HUD">
+			<group id="3000">
+				<function start="65" end="65" comment="JUNCTION_VIEW_HUD" mask="00001000b">aktiv</function>
+			</group>
+		</code>
+	<code description="Activate Route Flight Feature">
+			<group id="3000">
+				<function start="135" end="135" comment="ROUTE_FLIGHT" mask="00001000b">aktiv</function>
+			</group>
+		</code>
+	<code description="Route Flight Simulator">
+			<group id="3000">
+				<function start="111" end="111" comment="NAVI_SCROLLING_ALONG_ROUTE" mask="00100000b">aktiv</function>
+			</group>
+		</code>
+	<code description="Displays Route as a list in iDrive">
+			<group id="3000">
+				<function start="59" end="59" comment="NAVI_ROAD_PREVIEW" mask="00100000b">aktiv</function>
+			</group>
+		</code>
+	<code description="Enables High Beam Asssistant in the iDrive Menu">
+			<group id="3000">
+				<function start="109" end="109" comment="HIGH_BEAM_ASSISTANT" mask="10000000b">aktiv</function>
+			</group>
+		</code>
+	<code description="Locks the door after beginning to drive">
+			<group id="3000">
+				<function start="129" end="129" comment="DOOR_LOCK_AFTER_DRIVING_AWAY" mask="01000000b">aktiv</function>
+			</group>
+		</code>
+	<code description="Enables M Laptimer in iDrive">
+			<group id="3000">
+				<function start="57" end="57" comment="M_LAPTIMER" mask="01000000b">aktiv</function>
+			</group>
+		</code>
+	<code description="Enables Efficient Dynamics displays in iDrive Part 1">
+			<group id="3000">
+				<function start="101" end="101" comment="EFF_DYN_SPORT_CID" mask="00010000b">aktiv</function>
+			</group>
+		</code>
+	<code description="Enables Efficient Dynamics displays in iDrive Part 2">
+			<group id="3000">
+				<function start="107" end="107" comment="EFF_DYN_SPORT_UNIT" mask="00000100b">aktiv</function>
+			</group>
+		</code>
+	<code description="Enables HUD Turnsignals in iDrive menu">
+			<group id="3000">
+				<function start="55" end="55" comment="HUD_TURNSIGNAL" mask="10000000b">aktiv</function>
+			</group>
+		</code>
+	<code description="Enables Volume Popup Display">
+			<group id="3002">
+				<function start="52" end="52" comment="VOLUME_POPUP_DISPLAY" mask="01000000b">aktiv</function>
+			</group>
+		</code>
+	<code description="Video In Motion Part 1">
+			<group id="3000">
+				<function start="72" end="72" comment="SPEEDLOCK_X_KMH_MAX" mask="11111111b">nicht_aktiv</function>
+			</group>
+		</code>
+	<code description="Video In Motion Part 2">
+			<group id="3000">
+				<function start="71" end="71" comment="SPEEDLOCK_X_KMH_MIN" mask="11111111b">nicht_aktiv</function>
+			</group>
+		</code>
+	<code description="Video In Motion Part 3">
+			<group id="3000">
+				<function start="5" end="5" comment="VIDEO_HANDBRAKE" mask="00000100b">nicht_aktiv</function>
+			</group>
+		</code>
+	<code description="Video In Motion Part 4">
+			<group id="3000">
+				<function start="5" end="5" comment="VIDEO_FRONT_LOCKED" mask="00010000b">nicht_aktiv</function>
+			</group>
+		</code>
+	<code description="Video In Motion Part 5">
+			<group id="3000">
+				<function start="57" end="57" comment="VIDEO_SPEEDLOCK_CONDITION" mask="00000111b">none</function>
+			</group>
+		</code>
+	<code description="Change Navi Voice To Birtish English Part 1">
+			<group id="3000">
+				<function start="139" end="139" comment="LAUNGUAGE_ENGLISH_UK" mask="00001100b">master</function>
+			</group>
+		</code>
+	<code description="Changes Navi Voice to British English Part 2">
+			<group id="3000">
+				<function start="139" end="139" comment="LANGUAGE_ENGLISH_US" mask="00110000b">nicht_aktiv</function>
+			</group>
+		</code>
+	<code description="Enables Navigation Trip Import">
+			<group id="3000">
+				<function start="61" end="61" comment="NAVI_TRIP_IMPORT" mask="00000001b">aktiv</function>
+			</group>
+		</code>
+	<code description="Enables navigation fuelstop proposals.">
+			<group id="3000">
+				<function start="60" end="60" comment="NAVI_FUELSTOP_PROPOSAL" mask="00100000b">aktiv</function>
+			</group>
+		</code>
+	<code description="Enables xViD Codec from USB">
+			<group id="3000">
+				<function start="15" end="15" comment="ENT_CODEC_XVID" mask="00100000b">aktiv</function>
+			</group>
+		</code>
+	<code description="Enables VCD Codec from USB">
+			<group id="3000">
+				<function start="15" end="15" comment="ENT_CODEC_VCD" mask="01000000b">aktiv</function>
+			</group>
+		</code>
+	<code description="Enables Videos to be Played from USB">
+			<group id="3003">
+				<function start="33" end="33" comment="API_USB_VIDEO" mask="00000110b">both</function>
+			</group>
+		</code>
+	<code description="Enables OGG Codec from USB">
+			<group id="3000">
+				<function start="15" end="15" comment="ENT_CODEC_OGG" mask="00010000b">aktiv</function>
+			</group>
+		</code>
+	<code description="Add GPS Currrent Location to iDrive menu">
+			<group id="3000">
+				<function start="96" end="96" comment="NAVI_POSITION_MENU" mask="10000000b">aktiv</function>
+			</group>
+		</code>
+	<code description="Save video files to NBT HDD">
+			<group id="3000">
+				<function start="13" end="13" comment="ENT_MC_VIDEO_SUPPORT" mask="00000100b">aktiv</function>
+			</group>
+		</code>
+	<code description="Enables M Laptimer in iDrive">
+			<group id="3000">
+				<function start="56" end="56" comment="OFFICE_MESSAGES_SPEEDLOCK_CONDITION" mask="00001110b">none</function>
+			</group>
+		</code>
+	<code description="Allows entire text messages to eb displayed while driving">
+			<group id="3000">
+				<function start="11" end="11" comment="PIM_DRIVING_TEXT_LENGTH" mask="00000111b">whole_text</function>
+			</group>
+		</code>
+	<code description="Allows entire text messages to eb displayed while driving">
+			<group id="3000">
+				<function start="11" end="11" comment="PIM_DRIVING_TEXT_LENGTH" mask="00000111b">whole_text</function>
+			</group>
+		</code>
+	<code description="Allows entire text messages to be displayed while driving">
+			<group id="3000">
+				<function start="11" end="11" comment="PIM_DRIVING_TEXT_LENGTH" mask="00000111b">whole_text</function>
+			</group>
+		</code>
+	<code description="Disable Audible Beep when locking car">
+			<group id="3000">
+				<function start="110" end="110" comment="ACOUSTICAL_LOCK_CONFIRM" mask="00000001b">nicht_aktiv</function>
+			</group>
+		</code>
+	<code description="Enable speech input for email or SMS">
+			<group id="3003">
+				<function start="1" end="1" comment="SPEECH_2_TEXT" mask="00010000b">aktiv</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="000006DE" name="IHKA_HIGH" author="Cryptocar_Personal" series="F025">
+	<code description="A/C Remembers last setting">
+			<group id="3000">
+				<function start="0" end="0" comment="OFF_MEMORY" mask="00000001b">aktiv</function>
+			</group>
+		</code>
+	<code description="A/C always remembers air reciculating setting">
+			<group id="3000">
+				<function start="0" end="0" comment="UMLUFT_MEMORY" mask="00000010b">aktiv</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="00000014" name="JBBFE" author="Cryptocar_Personal" series="F025">
+	<code description="Opening rear doors does NOT stop windows">
+			<group id="3070">
+				<function start="0" end="0" comment="FH_TUERAUF_STOP_MAUT" mask="00000100b">nicht_aktiv</function>
+			</group>
+		</code>
+	<code description="Disable headlamp washers">
+			<group id="3000">
+				<function start="8" end="8" comment="SCHEINWERFERREINIGUNG" mask="00000001b">nicht_aktiv</function>
+			</group>
+		</code>
+	<code description="Auto-Wiper Sensitivity Increase Part 1">
+			<group id="3530">
+				<function start="6" end="6" comment="RLS_FLC_SCHWELLWERT_SATZ_1" mask="11110000b">05</function>
+			</group>
+		</code>
+	<code description="Auto-Wiper Sensitivity Increase Part 2">
+			<group id="3530">
+				<function start="6" end="6" comment="RLS_FLC_SCHWELLWERT_SATZ_2" mask="00001111b">09</function>
+			</group>
+		</code>
+	<code description="Auto-Wiper Sensitivity Increase Part 3">
+			<group id="3530">
+				<function start="7" end="7" comment="RLS_FLC_SCHWELLWERT_SATZ_3" mask="00001111b">0D</function>
+			</group>
+		</code>
+	<code description="Auto wiper Sensitivity changed to default Normal">
+			<group id="3530">
+				<function start="5" end="5" comment="RLS_DEF_FLC_SCHWELLWERT_SATZ" mask="00000111b">normal</function>
+			</group>
+		</code>
+	<code description="Auto wiper Sensitivity changed to sensitive">
+			<group id="3530">
+				<function start="5" end="5" comment="RLS_DEF_FLC_SCHWELLWERT_SATZ" mask="00000111b">empfindlich</function>
+			</group>
+		</code>
+	<code description="Auto wiper Sensitivity changed to default very sensitive">
+			<group id="3530">
+				<function start="5" end="5" comment="RLS_DEF_FLC_SCHWELLWERT_SATZ" mask="00000111b">sehr_empfindlich</function>
+			</group>
+		</code>
+	<code description="Auto wiper Sensitivity changed to insensitive">
+			<group id="3530">
+				<function start="5" end="5" comment="RLS_DEF_FLC_SCHWELLWERT_SATZ" mask="00000111b">unempfindlich</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="00001148" name="KAFAS2" author="Cryptocar_Personal" series="F025">
+	<code description="High Beam Assistant Auto-On">
+			<group id="3000">
+				<function start="1" end="1" comment="FLA_ON_OFF" mask="00000001b">FLA_on</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="00000069" name="KOMBI L6 BO" author="Cryptocar_Personal" series="F025">
+	<code description="Adds Digital speed to BC Menu">
+			<group id="3000">
+				<function start="1" end="1" comment="BC_DIGITAL_V" mask="00000010b">aktiv</function>
+			</group>
+		</code>
+	<code description="Show Turnsignals in HUD part 1">
+			<group id="3008">
+				<function start="5" end="5" comment="HUD_PIA_BLINKER" mask="00000001b">aktiv</function>
+			</group>
+		</code>
+	<code description="Show Turnsignals in HUD part 2">
+			<group id="3000">
+				<function start="42" end="42" comment="BLINKER_HUD_ENABLE" mask="00100000b">aktiv</function>
+			</group>
+		</code>
+	<code description="X4 M40i Startup logo">
+			<group id="3000">
+				<function start="53" end="53" comment="BMW_LOGO" mask="00001111b">mpa_x4</function>
+			</group>
+		</code>
+	<code description="Default BMW Startup logo">
+			<group id="3000">
+				<function start="53" end="53" comment="BMW_LOGO" mask="00001111b">bmw</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="00001AB7" name="PMA_PDC" author="Cryptocar_Personal" series="F025">
+	<code description="Minimum Speed Rear and Side Cameras can be activated (FF)">
+			<group id="300B">
+				<function start="8" end="8" comment="v_schwelle_1_kmh" mask="11111111b">FF</function>
+			</group>
+		</code>
+	<code description="Maximum Speed Rear and Side Cameras can be activated (FF)">
+			<group id="300B">
+				<function start="9" end="9" comment="v_schwelle_2_kmh" mask="11111111b">FF</function>
+			</group>
+		</code>
+	<code description="Minimum Distance Rear and Side Cameras can be activated (FF)">
+			<group id="300B">
+				<function start="10" end="10" comment="d_schwelle_1_kmh" mask="11111111b">FF</function>
+			</group>
+		</code>
+	<code description="Maxmimum Speed Rear and Side Cameras can be activated (FF)">
+			<group id="300B">
+				<function start="11" end="11" comment="d_schwelle_2_kmh" mask="11111111b">FF</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="00000629" name="DXC_CT01" author="Cryptocar_Personal" series="F025">
+	<code description="Disable xDrive Part 1">
+			<group id="3000">
+				<function start="28" end="28" comment="C_AllradAktuator_Schutzfunktion" mask="00000111b">inaktiv</function>
+			</group>
+		</code>
+	<code description="Disables xDrive Part 2">
+			<group id="3000">
+				<function start="20" end="20" comment="C_Variante_Antrieb_e" mask="11111111b">Heck</function>
+			</group>
+		</code>
+	<code description="Enable xDrive Part 1">
+		<group id="3000">
+				<function start="28" end="28" comment="C_AllradAktuator_Schutzfunktion" mask="00000111b">aktiv</function>
+			</group>
+		</code>
+	<code description="Enables xDrive Part 2">
+			<group id="3000">
+				<function start="20" end="20" comment="C_Variante_Antrieb_e" mask="11111111b">Allrad</function>
+			</group>
+		</code>
+	</cafd>
+</FDL>

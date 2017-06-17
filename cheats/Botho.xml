@@ -1,11 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <FDL>
-	<!--Botho - Public Release (2017-06-10) Updated with 3.61.5 -->
+	<!--Botho - Public Release (2017-06-17) Updated with 3.61.5 -->
 	
 <cafd id="00000911" name="ACSM_4B" author="Botho (public)" series="F020,F030">
 	<code description="Ceinture de sécurité : Durée du rappel à 10s (défaut : 100s)">
 		<group id="3001">
 			<function start="3" end="3" mask="11111111b" comment="GWF_SBR_WARNDAUER (défaut : 64)">0A</function>
+		</group>
+	</code>
+	<code description="Ceinture de sécurité : désactive le gong de rappel">
+		<group id="3000">
+			<function start="15" end="15" mask="00000010b" comment="SeatBeltReminder_SBR_Fahrer (défaut : aktiv)">nicht_aktiv</function>
+			<function start="15" end="15" mask="00000100b" comment="SeatBeltReminder_SBR_Beifahrer (défaut : aktiv)">nicht_aktiv</function>			
+		</group>
+	</code>
+	<code description="Ceinture de sécurité : désactive l'indicateur dans l'instrumentation tableau de bord">
+		<group id="3000">
+			<function start="15" end="15" mask="00010000b" comment="Gurtzustandsanzeige_Fahrer_GWF_GZA_FA (défaut : aktiv)">nicht_aktiv</function>
+			<function start="15" end="15" mask="00001000b" comment="Gurtzustandsanzeige_Beifahrer_GWF_GZA_BF (défaut : aktiv)">nicht_aktiv</function>			
+		</group>
+	</code>
+	<code description="Ceinture de sécurité : désactive le gong lorsque la ceinture est ejectée">
+		<group id="3000">
+			<function start="16" end="16" mask="00000001b" comment="SBR_PreWarning_Fahrer (défaut : aktiv)">nicht_aktiv</function>
+			<function start="16" end="16" mask="00000010b" comment="SBR_PreWarning_Beifahrer (défaut : aktiv)">nicht_aktiv</function>			
 		</group>
 	</code>
 </cafd>
@@ -132,14 +150,14 @@
 			<function start="2" end="2" mask="00011110b" comment="WW_ANZAHL_WASCHBET_ZUR_SRA (défaut : 0A)">05</function>
 		</group>
 	</code>
-	<code description="Rétroviseurs : fermeture autorisée en dessous de 255km/h (défaut : 20km/h)">
+	<code description="Rétroviseurs : fermeture autorisée en dessous de 49 km/h (défaut : 20 km/h)">
 		<group id="3110">
-			<function start="9" end="9" mask="11111111b" comment="ASP_MAX_GESCHWINDIGKEIT_BEIKLAPPEN (défaut : 14)">FF</function>
+			<function start="9" end="9" mask="11111111b" comment="ASP_MAX_GESCHWINDIGKEIT_BEIKLAPPEN (défaut : 14)">31</function>
 		</group>
 	</code>
-	<code description="Rétroviseurs : ouverture automatique à partir de 20 km/h (défaut : 40 km/h)">
+	<code description="Rétroviseurs : ouverture automatique à partir de 50 km/h (défaut : 40 km/h)">
 		<group id="3110">
-			<function start="10" end="10" mask="11111111b" comment="ASP_GESCHWINDIGKEIT_AUTO_AUSKLAPPEN (défaut : 28)">14</function>
+			<function start="10" end="10" mask="11111111b" comment="ASP_GESCHWINDIGKEIT_AUTO_AUSKLAPPEN (défaut : 28)">32</function>
 		</group>
 	</code>
 	<code description="Rétroviseurs passager : Augmente le débattement lors de la marche arrière à 85 digits (défaut : 59 digits - I-Step 61.0)">
@@ -357,7 +375,12 @@
 			<function start="3" end="3" mask="11111111b" comment="THRV_AVAI_TLC_HIGH (défaut : 46)">37</function>
 			<function start="4" end="4" mask="11111111b" comment="THRV_AVAI_TLC_LOW (défaut : 41)">32</function>
 		</group>
-	</code>		
+	</code>
+	<code description="Feux de route automatique Auto-On">
+		<group id="3000">
+			<function start="1" end="1" mask="00000001b" comment="FLA_ON_OFF (défaut : FLA_on)">FLA_on</function>
+		</group>
+	</code>
 </cafd>
 
 <cafd id="000007C8" name="HKFM" author="Botho (public)" series="F020,F030">
@@ -459,7 +482,7 @@
 			<function start="35" end="35" mask="11000000b" comment="DEAKTIVIERUNGSMOEGLICHKEIT_AMBILIGHT (défaut : 00)">01</function>
 		</group>
 	</code>
-	<code description="-- Don't work -- iDrive (Eclairage) : Affichage assistant feux de route">
+	<code description="-- Don't work / testing -- iDrive (Eclairage) : Affichage assistant feux de route">
 		<group id="3000">
 			<function start="109" end="109" mask="10000000b" comment="HIGH_BEAM_ASSISTANT (défaut : nicht_aktiv)">aktiv</function>
 		</group>

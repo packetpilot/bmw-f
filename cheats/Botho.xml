@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <FDL>
-	<!--Botho - Public Release (2017-06-17) Updated with 3.61.5 -->
+	<!--Botho - Public Release (2017-07-24) Updated with 3.62.1 -->
 	
 <cafd id="00000911" name="ACSM_4B" author="Botho (public)" series="F020,F030">
 	<code description="Ceinture de sécurité : Durée du rappel à 10s (défaut : 100s)">
@@ -377,7 +377,7 @@
 		</group>
 	</code>
 	<code description="Feux de route automatique Auto-On">
-		<group id="3000">
+		<group id="3050">
 			<function start="1" end="1" mask="00000001b" comment="FLA_ON_OFF (défaut : FLA_on)">FLA_on</function>
 		</group>
 	</code>

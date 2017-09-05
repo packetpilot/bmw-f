@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <FDL>
-	<!--Botho - Public Release (2017-07-24) Updated with 3.62.1 -->
+	<!--Botho - Public Release (2017-09-05) Updated with 3.62.1 -->
 	
 <cafd id="00000911" name="ACSM_4B" author="Botho (public)" series="F020,F030">
 	<code description="Ceinture de sécurité : Durée du rappel à 10s (défaut : 100s)">
@@ -456,17 +456,6 @@
 			<function start="106" end="106" mask="00000111b" comment="DISPLAYTIME_LIST_HUD_KOMBI (défaut : 05)">03</function>
 		</group>
 	</code>
-	<code description="-- Don't work (Only M5) -- iDrive (HUD) : Affichage de l'option Sport (indicateur de changement rapports)">
-		<group id="3000">
-			<function start="18" end="18" mask="00000001b" comment="HUD_SPORTANZEIGE_ENABLE (défaut : nicht_aktiv)">aktiv</function>
-			<function start="18" end="18" mask="00000100b" comment="HUD_SPORTANZEIGE_MS_GASSE_ENABLE (défaut : nicht_aktiv)">aktiv</function>
-		</group>
-	</code>
-	<code description="-- Don't work -- iDrive (HUD) : Affichage clignotants (Step 1 sur 2 - voir KOMBI)">
-		<group id="3001">
-			<function start="55" end="55" mask="10000000b" comment="HUD_TURNSIGNAL (défaut : nicht_aktiv)">aktiv</function>
-		</group>
-	</code>
 	<code description="iDrive (Portes) : Ajout de l'alarme">
 		<group id="3000">
 			<function start="110" end="110" mask="00000001b" comment="ACOUSTICAL_LOCK_CONFIRM (défaut : nicht_aktiv)">aktiv</function>
@@ -477,16 +466,6 @@
 			<function start="92" end="92" mask="00011000b" comment="DAYDRIVING_LIGHT (défaut : 00)">02</function>
 		</group>
 	</code>
-	<code description="-- Don't work -- iDrive (Eclairage) : Ajout lumière d'ambiance (F4x only)">
-		<group id="3000">
-			<function start="35" end="35" mask="11000000b" comment="DEAKTIVIERUNGSMOEGLICHKEIT_AMBILIGHT (défaut : 00)">01</function>
-		</group>
-	</code>
-	<code description="-- Don't work / testing -- iDrive (Eclairage) : Affichage assistant feux de route">
-		<group id="3000">
-			<function start="109" end="109" mask="10000000b" comment="HIGH_BEAM_ASSISTANT (défaut : nicht_aktiv)">aktiv</function>
-		</group>
-	</code>
 	<code description="iDrive (Statut) : Affichage température et pression des pneus">
 		<group id="3001">
 			<function start="1" end="1" mask="00100000b" comment="RDC_SAFETY (défaut : nicht_aktiv)">aktiv</function>
@@ -495,11 +474,6 @@
 	<code description="iDrive (Statut) : Affichage du carnet d'entretien">
 		<group id="3000">
 			<function start="2" end="2" mask="00100000b" comment="SERVICE_HISTORY (défaut : aktiv)">aktiv</function>
-		</group>
-	</code>
-	<code description="-- Don't work -- iDrive (Statut) : Affichage informations de la batterie">
-		<group id="3000">
-			<function start="134" end="134" mask="00000001b" comment="KI_SELECTION_SOC (défaut : nicht_aktiv)">aktiv</function>
 		</group>
 	</code>
 	<code description="iDrive (Notice) : Utilisation de la notice en roulant">
@@ -529,7 +503,7 @@
 			<function start="59" end="59" mask="00100000b" comment="NAVI_ROAD_PREVIEW (défaut : nicht_aktiv)">aktiv</function>
 		</group>
 	</code>
-	<code description="iDrive (Navigation) : Ajoute la position GPS en fin de menu.">
+	<code description="iDrive (Navigation) : Ajoute la position GPS en fin de menu">
 			<group id="3000">
 				<function start="96" end="96" mask="10000000b" comment="NAVI_POSITION_MENU (défaut : nicht_aktiv)">aktiv</function>
 			</group>
@@ -568,16 +542,6 @@
 	<code description="iDrive (Navigation) : Ajoute le menu Route express dans les préférences de guidage">
 		<group id="3000">
 			<function start="108" end="108" mask="00000100b" comment="NAVI_EXPRESS_ROADS (défaut : nicht_aktiv)">aktiv</function>
-		</group>
-	</code>
-	<code description="-- Don't work -- iDrive (Navigation) : Zoom automatique aux intersections">
-		<group id="3000">
-			<function start="111" end="111" mask="00000100b" comment="NAVI_AUTOZOOM (défaut : nicht_aktiv)">aktiv</function>
-		</group>
-	</code>
-	<code description="-- Don't work -- iDrive (Navigation) : Zoom automatique de la carte">
-		<group id="3000">
-			<function start="16" end="16" mask="00001000b" comment="AUTO_MAP_ZOOM (défaut : nicht_aktiv)">aktiv</function>
 		</group>
 	</code>
 	<code description="iDrive (Office) : Speech to Text (Email ou SMS) Nécessite souscription Nuance">
@@ -696,10 +660,46 @@
 			<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">09</function>
 		</group>
 	</code>
+	<code description="-- Don't work (Only M5) -- iDrive (HUD) : Affichage de l'option Sport (indicateur de changement rapports)">
+		<group id="3000">
+			<function start="18" end="18" mask="00000001b" comment="HUD_SPORTANZEIGE_ENABLE (défaut : nicht_aktiv)">aktiv</function>
+			<function start="18" end="18" mask="00000100b" comment="HUD_SPORTANZEIGE_MS_GASSE_ENABLE (défaut : nicht_aktiv)">aktiv</function>
+		</group>
+	</code>
+	<code description="-- Don't work -- iDrive (HUD) : Affichage clignotants (Step 1 sur 2 - voir KOMBI)">
+		<group id="3001">
+			<function start="55" end="55" mask="10000000b" comment="HUD_TURNSIGNAL (défaut : nicht_aktiv)">aktiv</function>
+		</group>
+	</code>
+	<code description="-- Don't work -- iDrive (Eclairage) : Ajout lumière d'ambiance (F4x only)">
+		<group id="3000">
+			<function start="35" end="35" mask="11000000b" comment="DEAKTIVIERUNGSMOEGLICHKEIT_AMBILIGHT (défaut : 00)">01</function>
+		</group>
+	</code>
+	<code description="-- Don't work / testing -- iDrive (Eclairage) : Affichage assistant feux de route">
+		<group id="3000">
+			<function start="109" end="109" mask="10000000b" comment="HIGH_BEAM_ASSISTANT (défaut : nicht_aktiv)">aktiv</function>
+		</group>
+	</code>
+	<code description="-- Don't work -- iDrive (Statut) : Affichage informations de la batterie">
+		<group id="3000">
+			<function start="134" end="134" mask="00000001b" comment="KI_SELECTION_SOC (défaut : nicht_aktiv)">aktiv</function>
+		</group>
+	</code>
 	<code description="-- Don't work -- iDrive (Réglages) : Activation GPS tracking (problème de réglementation CNIL en France je pense ...)">
 		<group id="3003">
 			<function start="15" end="15" mask="00000001b" comment="ASSIST_SVR_SHOW (défaut : nicht_aktiv)">aktiv</function>
 			<function start="14" end="14" mask="10000000b" comment="ASSIST_VEHICLEFINDER_SHOW (défaut : aktiv)">aktiv</function>
+		</group>
+	</code>
+	<code description="-- Don't work -- iDrive (Navigation) : Zoom automatique aux intersections">
+		<group id="3000">
+			<function start="111" end="111" mask="00000100b" comment="NAVI_AUTOZOOM (défaut : nicht_aktiv)">aktiv</function>
+		</group>
+	</code>
+	<code description="-- Don't work -- iDrive (Navigation) : Zoom automatique de la carte">
+		<group id="3000">
+			<function start="16" end="16" mask="00001000b" comment="AUTO_MAP_ZOOM (défaut : nicht_aktiv)">aktiv</function>
 		</group>
 	</code>
 	<code description="-- Don't work -- iDrive (Navigation) : Active le guidage en 2 etapes ?? No difference">

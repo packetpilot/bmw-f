@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <FDL>
-	<!--Botho - Public Release (2017-09-05) Updated with 3.62.1 -->
+	<!--Botho - Public Release (2017-10-05) Updated with 3.62.5 -->
 	
 <cafd id="00000911" name="ACSM_4B" author="Botho (public)" series="F020,F030">
 	<code description="Ceinture de sécurité : Durée du rappel à 10s (défaut : 100s)">
@@ -353,6 +353,17 @@
 	<code description="Climatisation : Mémorise la dernière position du flux d'air (défaut ; 15 minutes après arrêt du moteur)">
 		<group id="3003">
 			<function start="0" end="0" mask="00000001b" comment="MEMORY_UMLUFT (défaut : nicht_aktiv)">aktiv</function>
+		</group>
+	</code>
+	<code description="Climatisation : AC off en mode AUTO">
+		<group id="3003">
+			<function start="0" end="0" mask="00000100b" comment="AC_ON_WITH_AUTO (défaut : aktiv)">nicht_aktiv</function>
+		</group>
+	</code>
+	<code description="Climatisation : Désactive la remise en route automatique du recyclage du flux d'air (HO-Words : DAUE)">
+		<group id="3003">
+			<function start="1" end="1" mask="00010000b" comment="AC_ON_WITH_RECIRC (défaut : nicht_aktiv)">aktiv</function>
+			<function start="0" end="0" mask="00000001b" comment="UMLUFT_AUTO_AUS (défaut : aktiv)">nicht_aktiv</function>
 		</group>
 	</code>
 	<code description="Climatisation : AC off en mode AUTO">

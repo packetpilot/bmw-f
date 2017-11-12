@@ -242,7 +242,7 @@
 		</group>
 	</code>
 	<code description="Eclairage pas de porte (FollowMeHome) : durée d'éclairage 30s (défaut : 20s)">
-		<group id="3060">
+		<group id="3064">
 			<function start="216" end="216" mask="11111111b" comment="PIA_DEFAULT_FMH (défaut : 14)">1E</function>
 		</group>
 	</code>

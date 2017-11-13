@@ -238,7 +238,7 @@
 	</code>
 	<code description="Eclairage pas de porte (FollowMeHome) : activation par la télécommande - 4èime bouton ou clic rapide sur le 3ième (défaut : non actif)">
 		<group id="3060">
-			<function start="14" end="14" mask="00000010b" comment="FOLLOWMEHOME_VIA_FFB (nicht_aktiv)">aktiv</function>
+			<function start="14" end="14" mask="00000010b" comment="FOLLOWMEHOME_VIA_FFB (défaut : nicht_aktiv)">aktiv</function>
 		</group>
 	</code>
 	<code description="Eclairage pas de porte (FollowMeHome) : durée d'éclairage 30s (défaut : 20s)">

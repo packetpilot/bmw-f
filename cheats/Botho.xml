@@ -2,6 +2,7 @@
 <FDL>
 	<!-- Botho - Public Release       -->
 	<!-- last updated : 2017-12-07    --> 
+	<!-- last updated : 2017-12-11    --> 
 	<!-- last I-Step default values updated: 3.63.2  -->
 	
 	
@@ -553,6 +554,11 @@
 			<function start="57" end="57" mask="00000111b" comment="VIDEO_SPEEDLOCK_CONDITION (défaut : none)">none</function>
 		</group>
 	</code>
+	<code description="iDrive (Média) : couverture album Gracenote dB Full-Size">
+			<group id="3000">
+				<function start="14" end="14" comment="ENT_MC_COVER_SCALE (défaut : nicht_aktiv)" mask="00100000b">aktiv</function>
+			</group>
+		</code>
 	<code description="iDrive (HUD) : Affichage de l'assistant distance (Step 2 sur 3 - voir KOMBI et KAFAS2)">
 		<group id="3000">
 			<function start="97" end="97" mask="00001000b" comment="HUD_DISTANCE_INFO (défaut : nicht_aktiv)">aktiv</function>
@@ -601,12 +607,14 @@
 			<function start="1" end="1" mask="10000000b" comment="SL16_ADD_CEDEVICE (défaut : nicht_aktiv)">nicht_aktiv</function>
 		</group>
 	</code>
-	<code description="iDrive (Messages) : Affichage des SMS et de BMW Info en entier (défaut : 3 lignes)">
-		<group id="3003">
-			<function start="11" end="11" mask="00000111b" comment="PIM_DRIVING_TEXT_LENGTH (défaut : 01)">07</function>
+	<code description="iDrive (Messages) : Affichage des SMS, BMW Info, My Info and AKD en entier (défaut : 3 lignes)">
+		<group id="3000">
 			<function start="34" end="34" mask="00011100b" comment="MYINFO_DRIVING_TEXT_LENGTH (défaut : whole_text)">whole_text</function>
 			<function start="34" end="34" mask="11100000b" comment="AKD_DRIVING_TEXT_LENGTH (défaut : whole_text)">whole_text</function>
 			<function start="35" end="35" mask="00000111b" comment="BMWINFO_DRIVING_TEXT_LENGTH (défaut : whole_text)">whole_text</function>
+		</group>
+		<group id="3003">
+			<function start="11" end="11" mask="00000111b" comment="PIM_DRIVING_TEXT_LENGTH (défaut : 01)">07</function>
 		</group>
 	</code>
 	<code description="iDrive (Sport) : Affichage mode M Sport (Rouge et Argent)">
@@ -633,6 +641,22 @@
 		<group id="3000">
 			<function start="112" end="112" mask="00000010b" comment="NAVI_ONLINE_OPTIMIZATION_BUTTON (défaut : nicht_aktiv)">aktiv</function>
 		</group>
+	</code>
+	<code description="iDrive (Navigation) : Active Real-Time Traffic Info">
+			<group id="3000">
+				<function start="59" end="59" comment="NAVI_TRAFFIC_INFO_MAP" mask="00010000b">aktiv</function>
+			</group>
+			<group id="3002">
+				<function start="23" end="23" comment="TI_CA_TMC" mask="00000100b">aktiv</function>
+				<function start="24" end="24" comment="TI_VINFO" mask="00000010b">aktiv</function>
+				<function start="23" end="23" comment="TI_TMC_REGIONAL" mask="00100000b">aktiv</function>
+				<function start="23" end="23" comment="TI_FALLBACK_DISABLED" mask="01000000b">aktiv</function>
+			</group>
+	</code>
+	<code description="iDrive (Navigation) : Active la boussole">
+			<group id="3000">
+				<function start="5" end="5" comment="COMPASS" mask="00000001b">aktiv</function>
+			</group>
 	</code>
 	<code description="iDrive (Navigation) : Affichage de la vue sortie autoroute dans HUD">
 		<group id="3000">
@@ -788,17 +812,15 @@
 	</code>
 	<code description="-- TESTING -- iDrive (Réglages) : Active l'assistant de sortie de parking'">
 		<group id="3001">
-			<function start="13" end="13" mask="0000O001b" comment="MACRO_PMA_AUSPARKEN (défaut : nicht_aktiv)">aktiv</function>
+			<function start="13" end="13" mask="10000000b" comment="MACRO_PMA_AUSPARKEN (défaut : nicht_aktiv)">aktiv</function>
 		</group>
 	</code>
 	<code description="-- TESTING -- iDrive (Réglages) : Active PDC automatique'">
 		<group id="3001">
 			<function start="64" end="64" mask="00010000b" comment="ACTIVE_PDC (défaut : nicht_aktiv)">aktiv</function>
-			<function start="65" end="65" mask="010000000b" comment="AUTO_PDC (défaut : nicht_aktiv)">aktiv</function>
+			<function start="65" end="65" mask="01000000b" comment="AUTO_PDC (défaut : nicht_aktiv)">aktiv</function>
 		</group>
 	</code>
-	
-	
 	<code description="-- Don't work (Only M5) -- iDrive (HUD) : Affichage de l'option Sport (indicateur de changement rapports)">
 		<group id="3000">
 			<function start="18" end="18" mask="00000001b" comment="HUD_SPORTANZEIGE_ENABLE (défaut : nicht_aktiv)">aktiv</function>

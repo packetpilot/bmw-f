@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <FDL>
 	<!-- Botho - Public Release       -->
-	<!-- last updated : 2017-11-12    --> 
-	<!-- last I-Step updated: 3.63.0  -->
+	<!-- last updated : 2017-12-11    --> 
+	<!-- last I-Step default values updated: 3.63.2  -->
 	
 	
 <cafd id="00000911" name="ACSM_4B" author="Botho (public)" series="F020,F030">
@@ -52,7 +52,7 @@
 			<function start="7" end="7" mask="11111111b" comment="CLM_TIME_PIA_LOCK_AT_TIMEOUT (défaut : 0C)">03</function>
 		</group>
 	</code>
-	<code description="Accès confort : Activation Panic Alarm et tempo télécommande 500ms (short=welcome - MID=coffre - LONG=panic)">
+	<code description="Accès confort : Activation Panic Alarm et tempo télécommande 500ms (SHORT=welcome - MID=coffre - LONG=panic)">
 		<group id="30D0">
 			<function start="2" end="2" mask="00000100b" comment="RC_PANIC_ALARM (défaut : nicht_aktiv)">aktiv</function>
 			<function start="3" end="3" mask="00001111b" comment="RC_DEFAULT_IDG_3RD_BUTTON_SHORT (défaut : 00)">04</function>
@@ -77,16 +77,21 @@
 			<function start="5" end="5" mask="00000110b" comment="CAM_SMART_CLOSER (défaut : aktiv si build date 0315)">aktiv</function>
 		</group>
 	</code>
-	<code description="Accès confort : Délais d'ouverture du coffre à 0,2s (défaut 0,7s)">
+	<code description="Accès confort : Délais d'ouverture du coffre à 0,1s (défaut 0,7s)">
 		<group id="3040">
-			<function start="12" end="12" mask="11111111b" comment="CLM_TIMEOUT_HK_SMO (défaut : wert_03)">wert_02</function>
+			<function start="12" end="12" mask="11111111b" comment="CLM_TIMEOUT_HK_SMO (défaut : wert_03)">wert_01</function>
+		</group>
+	</code>
+	<code description="Accès confort : Désactive les clignotant à l'ouverture du coffre (défaut : activé)">
+		<group id="3040">
+			<function start="2" end="2" mask="00000100b" comment="CLM_SMO_INDICATOR (défaut : aktiv)">nicht_aktiv</function>
 		</group>
 	</code>
 	<code description="Dévérouillage des portes à l'arrêt du moteur (uniquement si le vérouillage automatique activé)">
   		<group id="3040">
   			<function start="1" end="1" mask="00000010b" comment="CLM_UNLOCK_KL15OFF_AFTER_PIA_AUTO_LOCK (défaut : aktiv)">aktiv</function>
   		</group>
-  	</code>	
+  	</code>
 	<code description="Angel Eyes (DRL) : Activation des feux de jour (Step 1 sur 3 - voir HU-NBT and REM)">
 		<group id="3060">
 			<function start="31" end="31" mask="00110000b" comment="TFL_MODUS (défaut : 02)">02</function>
@@ -175,9 +180,9 @@
 			<function start="10" end="10" mask="11111111b" comment="ASP_GESCHWINDIGKEIT_AUTO_AUSKLAPPEN (défaut : 28)">32</function>
 		</group>
 	</code>
-	<code description="Rétroviseurs passager : Augmente le débattement lors de la marche arrière à 85 digits (défaut : 59 digits - I-Step 61.0)">
+	<code description="Rétroviseurs passager : Augmente le débattement lors de la marche arrière (défaut : 59 digits - I-Step 61.0)">
 		<group id="3110">
-			<function start="2" end="2" mask="11111111b" comment="ASP_BORDSTEINAUTOMATIK_DELTA (défaut : 3B)">55</function>
+			<function start="2" end="2" mask="11111111b" comment="ASP_BORDSTEINAUTOMATIK_DELTA (défaut : 3B)">5A</function>
 		</group>
 	</code>
 	<code description="Clignotants : nb de clignotements à 5 (défaut : 3 - I-Step under 61.0)">
@@ -236,7 +241,7 @@
 			<function start="5" end="5" mask="00000111b" comment="RLS_DEF_FLC_SCHWELLWERT_SATZ (défaut : 00)">03</function>
 		</group>
 	</code>
-	<code description="Eclairage pas de porte (FollowMeHome) : activation par la télécommande - 4èime bouton ou clic rapide sur le 3ième (défaut : non actif)">
+	<code description="Eclairage pas de porte (FollowMeHome Step 1 sur 2 - voir HU-NBT) - 4èime bouton ou clic rapide sur le 3ième (défaut : non actif)">
 		<group id="3060">
 			<function start="14" end="14" mask="00000010b" comment="FOLLOWMEHOME_VIA_FFB (défaut : nicht_aktiv)">aktiv</function>
 		</group>
@@ -296,12 +301,12 @@
 			<function start="1" end="1" mask="00100000b" comment="CLM_HORN_AT_SECURE (défaut : aktiv)">aktiv</function>
 		</group>
 	</code>
-	<code description="Désactivation de la radio / navigation à l'ouverture de la porte conducteur (défaut : activé)">
+	<code description="Désactivation de la radio / navigation à l'ouverture de la porte conducteur (défaut : désactivé)">
 		<group id="3020">
 			<function start="1" end="1" mask="00000001b" comment="TCM_LOGIC_R_OFF_DOOR (défaut : nicht_aktiv)">aktiv</function>
 		</group>
 	</code>
-	<code description="Activation de la radio / navigation à l'ouverture de la porte conducteur (défaut : activé)">
+	<code description="Activation de la radio / navigation à l'ouverture de la porte conducteur (défaut : désactivé)">
 		<group id="3020">
 			<function start="1" end="1" mask="00000001b" comment="TCM_LOGIC_R_OFF_DOOR (défaut : nicht_aktiv)">nicht_aktiv</function>
 		</group>
@@ -315,6 +320,61 @@
 
 
 <cafd id="00000A07" name="FZD__07" author="Botho (public)" series="F020,F030">
+	<code description="Alarme buzzer level low (niveau 3)">
+		<group id="3001">
+			<function start="33" end="33" mask="11111111b" comment="Buzzer level low (défaut : level_2)">level_3</function>
+		</group>
+	</code>
+	<code description="Alarme buzzer level low (niveau 5)">
+		<group id="3001">
+			<function start="33" end="33" mask="11111111b" comment="Buzzer level low (défaut : level_2)">level_5</function>
+		</group>
+	</code>
+	<code description="Alarme buzzer level low (niveau 7)">
+		<group id="3001">
+			<function start="33" end="33" mask="11111111b" comment="Buzzer level low (défaut : level_2)">level_7</function>
+		</group>
+	</code>
+	<code description="Alarme buzzer level low (niveau 10)">
+		<group id="3001">
+			<function start="33" end="33" mask="11111111b" comment="Buzzer level low (défaut : level_2)">level_10</function>
+		</group>
+	</code>
+	<code description="Alarme buzzer level high (niveau 2)">
+		<group id="3001">
+			<function start="34" end="34" mask="11111111b" comment="Buzzer level high (défaut : level_3)">level_2</function>
+		</group>
+	</code>
+	<code description="Alarme buzzer level high (niveau 5)">
+		<group id="3001">
+			<function start="34" end="34" mask="11111111b" comment="Buzzer level high (défaut : level_3)">level_5</function>
+		</group>
+	</code>
+	<code description="Alarme buzzer level high (niveau 7)">
+		<group id="3001">
+			<function start="34" end="34" mask="11111111b" comment="Buzzer level high (défaut : level_3)">level_7</function>
+		</group>
+	</code>
+	<code description="Alarme buzzer level high (niveau 10)">
+		<group id="3001">
+			<function start="34" end="34" mask="11111111b" comment="Buzzer level high (défaut : level_3)">level_10</function>
+		</group>
+	</code>
+	<code description="Alarme type Europe">
+		<group id="3001">
+			<function start="17" end="17" mask="11111111b" comment="Alarm type Europe (défaut : ece)">ece</function>
+		</group>
+	</code>
+	<code description="Alarme type GB">
+		<group id="3001">
+			<function start="17" end="17" mask="11111111b" comment="Alarm type GB (défaut : ece)">gb</function>
+		</group>
+	</code>
+	<code description="Alarme type US">
+		<group id="3001">
+			<function start="17" end="17" mask="11111111b" comment="Alarm type US (défaut : ece)">us</function>
+		</group>
+	</code>
 	<code description="Activation Panic Alarme">
 		<group id="3002">
 			<function start="0" end="0" mask="00000100b" comment="Panikalarm (défaut : nicht_aktiv)">aktiv</function>
@@ -456,6 +516,11 @@
 
 
 <cafd id="00000DED" name="HU_NBT" author="Botho (public)" series="F020,F030">
+	<code description="iDrive (Media) : volume au démarrage à 25% (valeur par défaut)">
+		<group id="3002">
+			<function start="3" end="3" mask="11111111b" comment="VOL_MAX_ON (défaut : 19)">19</function>
+		</group>
+	</code>
 	<code description="iDrive (Media) : volume au démarrage à 30% (défaut 25%)">
 		<group id="3002">
 			<function start="3" end="3" mask="11111111b" comment="VOL_MAX_ON (défaut : 19)">1E</function>
@@ -485,9 +550,14 @@
 			<function start="71" end="71" mask="11111111b" comment="SPEEDLOCK_X_KMH_MIN (défaut : 03)">FF</function>
 			<function start="5" end="5" mask="00010000b" comment="VIDEO_FRONT_LOCKED (défaut : nicht_aktiv)">nicht_aktiv</function>
 			<function start="5" end="5" mask="00000100b" comment="VIDEO_HANDBRAKE (défaut : nicht_aktiv)">nicht_aktiv</function>
-			<function start="57" end="57" mask="00000111b" comment="VIDEO_SPEEDLOCK_CONDITION (défaut : 00)">00</function>
+			<function start="57" end="57" mask="00000111b" comment="VIDEO_SPEEDLOCK_CONDITION (défaut : none)">none</function>
 		</group>
 	</code>
+	<code description="iDrive (Média) : couverture album Gracenote dB Full-Size">
+			<group id="3000">
+				<function start="14" end="14" comment="ENT_MC_COVER_SCALE (défaut : nicht_aktiv)" mask="00100000b">aktiv</function>
+			</group>
+		</code>
 	<code description="iDrive (HUD) : Affichage de l'assistant distance (Step 2 sur 3 - voir KOMBI et KAFAS2)">
 		<group id="3000">
 			<function start="97" end="97" mask="00001000b" comment="HUD_DISTANCE_INFO (défaut : nicht_aktiv)">aktiv</function>
@@ -503,9 +573,19 @@
 			<function start="110" end="110" mask="00000001b" comment="ACOUSTICAL_LOCK_CONFIRM (défaut : nicht_aktiv)">aktiv</function>
 		</group>
 	</code>
+	<code description="-- TESTING -- iDrive (Portes) : Confort Openning">
+		<group id="3000">
+			<function start="100" end="100" mask="01000000b" comment="COMFORT_OPENING (défaut : aktiv)">nicht_aktiv</function>
+		</group>
+	</code>
 	<code description="iDrive (Eclairage) : Ajout feux de jour (Step 2 sur 3 - voir FEM_BODY et REM)">
 		<group id="3000">
 			<function start="92" end="92" mask="00011000b" comment="DAYDRIVING_LIGHT (défaut : 00)">02</function>
+		</group>
+	</code>
+	<code description="-- TESTING -- iDrive (Eclairage) : Ajout éclairage pas de porte (FollowMeHome Step 2 sur 2 - voir FEM)">
+		<group id="3000">
+			<function start="26" end="26" mask="00001000b" comment="KEY_CONF_COMFORT_HOMELIGHT (défaut : nicht_aktiv)">aktiv</function>
 		</group>
 	</code>
 	<code description="iDrive (Statut) : Affichage température et pression des pneus">
@@ -518,14 +598,20 @@
 			<function start="2" end="2" mask="00100000b" comment="SERVICE_HISTORY (défaut : aktiv)">aktiv</function>
 		</group>
 	</code>
-	<code description="iDrive (Notice) : Utilisation de la notice en roulant">
+	<code description="iDrive (Notice) : Utilisation de la notice et appareillage BT en roulant">
 		<group id="3000">
 			<function start="0" end="0" mask="00100000b" comment="SL06_IBA_1 (défaut : aktiv)">nicht_aktiv</function>
 			<function start="0" end="0" mask="01000000b" comment="SL07_IBA_2 (défaut : nicht_aktiv)">nicht_aktiv</function>
 			<function start="2" end="2" mask="00010000b" comment="SL21_IBA_3 (défaut : nicht_aktiv)">nicht_aktiv</function>
+			<function start="1" end="1" mask="10000000b" comment="SL16_ADD_CEDEVICE (défaut : nicht_aktiv)">nicht_aktiv</function>
 		</group>
 	</code>
-	<code description="iDrive (Messages) : Affichage des SMS en entier (défaut : 3 lignes)">
+	<code description="iDrive (Messages) : Affichage des SMS, BMW Info, My Info and AKD en entier (défaut : 3 lignes)">
+		<group id="3000">
+			<function start="34" end="34" mask="00011100b" comment="MYINFO_DRIVING_TEXT_LENGTH (défaut : whole_text)">whole_text</function>
+			<function start="34" end="34" mask="11100000b" comment="AKD_DRIVING_TEXT_LENGTH (défaut : whole_text)">whole_text</function>
+			<function start="35" end="35" mask="00000111b" comment="BMWINFO_DRIVING_TEXT_LENGTH (défaut : whole_text)">whole_text</function>
+		</group>
 		<group id="3003">
 			<function start="11" end="11" mask="00000111b" comment="PIM_DRIVING_TEXT_LENGTH (défaut : 01)">07</function>
 		</group>
@@ -554,6 +640,22 @@
 		<group id="3000">
 			<function start="112" end="112" mask="00000010b" comment="NAVI_ONLINE_OPTIMIZATION_BUTTON (défaut : nicht_aktiv)">aktiv</function>
 		</group>
+	</code>
+	<code description="iDrive (Navigation) : Active Real-Time Traffic Info">
+			<group id="3000">
+				<function start="59" end="59" comment="NAVI_TRAFFIC_INFO_MAP" mask="00010000b">aktiv</function>
+			</group>
+			<group id="3002">
+				<function start="23" end="23" comment="TI_CA_TMC" mask="00000100b">aktiv</function>
+				<function start="24" end="24" comment="TI_VINFO" mask="00000010b">aktiv</function>
+				<function start="23" end="23" comment="TI_TMC_REGIONAL" mask="00100000b">aktiv</function>
+				<function start="23" end="23" comment="TI_FALLBACK_DISABLED" mask="01000000b">aktiv</function>
+			</group>
+	</code>
+	<code description="iDrive (Navigation) : Active la boussole">
+			<group id="3000">
+				<function start="5" end="5" comment="COMPASS" mask="00000001b">aktiv</function>
+			</group>
 	</code>
 	<code description="iDrive (Navigation) : Affichage de la vue sortie autoroute dans HUD">
 		<group id="3000">
@@ -700,6 +802,22 @@
 	<code description="iDrive (Réglages) : Ecran de démarrage BMW Noel et Nouvel an (défaut : BMW)">
 		<group id="3001">
 			<function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">09</function>
+		</group>
+	</code>
+	<code description="-- TESTING -- iDrive (Réglages) : Configuration du contrôle de traction">
+		<group id="3000">
+			<function start="134" end="134" mask="00001000b" comment="TRACTION_DEMAND_CONTROL (défaut : nicht_aktiv)">aktiv</function>
+		</group>
+	</code>
+	<code description="-- TESTING -- iDrive (Réglages) : Active l'assistant de sortie de parking'">
+		<group id="3001">
+			<function start="13" end="13" mask="10000000b" comment="MACRO_PMA_AUSPARKEN (défaut : nicht_aktiv)">aktiv</function>
+		</group>
+	</code>
+	<code description="-- TESTING -- iDrive (Réglages) : Active PDC automatique'">
+		<group id="3001">
+			<function start="64" end="64" mask="00010000b" comment="ACTIVE_PDC (défaut : nicht_aktiv)">aktiv</function>
+			<function start="65" end="65" mask="01000000b" comment="AUTO_PDC (défaut : nicht_aktiv)">aktiv</function>
 		</group>
 	</code>
 	<code description="-- Don't work (Only M5) -- iDrive (HUD) : Affichage de l'option Sport (indicateur de changement rapports)">

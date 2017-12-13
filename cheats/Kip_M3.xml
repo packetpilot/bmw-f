@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FDL>
+<!-- 
+2018 F80 FDL Coding options - Kip Blackwell - Dec 2018
+
+ECUs to be FDL Coded:
+	ACSM
+	ASD
+	DSC
+	FEM_BODY**
+	HU_NBT2**
+	ICM
+	IHKA3
+	KAFAS2**
+	KOMBI
+	FLE 43**
+	FLE 44**
+	REM
+	SM2
+	
+	**Require VO Coding-->
+	
+<cafd id="00000909" name="ACSM" author="Kip_M3" series="F080,F082">
+	<code description="Disable seatbelt reminders">
+		<group id="3000">
+			<function start="15" end="15" mask="0000010b" comment="SeatBeltReminder_SBR_Fahrer">nicht_aktiv</function>
+			<function start="15" end="15" mask="00000100b" comment="SeatBeltReminder_SBR_Beifahrer">nicht_aktiv</function>
+			<function start="16" end="16" mask="00000001b" comment="SBR_PreWarning_Fahrer">nicht_aktiv</function>
+			<function start="16" end="16" mask="00000010b" comment="SBR_PreWarning_Beifahrer">nicht_aktiv</function>
+			<function start="15" end="15" mask="0000001b" comment="Initialwarnung_GWF_IW">nicht_aktiv</function>
+			<function start="15" end="15" mask="00001000b" comment="Gurtzustandsanzeige_Fahrer_GWF_GZA_FA">nicht_aktiv</function>
+			<function start="15" end="15" mask="00010000b" comment="Gurtzustandsanzeige_Beifahrer_GWF_GZA_BF">nicht_aktiv</function>
+		</group>
+	</code>
+    <code description="Seatbelt reminder sound duration (0 secs)">
+		<group id="3001">
+			<function start="3" end="3" mask="11111111b" comment="GWF_SBR_WARNDAUER">00</function>
+		</group>
+    </code>
+</cafd>
+<cafd id="00000F9B" name="ASD01" author="Kip_M3" series="F080,F082">
+	<code description="DISABLE Active Sound Design (also need to code ASD)">
+		<group id="3000">
+			<function start="0" end="0" comment="Model Range" mask="11111111b">0D</function>
+			<function start="1" end="1" comment="Model Range" mask="11111111b">01</function>
+		</group>
+	</code>
+</cafd>
+<cafd id="00001a33" name="DSC" author="Kip_M3" series="F080,F082">
+	<code description="EURO MDM on US Spec Cars">
+		<group id="3000">
+			<function start="12" end="12" comment="C_Laenderkennung" mask="00000011b">ECE</function>
+		</group>
+	</code>
+</cafd>	
+<cafd id="00000794" name="FEM_BODY" author="Kip_M3" series="F080,F082">
+	<code description="Radio and Navigation off when opening door">
+		<group id="3020">
+			<function start="1" end="1" mask="00000001b" comment="TCM_LOGIC_R_OFF_DOOR">aktiv</function>
+		</group>
+	</code>
+	<code description="Remove trunk kick delay, don't blink upon opening">
+		<group id="3040">
+			<function start="2" end="2" mask="00000100b" comment="CLM_SMO_INDICATOR">nicht_aktiv</function>
+			<function start="12" end="12" mask="11111111b" comment="CLM_TIMEOUT_HK_SMO (default wert_04)">wert_01</function>
+		</group>
+	</code>
+	<code description="Doors unlock when engine off">
+		<group id="3040">
+			<function start="1" end="1" mask="00000010b" comment="CLM_UNLOCK_KL15OFF_AFTER_PIA_AUTO_LOCK">aktiv</function>
+		</group>
+	</code>	
+	<code description="Window rolling up or down not interrupted by door opening">
+		<group id="3050">
+			<function start="0" end="0" mask="00000001b" comment="FH_Tuerauf_stop_maut">nicht_aktiv</function>
+		</group>
+	</code>	
+	<code description="Open/Close windows/mirror/roof from FOB and comfort access(open after 2 sec, close immediately)">
+    	<group id="3053">
+        	<function start="0" end="0" mask="01000000b" comment="KOMFORTOEFFNUNG_FB">aktiv</function>
+			<function start="0" end="0" mask="10000000b" comment="KOMFORTSCHLIESSUNG_FB">aktiv</function>
+			<function start="8" end="8" mask="11111111b" comment="KOMFORT_OEFFNEN (default=19 2.5sec)">10</function>
+			<function start="9" end="9" mask="11111111b" comment="KOMFORT_SCHLIESSEN (default=0F 1.6sec)">00</function>
+    	</group>
+    	<group id="3053">
+        	<function start="1" end="1" mask="00000010b" comment="KOMFORTSCHLIESSUNG">aktiv</function>
+			<function start="1" end="1" mask="00000001b" comment="KOMFORTOEFFNUNG">aktiv</function>
+			<function start="1" end="1" mask="00000100b" comment="KOMFORTSCHLIESSUNG_PA">aktiv</function>
+    	</group>
+	</code>
+	<code description="Enable rear fog lights (also need to code REM)">
+    	<group id="3060">
+        	<function start="7" end="7" mask="00001000b" comment="NSL_VERBAUT">verbaut</function>
+    	</group>
+    </code>
+	<code description="Enable illumination of exterior door handle LEDs when in reverse">
+    	<group id="3070">
+        	<function start="11" end="11" mask="00010000b" comment="OVT_BEI_RUECKFAHRLICHT">aktiv</function>
+    	</group>
+    </code>
+	<code description="Fold side mirrors from key fob and comfort access; unfold @ 25kmph">
+    	<group id="3110">
+        	<function start="0" end="0" mask="00001000b" comment="ASP_BEIKLAPPEN">aktiv</function>
+        	<function start="1" end="1" mask="00000001b" comment="ASP_BEIKLAPPEN_BEI_KOMFORTSCHLIESSEN">aktiv</function>
+        	<function start="8" end="8" mask="00000001b" comment="ASP_AUSKLAPPEN_NACH_KOMFORTSCHLIESSEN">aktiv</function>
+        	<function start="10" end="10" mask="11111111b" comment="ASP_GESCHWINDIGKEIT_AUTO_AUSKLAPPEN (default=28)">19</function>
+    	</group>
+    </code>
+	<code description="Tilt passenger mirror farther down when in reverse">
+    	<group id="3110">
+        	<function start="2" end="2" mask="11111111b" comment="ASP_BORDSTEINAUTOMATIK_DELTA (default=3B)">5A</function>
+    	</group>
+    </code>
+</cafd>
+<cafd id="00001EF6" name="HU_NBT2" author="Kip_M3" series="F080,F082">
+	<code description="Enable video files from USB">
+    	<group id="3000">
+        	<function start="15" end="15" mask="00010000b" comment="ENT_CODEC_OGG">aktiv</function>
+        	<function start="15" end="15" mask="00100000b" comment="ENT_CODEC_XVID">aktiv</function>
+        	<function start="15" end="15" mask="01000000b" comment="ENT_CODEC_XVCD">aktiv</function>
+    	</group>
+    </code>
+	<code desription="Suggest fuel stops during guidance">
+		<group id="3006">
+			<function start="2" end="2" mask="00100000b" comment="NAVI_FUELSTOP_PROPOSAL">aktiv</function>
+		</group>
+	</code>
+	<code description="Disable Active Sound Design">
+		<group id="3009">
+			<function start="1" end="1" mask="00000010b" comment="ASD_SOUND_OFF">aktiv</function>
+		</group>
+	</code>
+	<code description="Enable B and O Sound">
+		<group id="3000">
+			<function start="57" end="57" mask="00110000b" comment="HIGH_END_AUDIO_MENUE">03</function>
+		</group>
+	</code>	
+	<code description="Enable Enhanced Bluetooth and Contact Pics">
+    	<group id="3003">
+        	<function start="3" end="3" mask="00010000b" comment="TWO_PHONES_PARALLEL">aktiv</function>
+        	<function start="8" end="8" mask="00100000b" comment="CONTACT_BOOK_PICTURES">aktiv</function>
+        	<function start="10" end="10" mask="00000001b" comment="BLUETOOTH_2ND_HFP">aktiv</function>
+        	<function start="10" end="10" mask="00001000b" comment="MACRO_PIM">aktiv</function>
+        	<function start="19" end="19" mask="00100000b" comment="PIM_BILDER_EIN_AUS">aktiv</function>
+		</group>
+    </code>
+	<code description="Enable whole text messages">
+		<group id="3003">
+			<function start="11" end="11" mask="00000111b" comment="PIM_DRIVING_TEXT_LENGTH">Whole_Text</function>
+		</group>
+		<group id="3000">
+			<function start="31" end="31" comment="SPEEDLOCK_TEXT_LENGTH" mask="00011100b">whole_text</function>
+			<function start="137" end="137" comment="MYINFO_DRIVING_TEXT_LENGTH" mask="00011100b">whole_text</function>
+			<function start="137" end="137" comment="AKD_DRIVING_TEXT_LENGTH" mask="11100000b">whole_text</function>
+			<function start="138" end="138" comment="BMWINFO_DRIVING_TEXT_LENGTH" mask="00000111b">whole_text</function>
+		</group>
+	</code>	
+	<code description="Disable speed lock for Owner’s Manual, Bluetooth Pairing, Touchpad, DVD, Tuner and messages">
+    	<group id="3000">
+        	<function start="0" end="0" mask="00100000b" comment="SL06_IBA_1">nicht_aktiv</function>
+        	<function start="0" end="0" mask="01000000b" comment="SL07_IBA_2">nicht_aktiv</function>
+			<function start="1" end="1" mask="10000000b" comment="SL16_ADD_CEDEVICE">nicht_aktiv</function>
+        	<function start="2" end="2" mask="00010000b" comment="SL21_IBA_3">nicht_aktiv</function>
+        	<function start="2" end="2" mask="00000111b" comment="VIDEO_SPEEDLOCK_CONDITION">none</function>
+        	<function start="5" end="5" mask="00000100b" comment="VIDEO_HANDBRAKE">nicht_aktiv</function>
+			<function start="5" end="5" mask="00010000b" comment="VIDEO_FRONT_LOCKED">nicht_aktiv</function>
+        	<function start="31" end="31" mask="00000111b" comment="SPEEDLOCK_SPELLER_INPUT">none_locked</function>
+        	<function start="31" end="31" mask="00111000b" comment="SPEEDLOCK_TEXT_LENGTH">whole_text</function>
+			<function start="32" end="32" mask="00000100b" comment="SPEEDLOCK_IBA_ACCESS_CCM">nicht_aktiv</function>
+			<function start="32" end="32" mask="00001000b" comment="SPEEDLOCK_IBA_SHORT">nicht_aktiv</function>
+			<function start="109" end="109" mask="00000001b" comment="SPEEDLOCK_HMI_TUNER">nicht_aktiv</function>
+        	<function start="136" end="136" mask="00111000b" comment="OFFICE_MESSAGES_SPEEDLOCK_CONDITION">none</function>
+        	<function start="137" end="137" mask="00011100b" comment="MYINFO_DRIVING_TEXT_LENGTH">whole_text</function>
+			<function start="137" end="137" mask="11100000b" comment="AKD_DRIVING_TEXT_LENGTH">whole_text</function>
+			<function start="138" end="138" mask="00000111b" comment="BMWINFO_DRIVING_TEXT_LENGTH">whole_text</function>
+			<function start="146" end="146" mask="00011111b" comment="SPEEDLOCK_SPEEDVALUE_MIN">nicht_aktiv</function>
+			<function start="147" end="147" mask="00111111b" comment="SPEEDLOCK_SPEEDVALUE_MAX">nicht_aktiv</function>	  
+		</group>
+    </code>
+	<code description="Remove legal disclaimers">
+    	<group id="3001">
+        	<function start="52" end="52" mask="11111111b" comment="MACRO_CAM_LEGALDISCLAIMER">kein_ld</function>
+        	<function start="58" end="58" mask="11111111b" comment="LEGAL_DISCLAIMER_TIME">kein_ld</function>
+		</group>
+    </code>
+	<code description="Allow media volume to be retained up to 35% (default 25%)">
+		<group id="3002">
+			<function start="3" end="3" mask="11111111b" comment="VOL_MAX_ON">23</function>
+		</group>
+	</code>
+</cafd>
+
+<cafd id="000000B5" name="SM2" author="Kip_M3" series="F080,F082">
+	<code description="Enable seat heating memory infinity">
+		<group id="3000">
+			<function start="4" end="4" comment="SA_MEMORY_ZEIT" mask="00000011b">03</function> 
+		</group>
+	</code>
+</cafd>
+
+<cafd id="00001148" name="KAFAS2" author="Kip_M3" series="F080,F082">
+	<code description="Enable detection of grass/curb road edge">
+    	<group id="3020">
+        	<function start="2" end="2" mask="00000011b" comment="ROAD_EDGE_WARNING_ENABLED">detection_for_grass_edge_and_curb_stone</function>
+    	</group>
+    </code>
+</cafd>
+
+<cafd id="000016EE" name="IHKA3" author="Kip_M3" series="F080,F082">
+	<code description="Disable AC from turning ON if Auto Button is pressed">
+		<group id="3003">
+			<function start="0" end="0" mask="00000100b" comment="AC_ON_WITH_AUTO">nicht_aktiv</function>
+		</group>
+	</code>
+</cafd>
+
+<cafd id="0000067B" name="ICMQL" author="Kip_M3" series="F808,F082">
+	<code description="Enable speed limiter (also need to code KOMBI)">
+		<group id="3000">
+			<function start="173" end="173" mask="00000001b" comment="C_SLD_Funktion">aktiv</function>
+			<function start="197" end="197" mask="11100000b" comment="C_Umschaltung_ACC_DCC">zugelassen</function>
+		</group>
+	</code>
+</cafd>
+
+<cafd id="000009C8" name="KOMBI L7_MID" author="Kip_M3" series="F080,F082">
+	<code description="Enable speed limiter (also need to code ICM)">
+		<group id="3003">
+			<function start="3" end="3" mask="00000001b" comment="SLD_ENABLE">aktiv</function>
+		</group>
+	</code>
+</cafd>	
+
+<cafd id="000024C3" name="FLE 43/44" author="Kip_M3" series="F080,F082">
+	<code description="No Amber Enable GFHB/antidazzle high beams - Euro settings">
+		<group id="3000">
+        	<function start="4" end="4" mask="11110000b" comment="HlPrjLabel_HIType">01_Value</function>
+    	</group>
+		<group id="3003">
+        	<function start="0" end="9" mask="11111111b" comment="SchlechtWetter_C1_Idx">07_Value</function>
+        	<function start="10" end="19" mask="11111111b" comment="SchlechtWetter_C2_Idx">07_Value</function>
+        	<function start="20" end="29" mask="11111111b" comment="Stadt_V_Idx">07_Value</function>
+        	<function start="30" end="39" mask="11111111b" comment="SAE_Idx">07_Value</function>
+        	<function start="40" end="49" mask="11111111b" comment="H10_Landstrasse_C_Idx">07_Value</function>
+        	<function start="50" end="59" mask="11111111b" comment="H8_Autobahn_E3_Idx">07_Value</function>
+        	<function start="60" end="69" mask="11111111b" comment="H6_Autobahn_E2_Idx">07_Value</function>
+        	<function start="70" end="79" mask="11111111b" comment="H5_Autobahn_E1_Idx">07_Value</function>
+        	<function start="80" end="89" mask="11111111b" comment="H4_Autobahn_E_Idx">07_Value</function>
+        	<function start="90" end="99" mask="11111111b" comment="H_2_Idx">08_Value</function>
+        	<function start="100" end="109" mask="11111111b" comment="H_0_Idx">08_Value</function>
+        	<function start="110" end="119" mask="11111111b" comment="H_Plus2_Idx">07_Value</function>
+        	<function start="120" end="129" mask="11111111b" comment="H_Plus4_Idx">08_Value</function>
+        	<function start="130" end="139" mask="11111111b" comment="Blendfreies_Fernlicht_Idx">10_Value</function>
+        	<function start="140" end="149" mask="11111111b" comment="Volles_Fernlicht__Lichthupe_Idx">09_Value</function>
+    	</group>
+		<group id="3004">
+	  
+<!--
+US settings: 4th byte = 0C maps to LmmIdx04_****** values for Intensity, Priority, etc 
+ECE settings: ECE values for 4th byte = 04, which disables sidemarkers
+
+==>set 4th byte = 04 for no markers to map to LmmIdx12_****** values, which match ECE LmmIdx04_****** values
+
+-->
+        	<function start="0" end="9" mask="11111111b" comment="DRL_Idx">08_Value</function>
+        	<function start="10" end="19" mask="11111111b" comment="POLI1_Idx">00, 00, 00, 04, 00, 00, 08, 00, 00, 00</function>
+        	<function start="20" end="29" mask="11111111b" comment="POLI2_Idx">00, 00, 00, 04, 00, 00, 08, 00, 00, 00</function>
+        	<function start="30" end="39" mask="11111111b" comment="POLI3_IDX">00, 00, 00, 04, 00, 00, 08, 00, 00, 00</function>
+        	<function start="40" end="49" mask="11111111b" comment="PLI_Idx">10_Value</function>
+        	<function start="60" end="69" mask="11111111b" comment="WELL1_Idx">00, 09, 09, 04, 00, 00, 0A, 00, 00, 00</function>
+        	<function start="70" end="79" mask="11111111b" comment="WELL2_Idx">00, 00, 00, 04, 00, 00, 0B, 00, 00, 00</function>
+        	<function start="80" end="89" mask="11111111b" comment="WELL3_Idx">00, 00, 00, 04, 00, 00, 0B, 00, 00, 00</function>
+        	<function start="90" end="99" mask="11111111b" comment="WELL4_IDX">00, 00, 00, 04, 00, 00, 0B, 00, 00, 00</function>
+        	<function start="100" end="109" mask="11111111b" comment="FMH_Idx">00, 02, 02, 04, 00, 00, 0B, 00, 00, 00</function>
+        	<function start="110" end="119" mask="11111111b" comment="REMLI_Idx">00, 02, 02, 04, 00, 00, 0B, 00, 00, 00</function>
+	    	<function start="120" end="129" mask="11111111b" comment="HBBLINK_Idx">11_Value</function>
+        	<function start="130" end="139" mask="11111111b" comment="DWABLINK_Idx">07_Value</function>
+        	<function start="140" end="149" mask="11111111b" comment="PanicMode_Idx">07_Value</function>
+        	<function start="150" end="159" mask="11111111b" comment="RaidAlarm_Idx">11_Value</function>
+        	<function start="160" end="169" mask="11111111b" comment="Blinken_Idx">10_Value</function>     
+			<function start="180" end="189" mask="11111111b" comment="SIDEMRKLGT_Idx">00, 00, 00, 04, 00, 00, 00, 00, 00, 00</function>
+			<function start="190" end="199" mask="11111111b" comment="BLINKEN_PO_Idx">10_Value</function>
+    	</group>
+		<group id="3005">
+        	<function start="4" end="4" mask="11111111b" comment="LmmIdx01_Intensity">04_Value</function>
+        	<function start="7" end="7" mask="01000000b" comment="LmmIdx01_ErrorImpact">01_Value</function>
+        	<function start="9" end="9" mask="11111111b" comment="LmmIdx02_TimeOn">02_Value</function>
+        	<function start="10" end="10" mask="11111111b" comment="LmmIdx02_TimeOff">02_Value</function>
+        	<function start="11" end="11" mask="00001111b" comment="LmmIdx02_Priority">03_Value</function>
+        	<function start="11" end="11" mask="01000000b" comment="LmmIdx02_ErrorImpact">01_Value</function>
+        	<function start="12" end="12" mask="11111111b" comment="LmmIdx03_Intensity">04_Value</function>
+        	<function start="13" end="13" mask="11111111b" comment="LmmIdx03_TimeOn">02_Value</function>
+        	<function start="14" end="14" mask="11111111b" comment="LmmIdx03_TimeOff">02_Value</function>
+        	<function start="15" end="15" mask="00001111b" comment="LmmIdx03_Priority">05_Value</function>
+        	<function start="16" end="16" mask="11111111b" comment="LmmIdx04_Intensity">03_Value</function>
+        	<function start="17" end="17" mask="11111111b" comment="LmmIdx04_TimeOn">03_Value</function>
+        	<function start="18" end="18" mask="11111111b" comment="LmmIdx04_TimeOff">03_Value</function>
+        	<function start="19" end="19" mask="00001111b" comment="LmmIdx04_Priority">04_Value</function>
+        	<function start="20" end="20" mask="11111111b" comment="LmmIdx05_Intensity">03_Value</function>
+        	<function start="21" end="21" mask="11111111b" comment="LmmIdx05_TimeOn">03_Value</function>
+        	<function start="22" end="22" mask="11111111b" comment="LmmIdx05_TimeOff">03_Value</function>
+        	<function start="23" end="23" mask="00001111b" comment="LmmIdx05_Priority">01_Value</function>
+        	<function start="24" end="24" mask="11111111b" comment="LmmIdx06_Intensity">03_Value</function>
+        	<function start="25" end="25" mask="11111111b" comment="LmmIdx06_TimeOn">01_Value</function>
+        	<function start="26" end="26" mask="11111111b" comment="LmmIdx06_TimeOff">03_Value</function>
+        	<function start="27" end="27" mask="00001111b" comment="LmmIdx06_Priority">06_Value</function>
+        	<function start="27" end="27" mask="00110000b" comment="LmmIdx06_RampType">02_Value</function>
+        	<function start="27" end="27" mask="01000000b" comment="LmmIdx06_ErrorImpact">01_Value</function>
+        	<function start="28" end="28" mask="11111111b" comment="LmmIdx07_Intensity">03_Value</function>
+        	<function start="31" end="31" mask="00001111b" comment="LmmIdx07_Priority">06_Value</function>
+        	<function start="31" end="31" mask="00110000b" comment="LmmIdx07_RampType">02_Value</function>
+        	<function start="35" end="35" mask="00001111b" comment="LmmIdx08_Priority">03_Value</function>
+        	<function start="39" end="39" mask="00001111b" comment="LmmIdx09_Priority">05_Value</function>
+        	<function start="39" end="39" mask="00110000b" comment="LmmIdx09_RampType">02_Value</function>
+        	<function start="40" end="40" mask="11111111b" comment="LmmIdx10_Intensity">02_Value</function>
+        	<function start="43" end="43" mask="00001111b" comment="LmmIdx10_Priority">02_Value</function>
+        	<function start="43" end="43" mask="00110000b" comment="LmmIdx10_RampType">02_Value</function>
+        	<function start="44" end="44" mask="11111111b" comment="LmmIdx11_Intensity">03_Value</function>
+        	<function start="47" end="47" mask="00001111b" comment="LmmIdx11_Priority">04_Value</function>
+        	<function start="48" end="48" mask="11111111b" comment="LmmIdx12_Intensity">03_Value</function>
+        	<function start="51" end="51" mask="00001111b" comment="LmmIdx12_Priority">04_Value</function>
+        	<function start="134" end="134" mask="00111111b" comment="LmmReLut_LgtFct0">03_Value</function>
+        	<function start="134" end="134" mask="11000000b" comment="LmmReLut_LogLmpLow0">03_Value</function>
+        	<function start="135" end="135" mask="11111100b" comment="LmmReLut_Idx0">02_Value</function>
+        	<function start="136" end="136" mask="00111111b" comment="LmmReLut_LgtFct1">03_Value</function>
+        	<function start="136" end="136" mask="11000000b" comment="LmmReLut_LogLmpLow1">03_Value</function>
+        	<function start="137" end="137" mask="11111100b" comment="LmmReLut_Idx1">02_Value</function>
+        	<function start="138" end="138" mask="00111111b" comment="LmmReLut_LgtFct2">03_Value</function>
+        	<function start="138" end="138" mask="11000000b" comment="LmmReLut_LogLmpLow2">03_Value</function>
+        	<function start="139" end="139" mask="11111100b" comment="LmmReLut_Idx2">02_Value</function>
+    	</group>
+    </code>
+</cafd>
+
+<cafd id="000007A1" name="REM_01" author="Kip_M3" series="F080,F082">
+	<code description="ENABLE REAR windows roll up while doors opened">
+		<group id="3050">
+			<function start="0" end="0" comment="FH_TUERAUF_STOP_MAUT" mask="00000001b">nicht_aktiv</function>
+		</group>
+	</code>
+	<code description="Rear Fog: Enable Both Lamps (also need to code FEM)">
+      <group id="3063">
+        <function start="40" end="40" mask="00111111b" comment="Mapping_Nebelschlussl_L_output">1C</function>
+        <function start="50" end="50" mask="00111111b" comment="Mapping_Nebelschlussl_R_output">1D</function>
+      </group>
+    </code>
+</cafd>
+	
+
+</FDL>

@@ -39,7 +39,7 @@ ECUs to be FDL Coded:
     </code>
 </cafd>
 <cafd id="00000F9B" name="ASD01" author="Kip_M3" series="F080,F082">
-	<code description="DISABLE Active Sound Design (also need to code ASD)">
+	<code description="DISABLE Active Sound Design (also need to code HU_NBT2)">
 		<group id="3000">
 			<function start="0" end="0" comment="Model Range" mask="11111111b">0D</function>
 			<function start="1" end="1" comment="Model Range" mask="11111111b">01</function>
@@ -59,10 +59,55 @@ ECUs to be FDL Coded:
 			<function start="1" end="1" mask="00000001b" comment="TCM_LOGIC_R_OFF_DOOR">aktiv</function>
 		</group>
 	</code>
+	<code description="ENABLE Rear Tail-light with DRL (8TL). Part 1 of 2. See REM">
+		<group id="3060">
+			<function start="31" end="31" mask="00110000b">TFL_S</function>
+		</group>
+	</code>
+	<code description="Disable Horn Honk While Locking and Engine Running">
+		<group id="3040">
+			<function start="1" end="1" mask="00100000b">nicht_aktiv</function>
+		</group>
+	</code>
+	<code description="Reduce Automatic Headlamp Sensitivity">
+		<group id="3130">
+			<function start="5" end="5" mask="00000111b">unempfindlich</function>
+		</group>
+	</code>
+	<code description="Increase Soft Triple Blinker to Five (5) (EXCLUDES P3.61.x)">
+			<group id="3060">
+				<function start="7" end="7" mask="00000111b">04</function>
+			</group>
+		</code>
+	<code description="Turn on brake force flashing with hard braking">
+    	<group id="3060">
+        	<function start="16" end="16" mask="00000011b" comment="ESS_AKTIVIERBARER_AUSGANG">bremslicht_blinkend</function>
+    	</group>
+    </code>
+	<code description="Enable parking lights">
+    	<group id="3060">
+        	<function start="11" end="11" mask="01000000b" comment="PARKLICHT_MOEGLICH">aktiv</function>
+    	</group>
+    </code>
+	<code description="Control ambient light level from menu (independent from cluster dimmer)">
+		<group id="3070">
+			<function start="4" end="4" mask="10000000b" comment="AMBIENTE_NACHFUEHRUNG">nicht_aktiv</function>
+		</group>
+	</code>
+    <code description="Turn on hazard flashers at 20kmph with hard braking">
+    	<group id="3060">
+        	<function start="26" end="26" mask="00000001b" comment="WB_GB_ENABLE">aktiv</function>
+    	</group>
+    </code>
 	<code description="Remove trunk kick delay, don't blink upon opening">
 		<group id="3040">
 			<function start="2" end="2" mask="00000100b" comment="CLM_SMO_INDICATOR">nicht_aktiv</function>
 			<function start="12" end="12" mask="11111111b" comment="CLM_TIMEOUT_HK_SMO (default wert_04)">wert_01</function>
+		</group>
+	</code>
+	<code description="Remember steering wheel heat (always)">
+		<group id="3040">
+			<function start="4" end="4" mask="00001100b" comment="NACHLAUFZEIT_LENKRADHEIZUNG">03</function>
 		</group>
 	</code>
 	<code description="Doors unlock when engine off">
@@ -111,6 +156,20 @@ ECUs to be FDL Coded:
         	<function start="2" end="2" mask="11111111b" comment="ASP_BORDSTEINAUTOMATIK_DELTA (default=3B)">5A</function>
     	</group>
     </code>
+	<code description="F3x and F8x NGHB. Step 3 of 3. See LHM43/44.">
+		<group id="3073">
+			<function start="176" end="184" comment="NGHB PDF Step 3" mask="11111111b">00, 00, 00, 15, 00, 00, 0A, 15, 1F</function>
+		</group>
+		<group id="3074">
+			<function start="81" end="86" comment="NGHB PDF Step 3" mask="11111111b">2E, 3B, 00, 00, 00, 00</function>
+			<function start="87" end="92" comment="NGHB PDF Step 3" mask="11111111b">2E, 3B, 00, 00, 00, 00</function>
+			<function start="93" end="98" comment="NGHB PDF Step 3" mask="11111111b">00, 00, 00, 00, 00, 00</function>
+			<function start="99" end="104" comment="NGHB PDF Step 3" mask="11111111b">00, 00, 00, 00, 00, 00</function>
+			<function start="60" end="60" comment="P3.59 improvement" mask="11111111b">27</function>
+			<function start="61" end="61" comment="P3.59 improvement" mask="11111111b">1F</function>
+			<function start="63" end="63" comment="P3.59 improvement" mask="11111111b">E1</function>
+		</group>
+	</code>
 </cafd>
 <cafd id="00001EF6" name="HU_NBT2" author="Kip_M3" series="F080,F082">
 	<code description="Enable video files from USB">
@@ -133,6 +192,11 @@ ECUs to be FDL Coded:
 	<code description="Enable B and O Sound">
 		<group id="3000">
 			<function start="57" end="57" mask="00110000b" comment="HIGH_END_AUDIO_MENUE">03</function>
+		</group>
+	</code>	
+	<code description="Enable Logic7 Sound">
+		<group id="3000">
+			<function start="57" end="57" mask="00110000b" comment="HIGH_END_AUDIO_MENUE">00</function>
 		</group>
 	</code>	
 	<code description="Enable Enhanced Bluetooth and Contact Pics">
@@ -196,6 +260,21 @@ ECUs to be FDL Coded:
 			<function start="4" end="4" comment="SA_MEMORY_ZEIT" mask="00000011b">03</function> 
 		</group>
 	</code>
+	<code description="Easy Entry: Enable">
+		<group id="3000">
+			<function start="0" end="0" mask="00011100b" comment="EINAUSSTIEGSHILFE">Modus_FA_SLV</function>
+		</group>
+    </code>
+    <code description="Easy Entry: Set Max Rearward Auto-Travel (mm from limit?)">
+		<group id="3012">
+			<function start="4" end="5" mask="11111111b" comment="EAH_SCHUTZFREIRAUM_HINTEN_SLV_PHYS">00, 32</function>
+		</group>
+    </code>
+    <code description="Easy Entry: Set Desired Rearward Travel (mm?)">
+		<group id="3012">
+			<function start="0" end="1" mask="11111111b" comment="EAH_VERFAHRWEG_SLV_PHYS">00, 32</function>
+		</group>
+    </code>
 </cafd>
 
 <cafd id="00001148" name="KAFAS2" author="Kip_M3" series="F080,F082">
@@ -330,6 +409,110 @@ ECE settings: ECE values for 4th byte = 04, which disables sidemarkers
         	<function start="139" end="139" mask="11111100b" comment="LmmReLut_Idx2">02_Value</function>
     	</group>
     </code>
+	<code description="Enable GFHB and Ambers/antidazzle high beams - Euro settings">
+
+		<group id="3000">
+        	<function start="4" end="4" mask="11110000b" comment="HlPrjLabel_HIType">01_Value</function>
+    	</group>
+
+    	<group id="3003">
+        	<function start="0" end="9" mask="11111111b" comment="SchlechtWetter_C1_Idx">07_Value</function>
+        	<function start="10" end="19" mask="11111111b" comment="SchlechtWetter_C2_Idx">07_Value</function>
+        	<function start="20" end="29" mask="11111111b" comment="Stadt_V_Idx">07_Value</function>
+        	<function start="30" end="39" mask="11111111b" comment="SAE_Idx">07_Value</function>
+        	<function start="40" end="49" mask="11111111b" comment="H10_Landstrasse_C_Idx">07_Value</function>
+        	<function start="50" end="59" mask="11111111b" comment="H8_Autobahn_E3_Idx">07_Value</function>
+        	<function start="60" end="69" mask="11111111b" comment="H6_Autobahn_E2_Idx">07_Value</function>
+        	<function start="70" end="79" mask="11111111b" comment="H5_Autobahn_E1_Idx">07_Value</function>
+        	<function start="80" end="89" mask="11111111b" comment="H4_Autobahn_E_Idx">07_Value</function>
+        	<function start="90" end="99" mask="11111111b" comment="H_2_Idx">08_Value</function>
+        	<function start="100" end="109" mask="11111111b" comment="H_0_Idx">08_Value</function>
+        	<function start="110" end="119" mask="11111111b" comment="H_Plus2_Idx">07_Value</function>
+        	<function start="120" end="129" mask="11111111b" comment="H_Plus4_Idx">08_Value</function>
+        	<function start="130" end="139" mask="11111111b" comment="Blendfreies_Fernlicht_Idx">10_Value</function>
+        	<function start="140" end="149" mask="11111111b" comment="Volles_Fernlicht__Lichthupe_Idx">09_Value</function>
+    	</group>
+
+    	<group id="3004">
+	  
+<!-- 
+Leave US Sidemarker setting at original (US) settings to avoid disabling the US mandatory sidemarkers
+
+US settings: 4th byte = 04 maps to LmmIdx04_****** values for Intensity, Priority, etc 
+ECE settings: ECE values for 04 are all 00, which would disable sidemarkers
+
+==>set 4th byte = 0C (12 decimal) to map to LmmIdx12_****** values, which match original/US LmmIdx04_****** values
+
+-->
+        	<function start="0" end="9" mask="11111111b" comment="DRL_Idx">08_Value</function>
+        	<function start="10" end="19" mask="11111111b" comment="POLI1_Idx">00, 00, 00, 0C, 00, 00, 08, 00, 00, 00</function>
+        	<function start="20" end="29" mask="11111111b" comment="POLI2_Idx">00, 00, 00, 0C, 00, 00, 08, 00, 00, 00</function>
+        	<function start="30" end="39" mask="11111111b" comment="POLI3_IDX">00, 00, 00, 0C, 00, 00, 08, 00, 00, 00</function>
+        	<function start="40" end="49" mask="11111111b" comment="PLI_Idx">10_Value</function>
+        	<function start="60" end="69" mask="11111111b" comment="WELL1_Idx">00, 09, 09, 0C, 00, 00, 0A, 00, 00, 00</function>
+        	<function start="70" end="79" mask="11111111b" comment="WELL2_Idx">00, 00, 00, 0C, 00, 00, 0B, 00, 00, 00</function>
+        	<function start="80" end="89" mask="11111111b" comment="WELL3_Idx">00, 00, 00, 0C, 00, 00, 0B, 00, 00, 00</function>
+        	<function start="90" end="99" mask="11111111b" comment="WELL4_IDX">00, 00, 00, 0C, 00, 00, 0B, 00, 00, 00</function>
+        	<function start="100" end="109" mask="11111111b" comment="FMH_Idx">00, 02, 02, 0C, 00, 00, 0B, 00, 00, 00</function>
+        	<function start="110" end="119" mask="11111111b" comment="REMLI_Idx">00, 02, 02, 0C, 00, 00, 0B, 00, 00, 00</function>
+	    	<function start="120" end="129" mask="11111111b" comment="HBBLINK_Idx">11_Value</function>
+        	<function start="130" end="139" mask="11111111b" comment="DWABLINK_Idx">07_Value</function>
+        	<function start="140" end="149" mask="11111111b" comment="PanicMode_Idx">07_Value</function>
+        	<function start="150" end="159" mask="11111111b" comment="RaidAlarm_Idx">11_Value</function>
+        	<function start="160" end="169" mask="11111111b" comment="Blinken_Idx">10_Value</function>     
+			<function start="180" end="189" mask="11111111b" comment="SIDEMRKLGT_Idx">00, 00, 00, 0C, 00, 00, 00, 00, 00, 00</function>
+			<function start="190" end="199" mask="11111111b" comment="BLINKEN_PO_Idx">10_Value</function>
+    	</group>
+	  
+    	<group id="3005">
+        	<function start="4" end="4" mask="11111111b" comment="LmmIdx01_Intensity">04_Value</function>
+        	<function start="7" end="7" mask="01000000b" comment="LmmIdx01_ErrorImpact">01_Value</function>
+        	<function start="9" end="9" mask="11111111b" comment="LmmIdx02_TimeOn">02_Value</function>
+        	<function start="10" end="10" mask="11111111b" comment="LmmIdx02_TimeOff">02_Value</function>
+        	<function start="11" end="11" mask="00001111b" comment="LmmIdx02_Priority">03_Value</function>
+        	<function start="11" end="11" mask="01000000b" comment="LmmIdx02_ErrorImpact">01_Value</function>
+        	<function start="12" end="12" mask="11111111b" comment="LmmIdx03_Intensity">04_Value</function>
+        	<function start="13" end="13" mask="11111111b" comment="LmmIdx03_TimeOn">02_Value</function>
+        	<function start="14" end="14" mask="11111111b" comment="LmmIdx03_TimeOff">02_Value</function>
+        	<function start="15" end="15" mask="00001111b" comment="LmmIdx03_Priority">05_Value</function>
+        	<function start="16" end="16" mask="11111111b" comment="LmmIdx04_Intensity">03_Value</function>
+        	<function start="17" end="17" mask="11111111b" comment="LmmIdx04_TimeOn">03_Value</function>
+        	<function start="18" end="18" mask="11111111b" comment="LmmIdx04_TimeOff">03_Value</function>
+        	<function start="19" end="19" mask="00001111b" comment="LmmIdx04_Priority">04_Value</function>
+        	<function start="20" end="20" mask="11111111b" comment="LmmIdx05_Intensity">03_Value</function>
+        	<function start="21" end="21" mask="11111111b" comment="LmmIdx05_TimeOn">03_Value</function>
+        	<function start="22" end="22" mask="11111111b" comment="LmmIdx05_TimeOff">03_Value</function>
+        	<function start="23" end="23" mask="00001111b" comment="LmmIdx05_Priority">01_Value</function>
+        	<function start="24" end="24" mask="11111111b" comment="LmmIdx06_Intensity">03_Value</function>
+        	<function start="25" end="25" mask="11111111b" comment="LmmIdx06_TimeOn">01_Value</function>
+        	<function start="26" end="26" mask="11111111b" comment="LmmIdx06_TimeOff">03_Value</function>
+        	<function start="27" end="27" mask="00001111b" comment="LmmIdx06_Priority">06_Value</function>
+        	<function start="27" end="27" mask="00110000b" comment="LmmIdx06_RampType">02_Value</function>
+        	<function start="27" end="27" mask="01000000b" comment="LmmIdx06_ErrorImpact">01_Value</function>
+        	<function start="28" end="28" mask="11111111b" comment="LmmIdx07_Intensity">03_Value</function>
+        	<function start="31" end="31" mask="00001111b" comment="LmmIdx07_Priority">06_Value</function>
+        	<function start="31" end="31" mask="00110000b" comment="LmmIdx07_RampType">02_Value</function>
+        	<function start="35" end="35" mask="00001111b" comment="LmmIdx08_Priority">03_Value</function>
+        	<function start="39" end="39" mask="00001111b" comment="LmmIdx09_Priority">05_Value</function>
+        	<function start="39" end="39" mask="00110000b" comment="LmmIdx09_RampType">02_Value</function>
+        	<function start="40" end="40" mask="11111111b" comment="LmmIdx10_Intensity">02_Value</function>
+        	<function start="43" end="43" mask="00001111b" comment="LmmIdx10_Priority">02_Value</function>
+        	<function start="43" end="43" mask="00110000b" comment="LmmIdx10_RampType">02_Value</function>
+        	<function start="44" end="44" mask="11111111b" comment="LmmIdx11_Intensity">03_Value</function>
+        	<function start="47" end="47" mask="00001111b" comment="LmmIdx11_Priority">04_Value</function>
+        	<function start="48" end="48" mask="11111111b" comment="LmmIdx12_Intensity">03_Value</function>
+        	<function start="51" end="51" mask="00001111b" comment="LmmIdx12_Priority">04_Value</function>
+        	<function start="134" end="134" mask="00111111b" comment="LmmReLut_LgtFct0">03_Value</function>
+        	<function start="134" end="134" mask="11000000b" comment="LmmReLut_LogLmpLow0">03_Value</function>
+        	<function start="135" end="135" mask="11111100b" comment="LmmReLut_Idx0">02_Value</function>
+        	<function start="136" end="136" mask="00111111b" comment="LmmReLut_LgtFct1">03_Value</function>
+        	<function start="136" end="136" mask="11000000b" comment="LmmReLut_LogLmpLow1">03_Value</function>
+        	<function start="137" end="137" mask="11111100b" comment="LmmReLut_Idx1">02_Value</function>
+        	<function start="138" end="138" mask="00111111b" comment="LmmReLut_LgtFct2">03_Value</function>
+        	<function start="138" end="138" mask="11000000b" comment="LmmReLut_LogLmpLow2">03_Value</function>
+        	<function start="139" end="139" mask="11111100b" comment="LmmReLut_Idx2">02_Value</function>
+    	</group>
+    </code>
 </cafd>
 
 <cafd id="000007A1" name="REM_01" author="Kip_M3" series="F080,F082">
@@ -338,12 +521,50 @@ ECE settings: ECE values for 4th byte = 04, which disables sidemarkers
 			<function start="0" end="0" comment="FH_TUERAUF_STOP_MAUT" mask="00000001b">nicht_aktiv</function>
 		</group>
 	</code>
+	<code description="ENABLE Outer Light Flashing with EU Brake Force - LED Only">
+		<group id="3062">
+			<function start="110" end="110" comment="MAPPING_BRAKEFORCED_L_OUTPUT" mask="00111111b">bl_l</function>
+			<function start="120" end="120" comment="MAPPING_BRAKEFORCED_R_OUTPUT" mask="00111111b">bl_r</function>
+		</group>
+	</code>
+	<code description="Increase Outer Light Flashing with EU Brake Force - LED Only">
+		<group id="3064">
+			<function start="17" end="17" comment="ESS_BLINKFREQ_1" mask="00001110b">05</function>
+			<function start="17" end="17" comment="ESS_BLINKFREQ_2" mask="01110000b">05</function>
+		</group>
+	</code>
 	<code description="Rear Fog: Enable Both Lamps (also need to code FEM)">
       <group id="3063">
         <function start="40" end="40" mask="00111111b" comment="Mapping_Nebelschlussl_L_output">1C</function>
         <function start="50" end="50" mask="00111111b" comment="Mapping_Nebelschlussl_R_output">1D</function>
       </group>
     </code>
+</cafd>
+<cafd id="000010BA" name="LHM2" author="Almaretto" series="F030,F080">
+	<code description="F3x and F8x NGHB. Step 1 of 3 - Driver side. See LHM44/FEM_Body">
+		<group id="3000">
+			<function start="0" end="6" comment="NGHB PDF Step 2" mask="11111111b">FA, 64, 00, 00, FA, FA, 00</function>
+			<function start="7" end="13" comment="NGHB PDF Step 2" mask="11111111b">FA, 64, 00, 00, FA, FA, 00</function>
+			<function start="14" end="20" comment="NGHB PDF Step 2" mask="11111111b">FA, 00, 00, 19, FA, FA, 00</function>
+			<function start="21" end="27" comment="NGHB PDF Step 2" mask="11111111b">FA, 00, 00, 00, C8, C8, 00</function>
+			<function start="91" end="97" comment="NGHB PDF Step 2" mask="11111111b">FA, 00, FA, 00, FA, FA, 00</function>
+			<function start="98" end="104" comment="NGHB PDF Step 2" mask="11111111b">FA, FA, FA, 00, FA, FA, FA</function>
+		</group>
+	</code>
+	<code description="F3x and F8x NGHB. Step 2 of 3- Passenger side. See LHM43/FEM_Body">
+		<group id="3000">
+			<function start="0" end="6" comment="NGHB PDF Step 2" mask="11111111b">FA, FA, 00, 00, FA, FA, 00</function>
+			<function start="7" end="13" comment="NGHB PDF Step 2" mask="11111111b">FA, FA, 00, 00, FA, FA, 00</function>
+			<function start="14" end="20" comment="NGHB PDF Step 2" mask="11111111b">FA, FA, 00, 19, FA, FA, 00</function>
+			<function start="21" end="27" comment="NGHB PDF Step 2" mask="11111111b">FA, 00, 00, 00, C8, C8, 00</function>
+			<function start="35" end="41" comment="NGHB PDF Step 2" mask="11111111b">FA, FA, 00, 00, FA, FA, 00</function>
+			<function start="42" end="48" comment="NGHB PDF Step 2" mask="11111111b">FA, FA, 00, 00, FA, FA, 00</function>
+			<function start="49" end="55" comment="NGHB PDF Step 2" mask="11111111b">FA, FA, 00, 00, FA, FA, 00</function>
+			<function start="56" end="62" comment="NGHB PDF Step 2" mask="11111111b">FA, FA, 00, 00, FA, FA, 00</function>
+			<function start="91" end="97" comment="NGHB PDF Step 2" mask="11111111b">FA, FA, FA, 00, FA, FA, 00</function>
+			<function start="98" end="104" comment="NGHB PDF Step 2" mask="11111111b">FA, FA, FA, 00, FA, FA, FA</function>
+		</group>
+	</code>
 </cafd>
 	
 

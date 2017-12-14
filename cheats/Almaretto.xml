@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <FDL>
     <!--Almaretto-->
     <cafd id="000017BE" name="BDC_01" author="Almaretto" series="F015">
@@ -601,7 +601,7 @@
                 <function start="3" end="3" comment="VOL_MAX_ON" mask="11111111b">32</function>
             </group>
         </code>
-        <code description="ENABLE ‘Route Info’ (Turn-by-Turn list of route)">
+        <code description="ENABLE 'Route Info' (Turn-by-Turn list of route)">
             <group id="3000">
                 <function start="59" end="59" comment="NAVI_ROAD_PREVIEW" mask="00100000b">aktiv</function>
             </group>

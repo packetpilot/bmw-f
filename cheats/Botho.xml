@@ -180,9 +180,14 @@
 			<function start="10" end="10" mask="11111111b" comment="ASP_GESCHWINDIGKEIT_AUTO_AUSKLAPPEN (défaut : 28)">32</function>
 		</group>
 	</code>
-	<code description="Rétroviseurs passager : Augmente le débattement lors de la marche arrière (défaut : 59 digits - I-Step 61.0)">
+	<code description="Rétroviseurs passager : Augmente le débattement lors de la marche arrière à 85 digits (défaut : 59 digits - I-Step 61.0)">
 		<group id="3110">
-			<function start="2" end="2" mask="11111111b" comment="ASP_BORDSTEINAUTOMATIK_DELTA (défaut : 3B)">5A</function>
+			<function start="2" end="2" mask="11111111b" comment="ASP_BORDSTEINAUTOMATIK_DELTA (défaut : 3B)">55</function>
+		</group>
+	</code>
+	<code description="Rétroviseurs passager : Rétablie le débattement lors de la marche arrière à 59 digits (défaut : 59 digits - I-Step 61.0)">
+		<group id="3110">
+			<function start="2" end="2" mask="11111111b" comment="ASP_BORDSTEINAUTOMATIK_DELTA (défaut : 3B)">3B</function>
 		</group>
 	</code>
 	<code description="Clignotants : nb de clignotements à 5 (défaut : 3 - I-Step under 61.0)">
@@ -573,9 +578,9 @@
 			<function start="110" end="110" mask="00000001b" comment="ACOUSTICAL_LOCK_CONFIRM (défaut : nicht_aktiv)">aktiv</function>
 		</group>
 	</code>
-	<code description="-- TESTING -- iDrive (Portes) : Confort Openning">
+	<code description="-- TESTING -- iDrive (Portes) : Confort Openning (double clic sur télécommande ouvre les fénêtres à 75% - utile pour les coupés)">
 		<group id="3000">
-			<function start="100" end="100" mask="01000000b" comment="COMFORT_OPENING (défaut : aktiv)">nicht_aktiv</function>
+			<function start="100" end="100" mask="01000000b" comment="COMFORT_OPENING (défaut : nicht_aktiv)">aktiv</function>
 		</group>
 	</code>
 	<code description="iDrive (Eclairage) : Ajout feux de jour (Step 2 sur 3 - voir FEM_BODY et REM)">

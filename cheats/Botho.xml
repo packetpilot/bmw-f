@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <FDL>
     <!-- Botho - Public Release       -->
     <!-- last updated : 2017-12-14    -->
@@ -174,17 +174,17 @@
                 <function start="10" end="10" mask="11111111b" comment="ASP_GESCHWINDIGKEIT_AUTO_AUSKLAPPEN (défaut : 28)">32</function>
             </group>
         </code>
-        <code description="Rétroviseurs passager : Augmente le débattement lors de la marche arrière à 85 digits (défaut : 59 digits - I-Step 61.0)">
+        <code description="Rétroviseurs passager : Augmente le débattement lors de la marche arrière à 85 digits (défaut : 59 digits - I-Step à partir de 3.61.x)">
             <group id="3110">
                 <function start="2" end="2" mask="11111111b" comment="ASP_BORDSTEINAUTOMATIK_DELTA (défaut : 3B)">55</function>
             </group>
         </code>
-        <code description="Rétroviseurs passager : Rétablie le débattement lors de la marche arrière à 59 digits (défaut : 59 digits - I-Step 61.0)">
+        <code description="Rétroviseurs passager : Rétablie le débattement lors de la marche arrière à 59 digits (défaut : 59 digits - I-Step à partir de 3.61.x)">
             <group id="3110">
                 <function start="2" end="2" mask="11111111b" comment="ASP_BORDSTEINAUTOMATIK_DELTA (défaut : 3B)">3B</function>
             </group>
         </code>
-        <code description="Clignotants : nb de clignotements à 5 (défaut : 3 - I-Step under 61.0)">
+        <code description="Clignotants : nb de clignotements à 5 (défaut : 3 - I-Step en dessous de 3.61.x)">
             <group id="3060">
                 <function start="7" end="7" mask="00000111b" comment="BLINKZYKLEN_ANZAHL_TIPP (défaut : 00)">04</function>
             </group>
@@ -280,7 +280,7 @@
                 <function start="20" end="20" mask="00011111b" comment="ESS_AKTIVIERUNG_REALE_VERZ (défaut : 0E)">06</function>
             </group>
         </code>
-        <code description="Feux freinage d'urgence : vitesse minimale à 20km/h (défaut : 50km/h)">
+        <code description="Feux freinage d'urgence : vitesse minimale supérieur à 20km/h (défaut : 50km/h)">
             <group id="3060">
                 <function start="17" end="17" mask="11111110b" comment="ESS_AKTIVIERUNG_GESCHW (défaut : 32)">14</function>
             </group>
@@ -409,22 +409,22 @@
                 <function start="36" end="36" mask="00001000b" comment="IcmKod_B_InitEco (défaut : 00)">01</function>
             </group>
         </code>
-        <code description="Détection angle mort : Activation à 10km/h (défaut : 20km/h)">
+        <code description="Détection angle mort : Activation à partir de 10km/h (défaut : 20km/h)">
             <group id="3000">
                 <function start="190" end="190" mask="00111111b" comment="C_ZSW_Aktivierunggeschwindigkeit_Funktion_low (défaut : 01)">00</function>
             </group>
         </code>
-        <code description="Détection angle mort : Activation à 20km/h (défaut : 20km/h)">
+        <code description="Détection angle mort : Activation à partir de 20km/h (défaut : 20km/h)">
             <group id="3000">
                 <function start="190" end="190" mask="00111111b" comment="C_ZSW_Aktivierunggeschwindigkeit_Funktion_low (défaut : 01)">01</function>
             </group>
         </code>
-        <code description="Détection angle mort : Activation à 30km/h (défaut : 20km/h)">
+        <code description="Détection angle mort : Activation à partir de 30km/h (défaut : 20km/h)">
             <group id="3000">
                 <function start="190" end="190" mask="00111111b" comment="C_ZSW_Aktivierunggeschwindigkeit_Funktion_low (défaut : 01)">02</function>
             </group>
         </code>
-        <code description="Détection angle mort : Activation à 50km/h (défaut : 20km/h)">
+        <code description="Détection angle mort : Activation à partir de 50km/h (défaut : 20km/h)">
             <group id="3000">
                 <function start="190" end="190" mask="00111111b" comment="C_ZSW_Aktivierunggeschwindigkeit_Funktion_low (défaut : 01)">03</function>
             </group>
@@ -461,7 +461,7 @@
                 <function start="1" end="1" mask="00000100b" comment="SEND_PARAM_IBRAKE (défaut : 01)">01</function>
             </group>
         </code>
-        <code description="Avertisseur de franchissement de ligne : activation au dessus de 55 km/h (défaut : 70 km/h) et désactivation en dessous de 50 km/h (défaut : 65 km/h)">
+        <code description="Avertisseur de franchissement de ligne : activation à partir de 55 km/h (défaut : 70 km/h) et désactivation en dessous de 50 km/h (défaut : 65 km/h)">
             <group id="3020">
                 <function start="3" end="3" mask="11111111b" comment="THRV_AVAI_TLC_HIGH (défaut : 46)">37</function>
                 <function start="4" end="4" mask="11111111b" comment="THRV_AVAI_TLC_LOW (défaut : 41)">32</function>
@@ -871,7 +871,7 @@
                 <function start="43" end="43" mask="11110000b" comment="MPM_LOGO (défaut : 00)">05</function>
             </group>
         </code>
-        <code description="Tableau de bord : Affichage de l'heure en bas à droite du tableau de bord (I-Step above 54.3)">
+        <code description="Tableau de bord : Affichage de l'heure en bas à droite du tableau de bord (I-Step à partir de 3.54.3)">
             <group id="3000">
                 <function start="53" end="53" mask="01000000b" comment="BASISANZEIGE_VARIANTE (défaut : nicht_aktiv. Aktiv si build date 0315)">aktiv</function>
             </group>

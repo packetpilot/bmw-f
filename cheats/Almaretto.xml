@@ -17,17 +17,17 @@
                 <function start="128" end="128" mask="00000001b">aktiv</function>
             </group>
         </code>
-        <code description="ENABLE FRONT driver/ passenger window Roll Up when doors opened">
+        <code description="ENABLE FRONT driver/passenger window Roll Up when doors opened">
             <group id="3050">
                 <function start="0" end="0" mask="00000001b">nicht_aktiv</function>
             </group>
         </code>
-        <code description="ENABLE REAR driver/ passenger window Roll Up when doors opened">
+        <code description="ENABLE REAR driver/passenger window Roll Up when doors opened">
             <group id="3051">
                 <function start="0" end="0" mask="00000001b">nicht_aktiv</function>
             </group>
         </code>
-        <code description="ENABLE Open/ Close windows and mirrors via keyFOB/ CA (NA Cars)">
+        <code description="ENABLE Open/Close windows and mirrors via keyFOB - CA (NA Cars)">
             <group id="3056">
                 <function start="0" end="0" mask="01000000b">aktiv</function>
                 <function start="0" end="0" mask="10000000b">aktiv</function>
@@ -40,7 +40,7 @@
                 <function start="7" end="7" mask="00000001b">aktiv</function>
             </group>
         </code>
-        <code description="Remove open/ close window and mirror initiation delay">
+        <code description="Remove open/close window and mirror initiation delay">
             <group id="3056">
                 <function start="10" end="10" mask="11111111b">00</function>
             </group>
@@ -448,7 +448,7 @@
         </code>
     </cafd>
     <cafd id="00001AB7" name="PMA_PDC" author="Almaretto" series="F015">
-        <code description="ENABLE Top/ Rearview Cameras at ALL speeds. See iCAM for Sideview">
+        <code description="ENABLE Top/Rearview Cameras at ALL speeds. See iCAM for Sideview">
             <group id="300B">
                 <function start="8" end="8" comment="speed when auto disables top view" mask="11111111b">FF</function>
                 <function start="9" end="9" comment="speed when auto disables rear view" mask="11111111b">FF</function>
@@ -458,7 +458,7 @@
         </code>
     </cafd>
     <cafd id="0000146B" name="PMA_PDC" author="Almaretto" series="F015,I001">
-        <code description="ENABLE Top/ Rear Camera at All Speeds. Part 1 of 2. See icam for Side">
+        <code description="ENABLE Top/Rear Camera at All Speeds. Part 1 of 2. See icam for Side">
             <group id="300D">
                 <function start="8" end="8" comment="max speed to disables top camera view" mask="11111111b">FF</function>
                 <function start="9" end="9" comment="max speed to disables rear camera view" mask="11111111b">FF</function>
@@ -552,7 +552,7 @@
                 <function start="107" end="107" mask="00000100b">aktiv</function>
             </group>
         </code>
-        <code description="ENABLE AM Radio on Hybrid Vehicles (F15-40e/ I012/ I001)">
+        <code description="ENABLE AM Radio on Hybrid Vehicles (F15-40e/I012/I001)">
             <group id="3002">
                 <function start="52" end="52" comment="RADIO_BAND_KW" mask="00001000b">aktiv</function>
             </group>
@@ -606,7 +606,7 @@
                 <function start="59" end="59" comment="NAVI_ROAD_PREVIEW" mask="00100000b">aktiv</function>
             </group>
         </code>
-        <code description="Removes Speedlock for Office / Service Messages">
+        <code description="Removes Speedlock for Office/Service Messages">
             <group id="3000">
                 <function start="35" end="35" comment="SERVICES_MESSAGES_SPEEDLOCK_CONDITION" mask="00111000b">00</function>
                 <function start="56" end="56" comment="OFFICE_MESSAGES_SPEEDLOCK_CONDITION" mask="00001110b">00</function>
@@ -645,7 +645,7 @@
                 <function start="54" end="54" comment="MACRO_TRAILER_COUPLING" mask="00000001b">aktiv</function>
             </group>
         </code>
-        <code description="ENABLE Hold-Mode for Range Extender (I001 / 1012)">
+        <code description="ENABLE Hold-Mode for Range Extender (I001/1012)">
             <group id="3000">
                 <function start="12" end="12" comment="EV_MENU_AVAILABLE" mask="00001100b">rex</function>
             </group>
@@ -899,7 +899,7 @@
                 <function start="1" end="1" mask="10000000b">aktiv</function>
             </group>
         </code>
-        <code description="ENABLE RED/ WHITE Navigation Graphics in the Instrument Cluster">
+        <code description="ENABLE RED/WHITE Navigation Graphics in the Instrument Cluster">
             <group id="3000">
                 <function start="40" end="40" mask="00100000b">neue_farbtabelle</function>
             </group>
@@ -1231,7 +1231,7 @@
         </code>
     </cafd>
     <cafd id="0000106D" name="FRM_03CT" author="Almaretto" series="F010">
-        <code description="ENABLE Open/ Close windows and mirrors via keyFOB/ CA. Part 1 of 2. See CAS (NA Cars)">
+        <code description="ENABLE Open/Close windows and mirrors via keyFOB - CA. Part 1 of 2. See CAS (NA Cars)">
             <group id="3020">
                 <function start="0" end="0" mask="10000000b">aktiv</function>
             </group>
@@ -1271,7 +1271,7 @@
                 <function start="20" end="20" mask="00100000b">automatisch</function>
             </group>
         </code>
-        <code description="ENABLE FRONT driver/ passenger window Roll Up when doors opened (JBBFE for Rear)">
+        <code description="ENABLE FRONT driver/passenger window Roll Up when doors opened (JBBFE for Rear)">
             <group id="3030">
                 <function start="1" end="1" mask="00000100b">nicht_aktiv</function>
             </group>
@@ -1300,7 +1300,7 @@
         </code>
     </cafd>
     <cafd id="0000012F" name="FRM_O3CT" author="Almaretto" series="F010">
-        <code description="ENABLE Folding Mirrors/ Window Rollup. Part 1 of 2. See CAS">
+        <code description="ENABLE Folding Mirrors/Window Rollup. Part 1 of 2. See CAS">
             <group id="3020">
                 <function start="0" end="0" comment="ASP_BEIKLAPPEN_BEI_KOMFORTSCHLIESSEN" mask="10000000b">aktiv</function>
             </group>
@@ -1345,7 +1345,7 @@
                 <function start="20" end="20" mask="00100000b">automatisch</function>
             </group>
         </code>
-        <code description="ENABLE FRONT driver/ passenger window Roll Up when doors opened (JBBFE for Rear)">
+        <code description="ENABLE FRONT driver/passenger window Roll Up when doors opened (JBBFE for Rear)">
             <group id="3030">
                 <function start="1" end="1" mask="00000100b">00</function>
             </group>
@@ -1376,7 +1376,7 @@
                 <function start="3" end="3" mask="00100000b">aktiv</function>
             </group>
         </code>
-        <code description="ENABLE Open/ Close windows and mirrors via keyFOB/ CA (NA Cars). Part 2 of 2. See FRM">
+        <code description="ENABLE Open/Close windows and mirrors via keyFOB - CA (NA Cars). Part 2 of 2. See FRM">
             <group id="3003">
                 <function start="2" end="2" mask="00000001b">aktiv</function>
                 <function start="2" end="2" mask="00000010b">aktiv</function>
@@ -1385,7 +1385,7 @@
                 <function start="2" end="2" mask="00100000b">aktiv</function>
             </group>
         </code>
-        <code description="Removes Initiation Delay for Mirrors/ Windows">
+        <code description="Removes Initiation Delay for Mirrors/Windows">
             <group id="3003">
                 <function start="12" end="12" mask="11111111b">00</function>
             </group>
@@ -1453,22 +1453,22 @@
         </code>
     </cafd>
     <cafd id="000000B5" name="CFAS-PLX_1" author="Almaretto" series="F010,F015,F030,F80">
-        <code description="Time Period Seats will Remember heating/ cooling/ massage settings (0 minutes)">
+        <code description="Time Period Seats will Remember heating/cooling/massage settings (0 minutes)">
             <group id="3000">
                 <function start="4" end="4" comment="0 minutes" mask="00000011b">00</function>
             </group>
         </code>
-        <code description="Time Period Seats will Remember heating/ cooling/ massage settings (15 minutes)">
+        <code description="Time Period Seats will Remember heating/cooling/massage settings (15 minutes)">
             <group id="3000">
                 <function start="4" end="4" comment="15 minutes" mask="00000011b">01</function>
             </group>
         </code>
-        <code description="Time Period Seats will Remember heating/ cooling/ massage settings (24 hours)">
+        <code description="Time Period Seats will Remember heating/cooling/massage settings (24 hours)">
             <group id="3000">
                 <function start="4" end="4" comment="24 hours" mask="00000011b">02</function>
             </group>
         </code>
-        <code description="Time Period Seats will Remember heating/ cooling/ massage settings (Infinity)">
+        <code description="Time Period Seats will Remember heating/cooling/massage settings (Infinity)">
             <group id="3000">
                 <function start="4" end="4" comment="Infinity" mask="00000011b">03</function>
             </group>
@@ -1496,7 +1496,7 @@
         </code>
     </cafd>
     <cafd id="00000014" name="JBBFE" author="Almaretto" series="F010">
-        <code description="ENABLE REAR driver/ passenger window Roll Up when doors opened FRM for Front)">
+        <code description="ENABLE REAR driver/passenger window Roll Up when doors opened FRM for Front)">
             <group id="3070">
                 <function start="0" end="0" mask="00000100b">nicht_aktiv</function>
             </group>
@@ -1516,7 +1516,7 @@
         </code>
     </cafd>
     <cafd id="00000018" name="JBBF_E3_PDC" author="Almaretto" series="F010">
-        <code description="ENABLE Top/ Rear Camera at All Speeds. Part 1 of 2. See TRSVC for Side">
+        <code description="ENABLE Top/Rear Camera at All Speeds. Part 1 of 2. See TRSVC for Side">
             <group id="3009">
                 <function start="15" end="15" comment="max speed to disable top camera view" mask="11111111b">FF</function>
                 <function start="16" end="16" comment="max speed to disable rear camera view" mask="11111111b">FF</function>
@@ -1526,7 +1526,7 @@
         </code>
     </cafd>
     <cafd id="00000223" name="TRSVC" author="Almaretto" series="F010,F030,F080">
-        <code description="Side Camera at All Speeds. Part 1 of 2. See PDC for Top/ Rear">
+        <code description="Side Camera at All Speeds. Part 1 of 2. See PDC for Top/Rear">
             <group id="3000">
                 <function start="114" end="114" comment="Maximum speed side view can activate" mask="11111111b">FF</function>
                 <function start="115" end="115" comment="Auto-deactivate side view speed" mask="11111111b">FF</function>
@@ -1978,7 +1978,7 @@
                 <function start="4" end="4" mask="10000000b">aktiv</function>
             </group>
         </code>
-        <code description="Open Windows/ Fold Mirrors with Keyfob or CA (Newer I-Step)">
+        <code description="Open Windows/Fold Mirrors with Keyfob or CA (Newer I-Step)">
             <group id="3110">
                 <function start="8" end="8" comment="ASP_AUSKLAPPEN_NACH_KOMFORTSCHLIESSEN" mask="00000001b">aktiv</function>
                 <function start="1" end="1" comment="ASP_BEIKLAPPEN_BEI_KOMFORTSCHLIESSEN" mask="00000001b">aktiv</function>
@@ -1991,7 +1991,7 @@
                 <function start="1" end="1" comment="KOMFORTSCHLIESSUNG_PA" mask="00000100b">aktiv</function>
             </group>
         </code>
-        <code description="Open Windows/ Fold Mirrors with Keyfob or CA (Older I-Step)">
+        <code description="Open Windows/Fold Mirrors with Keyfob or CA (Older I-Step)">
             <group id="3110">
                 <function start="7" end="7" comment="ASP_AUSKLAPPEN_NACH_KOMFORTSCHLIESSEN" mask="00000001b">aktiv</function>
                 <function start="0" end="0" comment="ASP_BEIKLAPPEN_BEI_KOMFORTSCHLIESSEN" mask="10000000b">aktiv</function>
@@ -2004,7 +2004,7 @@
                 <function start="1" end="1" comment="KOMFORTSCHLIESSUNG_PA" mask="00000100b">aktiv</function>
             </group>
         </code>
-        <code description="Remove open/ close window and mirror initiation delay">
+        <code description="Remove open/close window and mirror initiation delay">
             <group id="3053">
                 <function start="9" end="9" comment="KOMFORT_SCHLIESSEN" mask="11111111b">00</function>
             </group>
@@ -2060,7 +2060,7 @@
                 <function start="0" end="0" comment="FH_TUERAUF_STOP_MAUT" mask="00000001b">nicht_aktiv</function>
             </group>
         </code>
-        <code description="ENABLE Top/ Rear camera at any speed. See TRSVC for Side View">
+        <code description="ENABLE Top/Rear camera at any speed. See TRSVC for Side View">
             <group id="3203">
                 <function start="7" end="7" comment="The speed when it auto disables top camera view" mask="11111111b">FF</function>
                 <function start="8" end="8" comment="The speed when it auto disables rear camera view" mask="11111111b">FF</function>
@@ -2082,7 +2082,7 @@
         </code>
     </cafd>
     <cafd id="00001A33" name="DSC" author="Almaretto" series="F080">
-        <code description="Euro MDM (P3.59.2 Settings): Coding US Spec Cars (F80 / F82)">
+        <code description="Euro MDM (P3.59.2 Settings): Coding US Spec Cars (F80/F82)">
             <group id="3000">
                 <function start="12" end="12" comment="C_Laenderkennung. ONLY Needed Change" mask="00000011b">ECE</function>
             </group>
@@ -2108,7 +2108,7 @@
         </code>
     </cafd>
     <cafd id="000017BC" name="BDC_01" author="Almaretto" series="G011,G030">
-        <code description="ENABLE Mirrors Fold / Windows Roll Up with CA and KeyFOB. Part 1 of 2. See IDF7">
+        <code description="ENABLE Mirrors Fold/Windows Roll Up with CA and KeyFOB. Part 1 of 2. See IDF7">
             <group id="3110">
                 <function start="0" end="0" comment="ASP_AUSKLAPPEN_NACH_KOMFORTSCHLIESSEN" mask="00000010b">aktiv</function>
                 <function start="0" end="0" comment="ASP_BEIKLAPPEN_BEI_KOMFORTSCHLIESSEN" mask="00001000b">aktiv</function>
@@ -2157,7 +2157,7 @@
                 <function start="0" end="0" comment="FH_TUERAUF_STOP_MAUT_REAR" mask="00000001b">nicht_aktiv</function>
             </group>
         </code>
-        <code description="ENABLE Mirrors Fold / Windows Roll Up with CA and KeyFOB. Part 2 of 2. See 17BC">
+        <code description="ENABLE Mirrors Fold/Windows Roll Up with CA and KeyFOB. Part 2 of 2. See 17BC">
             <group id="3514">
                 <function start="0" end="0" comment="KOMFORTOEFFNUG_FB" mask="01000000b">aktiv</function>
                 <function start="0" end="0" comment="KOMFORTSCHLIESSUNG_FB" mask="10000000b">aktiv</function>
@@ -2166,7 +2166,7 @@
                 <function start="1" end="1" comment="KOMFORTSCHLIESSUNG_PA" mask="00000100b">aktiv</function>
             </group>
         </code>
-        <code description="Remove Mirror / Window Initiation Delay with CA and KeyFOB">
+        <code description="Remove Mirror/Window Initiation Delay with CA and KeyFOB">
             <group id="3514">
                 <function start="10" end="10" comment="KOMFORT_SCHLIESSEN" mask="11111111b">00</function>
             </group>
@@ -2314,7 +2314,7 @@
                 <function start="110" end="110" comment="Acoustical_lock_confirm" mask="00000001b">aktiv</function>
             </group>
         </code>
-        <code description="ENABLE Sports Displays - Red/ Silver.">
+        <code description="ENABLE Sports Displays - Red/Silver.">
             <group id="3000">
                 <function start="133" end="133" comment="M_VEHICLE" mask="01000000b">aktiv</function>
             </group>
@@ -2332,7 +2332,7 @@
                 <function start="9" end="9" comment="EFF_DYN_SPORT_CID" mask="00100000b">aktiv</function>
             </group>
         </code>
-        <code description="DISABLE Office / Service Message Function Speed Lock-Out">
+        <code description="DISABLE Office/Service Message Function Speed Lock-Out">
             <group id="3000">
                 <function start="136" end="136" comment="OFFICE_MESSAGES_SPEEDLOCK_CONDITION" mask="00111000b">none</function>
                 <function start="138" end="138" comment="SERVICES_MESSAGES_SPEEDLOCK_CONDITION" mask="00111000b">none</function>
@@ -2384,7 +2384,7 @@
                 <function start="62" end="62" comment="STARTUP_EMBLEM" mask="01111000b">variant_01</function>
             </group>
         </code>
-        <code description="DISABLE STARTUP / CAMERA Legal Disclaimers">
+        <code description="DISABLE STARTUP/CAMERA Legal Disclaimers">
             <group id="3001">
                 <function start="58" end="58" comment="LEGAL_DISCLAIMER_TIME" mask="11111111b">00</function>
                 <function start="52" end="52" comment="MACRO_CAM_LEGALDISCLAIMER" mask="11111111b">00</function>
@@ -2414,7 +2414,7 @@
                 <function start="6" end="6" comment="INBAND_RINGING" mask="10000000b">aktiv</function>
             </group>
         </code>
-        <code description="ENABLE AM Radio on Hybrid Vehicles (F15/ I12/ I01)">
+        <code description="ENABLE AM Radio on Hybrid Vehicles (F15/I12/I01)">
             <group id="3002">
                 <function start="52" end="52" comment="RADIO_BAND_KW" mask="00001000b">aktiv</function>
             </group>
@@ -2459,7 +2459,7 @@
                 <function start="14" end="14" comment="ENT_MC_COVER_SCALE" mask="00100000b">aktiv</function>
             </group>
         </code>
-        <code description="ENABLE Hold-Mode for Range Extender (I001 / 1012)">
+        <code description="ENABLE Hold-Mode for Range Extender (I001/1012)">
             <group id="3009">
                 <function start="4" end="4" comment="EV_MENU_AVAILABLE" mask="01100000b">rex</function>
             </group>

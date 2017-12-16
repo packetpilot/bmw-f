@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <FDL>
     <!-- Botho - Public Release       -->
-    <!-- last updated : 2017-12-14    -->
+    <!-- last updated : 2017-12-16    -->
     <!-- last I-Step default values updated: 3.63.2  -->
     <cafd id="00000911" name="ACSM_4B" author="Botho (public)" series="F020,F030">
         <code description="Ceinture de sécurité : Durée du rappel à 10s (défaut : 100s)">
@@ -409,9 +409,24 @@
         </code>
     </cafd>
     <cafd id="0000067B" name="ICMQL" author="Botho (public)" series="F020,F030">
-        <code description="Active Cruise Control : Distance minimum par défaut à 1">
+        <code description="Active Cruise Control : Distance position 1 (proche)">
             <group id="3000">
                 <function start="184" end="184" mask="00000111b" comment="C_Abstandsstufe_init (défaut : 03)">01</function>
+            </group>
+        </code>
+        <code description="Active Cruise Control : Distance position 2">
+            <group id="3000">
+                <function start="184" end="184" mask="00000111b" comment="C_Abstandsstufe_init (défaut : 03)">02</function>
+            </group>
+        </code>
+        <code description="Active Cruise Control : Distance position 3 (par défaut)">
+            <group id="3000">
+                <function start="184" end="184" mask="00000111b" comment="C_Abstandsstufe_init (défaut : 03)">03</function>
+            </group>
+        </code>
+        <code description="Active Cruise Control : Distance position 4 (éloigné)">
+            <group id="3000">
+                <function start="184" end="184" mask="00000111b" comment="C_Abstandsstufe_init (défaut : 03)">04</function>
             </group>
         </code>
         <code description="Active Cruise Control : Activation à partir de 10 km/h (30 km/h ou 20 mph par défaut)">
@@ -420,9 +435,14 @@
                 <function start="143" end="143" mask="11111111b" comment="C_Wunschgeschw_min_mph (défaut : 14)">06</function>
             </group>
         </code>
-        <code description="ECO PRO : Activation par défaut au démarrage">
+        <code description="Mode de conduite : Activation ECO PRO par défaut au démarrage">
             <group id="3000">
                 <function start="36" end="36" mask="00001000b" comment="IcmKod_B_InitEco (défaut : 00)">01</function>
+            </group>
+        </code>
+        <code description="Mode de conduite : Activation CONFORT par défaut au démarrage">
+            <group id="3000">
+                <function start="36" end="36" mask="00001000b" comment="IcmKod_B_InitEco (défaut : 00)">00</function>
             </group>
         </code>
         <code description="Détection angle mort : Activation à partir de 10km/h (défaut : 20km/h)">
@@ -475,6 +495,11 @@
                 <function start="1" end="1" mask="00011000b" comment="DISPLAY_HEADWAY_DISTANCE (défaut : 00)">01</function>
                 <function start="1" end="1" mask="00000010b" comment="SEND_STATUS_IBRAKE (défaut : 00)">01</function>
                 <function start="1" end="1" mask="00000100b" comment="SEND_PARAM_IBRAKE (défaut : 01)">01</function>
+            </group>
+        </code>
+        <code description="Avertisseur de franchissement de ligne : activation de la détection du bord de la route sans marquage">
+            <group id="3020">
+                <function start="2" end="2" mask="00000011b" "ROAD_EDGE_WARNING_ENABLED (defaut : 02)">detection_for_grass_edge_and_curb_stone</function>
             </group>
         </code>
         <code description="Avertisseur de franchissement de ligne : activation à partir de 55 km/h (défaut : 70 km/h) et désactivation en dessous de 50 km/h (défaut : 65 km/h)">
@@ -561,6 +586,11 @@
                 <function start="14" end="14" comment="ENT_MC_COVER_SCALE (défaut : nicht_aktiv)" mask="00100000b">aktiv</function>
             </group>
         </code>
+        <code description="iDrive (Média) : Active les bookmark dans la collection de musique">
+            <group id="3000">
+                <function start="14" end="14" comment="ENT_MC_SONG_BOOKMARKS (défaut : nicht_aktiv)" mask="00000100b">aktiv</function>
+            </group>
+        </code>
         <code description="iDrive (HUD) : Affichage de l'assistant distance (Step 2 sur 3 - voir KOMBI et KAFAS2)">
             <group id="3000">
                 <function start="97" end="97" mask="00001000b" comment="HUD_DISTANCE_INFO (défaut : nicht_aktiv)">aktiv</function>
@@ -586,7 +616,7 @@
                 <function start="92" end="92" mask="00011000b" comment="DAYDRIVING_LIGHT (défaut : 00)">02</function>
             </group>
         </code>
-        <code description="-- TESTING -- iDrive (Eclairage) : Ajout éclairage pas de porte (FollowMeHome Step 2 sur 2 - voir FEM)">
+        <code description="-- TESTING -- iDrive (Eclairage) : Ajout éclairage pas de porte (Follow-Me-Home Step 2 sur 2 - voir FEM)">
             <group id="3000">
                 <function start="26" end="26" mask="00001000b" comment="KEY_CONF_COMFORT_HOMELIGHT (défaut : nicht_aktiv)">aktiv</function>
             </group>
@@ -689,6 +719,12 @@
         <code description="iDrive (Navigation) : Ajoute le menu Route express dans les préférences de guidage">
             <group id="3000">
                 <function start="108" end="108" mask="00000100b" comment="NAVI_EXPRESS_ROADS (défaut : nicht_aktiv)">aktiv</function>
+            </group>
+        </code>
+         <code description="iDrive (Navigation) : active les popup de guidage SPLIT et FULL">
+            <group id="3000">
+                <function start="62" end="62" mask="00001000b" comment="NAVI_SPLIT_GUIDINGPOPUP (défaut : nicht_aktiv)">aktiv</function>
+                <function start="62" end="62" mask="00010000b" comment="NAVI_FULL_GUIDINGPOPUP (défaut : nicht_aktiv)">aktiv</function>
             </group>
         </code>
         <code description="iDrive (Office) : Speech to Text (Email ou SMS) Nécessite souscription Nuance">
@@ -875,6 +911,16 @@
         <code description="Tableau de bord : Affichage de la vitesse digitale">
             <group id="3000">
                 <function start="1" end="1" mask="00000010b" comment="BC_DIGITAL_V (défaut : nicht_aktiv)">aktiv</function>
+            </group>
+        </code>
+        <code description="Tableau de bord : désactivation reset auto du compteur journalier (4h par défaut)">
+            <group id="3000">
+                <function start="44" end="44" mask="11111111b" comment="BC_AUTORESET_ZEIT (défaut : 04)">FF</function>
+            </group>
+        </code>
+        <code description="Tableau de bord : active l'éclairage de jour y compris la nuit">
+            <group id="3007">
+                <function start="10" end="10" mask="11111111b" comment="DIM_NACHT_EIN (défaut : 08)">FF</function>
             </group>
         </code>
         <code description="Tableau de bord : Affichage permanent du logo M performance en bas à droite (1/2)">

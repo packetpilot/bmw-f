@@ -621,7 +621,7 @@
         </code>
         <code description="ENABLE Album Cover Scale to Full-Size">
             <group id="3000">
-                <function start="14" end="14" comment="ENT_MC_COVER_SCALE" mask="00000100b">aktiv</function>
+                <function start="14" end="14" comment="ENT_MC_COVER_SCALE" mask="00100000b">aktiv</function>
             </group>
         </code>
         <code description="DISABLE Bluetooth Device Pairing Speedlock">

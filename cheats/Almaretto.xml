@@ -1975,7 +1975,7 @@
         </code>
         <code description="Separates Ambient Light Level and Instrument Cluster Light Level">
             <group id="3070">
-                <function start="4" end="4" mask="10000000b">aktiv</function>
+                <function start="4" end="4" mask="10000000b" comment="AMBIENTE_NACHFUEHRUNG (default : aktiv)">nicht_aktiv</function>
             </group>
         </code>
         <code description="Open Windows/Fold Mirrors with Keyfob or CA (Newer I-Step)">
@@ -2016,7 +2016,7 @@
         </code>
         <code description="Removes Trunk Opening Delay - 0 seconds (Newer I-Step)">
             <group id="3040">
-                <function start="4" end="4" comment="CLM_TIME_DELAY_BOOTLID" mask="11111111b">00</function>
+                <function start="6" end="6" comment="CLM_TIME_DELAY_BOOTLID" mask="11111111b">00</function>
             </group>
         </code>
         <code description="Turn off taillight flashing when opening trunk via Comfort Access">

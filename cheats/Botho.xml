@@ -1,7 +1,7 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <FDL>
     <!-- Botho - Public Release       -->
-    <!-- last updated : 2017-12-16    -->
+    <!-- last updated : 2017-12-26    -->
     <!-- last I-Step default values updated: 3.63.2  -->
     <cafd id="00000911" name="ACSM_4B" author="Botho (public)" series="F020,F030">
         <code description="Ceinture de sécurité : Durée du rappel à 10s (défaut : 100s)">
@@ -194,7 +194,7 @@
                 <function start="7" end="7" mask="00000111b" comment="BLINKZYKLEN_ANZAHL_TIPP (défaut : 00)">04</function>
             </group>
         </code>
-         <code description="-- Don't work -- Clignotants : nb de clignotements à 5 (00 = 1, 01 = 3, 02 = 5 ; défaut : 3 - I-Step après 3.61.x)">
+        <code description="-- Don't work -- Clignotants : nb de clignotements à 5 (00 = 1, 01 = 3, 02 = 5 ; défaut : 3 - I-Step après 3.61.x)">
             <group id="3064">
                 <function start="215" end="215" mask="00000001b" comment="PIA_DEFAULT_TIPPBLINKEN (défaut : 01)">02</function>
             </group>
@@ -499,7 +499,7 @@
         </code>
         <code description="Avertisseur de franchissement de ligne : activation de la détection du bord de la route sans marquage">
             <group id="3020">
-                <function start="2" end="2" mask="00000011b" "ROAD_EDGE_WARNING_ENABLED (defaut : 02)">detection_for_grass_edge_and_curb_stone</function>
+                <function start="2" end="2" mask="00000011b" comment="ROAD_EDGE_WARNING_ENABLED (defaut : 02)">detection_for_grass_edge_and_curb_stone</function>
             </group>
         </code>
         <code description="Avertisseur de franchissement de ligne : activation à partir de 55 km/h (défaut : 70 km/h) et désactivation en dessous de 50 km/h (défaut : 65 km/h)">
@@ -721,7 +721,7 @@
                 <function start="108" end="108" mask="00000100b" comment="NAVI_EXPRESS_ROADS (défaut : nicht_aktiv)">aktiv</function>
             </group>
         </code>
-         <code description="iDrive (Navigation) : active les popup de guidage SPLIT et FULL">
+        <code description="iDrive (Navigation) : active les popup de guidage SPLIT et FULL">
             <group id="3000">
                 <function start="62" end="62" mask="00001000b" comment="NAVI_SPLIT_GUIDINGPOPUP (défaut : nicht_aktiv)">aktiv</function>
                 <function start="62" end="62" mask="00010000b" comment="NAVI_FULL_GUIDINGPOPUP (défaut : nicht_aktiv)">aktiv</function>

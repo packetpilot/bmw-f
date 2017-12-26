@@ -2,7 +2,7 @@
 <FDL>
     <!-- Botho - Public Release       -->
     <!-- last updated : 2017-12-26    -->
-    <!-- last I-Step default values updated: 3.63.2  -->
+    <!-- last I-Step default values updated: 3.63.3  -->
     <cafd id="00000911" name="ACSM_4B" author="Botho (public)" series="F020,F030">
         <code description="Ceinture de sécurité : Durée du rappel à 10s (défaut : 100s)">
             <group id="3001">
@@ -11,11 +11,11 @@
         </code>
         <code description="Ceinture de sécurité : désactive le gong de rappel">
             <group id="3000">
-                <function start="15" end="15" mask="00000010b" comment="SeatBeltReminder_SBR_Fahrer (défaut : aktiv)">nicht_aktiv</function>
-                <function start="15" end="15" mask="00000100b" comment="SeatBeltReminder_SBR_Beifahrer (défaut : aktiv)">nicht_aktiv</function>
+                <function start="15" end="15" mask="00000100b" comment="SeatBeltReminder_SBR_Fahrer (défaut : aktiv)">nicht_aktiv</function>
+                <function start="15" end="15" mask="00000010b" comment="SeatBeltReminder_SBR_Beifahrer (défaut : aktiv)">nicht_aktiv</function>
             </group>
         </code>
-        <code description="Ceinture de sécurité : désactive l'indicateur dans l'instrumentation tableau de bord">
+        <code description="Ceinture de sécurité : désactive l'indicateur dans l'instrumentation du tableau de bord">
             <group id="3000">
                 <function start="15" end="15" mask="00010000b" comment="Gurtzustandsanzeige_Fahrer_GWF_GZA_FA (défaut : aktiv)">nicht_aktiv</function>
                 <function start="15" end="15" mask="00001000b" comment="Gurtzustandsanzeige_Beifahrer_GWF_GZA_BF (défaut : aktiv)">nicht_aktiv</function>
@@ -141,7 +141,7 @@
                 <function start="12" end="12" mask="00011111b" comment="MAPPING_SIDEMARKER_L_FUNCTION (défaut : 01)">04</function>
                 <function start="23" end="23" mask="00011111b" comment="MAPPING_SIDEMARKER_R_FUNCTION (défaut : 01)">04</function>
                 <function start="13" end="13" mask="11111111b" comment="MAPPING_SIDEMARKER_L_PWM_LEVEL_STANDARD (défaut : off)">8.2V</function>
-                <function start="24" end="24" mask="11111111b" comment="MAPPING_SIDEMARKER_V_PWM_LEVEL_STANDARD (défaut : off)">8.2V</function>
+                <function start="24" end="24" mask="11111111b" comment="MAPPING_SIDEMARKER_R_PWM_LEVEL_STANDARD (défaut : off)">8.2V</function>
             </group>
         </code>
         <code description="Laves phares : Désactivation">
@@ -385,7 +385,7 @@
         </code>
         <code description="Alarme type US">
             <group id="3001">
-                <function start="17" end="17" mask="11111111b" comment="Alarm type US (défaut : ece)">us</function>
+                <function start="17" end="17" mask="11111111b" comment="Alarm type US (défaut : ece)">initwert</function>
             </group>
         </code>
         <code description="Activation Panic Alarme">
@@ -490,7 +490,7 @@
         </code>
     </cafd>
     <cafd id="00001148" name="KAFAS2" author="Botho (public)" series="F020,F030">
-        <code description="HUD : Affichage de l'assistant distance (Step 3 sur 3 - voir KOMBI et HU_NBT)">
+        <code description="HUD : Affichage de l'assistant de distance (Step 3 sur 3 - voir KOMBI et HU_NBT)">
             <group id="3060">
                 <function start="1" end="1" mask="00011000b" comment="DISPLAY_HEADWAY_DISTANCE (défaut : 00)">01</function>
                 <function start="1" end="1" mask="00000010b" comment="SEND_STATUS_IBRAKE (défaut : 00)">01</function>
@@ -591,7 +591,7 @@
                 <function start="14" end="14" comment="ENT_MC_SONG_BOOKMARKS (défaut : nicht_aktiv)" mask="00000100b">aktiv</function>
             </group>
         </code>
-        <code description="iDrive (HUD) : Affichage de l'assistant distance (Step 2 sur 3 - voir KOMBI et KAFAS2)">
+        <code description="iDrive (HUD) : Affichage de l'assistant de distance (Step 2 sur 3 - voir KOMBI et KAFAS2)">
             <group id="3000">
                 <function start="97" end="97" mask="00001000b" comment="HUD_DISTANCE_INFO (défaut : nicht_aktiv)">aktiv</function>
             </group>
@@ -913,12 +913,12 @@
                 <function start="1" end="1" mask="00000010b" comment="BC_DIGITAL_V (défaut : nicht_aktiv)">aktiv</function>
             </group>
         </code>
-        <code description="Tableau de bord : désactivation reset auto du compteur journalier (4h par défaut)">
+        <code description="Tableau de bord : Désactivation reset auto du compteur journalier (4h par défaut)">
             <group id="3000">
                 <function start="44" end="44" mask="11111111b" comment="BC_AUTORESET_ZEIT (défaut : 04)">FF</function>
             </group>
         </code>
-        <code description="Tableau de bord : active l'éclairage de jour y compris la nuit">
+        <code description="Tableau de bord : Active l'éclairage de jour y compris la nuit">
             <group id="3007">
                 <function start="10" end="10" mask="11111111b" comment="DIM_NACHT_EIN (défaut : 08)">FF</function>
             </group>
@@ -958,7 +958,7 @@
                 <function start="20" end="20" mask="11111111b" comment="HUD_STARTUP_TIME (défaut : 28. 32 si production date après 0315)">0A</function>
             </group>
         </code>
-        <code description="HUD : Affichage de l'assistant distance (Step 1 sur 3 - voir KAFAS2 et HU_NBT)">
+        <code description="HUD : Affichage de l'assistant de distance (Step 1 sur 3 - voir KAFAS2 et HU_NBT)">
             <group id="3000">
                 <function start="1" end="1" mask="00000001b" comment="IBRAKE_ABSTAND_ENABLE (défaut : nicht_aktiv)">aktiv</function>
             </group>
@@ -980,7 +980,7 @@
         </code>
     </cafd>
     <cafd id="000007A1" name="REM_01" author="Botho (public)" series="F020,F030">
-        <code description="Vitres arrières : Activation à l'ouverture des portières arrières">
+        <code description="Vitres arrières : Activation à l'ouverture des portes arrières">
             <group id="3050">
                 <function start="0" end="0" mask="00000001b" comment="FH_TUERAUF_STOP_MAUT (défaut : aktiv)">nicht_aktiv</function>
             </group>
@@ -1017,13 +1017,13 @@
                 <function start="10" end="10" mask="11111111b" comment="D_SCHWELLE_2 : distance de désactivation caméra arrière (défaut : 0A)">FF</function>
             </group>
         </code>
-        <code description="Feux freinage d'urgence : activation LED arrères (défaut : activé)">
+        <code description="Feux freinage d'urgence : Activation LED arrères (défaut : activé)">
             <group id="3062">
                 <function start="110" end="110" mask="00111111b" comment="MAPPING_BRAKEFORCED_L_OUTPUT (défaut : bl_l)">bl_l</function>
                 <function start="120" end="120" mask="00111111b" comment="MAPPING_BRAKEFORCED_R_OUTPUT (défaut : bl_r)">bl_r</function>
             </group>
         </code>
-        <code description="Feux freinage d'urgence : augmentation fréquence de clignotement LED arrères (défaut : 03)">
+        <code description="Feux freinage d'urgence : Augmentation fréquence de clignotement LED arrères (défaut : 03)">
             <group id="3064">
                 <function start="17" end="17" mask="00001110b" comment="ESS_BLINKFREQ_1 (défaut : 03)">05</function>
                 <function start="17" end="17" mask="01110000b" comment="ESS_BLINKFREQ_2 (défaut : 03)">05</function>
@@ -1041,12 +1041,12 @@
                 <function start="0" end="0" mask="00011100b" comment="EINAUSSTIEGSHILFE (défaut : nicht_aktiv)">Modus_FA_SLV</function>
             </group>
         </code>
-        <code description="Sièges électriques (Easy Entry) : distance minimum du siège par rapport à la butée arrière">
+        <code description="Sièges électriques (Easy Entry) : Distance minimum du siège par rapport à la butée arrière">
             <group id="3012">
                 <function start="4" end="5" mask="11111111b" comment="EAH_SCHUTZFREIRAUM_HINTEN_SLV_PHYS (défaut : 00, 64)">00, 32</function>
             </group>
         </code>
-        <code description="Sièges électriques (Easy Entry) : distance de recul du siège">
+        <code description="Sièges électriques (Easy Entry) : Distance de recul du siège">
             <group id="3012">
                 <function start="0" end="1" mask="11111111b" comment="EAH_VERFAHRWEG_SLV_PHYS (défaut : 00, 3C)">00, 32</function>
             </group>

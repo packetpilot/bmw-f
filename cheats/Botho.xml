@@ -300,7 +300,12 @@
                 <function start="0" end="0" mask="00010000b" comment="TCM_MSA_DEFAULT_OFF (défaut : nicht_aktiv)">aktiv</function>
             </group>
         </code>
-        <code description="Auto Start/Stop : Mémorise la dernière position Auto Start/Stop">
+        <code description="Auto Start/Stop : Désactive Auto Start/Stop en mode Eco Pro">
+            <group id="3023">
+                <function start="0" end="0" mask="10000000b" comment="TCM_MSA_ECO_MODE (défaut : aktiv)">nicht_aktiv</function>
+            </group>
+        </code>
+        <code description="Auto Start/Stop : Mémorise la dernière position Auto Start/Stop (après redémarrage)">
             <group id="3023">
                 <function start="0" end="0" mask="00100000b" comment="TCM_MSA_MEMORY (défaut : nicht_aktiv)">aktiv</function>
             </group>

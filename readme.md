@@ -54,22 +54,22 @@ FEM_BODY|[40]|Front Electronics Module (ZGW, FRM, CAS, and JBBF Combined)
 FEM_GW|[10]|Front Electronics Module Gateway
 FZD|[56]|Function Unit Roof
 GHAS|[f]|??
-HC2|[8]|??
+HC2|[8]|Heading Control (Lane Change Warning)
 HU_NBT2|[63]|Head Unit NBTv2 (MY2016+)
 ICM|[1c]|Integrated Chassis Management
 IHKA3|[78]|Integrated Automatic Heating/Air Conditioning System
-KAFAS2|[5d]|Camera System [v2? MYXXXX+]
+KAFAS2|[5d]|Camera-based Driver Assist System [v2? MYXXXX+]
 KOMBI|[60]|Instrument Cluster
 LHM|[43]|LED Headlight Main Module
 LHM|[44]|LED Headlight Main Module
 REM|[72]|Rear Electronics Module
-SM2|[6d]|Seat Module [v2?]
-SM2|[6e]|Seat Module [v2?]
+SM2|[6d]|Seat Module / Seat Memory
+SM2|[6e]|Seat Module / Seat Memory
 TBX|[35]|iDrive Controller Touch Handwriting Module
 TMS|[41]|LED Headlight Secondary Module (stepper servos, marker, positioning light, indicators)
 TMS|[42]|LED Headlight Secondary Module (stepper servos, marker, positioning light, indicators)
 TRSVC|[6]|Surround View Camera System
-VDC1|[76]|??
+VDC1|[76]|Vertical Dynamics Management
 ZBE3|[67]|iDrive Controller
 ZGW|[XX]|Central Gateway Module
 

@@ -606,24 +606,20 @@
                 <function start="106" end="106" mask="00000111b" comment="DISPLAYTIME_LIST_HUD_KOMBI (défaut : 05)">03</function>
             </group>
         </code>
+        <code description="iDrive (HUD) : Affichage de l'option Sport (indicateur de changement rapports - seulement pour véhicule M)">
+            <group id="3000">
+                <function start="18" end="18" mask="00000001b" comment="HUD_SPORTANZEIGE_ENABLE (défaut : nicht_aktiv)">aktiv</function>
+                <function start="18" end="18" mask="00000100b" comment="HUD_SPORTANZEIGE_MS_GASSE_ENABLE (défaut : nicht_aktiv)">aktiv</function>
+            </group>
+        </code>
         <code description="iDrive (Portes) : Ajout de l'alarme">
             <group id="3000">
                 <function start="110" end="110" mask="00000001b" comment="ACOUSTICAL_LOCK_CONFIRM (défaut : nicht_aktiv)">aktiv</function>
             </group>
         </code>
-        <code description="-- TESTING -- iDrive (Portes) : Confort Openning (double clic sur télécommande ouvre les fénêtres à 75% - utile pour les coupés)">
-            <group id="3000">
-                <function start="100" end="100" mask="01000000b" comment="COMFORT_OPENING (défaut : nicht_aktiv)">aktiv</function>
-            </group>
-        </code>
         <code description="iDrive (Eclairage) : Ajout feux de jour (Step 2 sur 3 - voir FEM_BODY et REM)">
             <group id="3000">
                 <function start="92" end="92" mask="00011000b" comment="DAYDRIVING_LIGHT (défaut : 00)">02</function>
-            </group>
-        </code>
-        <code description="-- TESTING -- iDrive (Eclairage) : Ajout éclairage pas de porte (Follow-Me-Home Step 2 sur 2 - voir FEM)">
-            <group id="3000">
-                <function start="26" end="26" mask="00001000b" comment="KEY_CONF_COMFORT_HOMELIGHT (défaut : nicht_aktiv)">aktiv</function>
             </group>
         </code>
         <code description="iDrive (Statut) : Affichage température et pression des pneus">
@@ -853,21 +849,15 @@
                 <function start="134" end="134" mask="00001000b" comment="TRACTION_DEMAND_CONTROL (défaut : nicht_aktiv)">aktiv</function>
             </group>
         </code>
-        <code description="-- TESTING -- iDrive (Réglages) : Active l'assistant de sortie de parking'">
+        <code description="-- Don't work -- iDrive (Réglages) : Active l'assistant de sortie de parking (nécessite hardware spécifique)">
             <group id="3001">
                 <function start="13" end="13" mask="10000000b" comment="MACRO_PMA_AUSPARKEN (défaut : nicht_aktiv)">aktiv</function>
             </group>
         </code>
-        <code description="-- TESTING -- iDrive (Réglages) : Active PDC automatique'">
+        <code description="-- Don't work -- iDrive (Réglages) : Active PDC automatique (nécessite hardware spécifique)">
             <group id="3001">
                 <function start="64" end="64" mask="00010000b" comment="ACTIVE_PDC (défaut : nicht_aktiv)">aktiv</function>
                 <function start="65" end="65" mask="01000000b" comment="AUTO_PDC (défaut : nicht_aktiv)">aktiv</function>
-            </group>
-        </code>
-        <code description="-- Don't work (Only M5) -- iDrive (HUD) : Affichage de l'option Sport (indicateur de changement rapports)">
-            <group id="3000">
-                <function start="18" end="18" mask="00000001b" comment="HUD_SPORTANZEIGE_ENABLE (défaut : nicht_aktiv)">aktiv</function>
-                <function start="18" end="18" mask="00000100b" comment="HUD_SPORTANZEIGE_MS_GASSE_ENABLE (défaut : nicht_aktiv)">aktiv</function>
             </group>
         </code>
         <code description="-- Don't work -- iDrive (HUD) : Affichage clignotants (Step 1 sur 2 - voir KOMBI)">
@@ -875,19 +865,29 @@
                 <function start="55" end="55" mask="10000000b" comment="HUD_TURNSIGNAL (défaut : nicht_aktiv)">aktiv</function>
             </group>
         </code>
-        <code description="-- Don't work -- iDrive (Eclairage) : Ajout lumière d'ambiance (F4x only)">
+        <code description="-- Don't work -- iDrive (Eclairage) : lumière d'ambiance (F4x only)">
             <group id="3000">
                 <function start="35" end="35" mask="11000000b" comment="DEAKTIVIERUNGSMOEGLICHKEIT_AMBILIGHT (défaut : 00)">01</function>
             </group>
         </code>
-        <code description="-- Don't work / testing -- iDrive (Eclairage) : Affichage assistant feux de route">
+        <code description="-- Don't work -- iDrive (Eclairage) : Affichage assistant feux de route">
             <group id="3000">
                 <function start="109" end="109" mask="10000000b" comment="HIGH_BEAM_ASSISTANT (défaut : nicht_aktiv)">aktiv</function>
+            </group>
+        </code>
+        <code description="-- TESTING -- iDrive (Eclairage) : Ajout éclairage pas de porte (Follow-Me-Home Step 2 sur 2 - voir FEM)">
+            <group id="3000">
+                <function start="26" end="26" mask="00001000b" comment="KEY_CONF_COMFORT_HOMELIGHT (défaut : nicht_aktiv)">aktiv</function>
             </group>
         </code>
         <code description="-- Don't work -- iDrive (Statut) : Affichage informations de la batterie">
             <group id="3000">
                 <function start="134" end="134" mask="00000001b" comment="KI_SELECTION_SOC (défaut : nicht_aktiv)">aktiv</function>
+            </group>
+        </code>
+        <code description="-- TESTING -- iDrive (Portes) : Confort Openning (double clic sur télécommande ouvre les fénêtres à 75% - utile pour les coupés)">
+            <group id="3000">
+                <function start="100" end="100" mask="01000000b" comment="COMFORT_OPENING (défaut : nicht_aktiv)">aktiv</function>
             </group>
         </code>
         <code description="-- Don't work -- iDrive (Réglages) : Activation GPS tracking (problème de réglementation CNIL en France je pense ...)">

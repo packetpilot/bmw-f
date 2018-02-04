@@ -2,7 +2,8 @@
 <FDL>
     <!-- Botho - Public Release       -->
     <!-- last updated : 2017-12-26    -->
-    <!-- last I-Step default values updated: 3.63.3  -->
+    <!-- last I-Step default values for F030 Production date 0315 updated: 3.63.3  -->
+    
     <cafd id="00000911" name="ACSM_4B" author="Botho (public)" series="F020,F030">
         <code description="Ceinture de sécurité : Durée du rappel à 10s (défaut : 100s)">
             <group id="3001">
@@ -645,6 +646,7 @@
                 <function start="34" end="34" mask="00011100b" comment="MYINFO_DRIVING_TEXT_LENGTH (défaut : whole_text)">whole_text</function>
                 <function start="34" end="34" mask="11100000b" comment="AKD_DRIVING_TEXT_LENGTH (défaut : whole_text)">whole_text</function>
                 <function start="35" end="35" mask="00000111b" comment="BMWINFO_DRIVING_TEXT_LENGTH (défaut : whole_text)">whole_text</function>
+                <function start="35" end="35" mask="00111000b" comment="SERVICES_MESSAGES_SPEEDLOCK_CONDITION (défaut : none)">none</function>
             </group>
             <group id="3003">
                 <function start="11" end="11" mask="00000111b" comment="PIM_DRIVING_TEXT_LENGTH (défaut : 01)">07</function>
@@ -747,6 +749,11 @@
         <code description="iDrive (Téléphone) : Sonnerie du téléphone (iOS only)">
             <group id="3003">
                 <function start="6" end="6" mask="10000000b" comment="INBAND_RINGING (défaut : nicht_aktiv)">aktiv</function>
+            </group>
+        </code>
+        <code description="iDrive (Téléphone) : Affichage de l'icône des contacts">
+            <group id="3003">
+                <function start="12" end="12" mask="00001000b" comment="CONTACTS_ICON (défaut : nicht_aktiv)">aktiv</function>
             </group>
         </code>
         <code description="iDrive (Téléphone) : Sonnerie BMW (défaut : BMW)">
@@ -890,7 +897,7 @@
                 <function start="100" end="100" mask="01000000b" comment="COMFORT_OPENING (défaut : nicht_aktiv)">aktiv</function>
             </group>
         </code>
-        <code description="-- Don't work -- iDrive (Réglages) : Activation GPS tracking (problème de réglementation CNIL en France je pense ...)">
+        <code description="-- Don't work -- iDrive (Réglages) : Activation GPS tracking (ne fonctionne pas en France ...)">
             <group id="3003">
                 <function start="15" end="15" mask="00000001b" comment="ASSIST_SVR_SHOW (défaut : nicht_aktiv)">aktiv</function>
                 <function start="14" end="14" mask="10000000b" comment="ASSIST_VEHICLEFINDER_SHOW (défaut : aktiv)">aktiv</function>

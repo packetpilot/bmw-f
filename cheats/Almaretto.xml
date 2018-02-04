@@ -2293,7 +2293,7 @@
                 <function start="11" end="11" comment="PIM_Driving_Text_Length" mask="00000111b">whole_text</function>
             </group>
             <group id="3000">
-                <function start="31" end="31" comment="SPEEDLOCK_TEXT_LENGTH" mask="00011100b">whole_text</function>
+                <function start="31" end="31" comment="SPEEDLOCK_TEXT_LENGTH" mask="00111000b">whole_text</function>
                 <function start="137" end="137" comment="MYINFO_DRIVING_TEXT_LENGTH" mask="00011100b">whole_text</function>
                 <function start="137" end="137" comment="AKD_DRIVING_TEXT_LENGTH" mask="11100000b">whole_text</function>
                 <function start="138" end="138" comment="BMWINFO_DRIVING_TEXT_LENGTH" mask="00000111b">whole_text</function>

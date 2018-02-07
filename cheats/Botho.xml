@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <FDL>
     <!-- Botho - Public Release       -->
-    <!-- last updated : 2017-12-26    -->
+    <!-- last updated : 2018-02-07    -->
     <!-- last I-Step default values for F030 Production date 0315 updated: 3.63.3  -->
     
     <cafd id="00000911" name="ACSM_4B" author="Botho (public)" series="F020,F030">
@@ -391,7 +391,7 @@
         </code>
         <code description="Alarme type US">
             <group id="3001">
-                <function start="17" end="17" mask="11111111b" comment="Alarm type US (défaut : ece)">initwert</function>
+                <function start="17" end="17" mask="11111111b" comment="Alarm type US (défaut : ece)">08</function>
             </group>
         </code>
         <code description="Activation Panic Alarme">

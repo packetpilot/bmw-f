@@ -2114,16 +2114,6 @@
                 <function start="0" end="0" comment="ASP_BEIKLAPPEN_BEI_KOMFORTSCHLIESSEN" mask="00001000b">aktiv</function>
             </group>
         </code>
-        <code description="Remember Auto Start Stop Setting when Shutdown (NA Only)">
-            <group id="3023">
-                <function start="2" end="2" comment="TCM_MSA_MEMORY" mask="00100000b">aktiv</function>
-            </group>
-        </code>
-        <code description="ENABLE Auto Start Stop OFF by Default (NA Only)">
-            <group id="3023">
-                <function start="2" end="2" comment="TCM_MSA_DEFAULT_OFF" mask="00010000b">aktiv</function>
-            </group>
-        </code>
         <code description="Unlock doors when STOP engine - auto or manual lock">
             <group id="3041">
                 <function start="42" end="42" comment="CLI_DEFAULT_UNLOCK_AFTER_END_OF_DRIVING" mask="00001100b">aktiv</function>

@@ -751,11 +751,6 @@
                 <function start="6" end="6" mask="10000000b" comment="INBAND_RINGING (défaut : nicht_aktiv)">aktiv</function>
             </group>
         </code>
-        <code description="iDrive (Téléphone) : Affichage de l'icône des contacts">
-            <group id="3003">
-                <function start="12" end="12" mask="00001000b" comment="CONTACTS_ICON (défaut : nicht_aktiv)">aktiv</function>
-            </group>
-        </code>
         <code description="iDrive (Téléphone) : Sonnerie BMW (défaut : BMW)">
             <group id="3003">
                 <function start="8" end="8" mask="00000011b" comment="RINGTONE (défaut : 00)">00</function>
@@ -854,6 +849,11 @@
         <code description="-- TESTING -- iDrive (Réglages) : Configuration du contrôle de traction">
             <group id="3000">
                 <function start="134" end="134" mask="00001000b" comment="TRACTION_DEMAND_CONTROL (défaut : nicht_aktiv)">aktiv</function>
+            </group>
+        </code>
+        <code description="-- Don't work -- iDrive (Téléphone) : Affichage de l'icône des contacts">
+            <group id="3003">
+                <function start="12" end="12" mask="00001000b" comment="CONTACTS_ICON (défaut : nicht_aktiv)">aktiv</function>
             </group>
         </code>
         <code description="-- Don't work -- iDrive (Réglages) : Active l'assistant de sortie de parking (nécessite hardware spécifique)">

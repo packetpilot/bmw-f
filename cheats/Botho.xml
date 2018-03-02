@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <FDL>
     <!-- Botho - Public Release       -->
-    <!-- last updated : 2018-02-07    -->
-    <!-- last I-Step default values for F030 Production date 0315 updated: 3.63.3  -->
+    <!-- last updated : 2018-03-02    -->
+    <!-- last I-Step default values for F030 Production date 0315 updated: F020-18-03-511  -->
     
     <cafd id="00000911" name="ACSM_4B" author="Botho (public)" series="F020,F030">
         <code description="Ceinture de sécurité : Durée du rappel à 10s (défaut : 100s)">
@@ -496,7 +496,7 @@
         </code>
     </cafd>
     <cafd id="00001148" name="KAFAS2" author="Botho (public)" series="F020,F030">
-        <code description="HUD : Affichage de l'assistant de distance (Step 3 sur 3 - voir KOMBI et HU_NBT)">
+        <code description="HUD : Affichage de l'assistant de distance (Step 3 sur 3 - voir KOMBI et HU_NBT - nécessite Active Cruise Control)">
             <group id="3060">
                 <function start="1" end="1" mask="00011000b" comment="DISPLAY_HEADWAY_DISTANCE (défaut : 00)">01</function>
                 <function start="1" end="1" mask="00000010b" comment="SEND_STATUS_IBRAKE (défaut : 00)">01</function>
@@ -592,12 +592,12 @@
                 <function start="14" end="14" comment="ENT_MC_COVER_SCALE (défaut : nicht_aktiv)" mask="00100000b">aktiv</function>
             </group>
         </code>
-        <code description="iDrive (Média) : Active les bookmark dans la collection de musique">
+        <code description="iDrive (Média) : Active les bookmarks dans la collection de musique">
             <group id="3000">
                 <function start="14" end="14" comment="ENT_MC_SONG_BOOKMARKS (défaut : nicht_aktiv)" mask="00000100b">aktiv</function>
             </group>
         </code>
-        <code description="iDrive (HUD) : Affichage de l'assistant de distance (Step 2 sur 3 - voir KOMBI et KAFAS2)">
+        <code description="iDrive (HUD) : Affichage de l'assistant de distance (Step 2 sur 3 - voir KOMBI et KAFAS2 - nécessite Active Cruise Control)">
             <group id="3000">
                 <function start="97" end="97" mask="00001000b" comment="HUD_DISTANCE_INFO (défaut : nicht_aktiv)">aktiv</function>
             </group>
@@ -730,6 +730,20 @@
                 <function start="62" end="62" mask="00010000b" comment="NAVI_FULL_GUIDINGPOPUP (défaut : nicht_aktiv)">aktiv</function>
             </group>
         </code>
+        <code description="iDrive (Navigation) : Voix femme (par défaut)">
+            <group id="3000">
+                <function start="73" end="73" mask="00001111b" comment="SPRECHERWAHL1 (défaut : weiblich)">weiblich</function>
+                <function start="73" end="73" mask="11110000b" comment="SPRECHERWAHL2 (défaut : weiblich)">weiblich</function>
+                <function start="74" end="74" mask="00001111b" comment="SPRECHERWAHL3 (défaut : weiblich)">weiblich</function>
+            </group>
+        </code>
+        <code description="iDrive (Navigation) : Voix homme">
+            <group id="3000">
+                <function start="73" end="73" mask="00001111b" comment="SPRECHERWAHL1 (défaut : weiblich)">maennlich</function>
+                <function start="73" end="73" mask="11110000b" comment="SPRECHERWAHL2 (défaut : weiblich)">maennlich</function>
+                <function start="74" end="74" mask="00001111b" comment="SPRECHERWAHL3 (défaut : weiblich)">maennlich</function>
+            </group>
+        </code>
         <code description="iDrive (Office) : Speech to Text (Email ou SMS) Nécessite souscription Nuance">
             <group id="3003">
                 <function start="1" end="1" mask="00010000b" comment="SPEECH_2_TEXT (défaut : nicht_aktiv)">aktiv</function>
@@ -846,7 +860,13 @@
                 <function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">09</function>
             </group>
         </code>
-        <code description="-- TESTING -- iDrive (Réglages) : Configuration du contrôle de traction">
+        <code description="-- TESTING --iDrive (Navigation) : active les visites guidées">
+            <group id="3000">
+                <function start="60" end="60" mask="00000010b" comment="GUIDED_TOURS (défaut : nicht_aktiv)">aktiv</function>
+                <function start="60" end="60" mask="00010000b" comment="ROUTEN_ID_GUIDEDTOURS (défaut : nicht_aktiv)">aktiv</function>
+            </group>
+        </code>
+        <code description="-- Don't work -- iDrive (Réglages) : Configuration du contrôle de traction (Le menu est bien là mais inopérant)">
             <group id="3000">
                 <function start="134" end="134" mask="00001000b" comment="TRACTION_DEMAND_CONTROL (défaut : nicht_aktiv)">aktiv</function>
             </group>
@@ -970,7 +990,7 @@
                 <function start="20" end="20" mask="11111111b" comment="HUD_STARTUP_TIME (défaut : 28. 32 si production date après 0315)">0A</function>
             </group>
         </code>
-        <code description="HUD : Affichage de l'assistant de distance (Step 1 sur 3 - voir KAFAS2 et HU_NBT)">
+        <code description="HUD : Affichage de l'assistant de distance (Step 1 sur 3 - voir KAFAS2 et HU_NBT - nécessite Active Cruise Control)">
             <group id="3000">
                 <function start="1" end="1" mask="00000001b" comment="IBRAKE_ABSTAND_ENABLE (défaut : nicht_aktiv)">aktiv</function>
             </group>

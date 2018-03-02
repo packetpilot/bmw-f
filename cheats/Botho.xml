@@ -860,7 +860,7 @@
                 <function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">09</function>
             </group>
         </code>
-        <code description="-- TESTING --iDrive (Navigation) : active les visites guidées">
+        <code description="-- TESTING -- iDrive (Navigation) : active les visites guidées">
             <group id="3000">
                 <function start="60" end="60" mask="00000010b" comment="GUIDED_TOURS (défaut : nicht_aktiv)">aktiv</function>
                 <function start="60" end="60" mask="00010000b" comment="ROUTEN_ID_GUIDEDTOURS (défaut : nicht_aktiv)">aktiv</function>

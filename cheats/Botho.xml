@@ -87,6 +87,11 @@
                 <function start="2" end="2" mask="00000100b" comment="CLM_SMO_INDICATOR (défaut : aktiv)">nicht_aktiv</function>
             </group>
         </code>
+        <code description="Vérouillage des portes : seuil de vitesse à 8km (uniquement si le vérouillage automatique activé - 16km par défaut)">
+            <group id="3040">
+                <function start="8" end="8" mask="11111111b" comment="CLM_SPEED_LIMIT_PIA_AUTO_LOCK (défaut : wert_04)">wert_03</function>
+            </group>
+        </code>
         <code description="Dévérouillage des portes à l'arrêt du moteur (uniquement si le vérouillage automatique activé)">
             <group id="3040">
                 <function start="1" end="1" mask="00000010b" comment="CLM_UNLOCK_KL15OFF_AFTER_PIA_AUTO_LOCK (défaut : aktiv)">aktiv</function>
@@ -945,6 +950,26 @@
                 <function start="1" end="1" mask="00000010b" comment="BC_DIGITAL_V (défaut : nicht_aktiv)">aktiv</function>
             </group>
         </code>
+        <code description="Tableau de bord : Seuil de la 1ère alerte réserve carburant à 70km (90km par défaut)">
+            <group id="3000">
+                <function start="35" end="35" mask="11111111b" comment="CC_RW_WARNUNG_2 (défaut : 5A)">46</function>
+            </group>
+        </code>
+        <code description="Tableau de bord : Seuil de la 1ère alerte réserve carburant à 90km (90km par défaut)">
+            <group id="3000">
+                <function start="35" end="35" mask="11111111b" comment="CC_RW_WARNUNG_2 (défaut : 5A)">5A</function>
+            </group>
+        </code>
+        <code description="Tableau de bord : Seuil de la 2ème alerte réserve carburant à 30km (50km par défaut)">
+            <group id="3000">
+                <function start="29" end="29" mask="11111111b" comment="CC_RW_WARNUNG (défaut : 32)">1E</function>
+            </group>
+        </code>
+        <code description="Tableau de bord : Seuil de la 2ème alerte réserve carburant à 50km (50km par défaut)">
+            <group id="3000">
+                <function start="29" end="29" mask="11111111b" comment="CC_RW_WARNUNG (défaut : 32)">32</function>
+            </group>
+        </code>
         <code description="Tableau de bord : Désactivation reset auto du compteur journalier (4h par défaut)">
             <group id="3000">
                 <function start="44" end="44" mask="11111111b" comment="BC_AUTORESET_ZEIT (défaut : 04)">FF</function>
@@ -955,24 +980,114 @@
                 <function start="10" end="10" mask="11111111b" comment="DIM_NACHT_EIN (défaut : 08)">FF</function>
             </group>
         </code>
-        <code description="Tableau de bord : Affichage permanent du logo M performance en bas à droite (1/2)">
+        <code description="Tableau de bord : Affichage permanent du Logo M performance en bas à droite (1/2)">
             <group id="3003">
                 <function start="7" end="7" mask="00000100b" comment="MPM_ENABLE (défaut : nicht_aktiv)">aktiv</function>
             </group>
         </code>
-        <code description="Tableau de bord : Logo M performance M50d (2/2)">
+        <code description="Tableau de bord : Choix Logo M performance M50d (2/2)">
             <group id="3000">
-                <function start="43" end="43" mask="11110000b" comment="MPM_LOGO (défaut : 00)">05</function>
+                <function start="43" end="43" mask="11110000b" comment="MPM_LOGO (défaut : ag)">50d</function>
+            </group>
+        </code>
+        <code description="Tableau de bord : Choix Logo M performance 135i (2/2)">
+            <group id="3000">
+                <function start="43" end="43" mask="11110000b" comment="MPM_LOGO (défaut : ag)">135i</function>
+            </group>
+        </code>
+        <code description="Tableau de bord : Choix Logo M performance 140i (2/2)">
+            <group id="3000">
+                <function start="43" end="43" mask="11110000b" comment="MPM_LOGO (défaut : ag)">140i</function>
+            </group>
+        </code>
+        <code description="Tableau de bord : Choix Logo M performance 235i (2/2)">
+            <group id="3000">
+                <function start="43" end="43" mask="11110000b" comment="MPM_LOGO (défaut : ag)">235i</function>
+            </group>
+        </code>
+        <code description="Tableau de bord : Choix Logo M performance 240i (2/2)">
+            <group id="3000">
+                <function start="43" end="43" mask="11110000b" comment="MPM_LOGO (défaut : ag)">240i</function>
+            </group>
+        </code>
+        <code description="Tableau de bord : Choix Logo M performance 340i (2/2)">
+            <group id="3000">
+                <function start="43" end="43" mask="11110000b" comment="MPM_LOGO (défaut : ag)">340i</function>
+            </group>
+        </code>
+        <code description="Tableau de bord : Choix Logo M performance 550d (2/2)">
+            <group id="3000">
+                <function start="43" end="43" mask="11110000b" comment="MPM_LOGO (défaut : ag)">550d</function>
+            </group>
+        </code>
+        <code description="Tableau de bord : Choix Logo M performance hybride (2/2)">
+            <group id="3000">
+                <function start="43" end="43" mask="11110000b" comment="MPM_LOGO (défaut : ag)">phev</function>
+            </group>
+        </code>
+        <code description="Tableau de bord et HUD : Logo au démarrage par défaut">
+            <group id="3000">
+                <function start="0" end="0" mask="11110000b" comment="BMW_LOGO (défaut : ag)">ag</function>
+            </group>
+        </code>
+        <code description="Tableau de bord et HUD : Logo au démarrage M performance">
+            <group id="3000">
+                <function start="0" end="0" mask="11110000b" comment="BMW_LOGO (défaut : ag)">m_performance</function>
+            </group>
+        </code>
+        <code description="Tableau de bord et HUD : Logo au démarrage M performance 135i">
+            <group id="3000">
+                <function start="0" end="0" mask="11110000b" comment="BMW_LOGO (défaut : ag)">135i</function>
+            </group>
+        </code>
+        <code description="Tableau de bord et HUD : Logo au démarrage M performance 140i">
+            <group id="3000">
+                <function start="0" end="0" mask="11110000b" comment="BMW_LOGO (défaut : ag)">140i</function>
+            </group>
+        </code>
+        <code description="Tableau de bord et HUD : Logo au démarrage M performance 235i">
+            <group id="3000">
+                <function start="0" end="0" mask="11110000b" comment="BMW_LOGO (défaut : ag)">235i</function>
+            </group>
+        </code>
+        <code description="Tableau de bord et HUD : Logo au démarrage M performance 240i">
+            <group id="3000">
+                <function start="0" end="0" mask="11110000b" comment="BMW_LOGO (défaut : ag)">240i</function>
+            </group>
+        </code>
+        <code description="Tableau de bord et HUD : Logo au démarrage M performance 340i">
+            <group id="3000">
+                <function start="0" end="0" mask="11110000b" comment="BMW_LOGO (défaut : ag)">340i</function>
+            </group>
+        </code>
+        <code description="Tableau de bord et HUD : Logo au démarrage M performance 50d">
+            <group id="3000">
+                <function start="0" end="0" mask="11110000b" comment="BMW_LOGO (défaut : ag)">50d</function>
+            </group>
+        </code>
+        <code description="Tableau de bord et HUD : Logo au démarrage M performance M2">
+            <group id="3000">
+                <function start="0" end="0" mask="11110000b" comment="BMW_LOGO (défaut : ag)">M2</function>
+            </group>
+        </code>
+        <code description="Tableau de bord et HUD : Logo au démarrage M performance M3">
+            <group id="3000">
+                <function start="0" end="0" mask="11110000b" comment="BMW_LOGO (défaut : ag)">M4</function>
+            </group>
+        </code>
+        <code description="Tableau de bord et HUD : Logo au démarrage M performance M4 GTS">
+            <group id="3000">
+                <function start="0" end="0" mask="11110000b" comment="BMW_LOGO (défaut : ag)">M4 GTS</function>
+            </group>
+        </code>
+        <code description="Tableau de bord et HUD : Logo au démarrage M performance hybride">
+            <group id="3000">
+                <function start="0" end="0" mask="11110000b" comment="BMW_LOGO (défaut : ag)">phev</function>
             </group>
         </code>
         <code description="Tableau de bord : Affichage de l'heure en bas à droite du tableau de bord (I-Step après 3.54.3)">
             <group id="3000">
                 <function start="53" end="53" mask="01000000b" comment="BASISANZEIGE_VARIANTE (défaut : nicht_aktiv. Aktiv si production date après 0315)">aktiv</function>
-            </group>
-        </code>
-        <code description="Tableau de bord et HUD : Logo M performance au démarrage">
-            <group id="3000">
-                <function start="0" end="0" mask="11110000b" comment="BMW_LOGO (défaut : 00)">01</function>
             </group>
         </code>
         <code description="Tableau de bord : Affichage rapports en mode Sport (S1 à S8 au lieu de DS)">

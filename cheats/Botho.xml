@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <FDL>
     <!-- Botho - Public Release       -->
-    <!-- last updated : 2017-12-26    -->
-    <!-- last I-Step default values updated: 3.63.3  -->
+    <!-- last updated : 2018-03-02    -->
+    <!-- last I-Step default values for F030 Production date 0315 updated: F020-18-03-511  -->
+    
     <cafd id="00000911" name="ACSM_4B" author="Botho (public)" series="F020,F030">
         <code description="Ceinture de sécurité : Durée du rappel à 10s (défaut : 100s)">
             <group id="3001">
@@ -84,6 +85,11 @@
         <code description="Accès confort : Désactive les clignotant à l'ouverture du coffre (défaut : activé)">
             <group id="3040">
                 <function start="2" end="2" mask="00000100b" comment="CLM_SMO_INDICATOR (défaut : aktiv)">nicht_aktiv</function>
+            </group>
+        </code>
+        <code description="Vérouillage des portes : seuil de vitesse à 8km (uniquement si le vérouillage automatique activé - 16km par défaut)">
+            <group id="3040">
+                <function start="8" end="8" mask="11111111b" comment="CLM_SPEED_LIMIT_PIA_AUTO_LOCK (défaut : wert_04)">wert_03</function>
             </group>
         </code>
         <code description="Dévérouillage des portes à l'arrêt du moteur (uniquement si le vérouillage automatique activé)">
@@ -390,7 +396,7 @@
         </code>
         <code description="Alarme type US">
             <group id="3001">
-                <function start="17" end="17" mask="11111111b" comment="Alarm type US (défaut : ece)">initwert</function>
+                <function start="17" end="17" mask="11111111b" comment="Alarm type US (défaut : ece)">08</function>
             </group>
         </code>
         <code description="Activation Panic Alarme">
@@ -495,7 +501,7 @@
         </code>
     </cafd>
     <cafd id="00001148" name="KAFAS2" author="Botho (public)" series="F020,F030">
-        <code description="HUD : Affichage de l'assistant de distance (Step 3 sur 3 - voir KOMBI et HU_NBT)">
+        <code description="HUD : Affichage de l'assistant de distance (Step 3 sur 3 - voir KOMBI et HU_NBT - nécessite Active Cruise Control)">
             <group id="3060">
                 <function start="1" end="1" mask="00011000b" comment="DISPLAY_HEADWAY_DISTANCE (défaut : 00)">01</function>
                 <function start="1" end="1" mask="00000010b" comment="SEND_STATUS_IBRAKE (défaut : 00)">01</function>
@@ -591,12 +597,12 @@
                 <function start="14" end="14" comment="ENT_MC_COVER_SCALE (défaut : nicht_aktiv)" mask="00100000b">aktiv</function>
             </group>
         </code>
-        <code description="iDrive (Média) : Active les bookmark dans la collection de musique">
+        <code description="iDrive (Média) : Active les bookmarks dans la collection de musique">
             <group id="3000">
                 <function start="14" end="14" comment="ENT_MC_SONG_BOOKMARKS (défaut : nicht_aktiv)" mask="00000100b">aktiv</function>
             </group>
         </code>
-        <code description="iDrive (HUD) : Affichage de l'assistant de distance (Step 2 sur 3 - voir KOMBI et KAFAS2)">
+        <code description="iDrive (HUD) : Affichage de l'assistant de distance (Step 2 sur 3 - voir KOMBI et KAFAS2 - nécessite Active Cruise Control)">
             <group id="3000">
                 <function start="97" end="97" mask="00001000b" comment="HUD_DISTANCE_INFO (défaut : nicht_aktiv)">aktiv</function>
             </group>
@@ -645,6 +651,7 @@
                 <function start="34" end="34" mask="00011100b" comment="MYINFO_DRIVING_TEXT_LENGTH (défaut : whole_text)">whole_text</function>
                 <function start="34" end="34" mask="11100000b" comment="AKD_DRIVING_TEXT_LENGTH (défaut : whole_text)">whole_text</function>
                 <function start="35" end="35" mask="00000111b" comment="BMWINFO_DRIVING_TEXT_LENGTH (défaut : whole_text)">whole_text</function>
+                <function start="35" end="35" mask="00111000b" comment="SERVICES_MESSAGES_SPEEDLOCK_CONDITION (défaut : none)">none</function>
             </group>
             <group id="3003">
                 <function start="11" end="11" mask="00000111b" comment="PIM_DRIVING_TEXT_LENGTH (défaut : 01)">07</function>
@@ -726,6 +733,20 @@
             <group id="3000">
                 <function start="62" end="62" mask="00001000b" comment="NAVI_SPLIT_GUIDINGPOPUP (défaut : nicht_aktiv)">aktiv</function>
                 <function start="62" end="62" mask="00010000b" comment="NAVI_FULL_GUIDINGPOPUP (défaut : nicht_aktiv)">aktiv</function>
+            </group>
+        </code>
+        <code description="iDrive (Navigation) : Voix femme (par défaut)">
+            <group id="3000">
+                <function start="73" end="73" mask="00001111b" comment="SPRECHERWAHL1 (défaut : weiblich)">weiblich</function>
+                <function start="73" end="73" mask="11110000b" comment="SPRECHERWAHL2 (défaut : weiblich)">weiblich</function>
+                <function start="74" end="74" mask="00001111b" comment="SPRECHERWAHL3 (défaut : weiblich)">weiblich</function>
+            </group>
+        </code>
+        <code description="iDrive (Navigation) : Voix homme">
+            <group id="3000">
+                <function start="73" end="73" mask="00001111b" comment="SPRECHERWAHL1 (défaut : weiblich)">maennlich</function>
+                <function start="73" end="73" mask="11110000b" comment="SPRECHERWAHL2 (défaut : weiblich)">maennlich</function>
+                <function start="74" end="74" mask="00001111b" comment="SPRECHERWAHL3 (défaut : weiblich)">maennlich</function>
             </group>
         </code>
         <code description="iDrive (Office) : Speech to Text (Email ou SMS) Nécessite souscription Nuance">
@@ -844,9 +865,20 @@
                 <function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">09</function>
             </group>
         </code>
-        <code description="-- TESTING -- iDrive (Réglages) : Configuration du contrôle de traction">
+        <code description="-- TESTING -- iDrive (Navigation) : active les visites guidées">
+            <group id="3000">
+                <function start="60" end="60" mask="00000010b" comment="GUIDED_TOURS (défaut : nicht_aktiv)">aktiv</function>
+                <function start="60" end="60" mask="00010000b" comment="ROUTEN_ID_GUIDEDTOURS (défaut : nicht_aktiv)">aktiv</function>
+            </group>
+        </code>
+        <code description="-- Don't work -- iDrive (Réglages) : Configuration du contrôle de traction (Le menu est bien là mais inopérant)">
             <group id="3000">
                 <function start="134" end="134" mask="00001000b" comment="TRACTION_DEMAND_CONTROL (défaut : nicht_aktiv)">aktiv</function>
+            </group>
+        </code>
+        <code description="-- Don't work -- iDrive (Téléphone) : Affichage de l'icône des contacts">
+            <group id="3003">
+                <function start="12" end="12" mask="00001000b" comment="CONTACTS_ICON (défaut : nicht_aktiv)">aktiv</function>
             </group>
         </code>
         <code description="-- Don't work -- iDrive (Réglages) : Active l'assistant de sortie de parking (nécessite hardware spécifique)">
@@ -890,7 +922,7 @@
                 <function start="100" end="100" mask="01000000b" comment="COMFORT_OPENING (défaut : nicht_aktiv)">aktiv</function>
             </group>
         </code>
-        <code description="-- Don't work -- iDrive (Réglages) : Activation GPS tracking (problème de réglementation CNIL en France je pense ...)">
+        <code description="-- Don't work -- iDrive (Réglages) : Activation GPS tracking (ne fonctionne pas en France ...)">
             <group id="3003">
                 <function start="15" end="15" mask="00000001b" comment="ASSIST_SVR_SHOW (défaut : nicht_aktiv)">aktiv</function>
                 <function start="14" end="14" mask="10000000b" comment="ASSIST_VEHICLEFINDER_SHOW (défaut : aktiv)">aktiv</function>
@@ -918,6 +950,26 @@
                 <function start="1" end="1" mask="00000010b" comment="BC_DIGITAL_V (défaut : nicht_aktiv)">aktiv</function>
             </group>
         </code>
+        <code description="Tableau de bord : Seuil de la 1ère alerte réserve carburant à 70km (90km par défaut)">
+            <group id="3000">
+                <function start="35" end="35" mask="11111111b" comment="CC_RW_WARNUNG_2 (défaut : 5A)">46</function>
+            </group>
+        </code>
+        <code description="Tableau de bord : Seuil de la 1ère alerte réserve carburant à 90km (90km par défaut)">
+            <group id="3000">
+                <function start="35" end="35" mask="11111111b" comment="CC_RW_WARNUNG_2 (défaut : 5A)">5A</function>
+            </group>
+        </code>
+        <code description="Tableau de bord : Seuil de la 2ème alerte réserve carburant à 30km (50km par défaut)">
+            <group id="3000">
+                <function start="29" end="29" mask="11111111b" comment="CC_RW_WARNUNG (défaut : 32)">1E</function>
+            </group>
+        </code>
+        <code description="Tableau de bord : Seuil de la 2ème alerte réserve carburant à 50km (50km par défaut)">
+            <group id="3000">
+                <function start="29" end="29" mask="11111111b" comment="CC_RW_WARNUNG (défaut : 32)">32</function>
+            </group>
+        </code>
         <code description="Tableau de bord : Désactivation reset auto du compteur journalier (4h par défaut)">
             <group id="3000">
                 <function start="44" end="44" mask="11111111b" comment="BC_AUTORESET_ZEIT (défaut : 04)">FF</function>
@@ -928,24 +980,114 @@
                 <function start="10" end="10" mask="11111111b" comment="DIM_NACHT_EIN (défaut : 08)">FF</function>
             </group>
         </code>
-        <code description="Tableau de bord : Affichage permanent du logo M performance en bas à droite (1/2)">
+        <code description="Tableau de bord : Affichage permanent du Logo M performance en bas à droite (1/2)">
             <group id="3003">
                 <function start="7" end="7" mask="00000100b" comment="MPM_ENABLE (défaut : nicht_aktiv)">aktiv</function>
             </group>
         </code>
-        <code description="Tableau de bord : Logo M performance M50d (2/2)">
+        <code description="Tableau de bord : Choix Logo M performance M50d (2/2)">
             <group id="3000">
-                <function start="43" end="43" mask="11110000b" comment="MPM_LOGO (défaut : 00)">05</function>
+                <function start="43" end="43" mask="11110000b" comment="MPM_LOGO (défaut : ag)">50d</function>
+            </group>
+        </code>
+        <code description="Tableau de bord : Choix Logo M performance 135i (2/2)">
+            <group id="3000">
+                <function start="43" end="43" mask="11110000b" comment="MPM_LOGO (défaut : ag)">135i</function>
+            </group>
+        </code>
+        <code description="Tableau de bord : Choix Logo M performance 140i (2/2)">
+            <group id="3000">
+                <function start="43" end="43" mask="11110000b" comment="MPM_LOGO (défaut : ag)">140i</function>
+            </group>
+        </code>
+        <code description="Tableau de bord : Choix Logo M performance 235i (2/2)">
+            <group id="3000">
+                <function start="43" end="43" mask="11110000b" comment="MPM_LOGO (défaut : ag)">235i</function>
+            </group>
+        </code>
+        <code description="Tableau de bord : Choix Logo M performance 240i (2/2)">
+            <group id="3000">
+                <function start="43" end="43" mask="11110000b" comment="MPM_LOGO (défaut : ag)">240i</function>
+            </group>
+        </code>
+        <code description="Tableau de bord : Choix Logo M performance 340i (2/2)">
+            <group id="3000">
+                <function start="43" end="43" mask="11110000b" comment="MPM_LOGO (défaut : ag)">340i</function>
+            </group>
+        </code>
+        <code description="Tableau de bord : Choix Logo M performance 550d (2/2)">
+            <group id="3000">
+                <function start="43" end="43" mask="11110000b" comment="MPM_LOGO (défaut : ag)">550d</function>
+            </group>
+        </code>
+        <code description="Tableau de bord : Choix Logo M performance hybride (2/2)">
+            <group id="3000">
+                <function start="43" end="43" mask="11110000b" comment="MPM_LOGO (défaut : ag)">phev</function>
+            </group>
+        </code>
+        <code description="Tableau de bord et HUD : Logo au démarrage par défaut">
+            <group id="3000">
+                <function start="0" end="0" mask="11110000b" comment="BMW_LOGO (défaut : ag)">ag</function>
+            </group>
+        </code>
+        <code description="Tableau de bord et HUD : Logo au démarrage M performance">
+            <group id="3000">
+                <function start="0" end="0" mask="11110000b" comment="BMW_LOGO (défaut : ag)">m_performance</function>
+            </group>
+        </code>
+        <code description="Tableau de bord et HUD : Logo au démarrage M performance 135i">
+            <group id="3000">
+                <function start="0" end="0" mask="11110000b" comment="BMW_LOGO (défaut : ag)">135i</function>
+            </group>
+        </code>
+        <code description="Tableau de bord et HUD : Logo au démarrage M performance 140i">
+            <group id="3000">
+                <function start="0" end="0" mask="11110000b" comment="BMW_LOGO (défaut : ag)">140i</function>
+            </group>
+        </code>
+        <code description="Tableau de bord et HUD : Logo au démarrage M performance 235i">
+            <group id="3000">
+                <function start="0" end="0" mask="11110000b" comment="BMW_LOGO (défaut : ag)">235i</function>
+            </group>
+        </code>
+        <code description="Tableau de bord et HUD : Logo au démarrage M performance 240i">
+            <group id="3000">
+                <function start="0" end="0" mask="11110000b" comment="BMW_LOGO (défaut : ag)">240i</function>
+            </group>
+        </code>
+        <code description="Tableau de bord et HUD : Logo au démarrage M performance 340i">
+            <group id="3000">
+                <function start="0" end="0" mask="11110000b" comment="BMW_LOGO (défaut : ag)">340i</function>
+            </group>
+        </code>
+        <code description="Tableau de bord et HUD : Logo au démarrage M performance 50d">
+            <group id="3000">
+                <function start="0" end="0" mask="11110000b" comment="BMW_LOGO (défaut : ag)">50d</function>
+            </group>
+        </code>
+        <code description="Tableau de bord et HUD : Logo au démarrage M performance M2">
+            <group id="3000">
+                <function start="0" end="0" mask="11110000b" comment="BMW_LOGO (défaut : ag)">M2</function>
+            </group>
+        </code>
+        <code description="Tableau de bord et HUD : Logo au démarrage M performance M3">
+            <group id="3000">
+                <function start="0" end="0" mask="11110000b" comment="BMW_LOGO (défaut : ag)">M4</function>
+            </group>
+        </code>
+        <code description="Tableau de bord et HUD : Logo au démarrage M performance M4 GTS">
+            <group id="3000">
+                <function start="0" end="0" mask="11110000b" comment="BMW_LOGO (défaut : ag)">M4 GTS</function>
+            </group>
+        </code>
+        <code description="Tableau de bord et HUD : Logo au démarrage M performance hybride">
+            <group id="3000">
+                <function start="0" end="0" mask="11110000b" comment="BMW_LOGO (défaut : ag)">phev</function>
             </group>
         </code>
         <code description="Tableau de bord : Affichage de l'heure en bas à droite du tableau de bord (I-Step après 3.54.3)">
             <group id="3000">
                 <function start="53" end="53" mask="01000000b" comment="BASISANZEIGE_VARIANTE (défaut : nicht_aktiv. Aktiv si production date après 0315)">aktiv</function>
-            </group>
-        </code>
-        <code description="Tableau de bord et HUD : Logo M performance au démarrage">
-            <group id="3000">
-                <function start="0" end="0" mask="11110000b" comment="BMW_LOGO (défaut : 00)">01</function>
             </group>
         </code>
         <code description="Tableau de bord : Affichage rapports en mode Sport (S1 à S8 au lieu de DS)">
@@ -963,7 +1105,7 @@
                 <function start="20" end="20" mask="11111111b" comment="HUD_STARTUP_TIME (défaut : 28. 32 si production date après 0315)">0A</function>
             </group>
         </code>
-        <code description="HUD : Affichage de l'assistant de distance (Step 1 sur 3 - voir KAFAS2 et HU_NBT)">
+        <code description="HUD : Affichage de l'assistant de distance (Step 1 sur 3 - voir KAFAS2 et HU_NBT - nécessite Active Cruise Control)">
             <group id="3000">
                 <function start="1" end="1" mask="00000001b" comment="IBRAKE_ABSTAND_ENABLE (défaut : nicht_aktiv)">aktiv</function>
             </group>

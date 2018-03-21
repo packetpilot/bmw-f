@@ -230,6 +230,40 @@
                 <function start="29" end="29" mask="01000000b" comment="NSW_EIN_AUF_LDS_STL (défaut : 00 dans certains pays comme les USA)">01</function>
             </group>
         </code>
+         <code description="Feux anti-brouillard : active cornering lights">
+            <group id="3073">
+                <function start="218" end="218" mask="00000010b" comment="C_CLC_ENA (défaut : F020_enable)">F020_enable</function>
+                <function start="66" end="66" mask="00000001b" comment="C_BLC_ENA (défaut : F020_enable)">F020_enable</function>
+            </group>
+            <group id="3066">
+                <function start="0" end="0" mask="00000001b" comment="KL_ENABLE_LI (défaut : KL_Ein)">KL_Ein</function>
+                <function start="80" end="80" mask="00000001b" comment="KL_ENABLE_RE (défaut : KL_Ein)">KL_Ein</function>
+            </group>
+            <group id="3062">
+                <function start="110" end="110" mask="00111111b" comment="MAPPING_ABBIEGEL_L_OUTPUT (défaut : nsw_l)">nsw_l</function>
+                <function start="121" end="121" mask="00111111b" comment="MAPPING_ABBIEGEL_R_OUTPUT (défaut : nsw_r)">nsw_r</function>
+            </group>
+        </code>
+        <code description="Feux anti-brouillard : désactive cornering lights">
+            <group id="3073">
+                <function start="218" end="218" mask="00000010b" comment="C_CLC_ENA (défaut : F020_enable)">F020_disable</function>
+                <function start="66" end="66" mask="00000001b" comment="C_BLC_ENA (défaut : F020_enable)">F020_disable</function>
+            </group>
+            <group id="3066">
+                <function start="0" end="0" mask="00000001b" comment="KL_ENABLE_LI (défaut : KL_Ein)">KL_Aus</function>
+                <function start="80" end="80" mask="00000001b" comment="KL_ENABLE_RE (défaut : KL_Ein)">KL_Aus</function>
+            </group>
+            <group id="3062">
+                <function start="110" end="110" mask="00111111b" comment="MAPPING_ABBIEGEL_L_OUTPUT (défaut : nsw_l)">off</function>
+                <function start="121" end="121" mask="00111111b" comment="MAPPING_ABBIEGEL_R_OUTPUT (défaut : nsw_r)">off</function>
+            </group>
+        </code>
+        <code description="Feux anti-brouillard : permet aux phares anti-brouillard de s'allumer avec la marche arrière">
+            <group id="3073">
+                <function start="218" end="218" mask="00000100b" comment="C_CLC_REV_ALWAYS_ON (défaut : 01)">01</function>
+                <function start="218" end="218" mask="00010000b" comment="C_CLC_REV_CURV_BOTH_ON (défaut : 01)">01</function>
+            </group>
+        </code>
         <code description="Eclairage d'accueil : Activation de l'éclairage des portes lors de la marche arrière">
             <group id="3070">
                 <function start="11" end="11" mask="00010000b" comment="OVT_BEI_RUECKFAHRLICHT (défaut : nicht_aktiv)">aktiv</function>

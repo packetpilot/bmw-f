@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <FDL>
     <!--Almaretto-->
     <cafd id="000017BE" name="BDC_01" author="Almaretto" series="F015">
@@ -1016,12 +1016,7 @@
                 <function start="43" end="43" comment="FGS_NIVI_KI_ENABLE" mask="00000001b">aktiv</function>
             </group>
         </code>
-        <code description="ENABLE Range Extender Activation Battery Capacity (12%)">
-            <group id="3000">
-                <function start="47" end="47" comment="SOC_HOLD_POS" mask="11111111b">18</function>
-            </group>
-        </code>
-        <code description="Increase computer-limited fuel tank capacity of REX to full 2.4 US Gallons physical capacity">
+        <code description="Increase Computer-limited fuel tank capacity of REX to full 2.4 US Gal (NOT 17-18)">
             <group id="3005">
                 <function start="7" end="7" comment="TNK_VOLL_ANZEIGE" mask="11111111b">8_liter</function>
                 <function start="8" end="17" comment="TNK_LITER_RECHTS" mask="11111111b">mcv_rex_liter_kl_rechts</function>
@@ -1598,27 +1593,27 @@
         </code>
     </cafd>
     <cafd id="000011AB" name="ACSM_4i" author="Almaretto" series="I001">
-        <code description="DISABLE Seat Belt Reminder (Driver)">
+        <code description="DISABLE Seat Belt Reminder (Driver) - Old Firmware">
             <group id="3001">
                 <function start="1" end="1" comment="SeatBeltReminder_Fahrer" mask="00000001b">nicht_aktiv</function>
             </group>
         </code>
-        <code description="DISABLE Seat Belt Reminder (Passenger)">
+        <code description="DISABLE Seat Belt Reminder (Passenger) - Old Firmware">
             <group id="3001">
                 <function start="2" end="2" comment="SeatBeltReminder_Beifahrer" mask="00000001b">nicht_aktiv</function>
             </group>
         </code>
-        <code description="DISABLE Seat Belt Disconnected Reminder Sound (Driver)">
+        <code description="DISABLE Seat Belt Disconnected Reminder Sound (Driver) - Old Firmware">
             <group id="3001">
                 <function start="3" end="3" comment="SBR_PreWarning_Fahrer" mask="00000001b">nicht_aktiv</function>
             </group>
         </code>
-        <code description="DISABLE Seat Belt Disconnected Reminder Sound (Passenger)">
+        <code description="DISABLE Seat Belt Disconnected Reminder Sound (Passenger) - Old Firmware">
             <group id="3001">
                 <function start="4" end="4" comment="SBR_PreWarning_Beifahrer" mask="00000001b">nicht_aktiv</function>
             </group>
         </code>
-        <code description="DISABLE Initial Belt Warning Gong">
+        <code description="DISABLE Initial Belt Warning Gong - Old Firmware">
             <group id="3001">
                 <function start="0" end="0" comment="Initialwarnung" mask="00000001b">nicht_aktiv</function>
             </group>

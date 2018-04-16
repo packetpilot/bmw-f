@@ -10,7 +10,7 @@
         </code>
     <code description="DISABLE Lane Change Assistant. Part 1 of 2. See NBT2">
             <group id="3000">
-                <function start="73" end="73" comment="C_SWA_Vorhanden" mask="11111111b">01</function>
+                <function start="73" end="73" comment="C_SWA_Vorhanden" mask="11111111b">00</function>
             </group>
         </code>    
     </cafd>

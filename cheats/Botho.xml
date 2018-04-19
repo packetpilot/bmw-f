@@ -666,6 +666,7 @@
       <code description="iDrive (Statut) : Affichage température et pression des pneus">
          <group id="3001">
             <function start="1" end="1" mask="00100000b" comment="RDC_SAFETY (défaut : nicht_aktiv)">aktiv</function>
+            <function start="66" end="66" mask="00001100b" comment="RDC_DRUCK_TEMP (défaut : 01/druck)">02</function>
          </group>
       </code>
       <code description="iDrive (Statut) : Affichage du carnet d'entretien">

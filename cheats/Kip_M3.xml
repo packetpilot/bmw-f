@@ -509,32 +509,6 @@ ECE settings: ECE values for 4th byte = 04, which disables sidemarkers
          </group>
       </code>
    </cafd>
-   <cafd id="000010BA" name="LHM 43/44" author="Almaretto" series="F030,F080">
-      <code description="F3x and F8x NGHB. Step 1 of 3 - Driver side. Also code FEM_Body">
-         <group id="3000">
-            <function start="0" end="6" comment="NGHB PDF Step 2" mask="11111111b">FA, 64, 00, 00, FA, FA, 00</function>
-            <function start="7" end="13" comment="NGHB PDF Step 2" mask="11111111b">FA, 64, 00, 00, FA, FA, 00</function>
-            <function start="14" end="20" comment="NGHB PDF Step 2" mask="11111111b">FA, 00, 00, 19, FA, FA, 00</function>
-            <function start="21" end="27" comment="NGHB PDF Step 2" mask="11111111b">FA, 00, 00, 00, C8, C8, 00</function>
-            <function start="91" end="97" comment="NGHB PDF Step 2" mask="11111111b">FA, 00, FA, 00, FA, FA, 00</function>
-            <function start="98" end="104" comment="NGHB PDF Step 2" mask="11111111b">FA, FA, FA, 00, FA, FA, FA</function>
-         </group>
-      </code>
-      <code description="F3x and F8x NGHB. Step 2 of 3- Passenger side. Also Code FEM_Body">
-         <group id="3000">
-            <function start="0" end="6" comment="NGHB PDF Step 2" mask="11111111b">FA, FA, 00, 00, FA, FA, 00</function>
-            <function start="7" end="13" comment="NGHB PDF Step 2" mask="11111111b">FA, FA, 00, 00, FA, FA, 00</function>
-            <function start="14" end="20" comment="NGHB PDF Step 2" mask="11111111b">FA, FA, 00, 19, FA, FA, 00</function>
-            <function start="21" end="27" comment="NGHB PDF Step 2" mask="11111111b">FA, 00, 00, 00, C8, C8, 00</function>
-            <function start="35" end="41" comment="NGHB PDF Step 2" mask="11111111b">FA, FA, 00, 00, FA, FA, 00</function>
-            <function start="42" end="48" comment="NGHB PDF Step 2" mask="11111111b">FA, FA, 00, 00, FA, FA, 00</function>
-            <function start="49" end="55" comment="NGHB PDF Step 2" mask="11111111b">FA, FA, 00, 00, FA, FA, 00</function>
-            <function start="56" end="62" comment="NGHB PDF Step 2" mask="11111111b">FA, FA, 00, 00, FA, FA, 00</function>
-            <function start="91" end="97" comment="NGHB PDF Step 2" mask="11111111b">FA, FA, FA, 00, FA, FA, 00</function>
-            <function start="98" end="104" comment="NGHB PDF Step 2" mask="11111111b">FA, FA, FA, 00, FA, FA, FA</function>
-         </group>
-      </code>
-   </cafd>
    <cafd id="00001082" name="TMS_03" author="Kip_M3" series="F03X,F08X">
       <code description="Turn sidemarker LEDs OFF - Driver side. Step 1 of 2(need to test)">
          <group id="3005">

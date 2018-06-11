@@ -1973,7 +1973,7 @@
                 <function start="4" end="4" mask="10000000b" comment="AMBIENTE_NACHFUEHRUNG (default : aktiv)">nicht_aktiv</function>
             </group>
         </code>
-        <code description="Open Windows/Fold Mirrors with Keyfob or CA (Newer I-Step)">
+        <code description="Open Windows/Fold Mirrors with Keyfob or CA (Pre 2018 I-Step)">
             <group id="3110">
                 <function start="8" end="8" comment="ASP_AUSKLAPPEN_NACH_KOMFORTSCHLIESSEN" mask="00000001b">aktiv</function>
                 <function start="1" end="1" comment="ASP_BEIKLAPPEN_BEI_KOMFORTSCHLIESSEN" mask="00000001b">aktiv</function>
@@ -2205,37 +2205,37 @@
         </code>
     </cafd>
     <cafd id="00001B29" name="ACSM_5" author="Almaretto" series="G011,G030">
-        <code description="DISABLE Seat Belt Status in Cluster (Passenger)">
+        <code description="DISABLE Seat Belt Status in Cluster (Passenger) - Old Firmware">
             <group id="3001">
                 <function start="6" end="6" comment="Gurtzustandsanzeige_Beifahrer" mask="00000001b">nicht_aktiv</function>
             </group>
         </code>
-        <code description="DISABLE Seat Belt Status in Cluster (Driver)">
+        <code description="DISABLE Seat Belt Status in Cluster (Driver) - Older Firmware">
             <group id="3001">
                 <function start="5" end="5" comment="Gurtzustandsanzeige_Fahrer" mask="00000001b">nicht_aktiv</function>
             </group>
         </code>
-        <code description="DISABLE Seat Belt Reminder Chime (Driver)">
+        <code description="DISABLE Seat Belt Reminder Chime (Driver) - Older Firmware">
             <group id="3001">
                 <function start="1" end="1" comment="SeatBeltReminder_Fahrer" mask="00000001b">nicht_aktiv</function>
             </group>
         </code>
-        <code description="DISABLE Seat Belt Reminder (Passenger)">
+        <code description="DISABLE Seat Belt Reminder (Passenger) - Older Firmware">
             <group id="3001">
                 <function start="2" end="2" comment="SeatBeltReminder_Beifahrer" mask="00000001b">nicht_aktiv</function>
             </group>
         </code>
-        <code description="DISABLE Seat Belt Disconnected Reminder Sound (Driver)">
+        <code description="DISABLE Seat Belt Disconnected Reminder Sound (Driver) - Older Firmware">
             <group id="3001">
                 <function start="3" end="3" comment="SBR_PreWarning_Fahrer" mask="00000001b">nicht_aktiv</function>
             </group>
         </code>
-        <code description="DISABLE Seat Belt Disconnected Reminder Sound (Passenger)">
+        <code description="DISABLE Seat Belt Disconnected Reminder Sound (Passenger) - Older Firmware">
             <group id="3001">
                 <function start="4" end="4" comment="SBR_PreWarning_Beifahrer" mask="00000001b">nicht_aktiv</function>
             </group>
         </code>
-        <code description="DISABLE Initial Belt Warning Gong">
+        <code description="DISABLE Initial Belt Warning Gong - Older Firmware">
             <group id="3001">
                 <function start="0" end="0" comment="Initialwarnung" mask="00000001b">nicht_aktiv</function>
             </group>

@@ -2,7 +2,7 @@
 <FDL>
    <!-- 
 		Botho - Public Release
-        last updated : 2018-03-02
+        last updated : 2018-08-20
         last I-Step default values for F030 Production date 0315 updated: F020-18-03-511
     -->
    <cafd id="00000911" name="ACSM_4B" author="Botho (public)" series="F020,F030">
@@ -590,27 +590,27 @@
       </code>
    </cafd>
    <cafd id="00000DED" name="HU_NBT" author="Botho (public)" series="F020,F030">
-      <code description="iDrive (Media) : volume au démarrage à 25% (valeur par défaut)">
+      <code description="Média : volume au démarrage à 25% (valeur par défaut)">
          <group id="3002">
             <function start="3" end="3" mask="11111111b" comment="VOL_MAX_ON (défaut : 19)">19</function>
          </group>
       </code>
-      <code description="iDrive (Media) : volume au démarrage à 30% (défaut 25%)">
+      <code description="Média : volume au démarrage à 30% (défaut 25%)">
          <group id="3002">
             <function start="3" end="3" mask="11111111b" comment="VOL_MAX_ON (défaut : 19)">1E</function>
          </group>
       </code>
-      <code description="iDrive (Media) : volume au démarrage à 40% (défaut 25%)">
+      <code description="Média : volume au démarrage à 40% (défaut 25%)">
          <group id="3002">
             <function start="3" end="3" mask="11111111b" comment="VOL_MAX_ON (défaut : 19)">28</function>
          </group>
       </code>
-      <code description="iDrive (Media) : Montrer la piste suivante pour la musique (KOMBI_LOW only)">
+      <code description="Média : Montrer la piste suivante pour la musique (KOMBI_LOW only)">
          <group id="3000">
             <function start="110" end="110" mask="00100000b" comment="BASIS_KOMBI_MMI_LIST (fonctionne que si KOMBI_CIC=kombi_low) (défaut : nicht_aktiv)">aktiv</function>
          </group>
       </code>
-      <code description="iDrive (Média) : Activation lecture OGG, XVID, XVCD et USB">
+      <code description="Média : Activation lecture OGG, XVID, XVCD et USB">
          <group id="3000">
             <function start="15" end="15" mask="00010000b" comment="ENT_CODEC_OGG (défaut : nicht_aktiv)">aktiv</function>
             <function start="15" end="15" mask="00100000b" comment="ENT_CODEC_XVID (défaut : nicht_aktiv)">aktiv</function>
@@ -618,7 +618,7 @@
             <function start="13" end="13" mask="00000100b" comment="ENT_MC_VIDEO_SUPPORT (défaut : nicht_aktiv)">aktiv</function>
          </group>
       </code>
-      <code description="iDrive (Média) : Activation DVD in motion">
+      <code description="Média : Activation DVD in motion">
          <group id="3000">
             <function start="72" end="72" mask="11111111b" comment="SPEEDLOCK_X_KMH_MAX (défaut : 03)">FF</function>
             <function start="71" end="71" mask="11111111b" comment="SPEEDLOCK_X_KMH_MIN (défaut : 03)">FF</function>
@@ -627,54 +627,54 @@
             <function start="57" end="57" mask="00000111b" comment="VIDEO_SPEEDLOCK_CONDITION (défaut : none)">none</function>
          </group>
       </code>
-      <code description="iDrive (Média) : couverture album Gracenote dB Full-Size">
+      <code description="Média : couverture album Gracenote dB Full-Size">
          <group id="3000">
             <function start="14" end="14" comment="ENT_MC_COVER_SCALE (défaut : nicht_aktiv)" mask="00100000b">aktiv</function>
          </group>
       </code>
-      <code description="iDrive (Média) : Active les bookmarks dans la collection de musique">
+      <code description="Média : Active les bookmarks dans la collection de musique">
          <group id="3000">
             <function start="14" end="14" comment="ENT_MC_SONG_BOOKMARKS (défaut : nicht_aktiv)" mask="00000100b">aktiv</function>
          </group>
       </code>
-      <code description="iDrive (HUD) : Affichage de l'assistant de distance (Step 2 sur 3 - voir KOMBI et KAFAS2 - nécessite Active Cruise Control)">
+      <code description="HUD : Affichage de l'assistant de distance (Step 2 sur 3 - voir KOMBI et KAFAS2 - nécessite Active Cruise Control)">
          <group id="3000">
             <function start="97" end="97" mask="00001000b" comment="HUD_DISTANCE_INFO (défaut : nicht_aktiv)">aktiv</function>
          </group>
       </code>
-      <code description="iDrive (HUD) : Délai d'affichage 2,5s informations multimédia dans le HUD (défaut 4s)">
+      <code description="HUD : Délai d'affichage 2,5s informations multimédia dans le HUD (défaut 4s)">
          <group id="3000">
             <function start="106" end="106" mask="00000111b" comment="DISPLAYTIME_LIST_HUD_KOMBI (défaut : 05)">03</function>
          </group>
       </code>
-      <code description="iDrive (HUD) : Affichage de l'option Sport (indicateur de changement rapports - seulement pour véhicule M)">
+      <code description="HUD : Affichage de l'option Sport (indicateur de changement rapports - seulement pour véhicule M)">
          <group id="3000">
             <function start="18" end="18" mask="00000001b" comment="HUD_SPORTANZEIGE_ENABLE (défaut : nicht_aktiv)">aktiv</function>
             <function start="18" end="18" mask="00000100b" comment="HUD_SPORTANZEIGE_MS_GASSE_ENABLE (défaut : nicht_aktiv)">aktiv</function>
          </group>
       </code>
-      <code description="iDrive (Portes) : Ajout de l'alarme">
+      <code description="Portes : Ajout de l'alarme">
          <group id="3000">
             <function start="110" end="110" mask="00000001b" comment="ACOUSTICAL_LOCK_CONFIRM (défaut : nicht_aktiv)">aktiv</function>
          </group>
       </code>
-      <code description="iDrive (Eclairage) : Ajout feux de jour (Step 2 sur 3 - voir FEM_BODY et REM)">
+      <code description="Eclairage : Ajout feux de jour (Step 2 sur 3 - voir FEM_BODY et REM)">
          <group id="3000">
             <function start="92" end="92" mask="00011000b" comment="DAYDRIVING_LIGHT (défaut : 00)">02</function>
          </group>
       </code>
-      <code description="iDrive (Statut) : Affichage température et pression des pneus">
+      <code description="Statut : Affichage température et pression des pneus">
          <group id="3001">
             <function start="1" end="1" mask="00100000b" comment="RDC_SAFETY (défaut : nicht_aktiv)">aktiv</function>
             <function start="66" end="66" mask="00001100b" comment="RDC_DRUCK_TEMP (défaut : 01/druck)">02</function>
          </group>
       </code>
-      <code description="iDrive (Statut) : Affichage du carnet d'entretien">
+      <code description="Statut : Affichage du carnet d'entretien">
          <group id="3000">
             <function start="2" end="2" mask="00100000b" comment="SERVICE_HISTORY (défaut : aktiv)">aktiv</function>
          </group>
       </code>
-      <code description="iDrive (Notice) : Utilisation de la notice et appareillage BT en roulant">
+      <code description="Notice : Utilisation de la notice et jumelage BT en roulant">
          <group id="3000">
             <function start="0" end="0" mask="00100000b" comment="SL06_IBA_1 (défaut : aktiv)">nicht_aktiv</function>
             <function start="0" end="0" mask="01000000b" comment="SL07_IBA_2 (défaut : nicht_aktiv)">nicht_aktiv</function>
@@ -682,7 +682,7 @@
             <function start="1" end="1" mask="10000000b" comment="SL16_ADD_CEDEVICE (défaut : nicht_aktiv)">nicht_aktiv</function>
          </group>
       </code>
-      <code description="iDrive (Messages) : Affichage des SMS, BMW Info, My Info and AKD en entier (défaut : 3 lignes)">
+      <code description="Messages : Affichage des SMS, BMW Info, My Info and AKD en entier (défaut : 3 lignes)">
          <group id="3000">
             <function start="34" end="34" mask="00011100b" comment="MYINFO_DRIVING_TEXT_LENGTH (défaut : whole_text)">whole_text</function>
             <function start="34" end="34" mask="11100000b" comment="AKD_DRIVING_TEXT_LENGTH (défaut : whole_text)">whole_text</function>
@@ -693,32 +693,32 @@
             <function start="11" end="11" mask="00000111b" comment="PIM_DRIVING_TEXT_LENGTH (défaut : 01)">07</function>
          </group>
       </code>
-      <code description="iDrive (Sport) : Affichage mode M Sport (Rouge et Argent)">
+      <code description="Sport : Affichage mode M Sport (Rouge et Argent)">
          <group id="3000">
             <function start="133" end="133" mask="01000000b" comment="M_VEHICLE (défaut : nicht_aktiv)">aktiv</function>
          </group>
       </code>
-      <code description="iDrive (Navigation) : Alerte quand proche du POI">
+      <code description="Navigation : Alerte quand proche du POI">
          <group id="3000">
             <function start="111" end="111" mask="10000000b" comment="NAVI_ALERT_POI (défaut : nicht_aktiv)">aktiv</function>
          </group>
       </code>
-      <code description="iDrive (Navigation) : Ajoute prévisualisation de la route dans les options">
+      <code description="Navigation : Ajoute prévisualisation de la route dans les options">
          <group id="3000">
             <function start="59" end="59" mask="00100000b" comment="NAVI_ROAD_PREVIEW (défaut : nicht_aktiv)">aktiv</function>
          </group>
       </code>
-      <code description="iDrive (Navigation) : Ajoute la position GPS en fin de menu">
+      <code description="Navigation : Ajoute la position GPS en fin de menu">
          <group id="3000">
             <function start="96" end="96" mask="10000000b" comment="NAVI_POSITION_MENU (défaut : nicht_aktiv)">aktiv</function>
          </group>
       </code>
-      <code description="iDrive (Navigation) : Ajoute une préférence de calcul des trajets par les serveurs BMW">
+      <code description="Navigation : Ajoute une préférence de calcul des trajets par les serveurs BMW">
          <group id="3000">
             <function start="112" end="112" mask="00000010b" comment="NAVI_ONLINE_OPTIMIZATION_BUTTON (défaut : nicht_aktiv)">aktiv</function>
          </group>
       </code>
-      <code description="iDrive (Navigation) : Active Real-Time Traffic Info">
+      <code description="Navigation : Active Real-Time Traffic Info">
          <group id="3000">
             <function start="59" end="59" comment="NAVI_TRAFFIC_INFO_MAP" mask="00010000b">aktiv</function>
          </group>
@@ -729,252 +729,252 @@
             <function start="23" end="23" comment="TI_FALLBACK_DISABLED" mask="01000000b">aktiv</function>
          </group>
       </code>
-      <code description="iDrive (Navigation) : Active la boussole">
+      <code description="Navigation : Active la boussole">
          <group id="3000">
             <function start="5" end="5" comment="COMPASS" mask="00000001b">aktiv</function>
          </group>
       </code>
-      <code description="iDrive (Navigation) : Affichage de la vue sortie autoroute dans HUD">
+      <code description="Navigation : Affichage de la vue sortie autoroute dans HUD">
          <group id="3000">
             <function start="65" end="65" mask="00001000b" comment="JUNCTION_VIEW_HUD (défaut : nicht_aktiv. Aktiv si production date après 1114)">aktiv</function>
          </group>
       </code>
-      <code description="iDrive (Navigation) : Itinéraire en mode demo">
+      <code description="Navigation : Itinéraire en mode demo">
          <group id="3000">
             <function start="135" end="135" mask="00001000b" comment="ROUTE_FLIGHT (défaut : aktiv)">aktiv</function>
             <function start="111" end="111" mask="00001000b" comment="NAVI_SCROLLING_ALONG_ROUTE (défaut : nicht_aktiv)">aktiv</function>
          </group>
       </code>
-      <code description="iDrive (Navigation) : Propose un arrêt pour ravitaillement essence si nécessaire">
+      <code description="Navigation : Propose un arrêt pour ravitaillement essence si nécessaire">
          <group id="3000">
             <function start="60" end="60" mask="00100000b" comment="NAVI_FUELSTOP_PROPOSAL (défaut : aktiv)">aktiv</function>
          </group>
       </code>
-      <code description="iDrive (Navigation) : Ajout des catégories de Trafic info dans les options">
+      <code description="Navigation : Ajout des catégories de Trafic info dans les options">
          <group id="3000">
             <function start="16" end="16" mask="00000010b" comment="TRAFFIC_CATEGORIES (défaut : nicht_aktiv)">aktiv</function>
          </group>
       </code>
-      <code description="iDrive (Navigation) : Ajoute une étape sur le trajet (fonction aimant)">
+      <code description="Navigation : Ajoute une étape sur le trajet (fonction aimant)">
          <group id="3000">
             <function start="111" end="111" mask="00010000b" comment="NAVI_ROUTENMAGNET (défaut : nicht_aktiv)">aktiv</function>
          </group>
       </code>
-      <code description="iDrive (Navigation) : Ajoute le menu Route express dans les préférences de guidage">
+      <code description="Navigation : Ajoute le menu Route express dans les préférences de guidage">
          <group id="3000">
             <function start="108" end="108" mask="00000100b" comment="NAVI_EXPRESS_ROADS (défaut : nicht_aktiv)">aktiv</function>
          </group>
       </code>
-      <code description="iDrive (Navigation) : active les popup de guidage SPLIT et FULL">
+      <code description="Navigation : active les popup de guidage SPLIT et FULL">
          <group id="3000">
             <function start="62" end="62" mask="00001000b" comment="NAVI_SPLIT_GUIDINGPOPUP (défaut : nicht_aktiv)">aktiv</function>
             <function start="62" end="62" mask="00010000b" comment="NAVI_FULL_GUIDINGPOPUP (défaut : nicht_aktiv)">aktiv</function>
          </group>
       </code>
-      <code description="iDrive (Navigation) : Voix femme (par défaut)">
+      <code description="Navigation : Voix femme (par défaut)">
          <group id="3000">
             <function start="73" end="73" mask="00001111b" comment="SPRECHERWAHL1 (défaut : weiblich)">weiblich</function>
             <function start="73" end="73" mask="11110000b" comment="SPRECHERWAHL2 (défaut : weiblich)">weiblich</function>
             <function start="74" end="74" mask="00001111b" comment="SPRECHERWAHL3 (défaut : weiblich)">weiblich</function>
          </group>
       </code>
-      <code description="iDrive (Navigation) : Voix homme">
+      <code description="Navigation : Voix homme">
          <group id="3000">
             <function start="73" end="73" mask="00001111b" comment="SPRECHERWAHL1 (défaut : weiblich)">maennlich</function>
             <function start="73" end="73" mask="11110000b" comment="SPRECHERWAHL2 (défaut : weiblich)">maennlich</function>
             <function start="74" end="74" mask="00001111b" comment="SPRECHERWAHL3 (défaut : weiblich)">maennlich</function>
          </group>
       </code>
-      <code description="iDrive (Office) : Speech to Text (Email ou SMS) Nécessite souscription Nuance">
+      <code description="Office : Speech to Text (Email ou SMS) Nécessite souscription Nuance">
          <group id="3003">
             <function start="1" end="1" mask="00010000b" comment="SPEECH_2_TEXT (défaut : nicht_aktiv)">aktiv</function>
          </group>
       </code>
-      <code description="iDrive (Caméras) : Suppression des messages légaux">
+      <code description="Caméras : Suppression des messages légaux">
          <group id="3001">
             <function start="52" end="52" mask="11111111b" comment="MACRO_CAM_LEGALDISCLAIMER (défaut : 06)">00</function>
             <function start="58" end="58" mask="11111111b" comment="LEGAL_DISCLAIMER_TIME (défaut : 00)">00</function>
          </group>
       </code>
-      <code description="iDrive (Options) : Activation menu développeur">
+      <code description="Options : Activation menu développeur">
          <group id="3000">
             <function start="74" end="74" mask="01000000b" comment="ENTWICKLER_MENUE (défaut : nicht_aktiv)">aktiv</function>
          </group>
       </code>
-      <code description="iDrive (Téléphone) : Sonnerie du téléphone (iOS only)">
+      <code description="Téléphone : Sonnerie du téléphone (iOS only)">
          <group id="3003">
             <function start="6" end="6" mask="10000000b" comment="INBAND_RINGING (défaut : nicht_aktiv)">aktiv</function>
          </group>
       </code>
-      <code description="iDrive (Téléphone) : Sonnerie BMW (défaut : BMW)">
+      <code description="Téléphone : Sonnerie BMW (défaut : BMW)">
          <group id="3003">
             <function start="8" end="8" mask="00000011b" comment="RINGTONE (défaut : 00)">00</function>
          </group>
       </code>
-      <code description="iDrive (Téléphone) : Sonnerie MINI (défaut : BMW)">
+      <code description="Téléphone : Sonnerie MINI (défaut : BMW)">
          <group id="3003">
             <function start="8" end="8" mask="00000011b" comment="RINGTONE (défaut : 00)">01</function>
          </group>
       </code>
-      <code description="iDrive (Téléphone) : Sonnerie BMW_i (défaut : BMW)">
+      <code description="Téléphone : Sonnerie BMW_i (défaut : BMW)">
          <group id="3003">
             <function start="8" end="8" mask="00000011b" comment="RINGTONE (défaut : 00)">02</function>
          </group>
       </code>
-      <code description="iDrive (Téléphone) : Sonnerie Rolls Royce (défaut : BMW)">
+      <code description="Téléphone : Sonnerie Rolls Royce (défaut : BMW)">
          <group id="3003">
             <function start="8" end="8" mask="00000011b" comment="RINGTONE (défaut : 00)">03</function>
          </group>
       </code>
-      <code description="iDrive (Téléphone) : Activation de Sire Eyes Free (défaut : aktiv)">
+      <code description="Téléphone : Activation de Sire Eyes Free (défaut : aktiv)">
          <group id="3003">
             <function start="3" end="3" mask="00001000b" comment="CE_DEVICE_SPEECH_RECOGNITION (défaut : 01)">01</function>
          </group>
       </code>
-      <code description="iDrive (Réglages) : Son du Gong BMW (défaut : BMW)">
+      <code description="Réglages : Son du Gong BMW (défaut : BMW)">
          <group id="3002">
             <function start="26" end="26" mask="00111000b" comment="SOUND_SIGNAL_SET (défaut : 00)">00</function>
          </group>
       </code>
-      <code description="iDrive (Réglages) : Son du Gong MINI (défaut : BMW)">
+      <code description="Réglages : Son du Gong MINI (défaut : BMW)">
          <group id="3002">
             <function start="26" end="26" mask="00111000b" comment="SOUND_SIGNAL_SET (défaut : 00)">01</function>
          </group>
       </code>
-      <code description="iDrive (Réglages) : Son du Gong Rolls Royce (défaut : BMW)">
+      <code description="Réglages : Son du Gong Rolls Royce (défaut : BMW)">
          <group id="3002">
             <function start="26" end="26" mask="00111000b" comment="SOUND_SIGNAL_SET (défaut : 00)">02</function>
          </group>
       </code>
-      <code description="iDrive (Réglages) : Son du Gong BMW_i (défaut : BMW)">
+      <code description="Réglages : Son du Gong BMW_i (défaut : BMW)">
          <group id="3002">
             <function start="26" end="26" mask="00111000b" comment="SOUND_SIGNAL_SET (défaut : 00)">03</function>
          </group>
       </code>
-      <code description="iDrive (Réglages) : Ecran de démarrage BMW Connected Drive 1 (défaut : BMW)">
+      <code description="Réglages : Ecran de démarrage BMW Connected Drive 1 (défaut : BMW)">
          <group id="3001">
             <function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">00</function>
          </group>
       </code>
-      <code description="iDrive (Réglages) : Ecran de démarrage M Performance (défaut : BMW)">
+      <code description="Réglages : Ecran de démarrage M Performance (défaut : BMW)">
          <group id="3001">
             <function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">01</function>
          </group>
       </code>
-      <code description="iDrive (Réglages) : Ecran de démarrage BMW Connected Drive 2 (défaut : BMW)">
+      <code description="Réglages : Ecran de démarrage BMW Connected Drive 2 (défaut : BMW)">
          <group id="3001">
             <function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">02</function>
          </group>
       </code>
-      <code description="iDrive (Réglages) : Ecran de démarrage BMW_i (défaut : BMW)">
+      <code description="Réglages : Ecran de démarrage BMW_i (défaut : BMW)">
          <group id="3001">
             <function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">03</function>
          </group>
       </code>
-      <code description="iDrive (Réglages) : Ecran de démarrage MINI (défaut : BMW)">
+      <code description="Réglages : Ecran de démarrage MINI (défaut : BMW)">
          <group id="3001">
             <function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">04</function>
          </group>
       </code>
-      <code description="iDrive (Réglages) : Ecran de démarrage Rolls Royce (défaut : BMW)">
+      <code description="Réglages : Ecran de démarrage Rolls Royce (défaut : BMW)">
          <group id="3001">
             <function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">05</function>
          </group>
       </code>
-      <code description="iDrive (Réglages) : Ecran de démarrage BMW Connected Drive 3 (défaut : BMW)">
+      <code description="Réglages : Ecran de démarrage BMW Connected Drive 3 (défaut : BMW)">
          <group id="3001">
             <function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">06</function>
          </group>
       </code>
-      <code description="iDrive (Réglages) : Ecran de démarrage BMW White (défaut : BMW)">
+      <code description="Réglages : Ecran de démarrage BMW White (défaut : BMW)">
          <group id="3001">
             <function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">07</function>
          </group>
       </code>
-      <code description="iDrive (Réglages) : Ecran de démarrage BMW Brown (défaut : BMW)">
+      <code description="Réglages : Ecran de démarrage BMW Brown (défaut : BMW)">
          <group id="3001">
             <function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">08</function>
          </group>
       </code>
-      <code description="iDrive (Réglages) : Ecran de démarrage BMW Noel et Nouvel an (défaut : BMW)">
+      <code description="Réglages : Ecran de démarrage BMW Noel et Nouvel an (défaut : BMW)">
          <group id="3001">
             <function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">09</function>
          </group>
       </code>
-      <code description="-- TESTING -- iDrive (Navigation) : active les visites guidées">
+      <code description="-- TESTING -- Navigation : active les visites guidées">
          <group id="3000">
             <function start="60" end="60" mask="00000010b" comment="GUIDED_TOURS (défaut : nicht_aktiv)">aktiv</function>
             <function start="60" end="60" mask="00010000b" comment="ROUTEN_ID_GUIDEDTOURS (défaut : nicht_aktiv)">aktiv</function>
          </group>
       </code>
-      <code description="-- Don't work -- iDrive (Réglages) : Configuration du contrôle de traction (Le menu est bien là mais inopérant)">
+      <code description="-- Don't work -- Réglages : Configuration du contrôle de traction (Le menu est bien là mais inopérant)">
          <group id="3000">
             <function start="134" end="134" mask="00001000b" comment="TRACTION_DEMAND_CONTROL (défaut : nicht_aktiv)">aktiv</function>
          </group>
       </code>
-      <code description="-- Don't work -- iDrive (Téléphone) : Affichage de l'icône des contacts">
+      <code description="-- Don't work -- Téléphone : Affichage de l'icône des contacts">
          <group id="3003">
             <function start="12" end="12" mask="00001000b" comment="CONTACTS_ICON (défaut : nicht_aktiv)">aktiv</function>
          </group>
       </code>
-      <code description="-- Don't work -- iDrive (Réglages) : Active l'assistant de sortie de parking (nécessite hardware spécifique)">
+      <code description="-- Don't work -- Réglages : Active l'assistant de sortie de parking (nécessite hardware spécifique)">
          <group id="3001">
             <function start="13" end="13" mask="10000000b" comment="MACRO_PMA_AUSPARKEN (défaut : nicht_aktiv)">aktiv</function>
          </group>
       </code>
-      <code description="-- Don't work -- iDrive (Réglages) : Active PDC automatique (nécessite hardware spécifique)">
+      <code description="-- Don't work -- Réglages : Active PDC automatique (nécessite hardware spécifique)">
          <group id="3001">
             <function start="64" end="64" mask="00010000b" comment="ACTIVE_PDC (défaut : nicht_aktiv)">aktiv</function>
             <function start="65" end="65" mask="01000000b" comment="AUTO_PDC (défaut : nicht_aktiv)">aktiv</function>
          </group>
       </code>
-      <code description="-- Don't work -- iDrive (HUD) : Affichage clignotants (Step 1 sur 2 - voir KOMBI)">
+      <code description="-- Don't work -- HUD : Affichage clignotants (Step 1 sur 2 - voir KOMBI)">
          <group id="3001">
             <function start="55" end="55" mask="10000000b" comment="HUD_TURNSIGNAL (défaut : nicht_aktiv)">aktiv</function>
          </group>
       </code>
-      <code description="-- Don't work -- iDrive (Eclairage) : lumière d'ambiance (F4x only)">
+      <code description="-- Don't work -- Eclairage : lumière d'ambiance (F4x only)">
          <group id="3000">
             <function start="35" end="35" mask="11000000b" comment="DEAKTIVIERUNGSMOEGLICHKEIT_AMBILIGHT (défaut : 00)">01</function>
          </group>
       </code>
-      <code description="-- Don't work -- iDrive (Eclairage) : Affichage assistant feux de route">
+      <code description="-- Don't work -- Eclairage : Affichage assistant feux de route">
          <group id="3000">
             <function start="109" end="109" mask="10000000b" comment="HIGH_BEAM_ASSISTANT (défaut : nicht_aktiv)">aktiv</function>
          </group>
       </code>
-      <code description="-- TESTING -- iDrive (Eclairage) : Ajout éclairage pas de porte (Follow-Me-Home Step 2 sur 2 - voir FEM)">
+      <code description="-- TESTING -- Eclairage : Ajout éclairage pas de porte (Follow-Me-Home Step 2 sur 2 - voir FEM)">
          <group id="3000">
             <function start="26" end="26" mask="00001000b" comment="KEY_CONF_COMFORT_HOMELIGHT (défaut : nicht_aktiv)">aktiv</function>
          </group>
       </code>
-      <code description="-- Don't work -- iDrive (Statut) : Affichage informations de la batterie">
+      <code description="-- Don't work -- Statut : Affichage informations de la batterie">
          <group id="3000">
             <function start="134" end="134" mask="00000001b" comment="KI_SELECTION_SOC (défaut : nicht_aktiv)">aktiv</function>
          </group>
       </code>
-      <code description="-- TESTING -- iDrive (Portes) : Confort Openning (double clic sur télécommande ouvre les fénêtres à 75% - utile pour les coupés)">
+      <code description="-- TESTING -- Portes : Confort Openning (double clic sur télécommande ouvre les fénêtres à 75% - utile pour les coupés)">
          <group id="3000">
             <function start="100" end="100" mask="01000000b" comment="COMFORT_OPENING (défaut : nicht_aktiv)">aktiv</function>
          </group>
       </code>
-      <code description="-- Don't work -- iDrive (Réglages) : Activation GPS tracking (ne fonctionne pas en France ...)">
+      <code description="-- Don't work -- Réglages : Activation GPS tracking (ne fonctionne pas en France ...)">
          <group id="3003">
             <function start="15" end="15" mask="00000001b" comment="ASSIST_SVR_SHOW (défaut : nicht_aktiv)">aktiv</function>
             <function start="14" end="14" mask="10000000b" comment="ASSIST_VEHICLEFINDER_SHOW (défaut : aktiv)">aktiv</function>
          </group>
       </code>
-      <code description="-- Don't work -- iDrive (Navigation) : Zoom automatique aux intersections">
+      <code description="-- Don't work -- Navigation : Zoom automatique aux intersections">
          <group id="3000">
             <function start="111" end="111" mask="00000100b" comment="NAVI_AUTOZOOM (défaut : nicht_aktiv)">aktiv</function>
          </group>
       </code>
-      <code description="-- Don't work -- iDrive (Navigation) : Zoom automatique de la carte">
+      <code description="-- Don't work -- Navigation : Zoom automatique de la carte">
          <group id="3000">
             <function start="16" end="16" mask="00001000b" comment="AUTO_MAP_ZOOM (défaut : nicht_aktiv)">aktiv</function>
          </group>
       </code>
-      <code description="-- Don't work -- iDrive (Navigation) : Active le guidage en 2 etapes ?? No difference">
+      <code description="-- Don't work -- Navigation : Active le guidage en 2 etapes ?? No difference">
          <group id="3000">
             <function start="111" end="111" mask="00000010b" comment="NAVI_VIOCE_OUTPUT_2_STEP (défaut : nicht_aktiv)">aktiv</function>
          </group>

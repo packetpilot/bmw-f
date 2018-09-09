@@ -2,7 +2,7 @@
 <FDL>
    <!-- 
 		Botho - Public Release
-        last updated : 2018-08-20
+        last updated : 2018-09-09
         last I-Step default values for F030 Production date 0315 updated: F020-18-03-511
     -->
    <cafd id="00000911" name="ACSM_4B" author="Botho (public)" series="F020,F030">
@@ -758,13 +758,6 @@
       <code description="Navigation : Ajoute une étape sur le trajet (fonction aimant)">
          <group id="3000">
             <function start="111" end="111" mask="00010000b" comment="NAVI_ROUTENMAGNET (défaut : nicht_aktiv)">aktiv</function>
-         </group>
-      </code>
-      <code description="TESTING : Navigation : Activation range map">
-         <group id="3000">
-            <function start="33" end="33" mask="00000111b" comment="RANGE_VALUE_KOMBI_NEU (défaut : nicht_aktiv)">aktiv</function>
-            <function start="112" end="112" mask="00000100b" comment="NAVI_REICHWEITENKARTE (défaut : nicht_aktiv)">aktiv</function>
-            <function start="20" end="20" mask="00111100b" comment="REICHWEITENKARTE_SCALE_MAX (défaut : nicht_aktiv)">02</function>
          </group>
       </code>
       <code description="Navigation : Ajoute le menu Route express dans les préférences de guidage">

@@ -196,12 +196,12 @@
             <function start="2" end="2" mask="11111111b" comment="ASP_BORDSTEINAUTOMATIK_DELTA (défaut : 3B)">3B</function>
          </group>
       </code>
-      <code description="Clignotants : nb de clignotements à 5 (défaut : 3 - I-Step avant de 3.61.x)">
+      <code description="Clignotants : nb de clignotements à 5 (défaut : 00 - I-Step avant de 3.61.x)">
          <group id="3060">
             <function start="7" end="7" mask="00000111b" comment="BLINKZYKLEN_ANZAHL_TIPP (défaut : 00)">04</function>
          </group>
       </code>
-      <code description="-- Don't work -- Clignotants : nb de clignotements à 5 (00 = 1, 01 = 3, 02 = 5 ; défaut : 3 - I-Step après 3.61.x)">
+      <code description="-- Don't work -- Clignotants : nb de clignotements à 5 (00 = 1, 01 = 3, 02 = 5 ; défaut : 01 - I-Step après 3.61.x)">
          <group id="3064">
             <function start="215" end="215" mask="00000001b" comment="PIA_DEFAULT_TIPPBLINKEN (défaut : 01)">02</function>
          </group>
@@ -760,6 +760,13 @@
             <function start="111" end="111" mask="00010000b" comment="NAVI_ROUTENMAGNET (défaut : nicht_aktiv)">aktiv</function>
          </group>
       </code>
+      <code description="TESTING : Navigation : Activation range map">
+         <group id="3000">
+            <function start="33" end="33" mask="00000111b" comment="RANGE_VALUE_KOMBI_NEU (défaut : nicht_aktiv)">aktiv</function>
+            <function start="112" end="112" mask="00000100b" comment="NAVI_REICHWEITENKARTE (défaut : nicht_aktiv)">aktiv</function>
+            <function start="20" end="20" mask="00111100b" comment="REICHWEITENKARTE_SCALE_MAX (défaut : nicht_aktiv)">02</function>
+         </group>
+      </code>
       <code description="Navigation : Ajoute le menu Route express dans les préférences de guidage">
          <group id="3000">
             <function start="108" end="108" mask="00000100b" comment="NAVI_EXPRESS_ROADS (défaut : nicht_aktiv)">aktiv</function>
@@ -899,6 +906,19 @@
       <code description="Réglages : Ecran de démarrage BMW Noel et Nouvel an (défaut : BMW)">
          <group id="3001">
             <function start="62" end="62" mask="01111000b" comment="STARTUP_EMBLEM (défaut : 00)">09</function>
+         </group>
+      </code>
+      <code description="Réglages (EXPERT): Activation Bluetooth Tethering - nécessite de mofifier le provisioning XML via Tool32">
+         <group id="3003">
+            <function start="3" end="3" mask="00000010b" comment="DUN_PROFILE (défaut : ??)">01</function>
+            <function start="3" end="3" mask="00000100b" comment="PAN_PROFILE (défaut : ??)">01</function>
+            <function start="6" end="6" mask="00100000b" comment="BT_MODUL_ON_OFF (défaut : ??)">01</function>
+            <function start="15" end="15" mask="00110000b" comment="ONLINE_BROWSER (défaut : beide_aktiv)">beide_aktiv</function>
+            <function start="15" end="15" mask="10000000b" comment="ONLINE_SERVICES (défaut : aktiv)">nicht_aktiv</function>
+            <function start="16" end="16" mask="00000001b" comment="ONLINE_SERVICES_GLS (défaut : aktiv)">nicht_aktiv</function>
+            <function start="16" end="16" mask="10000000b" comment="ASSIST (défaut : aktiv)">nicht_aktiv</function>
+            <function start="18" end="18" mask="00001100b" comment="ONLINE_BROWSER_LIVE (défaut : aktiv)">nicht_aktiv</function>
+            <function start="18" end="18" mask="00010000b" comment="DATACOMM_CSIM (défaut : aktiv)">nicht_aktiv</function>
          </group>
       </code>
       <code description="-- TESTING -- Navigation : active les visites guidées">

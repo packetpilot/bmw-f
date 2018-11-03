@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <FDL>
 	<!--tutuianu_daniel-->
-<cafd id="00000122" name="KAFAS" author="tutuianu_daniel">
-	<code description="SLI 1 Romania No speed limit info in this country (get your country code uppercase in hex http://www.unit-conversion.info/texttools/hexadecimal/  )">
+	<cafd id="00000122" name="KAFAS" author="tutuianu_daniel">
+		<code description="SLI 1 Romania No speed limit info in this country (get your country code uppercase in hex http://www.unit-conversion.info/texttools/hexadecimal/  )">
 			<group id="3030">
 				<function start="2" end="3" comment="52,4F means R,O" mask="11111111b">52, 4F</function>
 			</group>
@@ -10,5 +10,40 @@
 				<function start="0" end="0" comment="COD_ELECTRICAL_HORIZON" mask="00010000b">aktiv</function>
 			</group>
 		</code>
-		</cafd>
+	</cafd>
+	<cafd id="00001EF6" name="HU_NBT_EVO" author="tutuianu_daniel">
+		<code description="Touchscreen activation">
+			<group id="3005">
+				<function start="67" end="67" comment="" mask="00000010b">aktiv</function>
+				<function start="67" end="67" comment="" mask="00000100b">aktiv</function>
+				<function start="68" end="68" comment="" mask="00000001b">aktiv</function>
+			</group>
+			<group id="300B">
+				<function start="5" end="5" comment="" mask="00000001b">aktiv</function>
+			</group>
+		</code>
+		<code description="NBT EVO ATM Emulator">
+			<group id="3000">
+				<function start="105" end="105" comment="" mask="00100000b">aktiv</function>
+				<function start="19" end="19" comment="" mask="00000110b">navigation</function>
+			</group>
+			<group id="3003">
+				<function start="18" end="18" comment="" mask="00000001b">aktiv</function>
+				<function start="3" end="3" comment="" mask="11100000b">atm</function>
+			</group>
+			<group id="3006">
+				<function start="28" end="28" comment="" mask="00010000b">nicht_aktiv</function>
+			</group>
+		</code>
+		<code description="Apple Carplay. Need to upload 143 FSC either OEM or retrofit pack. Check remote-coding.com">
+			<group id="3004">
+				<function start="0" end="0" comment="" mask="00000100b">aktiv</function>
+			</group>
+			<group id="3000">
+				<function start="110" end="110" comment="" mask="10000000b">aktiv</function>
+				<function start="19" end="19" comment="" mask="01000000b">nicht_aktiv</function>
+				<function start="19" end="19" comment="" mask="10000000b">nicht_aktiv</function>
+			</group>
+		</code>
+	</cafd>
 </FDL>

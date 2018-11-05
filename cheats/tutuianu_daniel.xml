@@ -45,5 +45,41 @@
 				<function start="19" end="19" comment="" mask="10000000b">nicht_aktiv</function>
 			</group>
 		</code>
+		<code description="APIX 1 8.8 inch 1280 x 480">
+			<group id="3005">
+				<function start="68" end="68" comment="" mask="00001110b">apix1</function>
+				<function start="68" end="68" comment="" mask="00110000b">18</function>
+				<function start="68" end="68" comment="" mask="11000000b">spi</function>
+				<function start="69" end="69" comment="" mask="00000111b">1280_480</function>
+				<function start="69" end="69" comment="" mask="00111000b">8_8</function>
+			</group>
+		</code>
+		<code description="APIX 1 10.25 inch 1280 x 480">
+			<group id="3005">
+				<function start="68" end="68" comment="" mask="00001110b">apix1</function>
+				<function start="68" end="68" comment="" mask="00110000b">18</function>
+				<function start="68" end="68" comment="" mask="11000000b">spi</function>
+				<function start="69" end="69" comment="" mask="00000111b">1280_480</function>
+				<function start="69" end="69" comment="" mask="00111000b">10_25</function>
+			</group>
+		</code>
+		<code description="APIX 2 8.8 inch 1280 x 480">
+			<group id="3005">
+				<function start="68" end="68" comment="" mask="00001110b">apix2</function>
+				<function start="68" end="68" comment="" mask="00110000b">24</function>
+				<function start="68" end="68" comment="" mask="11000000b">mii</function>
+				<function start="69" end="69" comment="" mask="00000111b">1280_480</function>
+				<function start="69" end="69" comment="" mask="00111000b">8_8</function>
+			</group>
+		</code>
+		<code description="APIX 2 10.25 inch 1280 x 480">
+			<group id="3005">
+				<function start="68" end="68" comment="" mask="00001110b">apix2</function>
+				<function start="68" end="68" comment="" mask="00110000b">24</function>
+				<function start="68" end="68" comment="" mask="11000000b">mii</function>
+				<function start="69" end="69" comment="" mask="00000111b">1280_480</function>
+				<function start="69" end="69" comment="" mask="00111000b">10_25</function>
+			</group>
+		</code>
 	</cafd>
 </FDL>

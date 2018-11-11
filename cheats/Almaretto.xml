@@ -2157,7 +2157,7 @@
             </group>
         </code>
     </cafd>
-    <cafd id="00002098" name="HKFM_2015" author="Almaretto" series="F015,G011,G030">
+    <cafd id="00002098" name="HKFM_2015" author="Almaretto" series="F015,G001,G011,G030,RR11">
         <code description="ENABLE  Trunk or Tailgate CLOSE with KeyFOB or RockerSwitch (No HOLD)">
             <group id="300B">
                 <function start="1" end="1" comment="HKL_REMOTECONTROLLIFTGATEBUTTON_BUTTON_TYPE" mask="11111111b">05</function>
@@ -2187,6 +2187,66 @@
             </group>
         </code>
     </cafd>
+    <cafd id="0000570E" name="HKFM_2015" author="Almaretto" series="F015,G001,G011,G030,RR11">
+        <code description="ENABLE  Trunk or Tailgate CLOSE with KeyFOB or RockerSwitch (No HOLD)">
+            <group id="300B">
+                <function start="1" end="1" comment="HKL_REMOTECONTROLLIFTGATEBUTTON_BUTTON_TYPE" mask="11111111b">05</function>
+            </group>
+            <group id="3008">
+                <function start="1" end="1" comment="HKL_ROCKERSWITCHPOS1_BUTTON_TYPE" mask="11111111b">05</function>
+            </group>
+        </code>
+        <code description="ENABLE Long Press (HOLD) While Close Trunk with RockerSwitch">
+            <group id="3008">
+                <function start="0" end="0" comment="HKL_ROCKERSWITCHPOS1_LONGPRESS_CLOSE" mask="00001000b">01</function>
+            </group>
+        </code>
+        <code description="DISABLE Long Press (HOLD) While Close Trunk with RockerSwitch">
+            <group id="3008">
+                <function start="0" end="0" comment="HKL_ROCKERSWITCHPOS1_LONGPRESS_CLOSE" mask="00001000b">00</function>
+            </group>
+        </code>
+        <code description="ENABLE Long Press (HOLD) Close Trunk with KeyFOB">
+            <group id="300B">
+                <function start="0" end="0" comment="HKL_REMOTECONTROLLIFTGATEBUTTON_LONGPRESS_CLOSE" mask="00001000b">01</function>
+            </group>
+        </code>
+        <code description="DISABLE Long Press (HOLD) Close Trunk with KeyFOB">
+            <group id="300B">
+                <function start="0" end="0" comment="HKL_REMOTECONTROLLIFTGATEBUTTON_LONGPRESS_CLOSE" mask="00001000b">00</function>
+            </group>
+        </code>
+    </cafd>
+    <cafd id="00005710" name="HKFM_2015" author="Almaretto" series="F015,G001,G011,G030,RR11">
+        <code description="ENABLE  Trunk or Tailgate CLOSE with KeyFOB or RockerSwitch (No HOLD)">
+            <group id="300B">
+                <function start="1" end="1" comment="HKL_REMOTECONTROLLIFTGATEBUTTON_BUTTON_TYPE" mask="11111111b">05</function>
+            </group>
+            <group id="3008">
+                <function start="1" end="1" comment="HKL_ROCKERSWITCHPOS1_BUTTON_TYPE" mask="11111111b">05</function>
+            </group>
+        </code>
+        <code description="ENABLE Long Press (HOLD) While Close Trunk with RockerSwitch">
+            <group id="3008">
+                <function start="0" end="0" comment="HKL_ROCKERSWITCHPOS1_LONGPRESS_CLOSE" mask="00001000b">01</function>
+            </group>
+        </code>
+        <code description="DISABLE Long Press (HOLD) While Close Trunk with RockerSwitch">
+            <group id="3008">
+                <function start="0" end="0" comment="HKL_ROCKERSWITCHPOS1_LONGPRESS_CLOSE" mask="00001000b">00</function>
+            </group>
+        </code>
+        <code description="ENABLE Long Press (HOLD) Close Trunk with KeyFOB">
+            <group id="300B">
+                <function start="0" end="0" comment="HKL_REMOTECONTROLLIFTGATEBUTTON_LONGPRESS_CLOSE" mask="00001000b">01</function>
+            </group>
+        </code>
+        <code description="DISABLE Long Press (HOLD) Close Trunk with KeyFOB">
+            <group id="300B">
+                <function start="0" end="0" comment="HKL_REMOTECONTROLLIFTGATEBUTTON_LONGPRESS_CLOSE" mask="00001000b">00</function>
+            </group>
+        </code>
+    </cafd>    
     <cafd id="000022D3" name="IHKA_PR01" author="Almaretto" series="G011,G030">
         <code description="ENABLE HVAC memory - A/C stay OFF if OFF at vehicle shutdown">
             <group id="3003">

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <FDL>
     <!-- Botho - Public Release       -->
-    <!-- last updated : 2018-03-02    -->
+    <!-- last updated : 2018-12-30    -->
     <!-- last I-Step default values for F030 Production date 0315 updated: F020-18-03-511  -->
     
     <cafd id="00000911" name="ACSM_4B" author="Botho (public)" series="F020,F030">
@@ -55,6 +55,16 @@
                 <function start="4" end="4" mask="00001111b" comment="RC_DEFAULT_IDG_3RD_BUTTON_LONG (défaut : 02)">03</function>
                 <function start="8" end="8" mask="11111111b" comment="RC_TIME_DELAY_BOOTLID (défaut : 05)">14</function>
                 <function start="9" end="9" mask="11111111b" comment="RC_TIME_DELAY_PANIC (défaut : 14)">28</function>
+            </group>
+        </code>
+        <code description="Accès confort : Nb de Clignotants à l'ouverture = 3 (défaut : 2)">
+            <group id="3060">
+                <function start="6" end="6" mask="00001100b" comment="QUITTBLK_ENTSCHAERFEN_ANZAHL (défaut : 02)">03</function>
+            </group>
+        </code>
+        <code description="Accès confort : Nb de Clignotants à la fermeture = 2 (défaut : 1)">
+            <group id="3060">
+                <function start="6" end="6" mask="00000011b" comment="QUITTBLK_SICHERN_ANZAHL (défaut : 01)">02</function>
             </group>
         </code>
         <code description="Accès confort : Activation accès confort à la fermeture après 0,5s (défaut : 1,5s)">
@@ -369,11 +379,6 @@
             <group id="3020">
                 <function start="0" end="0" mask="00000001b" comment="TCM_STARTLOCK_BRAKE (défaut : aktiv)">nicht_aktiv</function>
                 <function start="0" end="0" mask="00010000b" comment="TCM_STARTLOCK_DRIVINGREADINESS (défaut : aktiv)">nicht_aktiv</function>
-            </group>
-        </code>
-        <code description="-- TESTING -- Message en cas de haute température du liquide de refroidissement">
-            <group id="3040">
-                <function start="1" end="1" mask="10000000b" comment="CLM_CCM_COOLANT_TEMP (défaut : nicht_aktiv)">aktiv</function>
             </group>
         </code>
     </cafd>

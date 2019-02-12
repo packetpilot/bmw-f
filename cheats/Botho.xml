@@ -903,15 +903,8 @@
       </code>
       <code description="Réglages (EXPERT): Activation Bluetooth Tethering - nécessite de mofifier le provisioning XML via Tool32">
          <group id="3003">
-            <function start="3" end="3" mask="00000010b" comment="DUN_PROFILE (défaut : ??)">01</function>
-            <function start="3" end="3" mask="00000100b" comment="PAN_PROFILE (défaut : ??)">01</function>
-            <function start="6" end="6" mask="00100000b" comment="BT_MODUL_ON_OFF (défaut : ??)">01</function>
-            <function start="15" end="15" mask="00110000b" comment="ONLINE_BROWSER (défaut : beide_aktiv)">beide_aktiv</function>
-            <function start="15" end="15" mask="10000000b" comment="ONLINE_SERVICES (défaut : aktiv)">nicht_aktiv</function>
-            <function start="16" end="16" mask="00000001b" comment="ONLINE_SERVICES_GLS (défaut : aktiv)">nicht_aktiv</function>
-            <function start="16" end="16" mask="10000000b" comment="ASSIST (défaut : aktiv)">nicht_aktiv</function>
-            <function start="18" end="18" mask="00001100b" comment="ONLINE_BROWSER_LIVE (défaut : aktiv)">nicht_aktiv</function>
-            <function start="18" end="18" mask="00010000b" comment="DATACOMM_CSIM (défaut : aktiv)">nicht_aktiv</function>
+            <function start="3" end="3" mask="00000010b" comment="DUN_PROFILE (défaut : 00)">01</function>
+            <function start="3" end="3" mask="00000100b" comment="PAN_PROFILE (défaut : 00)">01</function>
          </group>
       </code>
       <code description="-- TESTING -- Navigation : active les visites guidées">

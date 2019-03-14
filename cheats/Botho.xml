@@ -88,6 +88,12 @@
             <function start="2" end="2" mask="00000100b" comment="CLM_SMO_INDICATOR (défaut : aktiv)">nicht_aktiv</function>
          </group>
       </code>
+      <code description="Accès confort : Nb de clignotements à l'ouverture 3 / fermeture 2 (défaut : 2 ouverture et 1 fermeture)">
+         <group id="3060">
+            <function start="6" end="6" mask="00001100b" comment="QUITTBLK_ENTSCHAERFEN_ANZAHL (défaut : 02)">03</function>
+            <function start="6" end="6" mask="00000011b" comment="QUITTBLK_SICHERN_ANZAHL (défaut : 01)">02</function>
+         </group>
+      </code>
       <code description="Vérouillage des portes : seuil de vitesse à 8km (uniquement si le vérouillage automatique activé - 16km par défaut)">
          <group id="3040">
             <function start="8" end="8" mask="11111111b" comment="CLM_SPEED_LIMIT_PIA_AUTO_LOCK (défaut : wert_04)">wert_03</function>

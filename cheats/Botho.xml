@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <FDL>
-   <!-- 
-		Botho - Public Release
-        last updated : 2018-09-09
-        last I-Step default values for F030 Production date 0315 updated: F020-18-03-511
+   <!--
+	Botho - Public Release
+	last updated : 2019-03-14
+	last I-Step default values for F030 Production date 0315 updated: F020-18-03-511
     -->
    <cafd id="00000911" name="ACSM_4B" author="Botho (public)" series="F020,F030">
       <code description="Ceinture de sécurité : Durée du rappel à 10s (défaut : 100s)">
@@ -58,6 +58,16 @@
             <function start="9" end="9" mask="11111111b" comment="RC_TIME_DELAY_PANIC (défaut : 14)">28</function>
          </group>
       </code>
+      <code description="Accès confort : Nb de Clignotants à l'ouverture = 3 (défaut : 2)">
+         <group id="3060">
+            <function start="6" end="6" mask="00001100b" comment="QUITTBLK_ENTSCHAERFEN_ANZAHL (défaut : 02)">03</function>
+         </group>
+      </code>
+      <code description="Accès confort : Nb de Clignotants à la fermeture = 2 (défaut : 1)">
+         <group id="3060">
+            <function start="6" end="6" mask="00000011b" comment="QUITTBLK_SICHERN_ANZAHL (défaut : 01)">02</function>
+         </group>
+      </code>
       <code description="Accès confort : Activation accès confort à la fermeture après 0,5s (défaut : 1,5s)">
          <group id="3053">
             <function start="9" end="9" mask="11111111b" comment="KOMFORT_SCHLIESSEN (défaut : 0F)">05</function>
@@ -86,12 +96,6 @@
       <code description="Accès confort : Désactive les clignotant à l'ouverture du coffre (défaut : activé)">
          <group id="3040">
             <function start="2" end="2" mask="00000100b" comment="CLM_SMO_INDICATOR (défaut : aktiv)">nicht_aktiv</function>
-         </group>
-      </code>
-      <code description="Accès confort : Nb de clignotements à l'ouverture 3 / fermeture 2 (défaut : 2 ouverture et 1 fermeture)">
-         <group id="3060">
-            <function start="6" end="6" mask="00001100b" comment="QUITTBLK_ENTSCHAERFEN_ANZAHL (défaut : 02)">03</function>
-            <function start="6" end="6" mask="00000011b" comment="QUITTBLK_SICHERN_ANZAHL (défaut : 01)">02</function>
          </group>
       </code>
       <code description="Vérouillage des portes : seuil de vitesse à 8km (uniquement si le vérouillage automatique activé - 16km par défaut)">
@@ -376,11 +380,6 @@
          <group id="3020">
             <function start="0" end="0" mask="00000001b" comment="TCM_STARTLOCK_BRAKE (défaut : aktiv)">nicht_aktiv</function>
             <function start="0" end="0" mask="00010000b" comment="TCM_STARTLOCK_DRIVINGREADINESS (défaut : aktiv)">nicht_aktiv</function>
-         </group>
-      </code>
-      <code description="-- TESTING -- Message en cas de haute température du liquide de refroidissement">
-         <group id="3040">
-            <function start="1" end="1" mask="10000000b" comment="CLM_CCM_COOLANT_TEMP (défaut : nicht_aktiv)">aktiv</function>
          </group>
       </code>
    </cafd>

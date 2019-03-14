@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FDL>
+	<!--stanleyy-->
+	<cafd id="00001B2D" name="ACSM_5" author="stanleyy" series="G011, G030">
+        <code description="Increased speed limits for surround/rear view cameras activation/deactivation">
+         <group id="3300">
+	 <function comment="v_schwelle_1_kmh" start="7" end="7" mask="11111111b">FF</function>
+         <function comment="v_schelle_2_kmh" start="8" end="8" mask="11111111b">FF</function>
+         <function comment="d_schwelle_1_kmh" start="9" end="9" mask="11111111b">FF</function>
+         <function comment="d_schwelle_2_kmh" start="10" end="10" mask="11111111b">FF</function>
+	 </group> 
+        </code>
+        <code description="Default speed limits for surround/rear view cameras activation/deactivation">
+         <group id="3300">
+	 <function comment="v_schwelle_1_kmh" start="7" end="7" mask="11111111b">23</function>
+         <function comment="v_schelle_2_kmh" start="8" end="8" mask="11111111b">0F</function>
+         <function comment="d_schwelle_1_kmh" start="9" end="9" mask="11111111b">32</function>
+         <function comment="d_schwelle_2_kmh" start="10" end="10" mask="11111111b">0A</function>
+         </group> 
+        </code>
+        </cafd>
+
+	<cafd id="00001C7A" name="SAS2" author="stanleyy" series="G011, G030">
+        <code description="Low default distance value for adaptive cruise control">
+         <group id="3000">
+	 <function comment="C_Abstandsstufe_init" start="0" end="0" mask="11111111b">Stufe1</function>
+	 </group> 
+        </code>
+        <code description="Factory default distance value for adaptive cruise control">
+         <group id="3000">
+	 <function comment="C_Abstandsstufe_init" start="0" end="0" mask="11111111b">Stufe3</function>
+	 </group> 
+        </code>
+        </cafd>
+
+	<cafd id="000029B7" name="DME_BAC2" author="stanleyy" series="G011, G030">
+        <code description="Rembember Auto Start/Stop last value">
+         <group id="3020">
+	 <function comment="TCM_MSA_MEMORY" start="39" end="39" mask="00000011b">On</function>
+	 </group> 
+        </code>
+        <code description="Don't rembember Auto Start/Stop last value">
+         <group id="3020">
+	 <function comment="TCM_MSA_MEMORY" start="39" end="39" mask="00000011b">Off</function>
+	 </group> 
+        </code>
+        </cafd>
+</FDL>

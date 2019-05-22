@@ -43,6 +43,7 @@
 				<function start="110" end="110" comment="" mask="10000000b">aktiv</function>
 				<function start="19" end="19" comment="" mask="01000000b">nicht_aktiv</function>
 				<function start="19" end="19" comment="" mask="10000000b">nicht_aktiv</function>
+				<function start="39" end="39" comment="" mask="10000000b">aktiv</function>
 			</group>
 		</code>
 		<code description="APIX 1 8.8 inch 1280 x 480">

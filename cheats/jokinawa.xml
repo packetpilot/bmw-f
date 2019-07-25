@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FDL>
+	<!--Rev1-->	
+	<!--jokinawa_personal-->
+	<cafd id="00007083" name="BDC_BODY3" author="jokinawa_personal" series="S18A">
+		<!--group 3221 PfFesMaster-->
+		<code description="SET STARTUP MODE to ADAPTIVE">
+			<group id="3221">
+				<function start="7" end="7" comment="FesPiaDefaultLastUserMode" mask="11111111b">0A</function>
+			</group>
+		</code>
+		<code description="SET STARTUP MODE to SPORT">
+			<group id="3221">
+				<function start="7" end="7" comment="FesPiaDefaultLastUserMode" mask="11111111b">01</function>
+			</group>
+		</code>
+		<code description="SET STARTUP MODE to SPORT INDIVIDUAL">
+			<group id="3221">
+				<function start="7" end="7" comment="FesPiaDefaultLastUserMode" mask="11111111b">03</function>
+			</group>
+		</code>
+		<code description="SET STARTUP MODE to COMFORT (DEFAULT)">
+			<group id="3221">
+				<function start="7" end="7" comment="FesPiaDefaultLastUserMode" mask="11111111b">04</function>
+			</group>
+		</code>
+		<code description="SET STARTUP MODE to ECO PRO">
+			<group id="3221">
+				<function start="7" end="7" comment="FesPiaDefaultLastUserMode" mask="11111111b">07</function>
+			</group>
+		</code>
+		<code description="SET STARTUP MODE to ECO PRO INDIVIDUAL">
+			<group id="3221">
+				<function start="7" end="7" comment="FesPiaDefaultLastUserMode" mask="11111111b">09</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="00002742" name="DME_BAC2" author="jokinawa_personal" series="S18A">
+		<!--group 3020 BSU_BEREICH-->
+		<code description="ENABLE AUTO START STOP MEMORY">
+			<group id="3020">
+				<function start="19" end="19" comment="TCM_MSA_MEMORY" mask="00000010b">01</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="00004508" name="DKOMBI4" author="jokinawa_personal" series="S18A">
+		<!--group 3000 Anzeige Konfiguration-->
+		<code description="DISABLE Speedometer Correction">
+			<group id="3000">
+				<function start="1" end="1" comment="BC_V_KORREKTUR" mask="01000000b">ohne_korrektur</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="00003E52" name="HU_MGU" author="jokinawa_personal" series="S18A">
+		<!--group 300A SARAH-->
+		<code description="DISABLE Night Vision LEGAL DISCLAIMER">
+			<group id="300A">
+				<function start="12" end="12" comment="werte=00" mask="11111111b">kein_ld</function>
+			</group>
+		</code>
+		<!--group 300B PARKEN-->
+		<code description="DISABLE Camera LEGAL DISCLAIMER">
+			<group id="300B">
+				<function start="1" end="1" comment="MACRO_CAM_LEGALDISCLAIMER" mask="11111111b">kein_ld</function>
+			</group>
+		</code>
+		<code description="DISABLE LEGAL DISCLAIMER Time">
+			<group id="300B">
+				<function start="3" end="3" comment="LEGAL_DISCLAIMER_TIME" mask="11111111b">kein_ld</function>
+			</group>
+		</code>
+		<!--group 3000 HMI_SPEECH-->
+		<code description="STARTUP EMBLEM (bmw_m)">
+			<group id="3000">
+				<function start="11" end="11" comment="STARTUP_EMBLEM" mask="00011110b">bmw_m</function>
+			</group>
+		</code>
+		<code description="STARTUP EMBLEM (rolls royce)">
+			<group id="3000">
+				<function start="11" end="11" comment="STARTUP_EMBLEM" mask="00011110b">rr</function>
+			</group>
+		</code>
+		<code description="DISABLE VIDEO SPEEDLOCK CONDITION">
+			<group id="3000">
+				<function start="53" end="53" comment="VIDEO_SPEEDLOCK_CONDITION" mask="00000111b">none</function>
+			</group>
+		</code>
+		<code description="ENABLE TIRE TEMP and PRESSURE Display">
+			<group id="3000">
+				<function start="20" end="20" comment="RDC_DRUCK_TEMP" mask="00000011b">druck_und_temperatur</function>
+			</group>
+		</code>
+		<!--group 3002-->
+		<code description="Change Played Sound Signal Set (BMW)">
+			<group id="3002">
+				<function start="2" end="2" comment="BRAND" mask="01110000b">bmw</function>
+			</group>
+		</code>
+		<code description="Change Played Sound Signal Set (Mini)">
+			<group id="3002">
+				<function start="2" end="2" comment="BRAND" mask="01110000b">mini</function>
+			</group>
+		</code>
+		<code description="Change Played Sound Signal Set (BMW_i)">
+			<group id="3002">
+				<function start="2" end="2" comment="BRAND" mask="01110000b">bmw_i</function>
+			</group>
+		</code>
+		<code description="Change Played Sound Signal Set (Rolls Royce)">
+			<group id="3002">
+				<function start="2" end="2" comment="BRAND" mask="01110000b">rolls_royce</function>
+			</group>
+		</code>
+		<code description="DISABLE Volume Popup Display">
+			<group id="3002">
+				<function start="0" end="0" comment="VOLUME_POPUP_DISPLAY" mask="10000000b">nicht_aktiv</function>
+			</group>
+		</code>
+		<!--group 3006-->
+		<code description="DISABLE SPEEDLOCK SPEEDVALUE MAX">
+			<group id="3006">
+				<function start="39" end="39" comment="SPEEDLOCK_SPEEDVALUE_MAX" mask="00011111b">nicht_aktiv</function>
+			</group>
+		</code>
+		<code description="DISABLE SPEEDLOCK SPEEDVALUE MIN">
+			<group id="3006">
+				<function start="40" end="40" comment="SPEEDLOCK_SPEEDVALUE_MIN" mask="00011111b">nicht_aktiv</function>
+			</group>
+		</code>
+	</cafd>
+</FDL>

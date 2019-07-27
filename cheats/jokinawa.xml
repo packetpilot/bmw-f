@@ -4,12 +4,12 @@
 	<!--jokinawa_personal-->
 	<cafd id="000051C9" name="IHKA4" author="jokinawa_personal" series="S18A">
 		<!--group 3000-->
-		<code description="Colder AC (1 of 2): SET Air Conditioning Region to Rest of World">
+		<code description="[1/2] Enable Colder Air Conditioning">
 			<group id="3000">
 				<function start="11" end="11" comment="LAENDERVARIENTE" mask="00000111b">02</function>
 			</group>
 		</code>
-		<code description="Colder AC (2 of 2): SET Temperature Offset to negative 3k">
+		<code description="[2/2] Enable Colder Air Conditioning">
 			<group id="3003">
 				<function start="1" end="1" comment="TEMPERATUR_OFFSET" mask="00001111b">06</function>
 			</group>
@@ -18,52 +18,52 @@
 	</cafd>
 	<cafd id="00007083" name="BDC_BODY3" author="jokinawa_personal" series="S18A">
 		<!--group 3221 PfFesMaster-->
-		<code description="SET startup mode to ADAPTIVE">
+		<code description="Change startup mode to Adaptive">
 			<group id="3221">
 				<function start="7" end="7" comment="FesPiaDefaultLastUserMode" mask="11111111b">0A</function>
 			</group>
 		</code>
-		<code description="SET startup mode to SPORT">
+		<code description="Change startup mode to Sport">
 			<group id="3221">
 				<function start="7" end="7" comment="FesPiaDefaultLastUserMode" mask="11111111b">01</function>
 			</group>
 		</code>
-		<code description="SET startup mode to SPORT INDIVIDUAL">
+		<code description="Change startup mode to Sport Individual">
 			<group id="3221">
 				<function start="7" end="7" comment="FesPiaDefaultLastUserMode" mask="11111111b">03</function>
 			</group>
 		</code>
-		<code description="SET startup mode to COMFORT (DEFAULT)">
+		<code description="Change startup mode to Comfort (default)">
 			<group id="3221">
 				<function start="7" end="7" comment="FesPiaDefaultLastUserMode" mask="11111111b">04</function>
 			</group>
 		</code>
-		<code description="SET startup mode to ECO PRO">
+		<code description="Change startup mode to Eco Pro">
 			<group id="3221">
 				<function start="7" end="7" comment="FesPiaDefaultLastUserMode" mask="11111111b">07</function>
 			</group>
 		</code>
-		<code description="SET startup mode to ECO PRO INDIVIDUAL">
+		<code description="Change startup mode to Eco Pro Individual">
 			<group id="3221">
 				<function start="7" end="7" comment="FesPiaDefaultLastUserMode" mask="11111111b">09</function>
 			</group>
 		</code>
-		<code description="ENABLE Sport Plus Mode (1 of 2: ENABLE menu option in HU_MGU)">
+		<code description="[1/2] Enable Sport Plus Mode">
 			<group id="3221">
 				<function start="9" end="9" comment="FesSportWorldMode1" mask="11111111b">02</function>
 			</group>
 		</code>
-		<code description="ENABLE Comfort Plus Mode (1 of 2: ENABLE menu option in HU_MGU)">
+		<code description="[1/2] Enable Comfort Plus Mode">
 			<group id="3221">
 				<function start="12" end="12" comment="FesComfortWorldMode1" mask="11111111b">05</function>
 			</group>
 		</code>
-		<code description="NOT WORKING: ENABLE Comfort Individual Mode (1 of 2: ENABLE menu option in HU_MGU)">
+		<code description="[WIP] [1/2] Enable Comfort Individual Mode">
 			<group id="3221">
 				<function start="13" end="13" comment="FesComfortWorldMode2" mask="11111111b">06</function>
 			</group>
 		</code>
-		<code description="NOT WORKING: ENABLE Eco Pro Plus Mode (1 of 2: ENABLE menu option in HU_MGU)">
+		<code description="[WIP] [1/2] Eco Pro Plus Mode">
 			<group id="3221">
 				<function start="15" end="15" comment="FesEcoWorldMode2" mask="11111111b">06</function>
 			</group>
@@ -71,7 +71,7 @@
 	</cafd>
 	<cafd id="00002742" name="DME_BAC2" author="jokinawa_personal" series="S18A">
 		<!--group 3020 BSU_BEREICH-->
-		<code description="ENABLE Auto Start Stop MEMORY CODE IN DIAGNOSTIC MODE">
+		<code description="[DIAG] Enable Auto Start Stop Memory">
 			<group id="3020">
 				<function start="19" end="19" comment="TCM_MSA_MEMORY" mask="00000010b">01</function>
 			</group>
@@ -79,12 +79,12 @@
 	</cafd>
 	<cafd id="00004508" name="DKOMBI4" author="jokinawa_personal" series="S18A">
 		<!--group 3000 Anzeige Konfiguration-->
-		<code description="DISABLE Speedometer Correction">
+		<code description="Disable Speedometer Correction">
 			<group id="3000">
 				<function start="1" end="1" comment="BC_V_KORREKTUR" mask="01000000b">ohne_korrektur</function>
 			</group>
 		</code>
-		<code description="NOT WORKING: SET Dash Logo to BMW M///">
+		<code description="[WIP} Change Dash Logo to BMW M">
 			<group id="3001">
 				<function start="18" end="18" comment="LOGO_SCHRIFTZUG" mask="11111111b">m_logo</function>
 			</group>
@@ -92,24 +92,25 @@
 	</cafd>
 	<cafd id="00003E52" name="HU_MGU" author="jokinawa_personal" series="S18A">
 		<!--group 300A SARAH-->
-		<code description="DISABLE Night Vision Legal Disclaimer">
+		<code description="Disable Night Vision Legal Disclaimer">
 			<group id="300A">
 				<function start="12" end="12" comment="werte=00" mask="11111111b">kein_ld</function>
 			</group>
 		</code>
 		<!--group 300B PARKEN-->
-		<code description="DISABLE Camera Legal Disclaimer">
+		<code description="Disable Camera Legal Disclaimer">
 			<group id="300B">
 				<function start="1" end="1" comment="MACRO_CAM_LEGALDISCLAIMER" mask="11111111b">kein_ld</function>
 			</group>
 		</code>
 		<!--group 3000 HMI_SPEECH-->
-		<code description="DISABLE Legal Disclaimer Time">
+		<code description="Disable Legal Disclaimer Time">
 			<group id="3000">
 				<function start="3" end="3" comment="LEGAL_DISCLAIMER_TIME" mask="11111111b">kein_ld</function>
 			</group>
 		</code>
-		<code description="ENABLE Video In Motion (VIM) (1 of 2) - MUST do physical button combo to enable after coding. See forums Bimmerpost G07 Forums for details.">
+		<code description="[1/2] Enable Video In Motion - must do physical button combo to enable after coding. See Bimmerpost G07 forum in comment.">
+		<!--https://g07.bimmerpost.com/forums/showpost.php?p=25076780&postcount=11-->
 			<group id="3000">
 				<function start="53" end="53" comment="VIDEO_SPEEDLOCK_CONDITION" mask="00000111b">none</function>
 				<function start="49" end="49" comment="SPEEDLOCK_FREISCHALTMENU" mask="10000000b">aktiv</function>
@@ -118,85 +119,86 @@
 			</group>
 		</code>
 		<!--group 3006-->
-		<code description="ENABLE Video In Motion (VIM) (2 of 2) - MUST do physical button combo to enable after coding. See forums Bimmerpost G07 Forums for details.">
+		<code description="[2/2] Enable Video In Motion - must do physical button combo to enable after coding. See Bimmerpost G07 forum in comment.">
+		<!--https://g07.bimmerpost.com/forums/showpost.php?p=25076780&postcount=11-->
 			<group id="3006">
 				<function start="14" end="14" comment="SPEEDLOCK_X_KMH_MIN" mask="11111111b">nicht_aktiv</function>
 				<function start="13" end="13" comment="SPEEDLOCK_X_KMH_MAX" mask="11111111b">nicht_aktiv</function>
 			</group>
 		</code>
-		<code description="ENABLE 5 times blinker option in Exterior Lighting settings">
+		<code description="Enable 5 click blinker option in Exterior Lighting settings">
 			<group id="3000">
 				<function start="0" end="0" comment="5_FACH_TIPPBLINKEN" mask="00000100b">aktiv</function>
 			</group>
 		</code>
-		<code description="SET Startup Emblem (bmw_m)">
+		<code description="Change Startup Emblem to BMW M">
 			<group id="3000">
 				<function start="11" end="11" comment="STARTUP_EMBLEM" mask="00011110b">bmw_m</function>
 			</group>
 		</code>
-		<code description="SET Startup Emblem (rolls royce)">
+		<code description="Change Startup Emblem to Rolls Royce">
 			<group id="3000">
 				<function start="11" end="11" comment="STARTUP_EMBLEM" mask="00011110b">rr</function>
 			</group>
 		</code>
-		<code description="SET Startup Emblem (alpina)">
+		<code description="Change Startup Emblem to Alpina">
 			<group id="3000">
 				<function start="11" end="11" comment="STARTUP_EMBLEM" mask="00011110b">alpina</function>
 			</group>
 		</code>
-		<code description="SET Startup Emblem (bmw)">
+		<code description="Change Startup Emblem to BMW">
 			<group id="3000">
 				<function start="11" end="11" comment="STARTUP_EMBLEM" mask="00011110b">bmw</function>
 			</group>
 		</code>
-		<code description="SET Startup Emblem (bmw_i)">
+		<code description="Change Startup Emblem to BMWi">
 			<group id="3000">
 				<function start="11" end="11" comment="STARTUP_EMBLEM" mask="00011110b">bmw_i</function>
 			</group>
 		</code>
-		<code description="ENABLE tire temperature and pressure display">
+		<code description="Enable tire temperature and pressure display">
 			<group id="3000">
 				<function start="20" end="20" comment="RDC_DRUCK_TEMP" mask="00000011b">druck_und_temperatur</function>
 			</group>
 		</code>
 		<!--group 3002-->
-		<code description="SET played sound signal set (BMW)">
+		<code description="Change played sound signal set to BMW">
 			<group id="3002">
 				<function start="2" end="2" comment="BRAND" mask="01110000b">bmw</function>
 			</group>
 		</code>
-		<code description="SET played sound signal set (Mini)">
+		<code description="Change played sound signal set to Mini">
 			<group id="3002">
 				<function start="2" end="2" comment="BRAND" mask="01110000b">mini</function>
 			</group>
 		</code>
-		<code description="SET played sound signal set (BMW_i)">
+		<code description="Change played sound signal set to BMWi">
 			<group id="3002">
 				<function start="2" end="2" comment="BRAND" mask="01110000b">bmw_i</function>
 			</group>
 		</code>
-		<code description="SET played sound signal set (Rolls Royce)">
+		<code description="Change played sound signal set to Rolls Royce">
 			<group id="3002">
 				<function start="2" end="2" comment="BRAND" mask="01110000b">rolls_royce</function>
 			</group>
 		</code>
-		<code description="DISABLE Volume Popup Display">
+		<code description="Disable Volume Popup Display">
 			<group id="3002">
 				<function start="0" end="0" comment="VOLUME_POPUP_DISPLAY" mask="10000000b">nicht_aktiv</function>
 			</group>
 		</code>
-		<code description="SET Max volume retention to 50 percent">
+		<code description="Change max volume retention to 50 percent">
 			<group id="3002">
 				<function start="1" end="1" comment="VOLUME_MAX_ON" mask="11111111b">32</function>
 			</group>
 		</code>
 		<!--group 3008-->
-		<code description="ENABLE Sport Plus menu option (2 of 2: ENABLE in BDC_BODY)">
+		<code description="[2/2] Enable Sport Plus menu option">
 			<group id="3008">
 				<function start="0" end="0" comment="FES_SPORT_EXPERT" mask="00000100b">aktiv</function>
 			</group>
 		</code>
-		<code description="ENABLE Comfort Plus menu option (2 of 2: ENABLE in BDC_BODY)">
+		<code description="[2/2] Enable Comfort Plus menu option">
 			<group id="3008">
 				<function start="0" end="0" comment="FES_COMFORT_PLUS" mask="00100000b">aktiv</function>
 			</group>

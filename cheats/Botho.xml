@@ -572,14 +572,9 @@
             <function start="0" end="0" mask="00001000b" comment="TASTER_FBD (défaut : nicht_aktiv)">aktiv</function>
          </group>
       </code>
-      <code description="Hayon : Vitesse d'ouverture (Lent puis rapide)">
+      <code description="Hayon : Vitesse d'ouverture (rapide progressif avec freinage avant la butée)">
          <group id="3020">
             <function start="2" end="10" mask="11111111b" comment="DREHZAL_SEGMENT_OEFF (défaut : 1B, 1B, 1B, 1B, 1B, 1B, 1B, 1B, 1B)">1B, 28, 28, 28, 28, 28, 28, 1B, 1B</function>
-         </group>
-      </code>
-      <code description="Hayon : Vitesse d'ouverture (Lent puis moyennement rapide)">
-         <group id="3020">
-            <function start="2" end="10" mask="11111111b" comment="DREHZAL_SEGMENT_OEFF (défaut : 1B, 1B, 1B, 1B, 1B, 1B, 1B, 1B, 1B)">1B, 26, 26, 26, 26, 26, 26, 28, 1B</function>
          </group>
       </code>
       <code description="Hayon : Vitesse d'ouverture (par défaut)">

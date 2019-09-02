@@ -2,8 +2,7 @@
 <FDL>
    <!--
 	Botho - Public Release
-	last updated : 2019-03-14
-	last I-Step default values for F030 Production date 0315 updated: F020-18-03-511
+	last updated : 2019-09-02
     -->
    <cafd id="00000911" name="ACSM_4B" author="Botho (public)" series="F020,F030">
       <code description="Ceinture de sécurité : Durée du rappel à 10s (défaut : 100s)">
@@ -573,6 +572,32 @@
             <function start="0" end="0" mask="00001000b" comment="TASTER_FBD (défaut : nicht_aktiv)">aktiv</function>
          </group>
       </code>
+      <code description="Hayon : Vitesse d'ouverture (Lent puis rapide)">
+         <group id="3020">
+            <function start="2" end="10" mask="11111111b" comment="DREHZAL_SEGMENT_OEFF (défaut : 1B, 1B, 1B, 1B, 1B, 1B, 1B, 1B, 1B)">1B, 28, 28, 28, 28, 28, 28, 1B, 1B</function>
+         </group>
+      </code>
+      <code description="Hayon : Vitesse d'ouverture (Lent puis moyennement rapide)">
+         <group id="3020">
+            <function start="2" end="10" mask="11111111b" comment="DREHZAL_SEGMENT_OEFF (défaut : 1B, 1B, 1B, 1B, 1B, 1B, 1B, 1B, 1B)">1B, 26, 26, 26, 26, 26, 26, 28, 1B</function>
+         </group>
+      </code>
+      <code description="Hayon : Vitesse d'ouverture (par défaut)">
+         <group id="3020">
+            <function start="2" end="10" mask="11111111b" comment="DREHZAL_SEGMENT_OEFF (défaut : 1B, 1B, 1B, 1B, 1B, 1B, 1B, 1B, 1B)">1B, 1B, 1B, 1B, 1B, 1B, 1B, 1B, 1B</function>
+         </group>
+      </code>
+      <code description="Hayon : Vitesse de fermeture (rapide progressif avec freinage à la fermeture)">
+         <group id="3020">
+            <function start="11" end="19" mask="11111111b" comment="DREHZAL_SEGMENT_SCHL (défaut : 13, 1B, 1B, 1B, 1B, 1B, 1B, 1B, 1B)">0A, 13, 28, 28, 28, 28, 28, 1B, 14</function>
+         </group>
+      </code>
+      <code description="Hayon : Vitesse de fermeture (par défaut)">
+         <group id="3020">
+            <function start="11" end="19" mask="11111111b" comment="DREHZAL_SEGMENT_SCHL (défaut : 13, 1B, 1B, 1B, 1B, 1B, 1B, 1B, 1B)">13, 1B, 1B, 1B, 1B, 1B, 1B, 1B, 1B</function>
+         </group>
+      </code>
+      
       <code description="Hayon : Activation fermeture sur pression de la main (exercer une pression pour fermer au moins 5% du hayon en moins de 2s)">
          <group id="3010">
             <function start="2" end="2" mask="00000010b" comment="MECH_DRUK_AUTO_SCH (défaut : nicht_aktiv)">aktiv</function>

@@ -575,21 +575,25 @@
       <code description="Hayon : Vitesse d'ouverture (rapide progressif avec freinage avant la butée)">
          <group id="3020">
             <function start="2" end="10" mask="11111111b" comment="DREHZAL_SEGMENT_OEFF (défaut : 1B, 1B, 1B, 1B, 1B, 1B, 1B, 1B, 1B)">1B, 28, 28, 28, 28, 28, 28, 1B, 1B</function>
+            <function start="21" end="21" mask="11111111b" comment="DEFAULT_DREHZ_OEF (défaut : 1B)">28</function>
          </group>
       </code>
       <code description="Hayon : Vitesse d'ouverture (par défaut)">
          <group id="3020">
             <function start="2" end="10" mask="11111111b" comment="DREHZAL_SEGMENT_OEFF (défaut : 1B, 1B, 1B, 1B, 1B, 1B, 1B, 1B, 1B)">1B, 1B, 1B, 1B, 1B, 1B, 1B, 1B, 1B</function>
+            <function start="21" end="21" mask="11111111b" comment="DEFAULT_DREHZ_OEF (défaut : 1B)">1B</function>
          </group>
       </code>
       <code description="Hayon : Vitesse de fermeture (rapide progressif avec freinage à la fermeture)">
          <group id="3020">
-            <function start="11" end="19" mask="11111111b" comment="DREHZAL_SEGMENT_SCHL (défaut : 13, 1B, 1B, 1B, 1B, 1B, 1B, 1B, 1B)">0A, 13, 28, 28, 28, 28, 28, 1B, 14</function>
+            <function start="11" end="19" mask="11111111b" comment="DREHZAL_SEGMENT_SCHL (défaut : 13, 1B, 1B, 1B, 1B, 1B, 1B, 1B, 1B)">0A, 13, 26, 26, 26, 26, 26, 1B, 14</function>
+            <function start="20" end="20" mask="11111111b" comment="DEFAULT_DREHZ_SCHL (défaut : 1B)">26</function>
          </group>
       </code>
       <code description="Hayon : Vitesse de fermeture (par défaut)">
          <group id="3020">
             <function start="11" end="19" mask="11111111b" comment="DREHZAL_SEGMENT_SCHL (défaut : 13, 1B, 1B, 1B, 1B, 1B, 1B, 1B, 1B)">13, 1B, 1B, 1B, 1B, 1B, 1B, 1B, 1B</function>
+            <function start="20" end="20" mask="11111111b" comment="DEFAULT_DREHZ_SCHL (défaut : 1B)">1B</function>
          </group>
       </code>
       

@@ -506,7 +506,7 @@
             </group>
         </code>
     </cafd>
-    <cafd id="000007C8" name="HKFM" author="Almaretto" series="F010,F015">
+    <cafd id="000007C8" name="HKFM" author="Almaretto" series="F001,F010,F015,F025,F030,F045">
         <code description="ENABLE Trunk Close via keyFOB/Footwell button (NA vehicles)">
             <group id="3010">
                 <function start="0" end="0" mask="00001000b">aktiv</function>

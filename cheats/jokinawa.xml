@@ -179,7 +179,7 @@
 				<function start="53" end="53" comment="GLOBAL_LAYOUT_VARIANTE" mask="11110000b">m_gmbh</function>
 			</group>
 		</code>
-		<code description="Change Dash Layout and Logo to Alpina">
+		<code description="Change Dash Layout and Logo to Alpina [req i-step 2019/07.xx+]">
 			<group id="3001">
 				<function start="18" end="18" comment="LOGO_SCHRIFTZUG" mask="11111111b">alpina</function>
 			</group>
@@ -187,7 +187,7 @@
 				<function start="53" end="53" comment="GLOBAL_LAYOUT_VARIANTE" mask="11110000b">alpina</function>
 			</group>
 		</code>
-		<code description="Change Dash Layout to Alpina with no logo">
+		<code description="Change Dash Layout to Alpina with no logo [req i-step 2019/07.xx+]">
 			<group id="3001">
 				<function start="18" end="18" comment="LOGO_SCHRIFTZUG" mask="11111111b">kein_logo</function>
 			</group>

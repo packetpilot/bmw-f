@@ -361,17 +361,9 @@
 	</cafd>
 	<cafd id="000042C1" name="SAS2" author="jokinawa" series="S18A">
 		<code description="[WIP][3/3] Enable Automatic Lane Change Assistant">
-            <group id="3001">
-                <function start="200" end="200" comment="C_NHA_aktiv" mask="11111111b">01</function>
-            </group>
             <group id="3000">
                 <function start="137" end="137" comment="C_SWA_VORHANDEN" mask="11111111b">01</function>
             </group>
         </code>
-		<code description="Enable Automatic Lane Change Assistant on All Roads">
-			<group id="3000">
-				<function start="4" end="4" comment="C_NHA_Spurwechsel_Strassentyp" mask="11111111b">01</function>
-			</group>
-		</code>
 	</cafd>
 </FDL>

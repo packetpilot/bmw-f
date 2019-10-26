@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <FDL>
 	<!--tutuianu_daniel-->
+	
 	<cafd id="00000122" name="KAFAS" author="tutuianu_daniel">
 		<code description="SLI 1 Romania No speed limit info in this country (get your country code uppercase in hex http://www.unit-conversion.info/texttools/hexadecimal/  )">
 			<group id="3030">
@@ -11,6 +12,7 @@
 			</group>
 		</code>
 	</cafd>
+	
 	<cafd id="00001EF6" name="HU_NBT_EVO" author="tutuianu_daniel">
 		<code description="Touchscreen activation">
 			<group id="3005">
@@ -35,7 +37,7 @@
 				<function start="28" end="28" comment="" mask="00010000b">nicht_aktiv</function>
 			</group>
 		</code>
-		<code description="Apple Carplay. Need to upload 143 FSC either OEM or retrofit pack. Check remote-coding.com">
+		<code description="Apple Carplay. Need to upload 143 FSC either OEM or retrofit pack.">
 			<group id="3004">
 				<function start="0" end="0" comment="" mask="00000100b">aktiv</function>
 			</group>
@@ -64,6 +66,27 @@
 				<function start="69" end="69" comment="" mask="00111000b">10_25</function>
 			</group>
 		</code>
+		
+		
+		<code description="APIX 2 8.8 inch 1280 x 480">
+			<group id="3005">
+				<function start="68" end="68" comment="" mask="00001110b">apix2</function>
+				<function start="68" end="68" comment="" mask="00110000b">24</function>
+				<function start="68" end="68" comment="" mask="11000000b">mii</function>
+				<function start="69" end="69" comment="" mask="00000111b">1280_480</function>
+				<function start="69" end="69" comment="" mask="00111000b">8_8</function>
+			</group>
+		</code>
+		<code description="APIX 2 10.25 inch 1280 x 480">
+			<group id="3005">
+				<function start="68" end="68" comment="" mask="00001110b">apix2</function>
+				<function start="68" end="68" comment="" mask="00110000b">24</function>
+				<function start="68" end="68" comment="" mask="11000000b">mii</function>
+				<function start="69" end="69" comment="" mask="00000111b">1280_480</function>
+				<function start="69" end="69" comment="" mask="00111000b">10_25</function>
+			</group>
+		</code>
+		
 		<code description="APIX 2 8.8 inch 1440 x 540">
 			<group id="3005">
 				<function start="68" end="68" comment="" mask="00001110b">apix2</function>
@@ -83,7 +106,8 @@
 			</group>
 		</code>
 	</cafd>
-		<cafd id="000017BE" name="BDC_01" author="tutuianu_daniel">
+	
+	<cafd id="000017BE" name="BDC_01" author="tutuianu_daniel">
 		<code description="Ambient colors - green, red and violett">
 			<group id="3070">
 				<function start="60" end="60" comment="weiss" mask="11111111b">59</function>
@@ -116,4 +140,33 @@
 			</group>
 		</code>
 	</cafd>
+
+
+	<cafd id="00001B29" name="ACSM_5" author="tutuianu_daniel">
+		<code description="DISABLE Seat Belt Status and Reminder Chime (Driver) - 2016+ Firmware">
+			<group id="3001">
+				<function start="0" end="0" comment="SBR_nicht_verbaut" mask="11111111b">00</function>
+			</group>
+		</code>
+
+		<code description="DISABLE Seat Belt Status and Reminder Chime (Passenger) - 2016+ Firmware">
+			<group id="3001">
+				<function start="1" end="1" comment="SBR_nicht_verbaut" mask="11111111b">00</function>
+			</group>
+		</code>
+		
+		
+		<code description="ENABLE Seat Belt Status and Reminder Chime (Driver) - 2016+ Firmware">
+			<group id="3001">
+				<function start="0" end="0" comment="SBR_ohne_SBE" mask="11111111b">04</function>
+			</group>
+		</code>
+		
+		<code description="ENABLE Seat Belt Status and Reminder Chime (Passenger) - 2016+ Firmware">
+			<group id="3001">
+				<function start="1" end="1" comment="SBR_mit_SBE" mask="11111111b">03</function>
+			</group>
+		</code>
+	</cafd>
+
 </FDL>

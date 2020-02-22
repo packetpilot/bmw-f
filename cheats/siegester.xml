@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FDL>
+	<!--siegester-->
+	<!--for version 07.2020.54-->
+	<cafd id="000040F9" name="KAFAS4" author="siegester" series="S18A">
+		<code description="(2/2) GFHB - Anti-dazzle headlights - Improved dynamics">
+			<group id="3102">
+				<function start="6"  end="6"  comment="C_FLA_COUNTRY_WITH_MUTIPLE_REFLECTORS" mask="11111111b">01</function>
+				<function start="7"  end="7"  comment="C_FLA_US_SENSITIVITY_MODE" mask="11111111b">00</function>
+				<function start="14" end="14" comment="C_FLA_BS_ENTER_THRESH" mask="11111111b">03</function>
+				<function start="15" end="15" comment="C_FLA_BS_EXIT_THRESH" mask="11111111b">02</function>
+			</group>
+		</code>
+	</cafd>
+
+
+	<cafd id="000044ED" name="BDC_BODY3" author="siegester" series="S18A">
+		<code description="(2/2) Enable Independent Turn Signal">
+			<group id="3510">
+				<function start="19" end="19" comment="FH_FREIGABE_PWF_US" mask="00000001b">00</function>
+			</group>
+		</code>
+	</cafd>
+
+
+	<cafd id="00001DF8" name="BDC_BODY3" author="siegester" series="S18A">
+		<code description="(1/2) Enable GFHB - Anti-dazzle headlights">
+			<group id="3531">
+				<function start="190" end="190" comment="C_AFS_ECO_LEVEL_3_ENA" mask="00000100b">01</function>
+				<function start="190" end="190" comment="C_AFS_ENA" mask="00000001b">01</function>
+			</group>
+			<group id="3530">
+				<function start="245" end="245" comment="C_BLC_PRE_ENA" mask="00000001b">01</function>
+				<function start="44"  end="46"  comment="LUT_FLC_FORWARDLIGHTING_Y" mask="11111111b">AFS</function>
+			</group>
+			<group id="3532">
+				<function start="192" end="192" comment="C_CLC_CURV_V2" mask="11111111b">23</function>
+				<function start="193" end="193" comment="C_CLC_CURV_V3" mask="11111111b">28</function>
+				<function start="186" end="186" comment="C_CLC_EXT_ENA" mask="00110000b">01</function>
+				<function start="214" end="214" comment="C_HBA_DIM_ENA" mask="00000100b">01</function>
+				<function start="217" end="217" comment="C_HBA_GFHBA_ENA_V_HI" mask="11111111b">3C</function>
+				<function start="214" end="214" comment="C_HBA_GFHB_ENA" mask="00000010b">01</function>
+				<function start="93" end="123"  comment="LUT_AFS_CODRV_HOR" mask="11111111b">standard/init</function>
+				<function start="62" end="92"   comment="LUT_AFS_DRV_HOR" mask="11111111b">F040_G005_AHL/G015_G020_Laser</function>
+			</group>
+		</code>
+	</cafd>
+
+
+	<cafd id="00005665" name="BDC_BODY3" author="siegester" series="S18A">
+		<code description="(1/2) Enable Independent Turn Signal">
+			<group id="3700">
+				<function start="20"  end="21"  comment="POL_L_CCM" mask="11111111b">CCM0</function>
+				<function start="22"  end="22"  comment="POL_L_UE_SPG_SCHUTZ" mask="00011000b">Inactive</function>
+				<function start="27"  end="27"  comment="POL_R_UE_SPG_SCHUTZ" mask="00011000b">Inactive</function>
+				<function start="42"  end="42"  comment="SML_L_UE_SPG_SCHUTZ" mask="00011000b">Inactive</function>
+				<function start="47"  end="47"  comment="SML_R_UE_SPG_SCHUTZ" mask="00011000b">Inactive</function>
+				<function start="60"  end="61"  comment="FRA_V_L_CCM" mask="11111111b">default</function>
+				<function start="65"  end="66"  comment="FRA_V_R_CCM" mask="11111111b">default</function>
+				<function start="122" end="122" comment="BFD_L_UE_SPG_SCHUTZ" mask="00011000b">Inactive</function>
+				<function start="127" end="127" comment="BFD_R_UE_SPG_SCHUTZ" mask="00011000b">Inactive</function>
+				<function start="130" end="131" comment="NSL_L_CCM" mask="11111111b">CCM114</function>
+				<function start="132" end="132" comment="NSL_L_UE_SPG_SCHUTZ" mask="00011000b">Active, Active</function>
+				<function start="135" end="136" comment="NSL_R_CCM" mask="11111111b">CCM129</function>
+				<function start="137" end="137" comment="NSL_R_UE_SPG_SCHUTZ" mask="00011000b">Active, Active</function>
+			</group>
+			<group id="3702">
+				<function start="1" end="1"   comment="LIC_FEATURE_14" mask="01000000b">disable</function>
+			</group>
+			<group id="3703">
+				<function start="0" end="199" comment="LIC_NIVEAU_OVERRIDE_INDEX" mask="11111111b">G20_ECE_code2</function>
+			</group>
+			<group id="3704">
+				<function start="0" end="239" comment="LIC_NIVEAU_OVERRIDE_DATA_0" mask="11111111b">G20_ECE_code1</function>
+			</group>
+			<group id="3706">
+				<function start="0" end="241" comment="LIC_LOG_LAMP_2_PHYS_LAMP_INDEX" mask="11111111b">UNK_PARAM_25</function>
+			</group>
+			<group id="3707">
+				<function start="0" end="213" comment="LIC_LOG_LAMP_2_PHYS_LAMP_DATA" mask="11111111b">UNK_PARAM_25</function>
+			</group>
+			<group id="3708">
+				<function start="0" end="36"  comment="LIC_VERSION_DATA" mask="11111111b">UNK_PARAM_28</function>
+			</group>
+			<group id="3709">
+				<function start="0" end="211" comment="LIC_EDGE_CUTTER_RULE_ASSIGNMENT" mask="11111111b">UNK_PARAM_3</function>
+			</group>
+		</code>
+	</cafd>
+
+
+	<cafd id="000042C1" name="SAS3" author="siegester" series="S18A">
+		<code description="(1/2) Enable Automatic Lane Change Assistant (HU_MGU)">
+			<group id="3000">
+				<function start="137" end="137" comment="C_SWA_VORHANDEN" mask="11111111b">01</function>
+			</group>
+		</code>
+	</cafd>
+
+
+	<cafd id="00003E52" name="HU_MGU" author="siegester" series="S18A">
+		<code description="Full sms display">
+			<group id="3001">
+				<function start="7" end="7" comment="PIM_Driving_Text_Length" mask="00001110b">whole_text</function>
+			</group>
+		</code>		
+
+		<code description="Change Startup Emblem to BMW ///M">
+			<group id="3000">
+				<function start="11" end="11" comment="STARTUP_EMBLEM" mask="00011110b">bmw_m</function>
+			</group>
+		</code>		
+		
+		<code description="enable 1.0 on g meter">
+			<group id="3008">
+				<function start="5" end="5" comment="G_METER_MAX_VAL" mask="00011100b">1.0</function>
+			</group>
+		</code>
+		
+		<code description="(2/2) Enable Automatic Lane Change Assistant (SAS3)">
+			<group id="300A">
+				<function start="11" end="11" comment="SPURWECHSELASSISTENT" mask="00000001b">01</function>
+			</group>
+		</code>
+	</cafd>
+
+
+	<cafd id="00004224" name="RAM" author="siegester" series="S18A">
+		<code description="Disable Active Sound Inside (ASD)">
+			<group id="3001">
+				<function start="19" end="19" comment="ASD_INSIDE" mask="00000001b">00</function>
+			</group>
+		</code>
+	</cafd>
+</FDL>

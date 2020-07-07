@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <FDL>
 	<!--tutuianu_daniel-->
-	
+
 	<cafd id="00000122" name="KAFAS" author="tutuianu_daniel">
 		<code description="SLI 1 Romania No speed limit info in this country (get your country code uppercase in hex http://www.unit-conversion.info/texttools/hexadecimal/  )">
 			<group id="3030">
@@ -12,7 +12,7 @@
 			</group>
 		</code>
 	</cafd>
-	
+
 	<cafd id="00001EF6" name="HU_NBT_EVO" author="tutuianu_daniel">
 		<code description="Touchscreen activation">
 			<group id="3005">
@@ -66,8 +66,8 @@
 				<function start="69" end="69" comment="" mask="00111000b">10_25</function>
 			</group>
 		</code>
-		
-		
+
+
 		<code description="APIX 2 8.8 inch 1280 x 480">
 			<group id="3005">
 				<function start="68" end="68" comment="" mask="00001110b">apix2</function>
@@ -86,7 +86,7 @@
 				<function start="69" end="69" comment="" mask="00111000b">10_25</function>
 			</group>
 		</code>
-		
+
 		<code description="APIX 2 8.8 inch 1440 x 540">
 			<group id="3005">
 				<function start="68" end="68" comment="" mask="00001110b">apix2</function>
@@ -106,9 +106,9 @@
 			</group>
 		</code>
 	</cafd>
-	
+
 	<cafd id="000017BE" name="BDC_01" author="tutuianu_daniel">
-		<code description="Ambient colors - green, red and violett">
+		<code description="Ambient colors - green, red and violett ( old firmware )">
 			<group id="3070">
 				<function start="60" end="60" comment="weiss" mask="11111111b">59</function>
 				<function start="61" end="61" comment="gruen" mask="11111111b">55</function>
@@ -139,6 +139,73 @@
 				<function start="86" end="86" comment="violett" mask="11111111b">B6</function>
 			</group>
 		</code>
+		<code description="Ambient colors - green, red and violett ( new firmware )">
+			<group id="3076">
+				<function start="126" end="126" comment="green" mask="11111111b">00</function>
+				<function start="127" end="127" comment="green" mask="11111111b">FF</function>
+				<function start="128" end="128" comment="green" mask="11111111b">00</function>
+				<function start="129" end="129" comment="green" mask="11111111b">00</function>
+				<function start="130" end="130" comment="green" mask="11111111b">FF</function>
+				<function start="131" end="131" comment="green" mask="11111111b">00</function>
+				<function start="132" end="132" comment="green" mask="11111111b">00</function>
+				<function start="133" end="133" comment="green" mask="11111111b">FF</function>
+				<function start="134" end="134" comment="green" mask="11111111b">00</function>
+				<function start="135" end="135" comment="green" mask="11111111b">00</function>
+				<function start="136" end="136" comment="green" mask="11111111b">FF</function>
+				<function start="137" end="137" comment="green" mask="11111111b">00</function>
+				<function start="138" end="138" comment="green" mask="11111111b">00</function>
+				<function start="139" end="139" comment="green" mask="11111111b">FF</function>
+				<function start="140" end="140" comment="green" mask="11111111b">00</function>
+				<function start="141" end="141" comment="green" mask="11111111b">00</function>
+				<function start="142" end="142" comment="green" mask="11111111b">FF</function>
+				<function start="143" end="143" comment="green" mask="11111111b">00</function>
+				<function start="144" end="144" comment="green" mask="11111111b">00</function>
+				<function start="145" end="145" comment="green" mask="11111111b">FF</function>
+				<function start="146" end="146" comment="green" mask="11111111b">00</function>
+				<function start="147" end="147" comment="red" mask="11111111b">FF</function>
+				<function start="148" end="148" comment="red" mask="11111111b">00</function>
+				<function start="149" end="149" comment="red" mask="11111111b">00</function>
+				<function start="150" end="150" comment="red" mask="11111111b">FF</function>
+				<function start="151" end="151" comment="red" mask="11111111b">00</function>
+				<function start="152" end="152" comment="red" mask="11111111b">00</function>
+				<function start="153" end="153" comment="red" mask="11111111b">FF</function>
+				<function start="154" end="154" comment="red" mask="11111111b">00</function>
+				<function start="155" end="155" comment="red" mask="11111111b">00</function>
+				<function start="156" end="156" comment="red" mask="11111111b">FF</function>
+				<function start="157" end="157" comment="red" mask="11111111b">00</function>
+				<function start="158" end="158" comment="red" mask="11111111b">00</function>
+				<function start="159" end="159" comment="red" mask="11111111b">FF</function>
+				<function start="160" end="160" comment="red" mask="11111111b">00</function>
+				<function start="161" end="161" comment="red" mask="11111111b">00</function>
+				<function start="162" end="162" comment="red" mask="11111111b">FF</function>
+				<function start="163" end="163" comment="red" mask="11111111b">00</function>
+				<function start="164" end="164" comment="red" mask="11111111b">00</function>
+				<function start="165" end="165" comment="red" mask="11111111b">FF</function>
+				<function start="166" end="166" comment="red" mask="11111111b">00</function>
+				<function start="167" end="167" comment="red" mask="11111111b">00</function>
+				<function start="168" end="168" comment="violett" mask="11111111b">FF</function>
+				<function start="169" end="169" comment="violett" mask="11111111b">00</function>
+				<function start="170" end="170" comment="violett" mask="11111111b">FF</function>
+				<function start="171" end="171" comment="violett" mask="11111111b">FF</function>
+				<function start="172" end="172" comment="violett" mask="11111111b">00</function>
+				<function start="173" end="173" comment="violett" mask="11111111b">FF</function>
+				<function start="174" end="174" comment="violett" mask="11111111b">FF</function>
+				<function start="175" end="175" comment="violett" mask="11111111b">00</function>
+				<function start="176" end="176" comment="violett" mask="11111111b">FF</function>
+				<function start="177" end="177" comment="violett" mask="11111111b">FF</function>
+				<function start="178" end="178" comment="violett" mask="11111111b">00</function>
+				<function start="179" end="179" comment="violett" mask="11111111b">FF</function>
+				<function start="180" end="180" comment="violett" mask="11111111b">FF</function>
+				<function start="181" end="181" comment="violett" mask="11111111b">00</function>
+				<function start="182" end="182" comment="violett" mask="11111111b">FF</function>
+				<function start="183" end="183" comment="violett" mask="11111111b">FF</function>
+				<function start="184" end="184" comment="violett" mask="11111111b">00</function>
+				<function start="185" end="185" comment="violett" mask="11111111b">FF</function>
+				<function start="186" end="186" comment="violett" mask="11111111b">FF</function>
+				<function start="187" end="187" comment="violett" mask="11111111b">00</function>
+				<function start="188" end="188" comment="violett" mask="11111111b">FF</function>
+			</group>
+		</code>
 	</cafd>
 
 
@@ -154,14 +221,14 @@
 				<function start="1" end="1" comment="SBR_nicht_verbaut" mask="11111111b">00</function>
 			</group>
 		</code>
-		
-		
+
+
 		<code description="ENABLE Seat Belt Status and Reminder Chime (Driver) - 2016+ Firmware">
 			<group id="3001">
 				<function start="0" end="0" comment="SBR_ohne_SBE" mask="11111111b">04</function>
 			</group>
 		</code>
-		
+
 		<code description="ENABLE Seat Belt Status and Reminder Chime (Passenger) - 2016+ Firmware">
 			<group id="3001">
 				<function start="1" end="1" comment="SBR_mit_SBE" mask="11111111b">03</function>

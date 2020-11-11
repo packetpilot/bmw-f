@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FDL>
+  <!--SergAA-->
+  <cafd id="00001060" name="DKOMBI 6WB" author="SergAA" series="F010">
+    <code description="Startup screen - BMW (standard)">
+      <group id="3000">
+        <function start="44" end="44" mask="00001111b">00</function>
+      </group>
+    </code>
+    <code description="Startup screen - M">
+      <group id="3000">
+        <function start="44" end="44" mask="00001111b">01</function>
+      </group>
+    </code>
+    <code description="Startup screen - BMW i">
+      <group id="3000">
+        <function start="44" end="44" mask="00001111b">03</function>
+      </group>
+    </code>
+    <code description="Startup screen - X5M">
+      <group id="3000">
+        <function start="44" end="44" mask="00001111b">08</function>
+      </group>
+    </code>
+    <code description="Startup screen - X6M">
+      <group id="3000">
+        <function start="44" end="44" mask="00001111b">09</function>
+      </group>
+    </code>
+    <code description="ECO Pro sailing display">
+      <group id="3003">
+        <function start="4" end="4" mask="00010000b">01</function>
+      </group>
+    </code>
+    <code description="Entertainment display in HUD">
+      <group id="3003">
+        <function start="10" end="10" mask="00000001b">01</function>
+      </group>
+    </code>
+    <code description="HorsePower display on">
+      <group id="3003">
+        <function start="11" end="11" mask="00000010b">01</function>
+      </group>
+    </code>
+  </cafd>
+  <cafd id="0000000F" name="CAS_04" author="SergAA" series="F010">
+    <code description="Start Stop - default OFF">
+      <group id="3000">
+        <function start="3" end="3" mask="00010000b">01</function>
+      </group>
+    </code>
+    <code description="Start Stop - memory">
+      <group id="3000">
+        <function start="3" end="3" mask="00100000b">01</function>
+      </group>
+    </code>
+  </cafd>
+  <cafd id="000001A7" name="DME DDE" author="SergAA" series="F010">
+    <code description="Recuperation off - always charge">
+      <group id="3701">
+        <function start="2" end="2" mask="00000001b">00</function>
+      </group>
+    </code>
+  </cafd>
+  <cafd id="00000092" name="IHKA" author="SergAA" series="F010">
+    <code description="Use webasto as additional heater (by default it stops after engine on)">
+      <group id="3000">
+        <function start="1" end="1" mask="00010000b">01</function>
+      </group>
+    </code>
+  </cafd>
+  <cafd id="00001148" name="KAFAS2" author="SergAA" series="F010">
+    <code description="Detect Road mark (Painted lane markings) + Detect grass and road sides">
+      <group id="3020">
+        <function start="1" end="1" mask="00000011b">02</function>
+      </group>
+    </code>
+    <code description="Enable High Beam Assistant FLA">
+      <group id="3050">
+        <function start="0" end="0" mask="00000001b">01</function>
+      </group>
+    </code>
+    <code description="Enable High Beam GlareFree">
+      <group id="3050">
+        <function start="0" end="0" mask="10000000b">01</function>
+      </group>
+    </code>
+    <code description="Lanes if system is on, arrows side dependant on. No yellow status.">
+      <group id="3020">
+        <function start="1" end="1" mask="11110000b">02</function>
+      </group>
+    </code>
+  </cafd>
+  <cafd id="0000004C" name="Night Vision 2" author="SergAA" series="F010">
+    <code description="Enable backgroup pedestrian detection">
+      <group id="3000">
+        <function start="20" end="20" mask="01111111b">5F</function>
+      </group>
+      <group id="3250">
+        <function start="0" end="0" mask="00010000b">01</function>
+        <function start="0" end="0" mask="10000000b">01</function>
+      </group>
+      <group id="3252">
+        <function start="0" end="0" mask="00000001b">01</function>
+      </group>
+      <group id="3253">
+        <function start="50" end="50" mask="00100000b">01</function>
+      </group>
+      <group id="3240">
+        <function start="21" end="21" mask="11111111b">FF</function>
+      </group>
+    </code>
+  </cafd>
+  <cafd id="00000909" name="ACSM" author="SergAA" series="F010">
+    <code description="Disable initial seatbelt warning">
+      <group id="3000">
+        <function start="15" end="15" mask="00000001b">01</function>
+      </group>
+    </code>
+  </cafd>
+  <cafd id="0000106D" name="FRM" author="SergAA" series="F010">
+    <code description="Set High Beam Assistant Default to Automatic on">
+      <group id="3050">
+        <function start="20" end="20" mask="00100000b">01</function>
+      </group>
+    </code>
+  </cafd>
+</FDL>

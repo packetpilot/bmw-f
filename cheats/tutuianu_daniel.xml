@@ -24,7 +24,20 @@
 				<function start="5" end="5" comment="" mask="00000001b">aktiv</function>
 			</group>
 		</code>
-		<code description="NBT EVO ATM Emulator">
+		<code description="NBT EVO GPS use internal port">
+			<group id="3000">
+				<function start="105" end="105" comment="" mask="00100000b">aktiv</function>
+				<function start="19" end="19" comment="" mask="00000110b">navigation</function>
+			</group>
+			<group id="3003">
+				<function start="18" end="18" comment="" mask="00000001b">aktiv</function>
+				<function start="3" end="3" comment="" mask="11100000b">nicht_aktiv</function>
+			</group>
+			<group id="3006">
+				<function start="28" end="28" comment="" mask="00010000b">aktiv</function>
+			</group>
+		</code>
+		<code description="NBT EVO GPS use ATM - OABR port">
 			<group id="3000">
 				<function start="105" end="105" comment="" mask="00100000b">aktiv</function>
 				<function start="19" end="19" comment="" mask="00000110b">navigation</function>

@@ -2572,4 +2572,198 @@
             </group>
         </code>
     </cafd>
+  
+    <!--2022-02-03 Added aSLA, TLA, and DAP-->
+	<!--Special Thanks to eaglesrest and atomantmk -->
+    
+    <cafd id="00003E52" name="HU_MGU" author="Almaretto" series="G005, G007, G020, G015, G030, G011">	
+		<code description="ENABLE Auto Speed Limit Assist (aSLA). Req ID7 and 11-20 I-Step. See 7083, SAS3 42C1, DSC 3D14 (2/4)">
+			<group id="300A">
+				<function start="10" end="10" comment="STRECKENVERLAUF - gen_01" mask="10000000b">01</function>
+				<function start="13" end="13" comment="VORAUSSCHAU - gen_01" mask="00001100b">01</function>
+				<function start="14" end="14" comment="SLAAUTOMATISCH - gen_01" mask="00110000b">01</function>
+				<function start="14" end="14" comment="VOFFSET - gen_1" mask="11000000b">01</function>
+				<function start="15" end="15" comment="VOFFSET_LANGSAM - gen_1" mask="11000000b">01</function>
+				<function start="18" end="18" comment="STRECKENVERLAUF_GENERATION - gen_1" mask="00000011b">01</function>
+			</group>	
+		</code>	
+		<code description="DISABLE Auto Speed Limit Assist (aSLA). See 7083, SAS3 42C1, DSC 3D14 (2/4)">
+			<group id="300A">
+				<function start="10" end="10" comment="STRECKENVERLAUF - gen_01" mask="10000000b">01</function>
+				<function start="13" end="13" comment="VORAUSSCHAU - gen_01" mask="00001100b">00</function>
+				<function start="14" end="14" comment="SLAAUTOMATISCH - gen_01" mask="00110000b">00</function>
+				<function start="14" end="14" comment="VOFFSET - gen_1" mask="11000000b">00</function>
+				<function start="15" end="15" comment="VOFFSET_LANGSAM - gen_1" mask="11000000b">00</function>
+				<function start="18" end="18" comment="STRECKENVERLAUF_GENERATION - gen_1" mask="00000011b">01</function>
+			</group>	
+		</code>	
+		<code description="ENABLE Traffic Light Assistant (TLA). Req ID7, 11-20 I-Step, and aSLA. See 7083, SAS3 42C1, DSC 3D14 (2/4)">
+			<group id="300A">
+				<function start="16" end="16" comment="AMPELN - gen_01" mask="01100000b">01</function>
+				<function start="17" end="17" comment="AMPELASSISTENT - gen_01" mask="00110000b">01</function>
+				<function start="17" end="17" comment="ANFAHRERINNERUNG - gen_01" mask="11000000b">01</function>
+			</group>	
+		</code>	
+		<code description="DISABLE Traffic Light Assistant (TLA). See 7083, SAS3 42C1, DSC 3D14 (2/4)">
+			<group id="300A">
+				<function start="16" end="16" comment="AMPELN - gen_01" mask="01100000b">00</function>
+				<function start="17" end="17" comment="AMPELASSISTENT - gen_01" mask="00110000b">00</function>
+				<function start="17" end="17" comment="ANFAHRERINNERUNG - gen_01" mask="11000000b">00</function>
+			</group>	
+		</code>	
+		<code description="ENABLE Driver Assistant Pro (DAP) - New Features. See BDC, SAS3 (2/3)">
+			<group id="300A">
+				<function start="14" end="14" comment="EINSEITIGVORBEIFAHREN - Undertaking gen_1" mask="00000011b">01</function>
+				<function start="19" end="19" comment="RETTUNGSGASSE - Emergency Lane Formation aktiv" mask="00000100b">01</function>
+				<function start="16" end="16" comment="SITUATIVERABSTAND - Adjust Distance Menu gen_1" mask="00000110b">01</function>
+			</group>	
+		</code>	
+		<code description="DISABLE Driver Assistant Pro (DAP) - New Features. See BDC, SAS3 (2/3)">
+			<group id="300A">
+				<function start="14" end="14" comment="EINSEITIGVORBEIFAHREN - Undertaking gen_1" mask="00000011b">00</function>
+				<function start="19" end="19" comment="RETTUNGSGASSE - Emergency Lane Formation aktiv" mask="00000100b">00</function>
+				<function start="16" end="16" comment="SITUATIVERABSTAND - Adjust Distance Menu gen_1" mask="00000110b">01</function>
+			</group>	
+		</code>	
+	</cafd>	
+    <cafd id="000042C1" name="SAS3" author="Almaretto" series="G005, G007, G020, G015, G030, G011">	
+		<code description="ENABLE Auto Speed Limit Assist (aSLA). Req ID7 and 11-20 I-Step. See 7083, MGU, DSC 3D14 (3/4)">
+			<group id="3001">
+				<function start="167" end="167" comment="C_SLA_Anzeige_Zusatztexte - Nr001_aktiviert" mask="11111111b">01</function>
+			</group>
+			<group id="3000">	
+				<function start="93" end="93" comment="C_SLA_Streckenregelung_vorhanden - NR_002_vorhanden_SLA_entkoppelt" mask="11111111b">02</function>
+				<function start="112" end="115" comment="C_SLA_aSLA_Land_Aktiv - 0xFFFFFFFF" mask="11111111b">FF, FF, FF, FF</function>
+				<function start="116" end="119" comment="C_SLA_Vorausschau_Land_Aktiv - 0xFFFFFFFF" mask="11111111b">FF, FF, FF, FF</function>
+				<function start="130" end="130" comment="C_SLA_aSLA_vorhanden - Nr001_vorhanden" mask="11111111b">01</function>
+				<function start="131" end="134" comment="C_SLA_Streckenregelung_Land_Aktiv - 0xFFFFFFFF" mask="11111111b">FF, FF, FF, FF</function>
+			</group>	
+		</code>	
+		<code description="DISABLE Auto Speed Limit Assist (aSLA). See 7083, MGU, DSC 3D14 (3/4)">
+			<group id="3001">
+				<function start="167" end="167" comment="C_SLA_Anzeige_Zusatztexte - Nr001_aktiviert" mask="11111111b">01</function>
+			</group>
+			<group id="3000">	
+				<function start="93" end="93" comment="C_SLA_Streckenregelung_vorhanden - NR_002_vorhanden_SLA_entkoppelt" mask="11111111b">02</function>
+				<function start="112" end="115" comment="C_SLA_aSLA_Land_Aktiv - 0xFFFFFFFF" mask="11111111b">F9, 0F, 86, 00</function>
+				<function start="116" end="119" comment="C_SLA_Vorausschau_Land_Aktiv - 0xFFFFFFFF" mask="11111111b">FB, DF, A7, C0</function>
+				<function start="130" end="130" comment="C_SLA_aSLA_vorhanden - Nr001_vorhanden" mask="11111111b">00</function>
+				<function start="131" end="134" comment="C_SLA_Streckenregelung_Land_Aktiv - 0xFFFFFFFF" mask="11111111b">FF, CF, 9F, F8</function>
+			</group>	
+		</code>	
+		<code description="ENABLE Traffic Light Assistant (TLA). Req ID7, 11-20 I-Step, and aSLA. See 7083, MGU, DSC 3D14 (3/4)">
+			<group id="3000">
+				<function start="178" end="178" comment="C_UCC_vorhanden - Nr001_vorhanden" mask="11111111b">01</function>
+				<function start="179" end="182" comment="C_SLA_UCC_Land_aktiv - 0xFFFFFFFF" mask="11111111b">FF, FF, FF, FF</function>
+				<function start="188" end="191" comment="C_SLA_aUCC_Land_aktiv - 0xFFFFFFFF" mask="11111111b">FF, FF, FF, FF</function>
+			</group>	
+		</code>	
+		<code description="DISABLE Traffic Light Assistant (TLA). See 7083, MGU, DSC 3D14 (3/4)">
+			<group id="3000">
+				<function start="178" end="178" comment="C_UCC_vorhanden - Nr000_nicht_vorhanden" mask="11111111b">00</function>
+				<function start="179" end="182" comment="C_SLA_UCC_Land_aktiv - 0xFFFFFFFF" mask="11111111b">08, 00, 00, 00</function>
+				<function start="188" end="191" comment="C_SLA_aUCC_Land_aktiv - 0xFFFFFFFF" mask="11111111b">08, 00, 00, 00</function>
+			</group>	
+		</code>	
+		<code description="ENABLE Driver Assistant Pro (DAP) - Unsupported Highway Exit Assistant. See BDC, MGU (3/3)">
+			<group id="3000">
+				<function start="183" end="183" comment="C_QmaN_Vorhanden - nr001_vorhanden" mask="11111111b">00</function>
+				<function start="184" end="187" comment="C_SLA_QmaN_Land_aktiv - FFFFFFFF" mask="11111111b">FA, C3, 81, F8</function>
+			</group>	
+		</code>	
+		<code description="DISABLE Driver Assistant Pro (DAP) - Unsupported Highway Exit Assistant. See BDC, MGU (3/3)">
+			<group id="3000">
+				<function start="183" end="183" comment="C_QmaN_Vorhanden - nr001_vorhanden" mask="11111111b">00</function>
+				<function start="184" end="187" comment="C_SLA_QmaN_Land_aktiv - FFFFFFFF" mask="11111111b">FA, C3, 81, F8</function>
+			</group>	
+		</code>	
+		<code description="ENABLE Driver Assistant Pro (DAP) - Option to form emergency lane. See BDC, MGU (3/3)">
+			<group id="3000">
+				<function start="192" end="192" comment="C_RGA_Funktion - Nr001_aktiviert" mask="11111111b">01</function>
+				<function start="193" end="196" comment="C_RGA_Land_aktiv - FFFFFFFF" mask="11111111b">FF, FF, FF, FF</function>
+				<function start="197" end="200" comment="C_RGA_Seitenwahl_links_Land_aktiv - FFFFFFFF" mask="11111111b">FF, FF, FF, FF</function>
+			</group>	
+		</code>	
+		<code description="DISABLE Driver Assistant Pro (DAP) - Option to form emergency lane. See BDC, MGU (3/3)">
+			<group id="3000">
+				<function start="192" end="192" comment="C_RGA_Funktion - Nr001_aktiviert" mask="11111111b">00</function>
+				<function start="193" end="196" comment="C_RGA_Land_aktiv - FFFFFFFF" mask="11111111b">88, 88, 01, 70</function>
+				<function start="197" end="200" comment="C_RGA_Seitenwahl_links_Land_aktiv - FFFFFFFF" mask="11111111b">88, 88, 01, 70</function>
+			</group>	
+		</code>	
+		<code description="ENABLE Driver Assistant Pro (DAP) - Undertaking. See BDC, MGU (3/3)">
+			<group id="3001">
+				<function start="160" end="160" comment="C_Rechtsueberholen_verbieten - Nr001_aktiviert" mask="11111111b">01</function>
+			</group>	
+		</code>	
+		<code description="DISABLE Driver Assistant Pro (DAP) - Undertaking. See BDC, MGU (3/3)">
+			<group id="3001">
+				<function start="160" end="160" comment="C_Rechtsueberholen_verbieten - Nr000_deaktiviert" mask="11111111b">00</function>
+			</group>	
+		</code>	
+	</cafd>	
+    <cafd id="00003D14" name="DSC_VIP" author="Almaretto" series="G005, G007, G020, G015, G011">	
+		<code description="ENABLE Speed Limit Assist (aSLA). Req ID7 and 11-20 I-Step. See 7083, MGU, DSC 3D14 (4/4)">
+			<group id="3020">
+				<function start="111" end="114" comment="C_SLA_aSLA_Land_Aktiv - 0xFFFFFFFF" mask="11111111b">FF, FF, FF, FF</function>
+				<function start="117" end="117" comment="C_SLA_aSLA_vorhanden - Nr001_vorhanden" mask="11111111b">01</function>
+				<function start="144" end="144" comment="C_SLA_Anzeige_Zusatztexte - Nr001_aktiviert" mask="11111111b">01</function>
+				<function start="210" end="213" comment="C_SLA_Vorausschau_Land_Aktiv - 0xFFFFFFFF" mask="11111111b">FF, FF, FF, FF</function>
+				<function start="215" end="215" comment="C_SLA_Streckenregelung_vorhanden - NR_002_vorhanden_SLA_entkoppelt" mask="11111111b">02</function>
+				<function start="216" end="219" comment="C_SLA_Streckenregelung_Land_Aktiv - 0xFFFFFFFF" mask="11111111b">FF, FF, FF, FF</function>
+			</group>	
+		</code>	
+		<code description="DISABLE Speed Limit Assist (aSLA). See 7083, MGU, DSC 3D14 (4/4)">
+			<group id="3020">
+				<function start="111" end="114" comment="C_SLA_aSLA_Land_Aktiv - 0xFFFFFFFF" mask="11111111b">F9, 0F, 86, 00</function>
+				<function start="117" end="117" comment="C_SLA_aSLA_vorhanden - Nr001_vorhanden" mask="11111111b">00</function>
+				<function start="144" end="144" comment="C_SLA_Anzeige_Zusatztexte - Nr001_aktiviert" mask="11111111b">01</function>
+				<function start="210" end="213" comment="C_SLA_Vorausschau_Land_Aktiv - 0xFFFFFFFF" mask="11111111b">FB, DF, AF, C0</function>
+				<function start="215" end="215" comment="C_SLA_Streckenregelung_vorhanden - NR_002_vorhanden_SLA_entkoppelt" mask="11111111b">00</function>
+				<function start="216" end="219" comment="C_SLA_Streckenregelung_Land_Aktiv - 0xFFFFFFFF" mask="11111111b">F9, 0F, 86, 00</function>
+			</group>	
+		</code>	
+		<code description="ENABLE Traffic Light Assistant (TLA). Req ID7, 11-20 I-Step, and aSLA. See 7083, MGU, DSC 3D14 (4/4)">
+			<group id="3020">
+				<function start="179" end="182" comment="C_SLA_UCC_Land_aktiv - 0xFFFFFFFF" mask="11111111b">FF, FF, FF, FF</function>
+			</group>	
+		</code>	
+		<code description="DISABLE Traffic Light Assistant (TLA). See 7083, MGU, DSC 3D14 (4/4)">
+			<group id="3020">
+				<function start="179" end="182" comment="C_SLA_UCC_Land_aktiv - Nr000_Bausteinpartitionierung" mask="11111111b">00, 00, 00, 00</function>
+			</group>	
+		</code>	
+	</cafd>		
+    <cafd id="00003D78" name="DSC_VIP" author="Almaretto" series="G005, G007, G020">	
+		<code description="ENABLE Speed Limit Assist (aSLA). Req ID7 and 11-20 I-Step. See 7083, MGU, DSC 3D14 (4/4)">
+			<group id="3020">
+				<function start="111" end="114" comment="C_SLA_aSLA_Land_Aktiv - 0xFFFFFFFF" mask="11111111b">FF, FF, FF, FF</function>
+				<function start="117" end="117" comment="C_SLA_aSLA_vorhanden - Nr001_vorhanden" mask="11111111b">01</function>
+				<function start="144" end="144" comment="C_SLA_Anzeige_Zusatztexte - Nr001_aktiviert" mask="11111111b">01</function>
+				<function start="210" end="213" comment="C_SLA_Vorausschau_Land_Aktiv - 0xFFFFFFFF" mask="11111111b">FF, FF, FF, FF</function>
+				<function start="215" end="215" comment="C_SLA_Streckenregelung_vorhanden - NR_002_vorhanden_SLA_entkoppelt" mask="11111111b">02</function>
+				<function start="216" end="219" comment="C_SLA_Streckenregelung_Land_Aktiv - 0xFFFFFFFF" mask="11111111b">FF, FF, FF, FF</function>
+			</group>	
+		</code>	
+		<code description="DISABLE Speed Limit Assist (aSLA). See 7083, MGU, DSC 3D14 (4/4)">
+			<group id="3020">
+				<function start="111" end="114" comment="C_SLA_aSLA_Land_Aktiv - 0xFFFFFFFF" mask="11111111b">F9, 0F, 86, 00</function>
+				<function start="117" end="117" comment="C_SLA_aSLA_vorhanden - Nr001_vorhanden" mask="11111111b">00</function>
+				<function start="144" end="144" comment="C_SLA_Anzeige_Zusatztexte - Nr001_aktiviert" mask="11111111b">01</function>
+				<function start="210" end="213" comment="C_SLA_Vorausschau_Land_Aktiv - 0xFFFFFFFF" mask="11111111b">FB, DF, AF, C0</function>
+				<function start="215" end="215" comment="C_SLA_Streckenregelung_vorhanden - NR_002_vorhanden_SLA_entkoppelt" mask="11111111b">00</function>
+				<function start="216" end="219" comment="C_SLA_Streckenregelung_Land_Aktiv - 0xFFFFFFFF" mask="11111111b">F9, 0F, 86, 00</function>
+			</group>	
+		</code>	
+		<code description="ENABLE Traffic Light Assistant (TLA). Req ID7, 11-20 I-Step, and aSLA. See 7083, MGU, DSC 3D14 (4/4)">
+			<group id="3020">
+				<function start="179" end="182" comment="C_SLA_UCC_Land_aktiv - 0xFFFFFFFF" mask="11111111b">FF, FF, FF, FF</function>
+			</group>	
+		</code>	
+		<code description="DISABLE Traffic Light Assistant (TLA). See 7083, MGU, DSC 3D14 (4/4)">
+			<group id="3020">
+				<function start="179" end="182" comment="C_SLA_UCC_Land_aktiv - Nr000_Bausteinpartitionierung" mask="11111111b">00, 00, 00, 00</function>
+			</group>	
+		</code>	
+	</cafd>	
 </FDL>

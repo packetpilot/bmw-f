@@ -2575,8 +2575,8 @@
   
     <!--2022-02-03 Added aSLA, TLA, and DAP-->
 	<!--Special Thanks to eaglesrest and atomantmk -->
-
-	<cafd id="00003E52" name="HU_MGU" author="Almaretto" series="G005, G007, G020, G015, G030, G011">	
+    
+    <cafd id="00003E52" name="HU_MGU" author="Almaretto" series="G005, G007, G020, G015, G030, G011">	
 		<code description="ENABLE Auto Speed Limit Assist (aSLA). Req ID7 and 11-20 I-Step. See 7083, SAS3 42C1, DSC 3D14 (2/4)">
 			<group id="300A">
 				<function start="10" end="10" comment="STRECKENVERLAUF - gen_01" mask="10000000b">01</function>
@@ -2626,7 +2626,7 @@
 			</group>	
 		</code>	
 	</cafd>	
-<cafd id="000042C1" name="SAS3" author="Almaretto" series="G005, G007, G020, G015, G030, G011">	
+    <cafd id="000042C1" name="SAS3" author="Almaretto" series="G005, G007, G020, G015, G030, G011">	
 		<code description="ENABLE Auto Speed Limit Assist (aSLA). Req ID7 and 11-20 I-Step. See 7083, MGU, DSC 3D14 (3/4)">
 			<group id="3001">
 				<function start="167" end="167" comment="C_SLA_Anzeige_Zusatztexte - Nr001_aktiviert" mask="11111111b">01</function>
@@ -2702,7 +2702,7 @@
 			</group>	
 		</code>	
 	</cafd>	
-<cafd id="00003D14" name="DSC_VIP" author="Almaretto" series="G005, G007, G020, G015, G011">	
+    <cafd id="00003D14" name="DSC_VIP" author="Almaretto" series="G005, G007, G020, G015, G011">	
 		<code description="ENABLE Speed Limit Assist (aSLA). Req ID7 and 11-20 I-Step. See 7083, MGU, DSC 3D14 (4/4)">
 			<group id="3020">
 				<function start="111" end="114" comment="C_SLA_aSLA_Land_Aktiv - 0xFFFFFFFF" mask="11111111b">FF, FF, FF, FF</function>
@@ -2734,7 +2734,7 @@
 			</group>	
 		</code>	
 	</cafd>		
-<cafd id="00003D78" name="DSC_VIP" author="Almaretto" series="G005, G007, G020">	
+    <cafd id="00003D78" name="DSC_VIP" author="Almaretto" series="G005, G007, G020">	
 		<code description="ENABLE Speed Limit Assist (aSLA). Req ID7 and 11-20 I-Step. See 7083, MGU, DSC 3D14 (4/4)">
 			<group id="3020">
 				<function start="111" end="114" comment="C_SLA_aSLA_Land_Aktiv - 0xFFFFFFFF" mask="11111111b">FF, FF, FF, FF</function>

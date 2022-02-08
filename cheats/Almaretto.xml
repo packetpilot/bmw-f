@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <FDL>
     <!--Almaretto-->
     <cafd id="000017BE" name="BDC_01" author="Almaretto" series="F015">
@@ -506,7 +506,7 @@
             </group>
         </code>
     </cafd>
-    <cafd id="000007C8" name="HKFM" author="Almaretto" series="F010,F015">
+    <cafd id="000007C8" name="HKFM" author="Almaretto" series="F001,F010,F015,F025,F030,F045">
         <code description="ENABLE Trunk Close via keyFOB/Footwell button (NA vehicles)">
             <group id="3010">
                 <function start="0" end="0" mask="00001000b">aktiv</function>
@@ -1016,12 +1016,7 @@
                 <function start="43" end="43" comment="FGS_NIVI_KI_ENABLE" mask="00000001b">aktiv</function>
             </group>
         </code>
-        <code description="ENABLE Range Extender Activation Battery Capacity (12%)">
-            <group id="3000">
-                <function start="47" end="47" comment="SOC_HOLD_POS" mask="11111111b">18</function>
-            </group>
-        </code>
-        <code description="Increase computer-limited fuel tank capacity of REX to full 2.4 US Gallons physical capacity">
+        <code description="Increase Computer-limited fuel tank capacity of REX to full 2.4 US Gal (NOT 17-18)">
             <group id="3005">
                 <function start="7" end="7" comment="TNK_VOLL_ANZEIGE" mask="11111111b">8_liter</function>
                 <function start="8" end="17" comment="TNK_LITER_RECHTS" mask="11111111b">mcv_rex_liter_kl_rechts</function>
@@ -1598,27 +1593,27 @@
         </code>
     </cafd>
     <cafd id="000011AB" name="ACSM_4i" author="Almaretto" series="I001">
-        <code description="DISABLE Seat Belt Reminder (Driver)">
+        <code description="DISABLE Seat Belt Reminder (Driver) - Old Firmware">
             <group id="3001">
                 <function start="1" end="1" comment="SeatBeltReminder_Fahrer" mask="00000001b">nicht_aktiv</function>
             </group>
         </code>
-        <code description="DISABLE Seat Belt Reminder (Passenger)">
+        <code description="DISABLE Seat Belt Reminder (Passenger) - Old Firmware">
             <group id="3001">
                 <function start="2" end="2" comment="SeatBeltReminder_Beifahrer" mask="00000001b">nicht_aktiv</function>
             </group>
         </code>
-        <code description="DISABLE Seat Belt Disconnected Reminder Sound (Driver)">
+        <code description="DISABLE Seat Belt Disconnected Reminder Sound (Driver) - Old Firmware">
             <group id="3001">
                 <function start="3" end="3" comment="SBR_PreWarning_Fahrer" mask="00000001b">nicht_aktiv</function>
             </group>
         </code>
-        <code description="DISABLE Seat Belt Disconnected Reminder Sound (Passenger)">
+        <code description="DISABLE Seat Belt Disconnected Reminder Sound (Passenger) - Old Firmware">
             <group id="3001">
                 <function start="4" end="4" comment="SBR_PreWarning_Beifahrer" mask="00000001b">nicht_aktiv</function>
             </group>
         </code>
-        <code description="DISABLE Initial Belt Warning Gong">
+        <code description="DISABLE Initial Belt Warning Gong - Old Firmware">
             <group id="3001">
                 <function start="0" end="0" comment="Initialwarnung" mask="00000001b">nicht_aktiv</function>
             </group>
@@ -2114,16 +2109,6 @@
                 <function start="0" end="0" comment="ASP_BEIKLAPPEN_BEI_KOMFORTSCHLIESSEN" mask="00001000b">aktiv</function>
             </group>
         </code>
-        <code description="Remember Auto Start Stop Setting when Shutdown (NA Only)">
-            <group id="3023">
-                <function start="2" end="2" comment="TCM_MSA_MEMORY" mask="00100000b">aktiv</function>
-            </group>
-        </code>
-        <code description="ENABLE Auto Start Stop OFF by Default (NA Only)">
-            <group id="3023">
-                <function start="2" end="2" comment="TCM_MSA_DEFAULT_OFF" mask="00010000b">aktiv</function>
-            </group>
-        </code>
         <code description="Unlock doors when STOP engine - auto or manual lock">
             <group id="3041">
                 <function start="42" end="42" comment="CLI_DEFAULT_UNLOCK_AFTER_END_OF_DRIVING" mask="00001100b">aktiv</function>
@@ -2172,7 +2157,7 @@
             </group>
         </code>
     </cafd>
-    <cafd id="00002098" name="HKFM_2015" author="Almaretto" series="F015,G011,G030">
+    <cafd id="00002098" name="HKFM_2015" author="Almaretto" series="F015,G001,G011,G030,RR11">
         <code description="ENABLE  Trunk or Tailgate CLOSE with KeyFOB or RockerSwitch (No HOLD)">
             <group id="300B">
                 <function start="1" end="1" comment="HKL_REMOTECONTROLLIFTGATEBUTTON_BUTTON_TYPE" mask="11111111b">05</function>
@@ -2202,6 +2187,66 @@
             </group>
         </code>
     </cafd>
+    <cafd id="0000570E" name="HKFM_2015" author="Almaretto" series="F015,G001,G011,G030,RR11">
+        <code description="ENABLE  Trunk or Tailgate CLOSE with KeyFOB or RockerSwitch (No HOLD)">
+            <group id="300B">
+                <function start="1" end="1" comment="HKL_REMOTECONTROLLIFTGATEBUTTON_BUTTON_TYPE" mask="11111111b">05</function>
+            </group>
+            <group id="3008">
+                <function start="1" end="1" comment="HKL_ROCKERSWITCHPOS1_BUTTON_TYPE" mask="11111111b">05</function>
+            </group>
+        </code>
+        <code description="ENABLE Long Press (HOLD) While Close Trunk with RockerSwitch">
+            <group id="3008">
+                <function start="0" end="0" comment="HKL_ROCKERSWITCHPOS1_LONGPRESS_CLOSE" mask="00001000b">01</function>
+            </group>
+        </code>
+        <code description="DISABLE Long Press (HOLD) While Close Trunk with RockerSwitch">
+            <group id="3008">
+                <function start="0" end="0" comment="HKL_ROCKERSWITCHPOS1_LONGPRESS_CLOSE" mask="00001000b">00</function>
+            </group>
+        </code>
+        <code description="ENABLE Long Press (HOLD) Close Trunk with KeyFOB">
+            <group id="300B">
+                <function start="0" end="0" comment="HKL_REMOTECONTROLLIFTGATEBUTTON_LONGPRESS_CLOSE" mask="00001000b">01</function>
+            </group>
+        </code>
+        <code description="DISABLE Long Press (HOLD) Close Trunk with KeyFOB">
+            <group id="300B">
+                <function start="0" end="0" comment="HKL_REMOTECONTROLLIFTGATEBUTTON_LONGPRESS_CLOSE" mask="00001000b">00</function>
+            </group>
+        </code>
+    </cafd>
+    <cafd id="00005710" name="HKFM_2015" author="Almaretto" series="F015,G001,G011,G030,RR11">
+        <code description="ENABLE  Trunk or Tailgate CLOSE with KeyFOB or RockerSwitch (No HOLD)">
+            <group id="300B">
+                <function start="1" end="1" comment="HKL_REMOTECONTROLLIFTGATEBUTTON_BUTTON_TYPE" mask="11111111b">05</function>
+            </group>
+            <group id="3008">
+                <function start="1" end="1" comment="HKL_ROCKERSWITCHPOS1_BUTTON_TYPE" mask="11111111b">05</function>
+            </group>
+        </code>
+        <code description="ENABLE Long Press (HOLD) While Close Trunk with RockerSwitch">
+            <group id="3008">
+                <function start="0" end="0" comment="HKL_ROCKERSWITCHPOS1_LONGPRESS_CLOSE" mask="00001000b">01</function>
+            </group>
+        </code>
+        <code description="DISABLE Long Press (HOLD) While Close Trunk with RockerSwitch">
+            <group id="3008">
+                <function start="0" end="0" comment="HKL_ROCKERSWITCHPOS1_LONGPRESS_CLOSE" mask="00001000b">00</function>
+            </group>
+        </code>
+        <code description="ENABLE Long Press (HOLD) Close Trunk with KeyFOB">
+            <group id="300B">
+                <function start="0" end="0" comment="HKL_REMOTECONTROLLIFTGATEBUTTON_LONGPRESS_CLOSE" mask="00001000b">01</function>
+            </group>
+        </code>
+        <code description="DISABLE Long Press (HOLD) Close Trunk with KeyFOB">
+            <group id="300B">
+                <function start="0" end="0" comment="HKL_REMOTECONTROLLIFTGATEBUTTON_LONGPRESS_CLOSE" mask="00001000b">00</function>
+            </group>
+        </code>
+    </cafd>    
     <cafd id="000022D3" name="IHKA_PR01" author="Almaretto" series="G011,G030">
         <code description="ENABLE HVAC memory - A/C stay OFF if OFF at vehicle shutdown">
             <group id="3003">
@@ -2220,37 +2265,37 @@
         </code>
     </cafd>
     <cafd id="00001B29" name="ACSM_5" author="Almaretto" series="G011,G030">
-        <code description="DISABLE Seat Belt Status in Cluster (Passenger)">
+        <code description="DISABLE Seat Belt Status in Cluster (Passenger) - 2016 Firmware">
             <group id="3001">
                 <function start="6" end="6" comment="Gurtzustandsanzeige_Beifahrer" mask="00000001b">nicht_aktiv</function>
             </group>
         </code>
-        <code description="DISABLE Seat Belt Status in Cluster (Driver)">
+        <code description="DISABLE Seat Belt Status in Cluster (Driver) - 2016 Firmware">
             <group id="3001">
                 <function start="5" end="5" comment="Gurtzustandsanzeige_Fahrer" mask="00000001b">nicht_aktiv</function>
             </group>
         </code>
-        <code description="DISABLE Seat Belt Reminder Chime (Driver)">
+        <code description="DISABLE Seat Belt Reminder Chime (Driver) - 2016 Firmware">
             <group id="3001">
                 <function start="1" end="1" comment="SeatBeltReminder_Fahrer" mask="00000001b">nicht_aktiv</function>
             </group>
         </code>
-        <code description="DISABLE Seat Belt Reminder (Passenger)">
+        <code description="DISABLE Seat Belt Reminder (Passenger) - 2016 Firmware">
             <group id="3001">
                 <function start="2" end="2" comment="SeatBeltReminder_Beifahrer" mask="00000001b">nicht_aktiv</function>
             </group>
         </code>
-        <code description="DISABLE Seat Belt Disconnected Reminder Sound (Driver)">
+        <code description="DISABLE Seat Belt Disconnected Reminder Sound (Driver) - 2016 Firmware">
             <group id="3001">
                 <function start="3" end="3" comment="SBR_PreWarning_Fahrer" mask="00000001b">nicht_aktiv</function>
             </group>
         </code>
-        <code description="DISABLE Seat Belt Disconnected Reminder Sound (Passenger)">
+        <code description="DISABLE Seat Belt Disconnected Reminder Sound (Passenger) - 2016 Firmware">
             <group id="3001">
                 <function start="4" end="4" comment="SBR_PreWarning_Beifahrer" mask="00000001b">nicht_aktiv</function>
             </group>
         </code>
-        <code description="DISABLE Initial Belt Warning Gong">
+        <code description="DISABLE Initial Belt Warning Gong - 2016 Firmware">
             <group id="3001">
                 <function start="0" end="0" comment="Initialwarnung" mask="00000001b">nicht_aktiv</function>
             </group>
@@ -2293,7 +2338,7 @@
                 <function start="11" end="11" comment="PIM_Driving_Text_Length" mask="00000111b">whole_text</function>
             </group>
             <group id="3000">
-                <function start="31" end="31" comment="SPEEDLOCK_TEXT_LENGTH" mask="00011100b">whole_text</function>
+                <function start="31" end="31" comment="SPEEDLOCK_TEXT_LENGTH" mask="00111000b">whole_text</function>
                 <function start="137" end="137" comment="MYINFO_DRIVING_TEXT_LENGTH" mask="00011100b">whole_text</function>
                 <function start="137" end="137" comment="AKD_DRIVING_TEXT_LENGTH" mask="11100000b">whole_text</function>
                 <function start="138" end="138" comment="BMWINFO_DRIVING_TEXT_LENGTH" mask="00000111b">whole_text</function>
@@ -2527,4 +2572,198 @@
             </group>
         </code>
     </cafd>
+  
+    <!--2022-02-03 Added aSLA, TLA, and DAP-->
+	<!--Special Thanks to eaglesrest and atomantmk -->
+    
+    <cafd id="00003E52" name="HU_MGU" author="Almaretto" series="G005, G007, G020, G015, G030, G011">	
+		<code description="ENABLE Auto Speed Limit Assist (aSLA). Req ID7 and 11-20 I-Step. See 7083, SAS3 42C1, DSC 3D14 (2/4)">
+			<group id="300A">
+				<function start="10" end="10" comment="STRECKENVERLAUF - gen_01" mask="10000000b">01</function>
+				<function start="13" end="13" comment="VORAUSSCHAU - gen_01" mask="00001100b">01</function>
+				<function start="14" end="14" comment="SLAAUTOMATISCH - gen_01" mask="00110000b">01</function>
+				<function start="14" end="14" comment="VOFFSET - gen_1" mask="11000000b">01</function>
+				<function start="15" end="15" comment="VOFFSET_LANGSAM - gen_1" mask="11000000b">01</function>
+				<function start="18" end="18" comment="STRECKENVERLAUF_GENERATION - gen_1" mask="00000011b">01</function>
+			</group>	
+		</code>	
+		<code description="DISABLE Auto Speed Limit Assist (aSLA). See 7083, SAS3 42C1, DSC 3D14 (2/4)">
+			<group id="300A">
+				<function start="10" end="10" comment="STRECKENVERLAUF - gen_01" mask="10000000b">01</function>
+				<function start="13" end="13" comment="VORAUSSCHAU - gen_01" mask="00001100b">00</function>
+				<function start="14" end="14" comment="SLAAUTOMATISCH - gen_01" mask="00110000b">00</function>
+				<function start="14" end="14" comment="VOFFSET - gen_1" mask="11000000b">00</function>
+				<function start="15" end="15" comment="VOFFSET_LANGSAM - gen_1" mask="11000000b">00</function>
+				<function start="18" end="18" comment="STRECKENVERLAUF_GENERATION - gen_1" mask="00000011b">01</function>
+			</group>	
+		</code>	
+		<code description="ENABLE Traffic Light Assistant (TLA). Req ID7, 11-20 I-Step, and aSLA. See 7083, SAS3 42C1, DSC 3D14 (2/4)">
+			<group id="300A">
+				<function start="16" end="16" comment="AMPELN - gen_01" mask="01100000b">01</function>
+				<function start="17" end="17" comment="AMPELASSISTENT - gen_01" mask="00110000b">01</function>
+				<function start="17" end="17" comment="ANFAHRERINNERUNG - gen_01" mask="11000000b">01</function>
+			</group>	
+		</code>	
+		<code description="DISABLE Traffic Light Assistant (TLA). See 7083, SAS3 42C1, DSC 3D14 (2/4)">
+			<group id="300A">
+				<function start="16" end="16" comment="AMPELN - gen_01" mask="01100000b">00</function>
+				<function start="17" end="17" comment="AMPELASSISTENT - gen_01" mask="00110000b">00</function>
+				<function start="17" end="17" comment="ANFAHRERINNERUNG - gen_01" mask="11000000b">00</function>
+			</group>	
+		</code>	
+		<code description="ENABLE Driver Assistant Pro (DAP) - New Features. See BDC, SAS3 (2/3)">
+			<group id="300A">
+				<function start="14" end="14" comment="EINSEITIGVORBEIFAHREN - Undertaking gen_1" mask="00000011b">01</function>
+				<function start="19" end="19" comment="RETTUNGSGASSE - Emergency Lane Formation aktiv" mask="00000100b">01</function>
+				<function start="16" end="16" comment="SITUATIVERABSTAND - Adjust Distance Menu gen_1" mask="00000110b">01</function>
+			</group>	
+		</code>	
+		<code description="DISABLE Driver Assistant Pro (DAP) - New Features. See BDC, SAS3 (2/3)">
+			<group id="300A">
+				<function start="14" end="14" comment="EINSEITIGVORBEIFAHREN - Undertaking gen_1" mask="00000011b">00</function>
+				<function start="19" end="19" comment="RETTUNGSGASSE - Emergency Lane Formation aktiv" mask="00000100b">00</function>
+				<function start="16" end="16" comment="SITUATIVERABSTAND - Adjust Distance Menu gen_1" mask="00000110b">01</function>
+			</group>	
+		</code>	
+	</cafd>	
+    <cafd id="000042C1" name="SAS3" author="Almaretto" series="G005, G007, G020, G015, G030, G011">	
+		<code description="ENABLE Auto Speed Limit Assist (aSLA). Req ID7 and 11-20 I-Step. See 7083, MGU, DSC 3D14 (3/4)">
+			<group id="3001">
+				<function start="167" end="167" comment="C_SLA_Anzeige_Zusatztexte - Nr001_aktiviert" mask="11111111b">01</function>
+			</group>
+			<group id="3000">	
+				<function start="93" end="93" comment="C_SLA_Streckenregelung_vorhanden - NR_002_vorhanden_SLA_entkoppelt" mask="11111111b">02</function>
+				<function start="112" end="115" comment="C_SLA_aSLA_Land_Aktiv - 0xFFFFFFFF" mask="11111111b">FF, FF, FF, FF</function>
+				<function start="116" end="119" comment="C_SLA_Vorausschau_Land_Aktiv - 0xFFFFFFFF" mask="11111111b">FF, FF, FF, FF</function>
+				<function start="130" end="130" comment="C_SLA_aSLA_vorhanden - Nr001_vorhanden" mask="11111111b">01</function>
+				<function start="131" end="134" comment="C_SLA_Streckenregelung_Land_Aktiv - 0xFFFFFFFF" mask="11111111b">FF, FF, FF, FF</function>
+			</group>	
+		</code>	
+		<code description="DISABLE Auto Speed Limit Assist (aSLA). See 7083, MGU, DSC 3D14 (3/4)">
+			<group id="3001">
+				<function start="167" end="167" comment="C_SLA_Anzeige_Zusatztexte - Nr001_aktiviert" mask="11111111b">01</function>
+			</group>
+			<group id="3000">	
+				<function start="93" end="93" comment="C_SLA_Streckenregelung_vorhanden - NR_002_vorhanden_SLA_entkoppelt" mask="11111111b">02</function>
+				<function start="112" end="115" comment="C_SLA_aSLA_Land_Aktiv - 0xFFFFFFFF" mask="11111111b">F9, 0F, 86, 00</function>
+				<function start="116" end="119" comment="C_SLA_Vorausschau_Land_Aktiv - 0xFFFFFFFF" mask="11111111b">FB, DF, A7, C0</function>
+				<function start="130" end="130" comment="C_SLA_aSLA_vorhanden - Nr001_vorhanden" mask="11111111b">00</function>
+				<function start="131" end="134" comment="C_SLA_Streckenregelung_Land_Aktiv - 0xFFFFFFFF" mask="11111111b">FF, CF, 9F, F8</function>
+			</group>	
+		</code>	
+		<code description="ENABLE Traffic Light Assistant (TLA). Req ID7, 11-20 I-Step, and aSLA. See 7083, MGU, DSC 3D14 (3/4)">
+			<group id="3000">
+				<function start="178" end="178" comment="C_UCC_vorhanden - Nr001_vorhanden" mask="11111111b">01</function>
+				<function start="179" end="182" comment="C_SLA_UCC_Land_aktiv - 0xFFFFFFFF" mask="11111111b">FF, FF, FF, FF</function>
+				<function start="188" end="191" comment="C_SLA_aUCC_Land_aktiv - 0xFFFFFFFF" mask="11111111b">FF, FF, FF, FF</function>
+			</group>	
+		</code>	
+		<code description="DISABLE Traffic Light Assistant (TLA). See 7083, MGU, DSC 3D14 (3/4)">
+			<group id="3000">
+				<function start="178" end="178" comment="C_UCC_vorhanden - Nr000_nicht_vorhanden" mask="11111111b">00</function>
+				<function start="179" end="182" comment="C_SLA_UCC_Land_aktiv - 0xFFFFFFFF" mask="11111111b">08, 00, 00, 00</function>
+				<function start="188" end="191" comment="C_SLA_aUCC_Land_aktiv - 0xFFFFFFFF" mask="11111111b">08, 00, 00, 00</function>
+			</group>	
+		</code>	
+		<code description="ENABLE Driver Assistant Pro (DAP) - Unsupported Highway Exit Assistant. See BDC, MGU (3/3)">
+			<group id="3000">
+				<function start="183" end="183" comment="C_QmaN_Vorhanden - nr001_vorhanden" mask="11111111b">00</function>
+				<function start="184" end="187" comment="C_SLA_QmaN_Land_aktiv - FFFFFFFF" mask="11111111b">FA, C3, 81, F8</function>
+			</group>	
+		</code>	
+		<code description="DISABLE Driver Assistant Pro (DAP) - Unsupported Highway Exit Assistant. See BDC, MGU (3/3)">
+			<group id="3000">
+				<function start="183" end="183" comment="C_QmaN_Vorhanden - nr001_vorhanden" mask="11111111b">00</function>
+				<function start="184" end="187" comment="C_SLA_QmaN_Land_aktiv - FFFFFFFF" mask="11111111b">FA, C3, 81, F8</function>
+			</group>	
+		</code>	
+		<code description="ENABLE Driver Assistant Pro (DAP) - Option to form emergency lane. See BDC, MGU (3/3)">
+			<group id="3000">
+				<function start="192" end="192" comment="C_RGA_Funktion - Nr001_aktiviert" mask="11111111b">01</function>
+				<function start="193" end="196" comment="C_RGA_Land_aktiv - FFFFFFFF" mask="11111111b">FF, FF, FF, FF</function>
+				<function start="197" end="200" comment="C_RGA_Seitenwahl_links_Land_aktiv - FFFFFFFF" mask="11111111b">FF, FF, FF, FF</function>
+			</group>	
+		</code>	
+		<code description="DISABLE Driver Assistant Pro (DAP) - Option to form emergency lane. See BDC, MGU (3/3)">
+			<group id="3000">
+				<function start="192" end="192" comment="C_RGA_Funktion - Nr001_aktiviert" mask="11111111b">00</function>
+				<function start="193" end="196" comment="C_RGA_Land_aktiv - FFFFFFFF" mask="11111111b">88, 88, 01, 70</function>
+				<function start="197" end="200" comment="C_RGA_Seitenwahl_links_Land_aktiv - FFFFFFFF" mask="11111111b">88, 88, 01, 70</function>
+			</group>	
+		</code>	
+		<code description="ENABLE Driver Assistant Pro (DAP) - Undertaking. See BDC, MGU (3/3)">
+			<group id="3001">
+				<function start="160" end="160" comment="C_Rechtsueberholen_verbieten - Nr001_aktiviert" mask="11111111b">01</function>
+			</group>	
+		</code>	
+		<code description="DISABLE Driver Assistant Pro (DAP) - Undertaking. See BDC, MGU (3/3)">
+			<group id="3001">
+				<function start="160" end="160" comment="C_Rechtsueberholen_verbieten - Nr000_deaktiviert" mask="11111111b">00</function>
+			</group>	
+		</code>	
+	</cafd>	
+    <cafd id="00003D14" name="DSC_VIP" author="Almaretto" series="G005, G007, G020, G015, G011">	
+		<code description="ENABLE Speed Limit Assist (aSLA). Req ID7 and 11-20 I-Step. See 7083, MGU, DSC 3D14 (4/4)">
+			<group id="3020">
+				<function start="111" end="114" comment="C_SLA_aSLA_Land_Aktiv - 0xFFFFFFFF" mask="11111111b">FF, FF, FF, FF</function>
+				<function start="117" end="117" comment="C_SLA_aSLA_vorhanden - Nr001_vorhanden" mask="11111111b">01</function>
+				<function start="144" end="144" comment="C_SLA_Anzeige_Zusatztexte - Nr001_aktiviert" mask="11111111b">01</function>
+				<function start="210" end="213" comment="C_SLA_Vorausschau_Land_Aktiv - 0xFFFFFFFF" mask="11111111b">FF, FF, FF, FF</function>
+				<function start="215" end="215" comment="C_SLA_Streckenregelung_vorhanden - NR_002_vorhanden_SLA_entkoppelt" mask="11111111b">02</function>
+				<function start="216" end="219" comment="C_SLA_Streckenregelung_Land_Aktiv - 0xFFFFFFFF" mask="11111111b">FF, FF, FF, FF</function>
+			</group>	
+		</code>	
+		<code description="DISABLE Speed Limit Assist (aSLA). See 7083, MGU, DSC 3D14 (4/4)">
+			<group id="3020">
+				<function start="111" end="114" comment="C_SLA_aSLA_Land_Aktiv - 0xFFFFFFFF" mask="11111111b">F9, 0F, 86, 00</function>
+				<function start="117" end="117" comment="C_SLA_aSLA_vorhanden - Nr001_vorhanden" mask="11111111b">00</function>
+				<function start="144" end="144" comment="C_SLA_Anzeige_Zusatztexte - Nr001_aktiviert" mask="11111111b">01</function>
+				<function start="210" end="213" comment="C_SLA_Vorausschau_Land_Aktiv - 0xFFFFFFFF" mask="11111111b">FB, DF, AF, C0</function>
+				<function start="215" end="215" comment="C_SLA_Streckenregelung_vorhanden - NR_002_vorhanden_SLA_entkoppelt" mask="11111111b">00</function>
+				<function start="216" end="219" comment="C_SLA_Streckenregelung_Land_Aktiv - 0xFFFFFFFF" mask="11111111b">F9, 0F, 86, 00</function>
+			</group>	
+		</code>	
+		<code description="ENABLE Traffic Light Assistant (TLA). Req ID7, 11-20 I-Step, and aSLA. See 7083, MGU, DSC 3D14 (4/4)">
+			<group id="3020">
+				<function start="179" end="182" comment="C_SLA_UCC_Land_aktiv - 0xFFFFFFFF" mask="11111111b">FF, FF, FF, FF</function>
+			</group>	
+		</code>	
+		<code description="DISABLE Traffic Light Assistant (TLA). See 7083, MGU, DSC 3D14 (4/4)">
+			<group id="3020">
+				<function start="179" end="182" comment="C_SLA_UCC_Land_aktiv - Nr000_Bausteinpartitionierung" mask="11111111b">00, 00, 00, 00</function>
+			</group>	
+		</code>	
+	</cafd>		
+    <cafd id="00003D78" name="DSC_VIP" author="Almaretto" series="G005, G007, G020">	
+		<code description="ENABLE Speed Limit Assist (aSLA). Req ID7 and 11-20 I-Step. See 7083, MGU, DSC 3D14 (4/4)">
+			<group id="3020">
+				<function start="111" end="114" comment="C_SLA_aSLA_Land_Aktiv - 0xFFFFFFFF" mask="11111111b">FF, FF, FF, FF</function>
+				<function start="117" end="117" comment="C_SLA_aSLA_vorhanden - Nr001_vorhanden" mask="11111111b">01</function>
+				<function start="144" end="144" comment="C_SLA_Anzeige_Zusatztexte - Nr001_aktiviert" mask="11111111b">01</function>
+				<function start="210" end="213" comment="C_SLA_Vorausschau_Land_Aktiv - 0xFFFFFFFF" mask="11111111b">FF, FF, FF, FF</function>
+				<function start="215" end="215" comment="C_SLA_Streckenregelung_vorhanden - NR_002_vorhanden_SLA_entkoppelt" mask="11111111b">02</function>
+				<function start="216" end="219" comment="C_SLA_Streckenregelung_Land_Aktiv - 0xFFFFFFFF" mask="11111111b">FF, FF, FF, FF</function>
+			</group>	
+		</code>	
+		<code description="DISABLE Speed Limit Assist (aSLA). See 7083, MGU, DSC 3D14 (4/4)">
+			<group id="3020">
+				<function start="111" end="114" comment="C_SLA_aSLA_Land_Aktiv - 0xFFFFFFFF" mask="11111111b">F9, 0F, 86, 00</function>
+				<function start="117" end="117" comment="C_SLA_aSLA_vorhanden - Nr001_vorhanden" mask="11111111b">00</function>
+				<function start="144" end="144" comment="C_SLA_Anzeige_Zusatztexte - Nr001_aktiviert" mask="11111111b">01</function>
+				<function start="210" end="213" comment="C_SLA_Vorausschau_Land_Aktiv - 0xFFFFFFFF" mask="11111111b">FB, DF, AF, C0</function>
+				<function start="215" end="215" comment="C_SLA_Streckenregelung_vorhanden - NR_002_vorhanden_SLA_entkoppelt" mask="11111111b">00</function>
+				<function start="216" end="219" comment="C_SLA_Streckenregelung_Land_Aktiv - 0xFFFFFFFF" mask="11111111b">F9, 0F, 86, 00</function>
+			</group>	
+		</code>	
+		<code description="ENABLE Traffic Light Assistant (TLA). Req ID7, 11-20 I-Step, and aSLA. See 7083, MGU, DSC 3D14 (4/4)">
+			<group id="3020">
+				<function start="179" end="182" comment="C_SLA_UCC_Land_aktiv - 0xFFFFFFFF" mask="11111111b">FF, FF, FF, FF</function>
+			</group>	
+		</code>	
+		<code description="DISABLE Traffic Light Assistant (TLA). See 7083, MGU, DSC 3D14 (4/4)">
+			<group id="3020">
+				<function start="179" end="182" comment="C_SLA_UCC_Land_aktiv - Nr000_Bausteinpartitionierung" mask="11111111b">00, 00, 00, 00</function>
+			</group>	
+		</code>	
+	</cafd>	
 </FDL>

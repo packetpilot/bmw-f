@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FDL>
+   <cafd id="00001C7A" name="SAS" author="Simpaty" series="G001,G011,G030">
+      <code description="ENABLE Lane Change Assistant. Part 1 of 2. See NBT2">
+         <group id="3000">
+            <function start="73" end="73" comment="C_SWA_Vorhanden" mask="11111111b">01</function>
+         </group>
+      </code>
+      <code description="DISABLE Lane Change Assistant. Part 1 of 2. See NBT2">
+         <group id="3000">
+            <function start="73" end="73" comment="C_SWA_Vorhanden" mask="11111111b">00</function>
+         </group>
+      </code>
+   </cafd>
+   <cafd id="00001EF6" name="HU_NBT_EVO" author="Simpaty" series="G001,G011,G030">
+      <code description="ENABLE Lane Change Assistant. Part 2 of 2. See SAS">
+         <group id="300A">
+            <function start="11" end="11" comment="Spurwechselassistent" mask="11000000b">01</function>
+         </group>
+      </code>
+      <code description="DISABLE Lane Change Assistant. Part 2 of 2. See SAS">
+         <group id="300A">
+            <function start="11" end="11" comment="Spurwechselassistent" mask="11000000b">00</function>
+         </group>
+      </code>
+   </cafd>
+</FDL>

@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FDL>
+	<!--Rev1-->	
+	<!--jokinawa-->
+	<cafd id="000051C9" name="IHKA4" author="jokinawa" series="S18A">
+		<!--group 3000-->
+		<code description="[1/2] Enable Colder Air Conditioning">
+			<group id="3000">
+				<function start="11" end="11" comment="LAENDERVARIENTE" mask="00000111b">02</function>
+			</group>
+		</code>
+		<code description="[2/2] Enable Colder Air Conditioning">
+			<group id="3003">
+				<function start="1" end="1" comment="TEMPERATUR_OFFSET" mask="00001111b">06</function>
+			</group>
+		</code>
+		
+	</cafd>
+	<cafd id="000044ED" name="BDC_BODY3" author="jokinawa" series="S18A">
+		<!--group 3510 PwFunction-->
+		<code description="Allow closing of windows and sunroof with keyfob">
+			<group id="3510">
+				<function start="11" end="11" comment="FH_KOMFORTSCHLIESSUNG_FB" mask="00100000b">aktiv</function>
+			</group>
+		</code>
+		<code description="Disable front windows rollup stopping when door opened">
+			<group id="3510">
+				<function start="0" end="0" comment="FH_TUERAUF_STOP_MAUT" mask="00000001b">nicht_aktiv</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="00007083" name="BDC_BODY3" author="jokinawa" series="S18A">
+		
+		<!--3075 LceMaster-->
+		<code description="Fog lights flash on alarm - Simultaneous [US Default]">
+			<group id="3075">
+				<function start="4" end="4" comment="FERNLICHTBLINKEN_UEBERFALLALARM_BLINKMODUS" mask="10000000b">gleichzeitig</function>
+			</group>
+		</code>
+		<code description="Fog lights flash on alarm - Alternating [Europe Default]">
+			<group id="3075">
+				<function start="4" end="4" comment="FERNLICHTBLINKEN_UEBERFALLALARM_BLINKMODUS" mask="10000000b">abwechseln</function>
+			</group>
+		</code>
+		<code description="Emergency Brake Force Display - Off [US Default]">
+			<group id="3075">
+				<function start="1" end="1" comment="GEFAHRENBREMSLICHT_TYP" mask="01100000b">nicht_aktiv</function>
+			</group>
+		</code>
+		<code description="Emergency Brake Force Display - Flashing [Europe Default]">
+			<group id="3075">
+				<function start="1" end="1" comment="GEFAHRENBREMSLICHT_TYP" mask="01100000b">bremslicht_blinkend</function>
+			</group>
+		</code>
+		<code description="Emergency Brake Force Display - Area Enlargement">
+			<group id="3075">
+				<function start="1" end="1" comment="GEFAHRENBREMSLICHT_TYP" mask="01100000b">flaechenvergroesserung</function>
+			</group>
+		</code>
+		<!--3040 VaMaster-->
+		<code description="Disable horn honk when locking doors with engine running">
+			<group id="3040">
+				<function start="1" end="1" comment="VAM_HORN_AT_SECURE" mask="00000010b">nicht_aktiv</function>
+			</group>
+		</code>
+		<!--group 3221 PfFesMaster-->
+		<code description="Mirror Tilt Angle 90 [default]">
+			<group id="3110">
+				<function start="1" end="1" comment="ASP_BORDSTEINAUTOMATIK_DELTA" mask="11111111b">5A</function>
+			</group>
+		</code>
+		<code description="Mirror Tilt Angle 80">
+			<group id="3110">
+				<function start="1" end="1" comment="ASP_BORDSTEINAUTOMATIK_DELTA" mask="11111111b">50</function>
+			</group>
+		</code>
+		<code description="Mirror Tilt Angle 70">
+			<group id="3110">
+				<function start="1" end="1" comment="ASP_BORDSTEINAUTOMATIK_DELTA" mask="11111111b">46</function>
+			</group>
+		</code>
+		<code description="Mirror Tilt Angle 59">
+			<group id="3110">
+				<function start="1" end="1" comment="ASP_BORDSTEINAUTOMATIK_DELTA" mask="11111111b">3B</function>
+			</group>
+		</code>
+		<code description="Change startup mode to Adaptive">
+			<group id="3221">
+				<function start="7" end="7" comment="FesPiaDefaultLastUserMode" mask="11111111b">0A</function>
+			</group>
+		</code>
+		<code description="Change startup mode to Sport">
+			<group id="3221">
+				<function start="7" end="7" comment="FesPiaDefaultLastUserMode" mask="11111111b">01</function>
+			</group>
+		</code>
+		<code description="Change startup mode to Sport Individual">
+			<group id="3221">
+				<function start="7" end="7" comment="FesPiaDefaultLastUserMode" mask="11111111b">03</function>
+			</group>
+		</code>
+		<code description="Change startup mode to Comfort (default)">
+			<group id="3221">
+				<function start="7" end="7" comment="FesPiaDefaultLastUserMode" mask="11111111b">04</function>
+			</group>
+		</code>
+		<code description="Change startup mode to Eco Pro">
+			<group id="3221">
+				<function start="7" end="7" comment="FesPiaDefaultLastUserMode" mask="11111111b">07</function>
+			</group>
+		</code>
+		<code description="Change startup mode to Eco Pro Individual">
+			<group id="3221">
+				<function start="7" end="7" comment="FesPiaDefaultLastUserMode" mask="11111111b">09</function>
+			</group>
+		</code>
+		<code description="[1/2] Enable Sport Plus Mode">
+			<group id="3221">
+				<function start="9" end="9" comment="FesSportWorldMode1" mask="11111111b">02</function>
+			</group>
+		</code>
+		<code description="[1/2] Enable Comfort Plus Mode">
+			<group id="3221">
+				<function start="12" end="12" comment="FesComfortWorldMode1" mask="11111111b">05</function>
+			</group>
+		</code>
+		<code description="[WIP][1/3] Enable Automatic Lane Change Assistant">
+			<group id="3420">
+				<function start="10" end="10" comment="SPURWECHSEL_ASSISTENT" mask="00000011b">01</function>
+			</group>
+		</code>
+		<code description="Enable Comfort Plus Mode options in Eco Pro Individual">
+			<group id="3221">
+				<!--function start="7" end="7" comment="FesPiaDefaultLastUserMode" mask="11111111b">09</function -->
+				<function start="5" end="5" comment="FesPiaDefaultEcoWorldMode" mask="11111111b">09</function>
+				<function start="12" end="12" comment="FesComfortWorldMode1" mask="11111111b">05</function>
+				<function start="4" end="4" comment="FesPiaDefaultComfortWorldMode" mask="11111111b">05</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="00002742" name="DME_BAC2" author="jokinawa" series="S18A">
+		<!--group 3020 BSU_BEREICH-->
+		<code description="[DIAG] Enable Auto Start Stop Memory">
+			<group id="3020">
+				<function start="19" end="19" comment="TCM_MSA_MEMORY" mask="00000010b">01</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="00004508" name="DKOMBI4" author="jokinawa" series="S18A">
+		<!--group 3000 Anzeige Konfiguration-->
+		<code description="Disable Seatbelt Status in Dash">
+			<group id="3000">
+				<function start="3" end="3" comment="FOND_GURTSTATUS_ENABLE" mask="00000111b">inaktiv</function>
+			</group>
+		</code>
+		<code description="[SAIL] Enable Sailing in Comfort Mode (optional)">
+			<group id="3000">
+				<function start="15" end="15" comment="SEGELN_IN_COMFORT_MODUS (optional)" mask="00001000b">01</function>
+			</group>
+		</code>
+		<code description="Disable Speedometer Correction">
+			<group id="3000">
+				<function start="1" end="1" comment="BC_V_KORREKTUR" mask="01000000b">ohne_korrektur</function>
+			</group>
+		</code>
+		<code description="Change Dash Layout and Logo to BMW M">
+			<group id="3001">
+				<function start="18" end="18" comment="LOGO_SCHRIFTZUG" mask="11111111b">m_logo</function>
+			</group>
+			<group id="3000">
+				<function start="53" end="53" comment="GLOBAL_LAYOUT_VARIANTE" mask="11110000b">m_gmbh</function>
+			</group>
+		</code>
+		<code description="Change Dash Layout BMW M with no logo">
+			<group id="3001">
+				<function start="18" end="18" comment="LOGO_SCHRIFTZUG" mask="11111111b">kein_logo</function>
+			</group>
+			<group id="3000">
+				<function start="53" end="53" comment="GLOBAL_LAYOUT_VARIANTE" mask="11110000b">m_gmbh</function>
+			</group>
+		</code>
+		<code description="Change Dash Layout and Logo to Alpina [req i-step 2019/07.xx+]">
+			<group id="3001">
+				<function start="18" end="18" comment="LOGO_SCHRIFTZUG" mask="11111111b">alpina</function>
+			</group>
+			<group id="3000">
+				<function start="53" end="53" comment="GLOBAL_LAYOUT_VARIANTE" mask="11110000b">alpina</function>
+			</group>
+		</code>
+		<code description="Change Dash Layout to Alpina with no logo [req i-step 2019/07.xx+]">
+			<group id="3001">
+				<function start="18" end="18" comment="LOGO_SCHRIFTZUG" mask="11111111b">kein_logo</function>
+			</group>
+			<group id="3000">
+				<function start="53" end="53" comment="GLOBAL_LAYOUT_VARIANTE" mask="11110000b">alpina</function>
+			</group>
+		</code>
+		<code description="Enable Assisted Driver View [req 2019/07.xx+]">
+			<group id="3000">
+				<function start="97" end="97" comment="SICHT_ABSICHT_ENABLE" mask="00100000b">01</function>
+				<function start="112" end="112" comment="CB_FZG_UMGEBUNG_FAS" mask="00100000b">01</function>
+				<function start="112" end="112" comment="CB_PRESELECT_NAVI_ANSICHT_FZG_UMGEBUNG" mask="01000000b">01</function>
+			</group>
+			<group id="3007">
+				<function start="29" end="29" comment="PIA_FZG_UMGEBUNG_FAS" mask="00000001b">01</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="00003E52" name="HU_MGU" author="jokinawa" series="S18A">
+		<!--group 300A SARAH-->
+		<code description="Disable Night Vision Legal Disclaimer">
+			<group id="300A">
+				<function start="12" end="12" comment="werte=00" mask="11111111b">kein_ld</function>
+			</group>
+		</code>
+		<!--group 300B PARKEN-->
+		<code description="Disable Camera Legal Disclaimer">
+			<group id="300B">
+				<function start="1" end="1" comment="MACRO_CAM_LEGALDISCLAIMER" mask="11111111b">kein_ld</function>
+			</group>
+		</code>
+		<!--group 3000 HMI_SPEECH-->
+		<code description="HUD Distance Info">
+			<group id="3000">
+				<function start="29" end="29" comment="HUD_DISTANCE_INFO" mask="00000001b">aktiv</function>
+			</group>
+		</code>
+		<code description="Disable Legal Disclaimer Time">
+			<group id="3000">
+				<function start="3" end="3" comment="LEGAL_DISCLAIMER_TIME" mask="11111111b">kein_ld</function>
+			</group>
+		</code>
+		<code description="[1/2] Enable Video In Motion - must do physical button combo to enable after coding. See Bimmerpost G07 forum in comment.">
+		<!--https://g07.bimmerpost.com/forums/showpost.php?p=25076780&postcount=11-->
+			<group id="3000">
+				<function start="53" end="53" comment="VIDEO_SPEEDLOCK_CONDITION" mask="00000111b">none</function>
+				<function start="49" end="49" comment="SPEEDLOCK_FREISCHALTMENU" mask="10000000b">aktiv</function>
+				<function start="40" end="40" comment="SPEEDLOCK_SPEEDVALUE_MIN" mask="00011111b">nicht_aktiv</function>
+				<function start="39" end="39" comment="SPEEDLOCK_SPEEDVALUE_MAX" mask="00111111b">nicht_aktiv</function>
+			</group>
+		</code>
+		<!--group 3006-->
+		<code description="[2/2] Enable Video In Motion - must do physical button combo to enable after coding. See Bimmerpost G07 forum in comment.">
+		<!--https://g07.bimmerpost.com/forums/showpost.php?p=25076780&postcount=11-->
+			<group id="3006">
+				<function start="14" end="14" comment="SPEEDLOCK_X_KMH_MIN" mask="11111111b">nicht_aktiv</function>
+				<function start="13" end="13" comment="SPEEDLOCK_X_KMH_MAX" mask="11111111b">nicht_aktiv</function>
+			</group>
+		</code>
+		<code description="Enable 5 click blinker option in Exterior Lighting settings">
+			<group id="3000">
+				<function start="0" end="0" comment="5_FACH_TIPPBLINKEN" mask="00000100b">aktiv</function>
+			</group>
+		</code>
+		<code description="Change Startup Emblem to BMW M">
+			<group id="3000">
+				<function start="11" end="11" comment="STARTUP_EMBLEM" mask="00011110b">bmw_m</function>
+			</group>
+		</code>
+		<code description="Change Startup Emblem to Rolls Royce">
+			<group id="3000">
+				<function start="11" end="11" comment="STARTUP_EMBLEM" mask="00011110b">rr</function>
+			</group>
+		</code>
+		<code description="Change Startup Emblem to Alpina">
+			<group id="3000">
+				<function start="11" end="11" comment="STARTUP_EMBLEM" mask="00011110b">alpina</function>
+			</group>
+		</code>
+		<code description="Change Startup Emblem to BMW">
+			<group id="3000">
+				<function start="11" end="11" comment="STARTUP_EMBLEM" mask="00011110b">bmw</function>
+			</group>
+		</code>
+		<code description="Change Startup Emblem to BMWi">
+			<group id="3000">
+				<function start="11" end="11" comment="STARTUP_EMBLEM" mask="00011110b">bmw_i</function>
+			</group>
+		</code>
+		<code description="Enable tire temperature and pressure display">
+			<group id="3000">
+				<function start="20" end="20" comment="RDC_DRUCK_TEMP" mask="00000011b">druck_und_temperatur</function>
+			</group>
+		</code>
+		<!--group 3002-->
+		<code description="Change played sound signal set to BMW [Not working on i-Step 2019.03.xx]">
+			<group id="3002">
+				<function start="2" end="2" comment="BRAND" mask="01110000b">bmw</function>
+			</group>
+		</code>
+		<code description="Change played sound signal set to Mini [Not working on i-Step 2019.03.xx]">
+			<group id="3002">
+				<function start="2" end="2" comment="BRAND" mask="01110000b">mini</function>
+			</group>
+		</code>
+		<code description="Change played sound signal set to BMWi [Not working on i-Step 2019.03.xx]">
+			<group id="3002">
+				<function start="2" end="2" comment="BRAND" mask="01110000b">bmw_i</function>
+			</group>
+		</code>
+		<code description="Change played sound signal set to Rolls Royce [Not working on i-Step 2019.03.xx]">
+			<group id="3002">
+				<function start="2" end="2" comment="BRAND" mask="01110000b">rolls_royce</function>
+			</group>
+		</code>
+		<code description="Disable Volume Popup Display">
+			<group id="3002">
+				<function start="0" end="0" comment="VOLUME_POPUP_DISPLAY" mask="10000000b">nicht_aktiv</function>
+			</group>
+		</code>
+		<code description="Change max volume retention to 50 percent">
+			<group id="3002">
+				<function start="1" end="1" comment="VOLUME_MAX_ON" mask="11111111b">32</function>
+			</group>
+		</code>
+		<!--group 3008-->
+		<code description="[2/2] Enable Sport Plus menu option">
+			<group id="3008">
+				<function start="0" end="0" comment="FES_SPORT_EXPERT" mask="00000100b">01</function>
+			</group>
+		</code>
+		<code description="[2/2] Enable Comfort Plus menu option">
+			<group id="3008">
+				<function start="0" end="0" comment="FES_COMFORT_PLUS" mask="00100000b">01</function>
+				<function start="3" end="3" comment="ECO_CONF_ATTENUATION_COMFPLUS" mask="00100000b">01</function>
+				<function start="3" end="3" comment="ECO_CONF_STEERING_COMFPLUS" mask="01000000b">01</function>
+			</group>
+		</code>
+		<code description="[SAIL] Enable Sailing Mode in Eco Pro">
+			<group id="3008">
+				<function start="4" end="4" comment="GLOBAL_CONF_SAILING" mask="00000100b">01</function>
+				<function start="4" end="4" comment="EFF_DYN_SAILING" mask="00010000b">01</function>
+			</group>
+			<group id="3009">
+				<function start="1" end="1" comment="SAILING_COUNTER" mask="00000010b">01</function>
+			</group>
+		</code>
+		<code description="[WIP][2/3] Enable Automatic Lane Change Assistant">
+			<group id="300A">
+				<function start="11" end="11" comment="SPURWECHSELASSISTENT" mask="00000001b">01</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="00001D92" name="FZD2" author="jokinawa" series="S18A">
+		<!--group 3002 DWA-->
+		<code description="Disable OBD2 Alarm">
+			<group id="3002">
+				<function start="6" end="6" comment="OBD_Alarm" mask="00001000b">00</function>
+			</group>
+		</code>
+	</cafd>
+	<cafd id="000055D7" name="HKFM2" author="jokinawa" series="S18A">
+		<code description="Enable Tailgate close with keyfob or switch (No holding)">
+            <group id="300B">
+                <function start="1" end="1" comment="HKL_REMOTECONTROLLIFTGATEBUTTON_BUTTON_TYPE" mask="11111111b">05</function>
+            </group>
+            <group id="3008">
+                <function start="1" end="1" comment="HKL_ROCKERSWITCHPOS1_BUTTON_TYPE" mask="11111111b">05</function>
+            </group>
+        </code>
+	</cafd>
+	<cafd id="000042C1" name="SAS2" author="jokinawa" series="S18A">
+		<code description="[WIP][3/3] Enable Automatic Lane Change Assistant">
+            <group id="3000">
+                <function start="137" end="137" comment="C_SWA_VORHANDEN" mask="11111111b">01</function>
+            </group>
+        </code>
+	</cafd>
+</FDL>

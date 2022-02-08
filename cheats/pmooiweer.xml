@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<FDL>
+<!-- 
+
+2018 F80/F82 FDL Coding for VLD (Variable Light Distribution) and GFHB (Glare-Free High Beams) - Peter Mooiweer - Dec 2018
+
+ECUs to be FDL Coded:
+	FEM_BODY
+	KAFAS2	
+	FLE 43
+	FLE 44
+
+**********************************************************************************************************************
+NOTES: 	1.	Removal of 5AP and 8S4 from FA (SALAPA elements) and VO coding FEM_BODY and KAFAS2 is NOT needed.  Simply 
+			FDL code those modules using the cheat codes provided below. This allows for easy (re)coding without
+			having to modify factory FA settings.
+		2.	Coding applies to Model Year 2018 F80 and F82, with KAFAS2 and FLE ECUs ONLY.
+**********************************************************************************************************************		
+-->
+	
+<cafd id="00000794" name="FEM_BODY" author="pmooiweer" series="F080,F082">
+
+	<code description="Enable GFHB and Adaptive Light Distribution (AFS) (also code KAFAS2 and FLE)">
+    	<group id="3003">
+        	<function start="18" end="18" mask="00100000b" comment="ComAdapterPdu_095_Objektdaten_Stufenloser_Fernlicht_Assistent">aktiv</function>
+    	</group>
+    	<group id="3073">
+        	<function start="40" end="42" mask="11111111b" comment="LUT_FLC_FORWARDLIGHTING_Y">F020_mit_AFS</function>
+        	<function start="152" end="152" mask="00000001b" comment="C_AFS_ENA">F020_enable</function>
+        	<function start="250" end="250" mask="00000001b" comment="C_HBA_ENA">F020_enable</function>
+    	</group>
+    </code>
+
+</cafd>
+
+
+<cafd id="00001148" name="KAFAS2" author="pmooiweer" series="F080,F082">
+	<code description="Enable GFHB (also code FEM_BODY and FLEs)">
+    	<group id="3050">
+        	<function start="1" end="1" mask="10000000b" comment="GLAREFREE_HIGHBEAM_ENABLED">glarfreeHB_on_F001</function>
+    	</group>
+    </code>
+</cafd>
+
+
+<cafd id="000024C3" name="FLE 43/44" author="pmooiweer" series="F080,F082">
+	<code description="Enable GFHB WITHOUT sidemarkers (also code FEM_BODY and KAFAS2)">
+		<group id="3000">
+        	<function start="4" end="4" mask="11110000b" comment="HlPrjLabel_HIType">01_Value</function>
+    	</group>
+    	<group id="3003">
+        	<function start="0" end="9" mask="11111111b" comment="SchlechtWetter_C1_Idx">07_Value</function>
+        	<function start="10" end="19" mask="11111111b" comment="SchlechtWetter_C2_Idx">07_Value</function>
+        	<function start="20" end="29" mask="11111111b" comment="Stadt_V_Idx">07_Value</function>
+        	<function start="30" end="39" mask="11111111b" comment="SAE_Idx">07_Value</function>
+        	<function start="40" end="49" mask="11111111b" comment="H10_Landstrasse_C_Idx">07_Value</function>
+        	<function start="50" end="59" mask="11111111b" comment="H8_Autobahn_E3_Idx">07_Value</function>
+        	<function start="60" end="69" mask="11111111b" comment="H6_Autobahn_E2_Idx">07_Value</function>
+        	<function start="70" end="79" mask="11111111b" comment="H5_Autobahn_E1_Idx">07_Value</function>
+        	<function start="80" end="89" mask="11111111b" comment="H4_Autobahn_E_Idx">07_Value</function>
+        	<function start="90" end="99" mask="11111111b" comment="H_2_Idx">08_Value</function>
+        	<function start="100" end="109" mask="11111111b" comment="H_0_Idx">08_Value</function>
+        	<function start="110" end="119" mask="11111111b" comment="H_Plus2_Idx">07_Value</function>
+        	<function start="120" end="129" mask="11111111b" comment="H_Plus4_Idx">08_Value</function>
+        	<function start="130" end="139" mask="11111111b" comment="Blendfreies_Fernlicht_Idx">10_Value</function>
+        	<function start="140" end="149" mask="11111111b" comment="Volles_Fernlicht__Lichthupe_Idx">09_Value</function>
+    	</group>
+    	<group id="3004">
+        	<function start="0" end="9" mask="11111111b" comment="DRL_Idx">08_Value</function>
+        	<function start="10" end="19" mask="11111111b" comment="POLI1_Idx">00, 00, 00, 04, 00, 00, 08, 00, 00, 00</function>
+        	<function start="20" end="29" mask="11111111b" comment="POLI2_Idx">00, 00, 00, 04, 00, 00, 08, 00, 00, 00</function>
+        	<function start="30" end="39" mask="11111111b" comment="POLI3_IDX">00, 00, 00, 04, 00, 00, 08, 00, 00, 00</function>
+        	<function start="40" end="49" mask="11111111b" comment="PLI_Idx">10_Value</function>
+        	<function start="60" end="69" mask="11111111b" comment="WELL1_Idx">00, 09, 09, 04, 00, 00, 0A, 00, 00, 00</function>
+        	<function start="70" end="79" mask="11111111b" comment="WELL2_Idx">00, 00, 00, 04, 00, 00, 0B, 00, 00, 00</function>
+        	<function start="80" end="89" mask="11111111b" comment="WELL3_Idx">00, 00, 00, 04, 00, 00, 0B, 00, 00, 00</function>
+        	<function start="90" end="99" mask="11111111b" comment="WELL4_IDX">00, 00, 00, 04, 00, 00, 0B, 00, 00, 00</function>
+        	<function start="100" end="109" mask="11111111b" comment="FMH_Idx">00, 02, 02, 04, 00, 00, 0B, 00, 00, 00</function>
+        	<function start="110" end="119" mask="11111111b" comment="REMLI_Idx">00, 02, 02, 04, 00, 00, 0B, 00, 00, 00</function>
+	    	<function start="120" end="129" mask="11111111b" comment="HBBLINK_Idx">11_Value</function>
+        	<function start="130" end="139" mask="11111111b" comment="DWABLINK_Idx">07_Value</function>
+        	<function start="140" end="149" mask="11111111b" comment="PanicMode_Idx">07_Value</function>
+        	<function start="150" end="159" mask="11111111b" comment="RaidAlarm_Idx">11_Value</function>
+        	<function start="160" end="169" mask="11111111b" comment="Blinken_Idx">10_Value</function>     
+			<function start="180" end="189" mask="11111111b" comment="SIDEMRKLGT_Idx">00, 00, 00, 04, 00, 00, 00, 00, 00, 00</function>
+			<function start="190" end="199" mask="11111111b" comment="BLINKEN_PO_Idx">10_Value</function>
+    	</group>
+    	<group id="3005">
+        	<function start="4" end="4" mask="11111111b" comment="LmmIdx01_Intensity">04_Value</function>
+        	<function start="7" end="7" mask="01000000b" comment="LmmIdx01_ErrorImpact">01_Value</function>
+        	<function start="9" end="9" mask="11111111b" comment="LmmIdx02_TimeOn">02_Value</function>
+        	<function start="10" end="10" mask="11111111b" comment="LmmIdx02_TimeOff">02_Value</function>
+        	<function start="11" end="11" mask="00001111b" comment="LmmIdx02_Priority">03_Value</function>
+        	<function start="11" end="11" mask="01000000b" comment="LmmIdx02_ErrorImpact">01_Value</function>
+        	<function start="12" end="12" mask="11111111b" comment="LmmIdx03_Intensity">04_Value</function>
+        	<function start="13" end="13" mask="11111111b" comment="LmmIdx03_TimeOn">02_Value</function>
+        	<function start="14" end="14" mask="11111111b" comment="LmmIdx03_TimeOff">02_Value</function>
+        	<function start="15" end="15" mask="00001111b" comment="LmmIdx03_Priority">05_Value</function>
+        	<function start="16" end="16" mask="11111111b" comment="LmmIdx04_Intensity">03_Value</function>
+        	<function start="17" end="17" mask="11111111b" comment="LmmIdx04_TimeOn">03_Value</function>
+        	<function start="18" end="18" mask="11111111b" comment="LmmIdx04_TimeOff">03_Value</function>
+        	<function start="19" end="19" mask="00001111b" comment="LmmIdx04_Priority">04_Value</function>
+        	<function start="20" end="20" mask="11111111b" comment="LmmIdx05_Intensity">03_Value</function>
+        	<function start="21" end="21" mask="11111111b" comment="LmmIdx05_TimeOn">03_Value</function>
+        	<function start="22" end="22" mask="11111111b" comment="LmmIdx05_TimeOff">03_Value</function>
+        	<function start="23" end="23" mask="00001111b" comment="LmmIdx05_Priority">01_Value</function>
+        	<function start="24" end="24" mask="11111111b" comment="LmmIdx06_Intensity">03_Value</function>
+        	<function start="25" end="25" mask="11111111b" comment="LmmIdx06_TimeOn">01_Value</function>
+        	<function start="26" end="26" mask="11111111b" comment="LmmIdx06_TimeOff">03_Value</function>
+        	<function start="27" end="27" mask="00001111b" comment="LmmIdx06_Priority">06_Value</function>
+        	<function start="27" end="27" mask="00110000b" comment="LmmIdx06_RampType">02_Value</function>
+        	<function start="27" end="27" mask="01000000b" comment="LmmIdx06_ErrorImpact">01_Value</function>
+        	<function start="28" end="28" mask="11111111b" comment="LmmIdx07_Intensity">03_Value</function>
+        	<function start="31" end="31" mask="00001111b" comment="LmmIdx07_Priority">06_Value</function>
+        	<function start="31" end="31" mask="00110000b" comment="LmmIdx07_RampType">02_Value</function>
+        	<function start="35" end="35" mask="00001111b" comment="LmmIdx08_Priority">03_Value</function>
+        	<function start="39" end="39" mask="00001111b" comment="LmmIdx09_Priority">05_Value</function>
+        	<function start="39" end="39" mask="00110000b" comment="LmmIdx09_RampType">02_Value</function>
+        	<function start="40" end="40" mask="11111111b" comment="LmmIdx10_Intensity">02_Value</function>
+        	<function start="43" end="43" mask="00001111b" comment="LmmIdx10_Priority">02_Value</function>
+        	<function start="43" end="43" mask="00110000b" comment="LmmIdx10_RampType">02_Value</function>
+        	<function start="44" end="44" mask="11111111b" comment="LmmIdx11_Intensity">03_Value</function>
+        	<function start="47" end="47" mask="00001111b" comment="LmmIdx11_Priority">04_Value</function>
+        	<function start="48" end="48" mask="11111111b" comment="LmmIdx12_Intensity">03_Value</function>
+        	<function start="51" end="51" mask="00001111b" comment="LmmIdx12_Priority">04_Value</function>
+        	<function start="134" end="134" mask="00111111b" comment="LmmReLut_LgtFct0">03_Value</function>
+        	<function start="134" end="134" mask="11000000b" comment="LmmReLut_LogLmpLow0">03_Value</function>
+        	<function start="135" end="135" mask="11111100b" comment="LmmReLut_Idx0">02_Value</function>
+        	<function start="136" end="136" mask="00111111b" comment="LmmReLut_LgtFct1">03_Value</function>
+        	<function start="136" end="136" mask="11000000b" comment="LmmReLut_LogLmpLow1">03_Value</function>
+        	<function start="137" end="137" mask="11111100b" comment="LmmReLut_Idx1">02_Value</function>
+        	<function start="138" end="138" mask="00111111b" comment="LmmReLut_LgtFct2">03_Value</function>
+        	<function start="138" end="138" mask="11000000b" comment="LmmReLut_LogLmpLow2">03_Value</function>
+        	<function start="139" end="139" mask="11111100b" comment="LmmReLut_Idx2">02_Value</function>
+    	</group>
+    </code>
+	
+	<code description="Enable GFHB WITH sidemarkers (also code FEM_BODY and KAFAS2)">
+		<group id="3000">
+        	<function start="4" end="4" mask="11110000b" comment="HlPrjLabel_HIType">01_Value</function>
+    	</group>
+    	<group id="3003">
+        	<function start="0" end="9" mask="11111111b" comment="SchlechtWetter_C1_Idx">07_Value</function>
+        	<function start="10" end="19" mask="11111111b" comment="SchlechtWetter_C2_Idx">07_Value</function>
+        	<function start="20" end="29" mask="11111111b" comment="Stadt_V_Idx">07_Value</function>
+        	<function start="30" end="39" mask="11111111b" comment="SAE_Idx">07_Value</function>
+        	<function start="40" end="49" mask="11111111b" comment="H10_Landstrasse_C_Idx">07_Value</function>
+        	<function start="50" end="59" mask="11111111b" comment="H8_Autobahn_E3_Idx">07_Value</function>
+        	<function start="60" end="69" mask="11111111b" comment="H6_Autobahn_E2_Idx">07_Value</function>
+        	<function start="70" end="79" mask="11111111b" comment="H5_Autobahn_E1_Idx">07_Value</function>
+        	<function start="80" end="89" mask="11111111b" comment="H4_Autobahn_E_Idx">07_Value</function>
+        	<function start="90" end="99" mask="11111111b" comment="H_2_Idx">08_Value</function>
+        	<function start="100" end="109" mask="11111111b" comment="H_0_Idx">08_Value</function>
+        	<function start="110" end="119" mask="11111111b" comment="H_Plus2_Idx">07_Value</function>
+        	<function start="120" end="129" mask="11111111b" comment="H_Plus4_Idx">08_Value</function>
+        	<function start="130" end="139" mask="11111111b" comment="Blendfreies_Fernlicht_Idx">10_Value</function>
+        	<function start="140" end="149" mask="11111111b" comment="Volles_Fernlicht__Lichthupe_Idx">09_Value</function>
+    	</group>
+    	<group id="3004">
+        	<function start="0" end="9" mask="11111111b" comment="DRL_Idx">08_Value</function>
+        	<function start="10" end="19" mask="11111111b" comment="POLI1_Idx">00, 00, 00, 0C, 00, 00, 08, 00, 00, 00</function>
+        	<function start="20" end="29" mask="11111111b" comment="POLI2_Idx">00, 00, 00, 0C, 00, 00, 08, 00, 00, 00</function>
+        	<function start="30" end="39" mask="11111111b" comment="POLI3_IDX">00, 00, 00, 0C, 00, 00, 08, 00, 00, 00</function>
+        	<function start="40" end="49" mask="11111111b" comment="PLI_Idx">10_Value</function>
+        	<function start="60" end="69" mask="11111111b" comment="WELL1_Idx">00, 09, 09, 0C, 00, 00, 0A, 00, 00, 00</function>
+        	<function start="70" end="79" mask="11111111b" comment="WELL2_Idx">00, 00, 00, 0C, 00, 00, 0B, 00, 00, 00</function>
+        	<function start="80" end="89" mask="11111111b" comment="WELL3_Idx">00, 00, 00, 0C, 00, 00, 0B, 00, 00, 00</function>
+        	<function start="90" end="99" mask="11111111b" comment="WELL4_IDX">00, 00, 00, 0C, 00, 00, 0B, 00, 00, 00</function>
+        	<function start="100" end="109" mask="11111111b" comment="FMH_Idx">00, 02, 02, 0C, 00, 00, 0B, 00, 00, 00</function>
+        	<function start="110" end="119" mask="11111111b" comment="REMLI_Idx">00, 02, 02, 0C, 00, 00, 0B, 00, 00, 00</function>
+	    	<function start="120" end="129" mask="11111111b" comment="HBBLINK_Idx">11_Value</function>
+        	<function start="130" end="139" mask="11111111b" comment="DWABLINK_Idx">07_Value</function>
+        	<function start="140" end="149" mask="11111111b" comment="PanicMode_Idx">07_Value</function>
+        	<function start="150" end="159" mask="11111111b" comment="RaidAlarm_Idx">11_Value</function>
+        	<function start="160" end="169" mask="11111111b" comment="Blinken_Idx">10_Value</function>     
+			<function start="180" end="189" mask="11111111b" comment="SIDEMRKLGT_Idx">00, 00, 00, 0C, 00, 00, 00, 00, 00, 00</function>
+			<function start="190" end="199" mask="11111111b" comment="BLINKEN_PO_Idx">10_Value</function>
+    	</group>
+    	<group id="3005">
+        	<function start="4" end="4" mask="11111111b" comment="LmmIdx01_Intensity">04_Value</function>
+        	<function start="7" end="7" mask="01000000b" comment="LmmIdx01_ErrorImpact">01_Value</function>
+        	<function start="9" end="9" mask="11111111b" comment="LmmIdx02_TimeOn">02_Value</function>
+        	<function start="10" end="10" mask="11111111b" comment="LmmIdx02_TimeOff">02_Value</function>
+        	<function start="11" end="11" mask="00001111b" comment="LmmIdx02_Priority">03_Value</function>
+        	<function start="11" end="11" mask="01000000b" comment="LmmIdx02_ErrorImpact">01_Value</function>
+        	<function start="12" end="12" mask="11111111b" comment="LmmIdx03_Intensity">04_Value</function>
+        	<function start="13" end="13" mask="11111111b" comment="LmmIdx03_TimeOn">02_Value</function>
+        	<function start="14" end="14" mask="11111111b" comment="LmmIdx03_TimeOff">02_Value</function>
+        	<function start="15" end="15" mask="00001111b" comment="LmmIdx03_Priority">05_Value</function>
+        	<function start="16" end="16" mask="11111111b" comment="LmmIdx04_Intensity">03_Value</function>
+        	<function start="17" end="17" mask="11111111b" comment="LmmIdx04_TimeOn">03_Value</function>
+        	<function start="18" end="18" mask="11111111b" comment="LmmIdx04_TimeOff">03_Value</function>
+        	<function start="19" end="19" mask="00001111b" comment="LmmIdx04_Priority">04_Value</function>
+        	<function start="20" end="20" mask="11111111b" comment="LmmIdx05_Intensity">03_Value</function>
+        	<function start="21" end="21" mask="11111111b" comment="LmmIdx05_TimeOn">03_Value</function>
+        	<function start="22" end="22" mask="11111111b" comment="LmmIdx05_TimeOff">03_Value</function>
+        	<function start="23" end="23" mask="00001111b" comment="LmmIdx05_Priority">01_Value</function>
+        	<function start="24" end="24" mask="11111111b" comment="LmmIdx06_Intensity">03_Value</function>
+        	<function start="25" end="25" mask="11111111b" comment="LmmIdx06_TimeOn">01_Value</function>
+        	<function start="26" end="26" mask="11111111b" comment="LmmIdx06_TimeOff">03_Value</function>
+        	<function start="27" end="27" mask="00001111b" comment="LmmIdx06_Priority">06_Value</function>
+        	<function start="27" end="27" mask="00110000b" comment="LmmIdx06_RampType">02_Value</function>
+        	<function start="27" end="27" mask="01000000b" comment="LmmIdx06_ErrorImpact">01_Value</function>
+        	<function start="28" end="28" mask="11111111b" comment="LmmIdx07_Intensity">03_Value</function>
+        	<function start="31" end="31" mask="00001111b" comment="LmmIdx07_Priority">06_Value</function>
+        	<function start="31" end="31" mask="00110000b" comment="LmmIdx07_RampType">02_Value</function>
+        	<function start="35" end="35" mask="00001111b" comment="LmmIdx08_Priority">03_Value</function>
+        	<function start="39" end="39" mask="00001111b" comment="LmmIdx09_Priority">05_Value</function>
+        	<function start="39" end="39" mask="00110000b" comment="LmmIdx09_RampType">02_Value</function>
+        	<function start="40" end="40" mask="11111111b" comment="LmmIdx10_Intensity">02_Value</function>
+        	<function start="43" end="43" mask="00001111b" comment="LmmIdx10_Priority">02_Value</function>
+        	<function start="43" end="43" mask="00110000b" comment="LmmIdx10_RampType">02_Value</function>
+        	<function start="44" end="44" mask="11111111b" comment="LmmIdx11_Intensity">03_Value</function>
+        	<function start="47" end="47" mask="00001111b" comment="LmmIdx11_Priority">04_Value</function>
+        	<function start="48" end="48" mask="11111111b" comment="LmmIdx12_Intensity">03_Value</function>
+        	<function start="51" end="51" mask="00001111b" comment="LmmIdx12_Priority">04_Value</function>
+        	<function start="134" end="134" mask="00111111b" comment="LmmReLut_LgtFct0">03_Value</function>
+        	<function start="134" end="134" mask="11000000b" comment="LmmReLut_LogLmpLow0">03_Value</function>
+        	<function start="135" end="135" mask="11111100b" comment="LmmReLut_Idx0">02_Value</function>
+        	<function start="136" end="136" mask="00111111b" comment="LmmReLut_LgtFct1">03_Value</function>
+        	<function start="136" end="136" mask="11000000b" comment="LmmReLut_LogLmpLow1">03_Value</function>
+        	<function start="137" end="137" mask="11111100b" comment="LmmReLut_Idx1">02_Value</function>
+        	<function start="138" end="138" mask="00111111b" comment="LmmReLut_LgtFct2">03_Value</function>
+        	<function start="138" end="138" mask="11000000b" comment="LmmReLut_LogLmpLow2">03_Value</function>
+        	<function start="139" end="139" mask="11111100b" comment="LmmReLut_Idx2">02_Value</function>
+    	</group>
+    </code>
+	
+</cafd>
+
+</FDL>

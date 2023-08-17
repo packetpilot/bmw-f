@@ -2,7 +2,7 @@
 <FDL>
    <!--
 	Botho - Public Release
-	last updated: 2023-07-15
+	last updated: 2023-08-17
     -->
    <cafd id="00000911" name="ACSM_4B" author="Botho (public)" series="F020,F030">
       <code description="Ceinture de sécurité: Durée du rappel à 10s (default: 100s)">
@@ -265,9 +265,9 @@
             <function start="10" end="10" mask="11111111b" comment="ASP_GESCHWINDIGKEIT_AUTO_AUSKLAPPEN (default: 28)">32</function>
          </group>
       </code>
-      <code description="Rétroviseurs passager: Augmente le débattement lors de la marche arrière à 85 digits (default: 59 digits - I-Step après 3.61.x)">
+      <code description="Rétroviseurs passager: Augmente le débattement lors de la marche arrière à 70 digits (default: 59 digits - I-Step après 3.61.x)">
          <group id="3110">
-            <function start="2" end="2" mask="11111111b" comment="ASP_BORDSTEINAUTOMATIK_DELTA (default: 3B)">55</function>
+            <function start="2" end="2" mask="11111111b" comment="ASP_BORDSTEINAUTOMATIK_DELTA (default: 3B)">46</function>
          </group>
       </code>
       <code description="Rétroviseurs passager: Rétablie le débattement lors de la marche arrière à 59 digits (default: 59 digits - I-Step après 3.61.x)">
@@ -332,15 +332,34 @@
             <function start="8" end="8" mask="11111111b" comment="C_HBA_HGWY_T_MIN (default: 1E - 30 sec)">0F</function>
          </group>
       </code>
-	  <code description="High-Beam Assistant Anti-Glare tunel (HBA): activation dès 50 km/h et désactivation à 45 km/h (defaut: 70-60 km/h)">
+	  <code description="High-Beam Assistant motorway (HBA): activation immédiat dès 140 km/h ou entre 90 km/h et 110 km/h pendant 30 sec (défaut">
+         <group id="3074">
+            <function start="5" end="5" mask="11111111b" comment="C_HBA_HGWY_V_LO (default: 5A - 90 km/h)">5A</function>
+            <function start="6" end="6" mask="11111111b" comment="C_HBA_HGWY_V_HI (default: 8C - 140 km/h)">8C</function>
+            <function start="7" end="7" mask="11111111b" comment="C_HBA_HGWY_V_MIN (default: 6E - 110 km/h)">6E</function>
+            <function start="8" end="8" mask="11111111b" comment="C_HBA_HGWY_T_MIN (default: 1E - 30 sec)">1E</function>
+         </group>
+      </code>
+	  <code description="High-Beam Assistant (HBA): activation tunel anti-éblouissement dès 50 km/h et désactivation à 45 km/h (defaut: 70-60 km/h)">
          <group id="3074">
             <function start="0" end="0" mask="11111111b" comment="C_HBA_ENA_V_LO (default: 3C - 60 km/h)">2D</function>
             <function start="1" end="1" mask="11111111b" comment="C_HBA_ENA_V_HI (default: 46 - 70 km/h)">32</function>
          </group>
       </code>
+	  <code description="High-Beam Assistant (HBA): activation tunel anti-éblouissement dès 70 km/h et désactivation à 60 km/h (defaut)">
+         <group id="3074">
+            <function start="0" end="0" mask="11111111b" comment="C_HBA_ENA_V_LO (default: 3C - 60 km/h)">3C</function>
+            <function start="1" end="1" mask="11111111b" comment="C_HBA_ENA_V_HI (default: 46 - 70 km/h)">46</function>
+         </group>
+      </code>
 	  <code description="High-Beam Assistant (HBA): activation via le bouton d'éclairage vers la droite (défaut: non)">
          <group id="3060">
             <function start="22" end="22" mask="11000000b" comment="FLA_AKTIVIERUNG (default: LDS_in_A)">LDS_in_A_oder_2</function>
+         </group>
+      </code>
+	  <code description="High-Beam Assistant (HBA): déactivation via le bouton d'éclairage vers la droite (défaut)">
+         <group id="3060">
+            <function start="22" end="22" mask="11000000b" comment="FLA_AKTIVIERUNG (default: LDS_in_A)">LDS_in_A</function>
          </group>
       </code>
       <code description="Feux anti-brouillard: désactive cornering lights">
@@ -764,7 +783,7 @@
             <function start="1" end="1" mask="00010000b" comment="ALLOW_SENS_CHANGE (default: 00)">01</function>
          </group>
       </code>
-	  <code description="High-Beam Assistant (HBA): désactivation du réglage de la sensibilité (default: no_sensitivity_change)">
+	  <code description="-- Don't work -- High-Beam Assistant (HBA): désactivation du réglage de la sensibilité (default)">
          <group id="3050">
             <function start="1" end="1" mask="00010000b" comment="ALLOW_SENS_CHANGE (default: 00)">00</function>
          </group>
@@ -781,22 +800,30 @@
             <function start="7" end="7" mask="11111111b" comment="SPEED_SWITCHING_HIGH_BEAMS_OFF (default: 1E)">1E</function>
          </group>
       </code>
-	  <code description="High-Beam Assistant (HBA): diminution des délais de réaction et seuil à 75 km/h en ville (défaut : 85 km/h)">
+	  <code description="High-Beam Assistant (HBA): ajustement des délais de réaction du tunel anti-éblouissement plus rapide">
          <group id="3050">
-            <function start="8" end="8" mask="11111111b" comment="DELAY_AFTER_ONCOMING (default: 06 - 6 sec)">02</function>
+            <function start="8" end="8" mask="11111111b" comment="DELAY_AFTER_ONCOMING (default: 06 - 6 sec)">03</function>
             <function start="10" end="10" mask="11111111b" comment="ONCOMING_HIGH_SPEED_DELAY (default: 0F - 15 sec)">04</function>
             <function start="11" end="11" mask="11111111b" comment="DELAY_AFTER_PRECEDING (default: 1E - 30 sec)">07</function>
             <function start="12" end="12" mask="11111111b" comment="DELAY_AFTER_SLOW_OVERTAKING (default: 50 - 80 sec)">14</function>
-            <function start="24" end="24" mask="11111111b" comment="H IGH_SPEED_SWITCHING_HIGH_BEAMS (default: 55 - 85 km/h)">4B</function>
          </group>
       </code>
-	  <code description="High-Beam Assistant (HBA): délais de réaction et seuil de désactivation en ville par defaut">
+	  <code description="High-Beam Assistant (HBA): ajustement des délais de réaction du tunel anti-éblouissement (defaut)">
          <group id="3050">
             <function start="8" end="8" mask="11111111b" comment="DELAY_AFTER_ONCOMING (default: 06 - 6 sec)">06</function>
             <function start="10" end="10" mask="11111111b" comment="ONCOMING_HIGH_SPEED_DELAY (default: 0F - 15 sec)">0F</function>
             <function start="11" end="11" mask="11111111b" comment="DELAY_AFTER_PRECEDING (default: 1E - 30 sec)">1E</function>
             <function start="12" end="12" mask="11111111b" comment="DELAY_AFTER_SLOW_OVERTAKING (default: 50 - 80 sec)">50</function>
-            <function start="24" end="24" mask="11111111b" comment="HIGH_SPEED_SWITCHING_HIGH_BEAMS (default: 55 - 85 km/h)">55</function>
+         </group>
+      </code>
+	  <code description="High-Beam Assistant (HBA): seuil d'activation en ville à 75 km/h (défaut : 85 km/h)">
+         <group id="3050">
+            <function start="24" end="24" mask="11111111b" comment="HIGH_SPEED_SWITCHING_HIGH_BEAMS (default: 55 - 85 km/h)">4B</function>
+         </group>
+      </code>
+	  <code description="High-Beam Assistant (HBA): seuil d'activation en ville à 85 km/h (défaut)">
+         <group id="3050">
+            <function start="24" end="24" mask="11111111b" comment="HIGH_SPEED_SWITCHING_HIGH_BEAMS (default: 55- 85 km/h)">55</function>
          </group>
       </code>
    </cafd>

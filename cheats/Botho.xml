@@ -2,7 +2,7 @@
 <FDL>
    <!--
 	Botho - Public Release
-	last updated: 2023-08-17
+	last updated: 2024-03-22
     -->
    <cafd id="00000911" name="ACSM_4B" author="Botho (public)" series="F020,F030">
       <code description="Ceinture de sécurité: Durée du rappel à 10s (default: 100s)">
@@ -324,11 +324,11 @@
             <function start="121" end="121" mask="00111111b" comment="MAPPING_ABBIEGEL_R_OUTPUT (default: nsw_r)">nsw_r</function>
          </group>
       </code> 
-	  <code description="High-Beam Assistant motorway (HBA): activation immédiat dès 120 km/h (défaut: 140 km/h) ou entre 80 km/h et 100 km/h pendant 15 sec (défaut: 90-110 km/h pendant 30 sec)">
+	  <code description="High-Beam Assistant motorway (HBA): activation immédiat dès 120 km/h (défaut: 140 km/h) ou entre 90 km/h et 110 km/h pendant 15 sec (défaut: 90-110 km/h pendant 30 sec)">
          <group id="3074">
-            <function start="5" end="5" mask="11111111b" comment="C_HBA_HGWY_V_LO (default: 5A - 90 km/h)">50</function>
+            <function start="5" end="5" mask="11111111b" comment="C_HBA_HGWY_V_LO (default: 5A - 90 km/h)">5A</function>
             <function start="6" end="6" mask="11111111b" comment="C_HBA_HGWY_V_HI (default: 8C - 140 km/h)">82</function>
-            <function start="7" end="7" mask="11111111b" comment="C_HBA_HGWY_V_MIN (default: 6E - 110 km/h)">64</function>
+            <function start="7" end="7" mask="11111111b" comment="C_HBA_HGWY_V_MIN (default: 6E - 110 km/h)">6E</function>
             <function start="8" end="8" mask="11111111b" comment="C_HBA_HGWY_T_MIN (default: 1E - 30 sec)">0F</function>
          </group>
       </code>
@@ -1003,6 +1003,11 @@
             <function start="133" end="133" mask="01000000b" comment="M_VEHICLE (default: nicht_aktiv)">aktiv</function>
          </group>
       </code>
+	  <code description="Tableau de bord: Affichage du point de commutation (Step 2 sur 2 - voir KOMBI)">
+         <group id="3001">
+            <function start="66" end="66" mask="00010000b" comment="SPA_CHECKBOX (default: nicht_aktiv)">aktiv</function>
+         </group>
+      </code>
       <code description="Navigation: Alerte quand proche du POI">
          <group id="3000">
             <function start="111" end="111" mask="10000000b" comment="NAVI_ALERT_POI (default: nicht_aktiv)">aktiv</function>
@@ -1447,6 +1452,11 @@
             <function start="41" end="41" mask="00010000b" comment="SPA_SPORT_ENABLE (default: nicht_aktiv. Aktiv si production date après 0315)">aktiv</function>
          </group>
       </code>
+	  <code description="Tableau de bord: Affichage du point de commutation (Step 1 sur 2 - voir HU_NBT)">
+         <group id="3003">
+            <function start="0" end="0" mask="00100000b" comment="SPA_KOMBISELECT_DISABLE (default: nicht_aktiv)">nicht_aktiv</function>
+         </group>
+      </code>	
 	  <code description="Tableau de bord: Affichage rapports au compteur">
          <group id="3003">
             <function start="0" end="0" mask="00010000b" comment="SPA_IST_GANG_ENABLE (default: nicht_aktiv)">aktiv</function>
